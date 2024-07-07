@@ -1,4 +1,4 @@
-FROM node:14-slim
+FROM node:20-slim
 
 WORKDIR /usr/src/app
 
@@ -15,4 +15,4 @@ COPY . .
 
 # EXPOSE $FRONTEND_B2C_PORT
 
-CMD ["npm", "run", "dev"]
+CMD ["sh", "-c", "npm run dev"]
