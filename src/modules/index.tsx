@@ -1,0 +1,8 @@
+export { Header } from './Header/'
+export { FirstScreen } from './landing/FirstScreen'
+export { FiveScreen } from './landing/FiveScreen'
+export { FourScreen } from './landing/FourScreen'
+export { SecondScreen } from './landing/SecondScreen'
+export { SevenScreen } from './landing/SevenScreen'
+export { SixScreen } from './landing/SixScreen'
+export { ThirdScreen } from './landing/ThirdScreen'

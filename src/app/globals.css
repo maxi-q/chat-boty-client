@@ -4,30 +4,29 @@
 
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+  --color-accent: rgb(112, 1, 254);
+  --color-accent-2: rgb(143, 254, 1);
+  --color-additional-4: rgb(47, 46, 50);
+  --color-white: rgb(255, 255, 255);
+  --color-main: rgb(242, 242, 242);
+  --color-additional: rgb(11, 10, 10);
+  --color-additional-2: rgb(243, 243, 243);
+  --color-additional-3: rgb(82, 80, 80); 
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: var(--color-main);
+  font-family:'Igra Sans', 'Times New Roman', Times, serif;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.section {
+  margin: 10px 0;
 }

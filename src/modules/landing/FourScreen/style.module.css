@@ -1,0 +1,52 @@
+.screen {
+  background-color: #fff;
+  border-radius: 35px;
+  background-size: 50% auto;
+}
+
+.title {
+  color: var(--color-accent);
+}
+
+.case {
+  background-color: var(--color-additional-2);
+  flex: 1;
+  flex-direction: column;
+}
+
+.separator {
+  content: '';
+  width: 100%;
+}
+
+.link {
+  background-color: var(--color-accent-2);
+  width: max-content;
+  transition: all .3s ease-out;
+  stroke: #0B0A0A;
+}
+
+.link:hover {
+  background-color: var(--color-accent);
+  color: var(--color-main);
+  stroke: var(--color-main);
+
+}
+
+.text {
+  color: var(--color-additional-3);
+}
+
+.CTA {
+  background-color: var(--color-accent-2);
+}
+
+.CTAButton {
+  background-color: var(--color-main);
+}
+.CTAAction {
+  background-color: var(--color-accent);
+}
+.CTAArrow {
+  fill: var(--color-main);
+}

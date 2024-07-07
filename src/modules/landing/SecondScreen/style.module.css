@@ -1,0 +1,54 @@
+.screen {
+  background-color: var(--color-white);
+  /* height: 900px; */
+  border-radius: 35px;
+  overflow: hidden;
+  position: relative;
+}
+
+.titleSpan {
+  color: var(--color-accent);
+} 
+
+.card {
+  background-color: var(--color-additional-2);
+  transition: all .3s ease-out;
+}
+
+.card:hover {
+  background-color: var(--color-accent-2) !important;
+}
+
+.line {
+  width: 100%;
+  background-color: var(--color-additional-3);
+  border-radius: 1px;
+  height: 2px;
+}
+
+.number {
+  color: var(--color-additional-3);
+}
+
+.title {
+  color: var(--color-additional);
+  white-space: pre-line;
+}
+
+.p {
+  color: var(--color-additional-3)
+}
+
+.accentCard {
+  background-color: var(--color-accent-2);
+}
+
+.icon {
+  transform: scale(0.5); /* уменьшить размер вдвое */
+  transform-origin: center; /* сохранить центр элемента */
+}
+
+.separator {
+  content: '';
+  width: 100%;
+}
