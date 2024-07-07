@@ -9,12 +9,12 @@ export const SevenScreen = () => {
   return (
     <main className={'section p-5 lg:pl-[50px] lg:pt-[70px] flex gap-16 xl:gap-10  ' + styles.screen}>
       <div className="lg:block flex flex-col items-center" style={{ flex: 1 }}>
-        <h1 className="text:text-2xl md:text-3xl lg:text-4xl xl:text-5xl uppercase w-max">
+        <h1 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl uppercase w-max">
           <span className={styles.titleSpan}>остались вопросы? </span> <br />
           Не знаете нужен ли вам <br />
           чат-бот/автоворонка?
         </h1>
-        <h3 className="font-bold text-sm md:text-base lg:text-lg uppercase pt-6 pb-10 tracking-wider w-max">
+        <h3 className="font-bold text-xs sm:text-base lg:text-lg uppercase pt-6 pb-10 tracking-wider w-max">
           Оставьте заявку на бесплатную консультацию, <br />
           расскажите про свой проект и за 30 минут <br />
           определимся нужно ли вам это или нет
