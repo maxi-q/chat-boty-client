@@ -29,7 +29,7 @@ type PopupState = {
 }
 
 export const usePopupStore = create<PopupState>((set) => ({
-  isOpen: true,
+  isOpen: false,
   openPopup: () => set({ isOpen: true }),
   closePopup: () => set({ isOpen: false }),
   content: {
