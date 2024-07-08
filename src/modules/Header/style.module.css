@@ -65,14 +65,18 @@
 }
 
 .telephone {
+  transition: all .3s ease-out;
   padding: 0 40px;
 }
+.telephone:hover {
+  color: var(--color-accent-2);
 
+}
 .contactLink {
-  
+  transition: all .3s ease-out;
+  cursor: pointer;
 }
 
 .contactLink:hover {
-  transition: all .3s ease-out;
   fill: var(--color-accent-2);
 }

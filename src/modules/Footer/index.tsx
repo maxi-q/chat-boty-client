@@ -1,6 +1,7 @@
 import { CallToActionButton } from '@/components/ui/CallToAction'
 import Image from 'next/image'
 import Link from 'next/link'
+import { TelephoneLink, TGLink, VKLink, WhatsAppLink } from '../../constants/static'
 import { Telegram, Vk, WhatsApp } from '../../constants/svg/'
 import styles from './style.module.css'
 
@@ -37,16 +38,25 @@ export const Footer = () => {
       </div>
       <div className="flex flex-col">
         <h3 className="text-base xl:text-lg pt-3 pb-1 uppercase tracking-widest">связаться</h3>
-        <a href={`tel:+79044240510`} className="text-xs opacity-75 leading-5 lg:leading-7 xl:leading-9 xl:text-sm">
+        <a href={TelephoneLink} className="text-xs opacity-75 leading-5 lg:leading-7 xl:leading-9 xl:text-sm">
           8 904 424 05 10
         </a>
-        <a href="mailto:nipi.bz@gmail.com?body=Привет, хочу уточнить по поводу бота&subject=Заказать чат бота" className="text-xs opacity-75 leading-5 lg:leading-7 xl:leading-9 xl:text-sm">
-        nipi.bz@gmail.com
+        <a
+          href="mailto:nipi.bz@gmail.com?body=Привет, хочу уточнить по поводу бота&subject=Заказать чат бота"
+          className="text-xs opacity-75 leading-5 lg:leading-7 xl:leading-9 xl:text-sm"
+        >
+          nipi.bz@gmail.com
         </a>
         <ul className="flex pt-1" style={{ marginLeft: '-10px' }}>
-          <WhatsApp className={'cursor-pointer ' + styles.contactLink} alt="whatsapp" height={40} />
-          <Telegram className={'cursor-pointer ' + styles.contactLink} alt="whatsapp" height={40} />
-          <Vk className={'cursor-pointer ' + styles.contactLink} alt="whatsapp" height={45} />
+          <a target="_blank" href={WhatsAppLink}>
+            <WhatsApp className={'cursor-pointer ' + styles.contactLink} alt="whatsapp" height={40} />
+          </a>
+          <a target="_blank" href={TGLink}>
+            <Telegram className={'cursor-pointer ' + styles.contactLink} alt="whatsapp" height={40} />
+          </a>
+          <a target="_blank" href={VKLink}>
+            <Vk className={'cursor-pointer ' + styles.contactLink} alt="whatsapp" height={45} />
+          </a>
         </ul>
         <h5 className="flex flex-1 items-end underline">Политика конфиденциальности</h5>
       </div>

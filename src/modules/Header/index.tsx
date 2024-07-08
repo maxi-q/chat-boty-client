@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import { TelephoneLink, TGLink, VKLink, WhatsAppLink } from '../../constants/static'
 import { Telegram, Vk, WhatsApp } from '../../constants/svg/'
 import styles from './style.module.css'
 
@@ -15,14 +16,19 @@ export const Header = () => {
         <LiComponent active={false}>Блог</LiComponent>
         <LiComponent active={false}>Контакты</LiComponent>
       </nav>
-      <aside
-        className={styles.contacts + ' flex-1 overflow-visible hidden justify-end items-center w-full lg:flex lg:w-auto lg:order-1'}
-        style={{ minWidth: '370px' }}
-      >
-        <a href={`tel:+7904240510`} className={styles.telephone}>8 904 424 05 10</a>
-        <WhatsApp className={styles.contactLink} alt="whatsapp" height={40} />
-        <Telegram className={styles.contactLink} alt="whatsapp" height={40} />
-        <Vk className={styles.contactLink} alt="whatsapp" height={45} />
+      <aside className={styles.contacts + ' flex-1 overflow-visible hidden justify-end items-center w-full lg:flex lg:w-auto lg:order-1'} style={{ minWidth: '370px' }}>
+        <a href={TelephoneLink} className={styles.telephone}>
+          8 904 424 05 10
+        </a>
+        <a target="_blank" href={WhatsAppLink}>
+          <WhatsApp className={styles.contactLink} alt="whatsapp" height={40} />
+        </a>
+        <a target="_blank" href={TGLink}>
+          <Telegram className={styles.contactLink} alt="whatsapp" height={40} />
+        </a>
+        <a target="_blank" href={VKLink}>
+          <Vk className={styles.contactLink} alt="whatsapp" height={45} />
+        </a>
       </aside>
     </header>
   )
