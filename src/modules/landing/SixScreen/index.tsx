@@ -62,7 +62,7 @@ export const SixScreen = () => {
 
 const Card = ({ date, title, text, describe }: { date: string; title: string; text: string; describe: string }) => {
   return (
-    <div className={'rounded-xl p-8 flex ' + styles.card}>
+    <div className={'rounded-xl p-6 lg:p-8 flex ' + styles.card}>
       <h5 className="text-xs select-none">{date}</h5>
       <Splitter />
       <h3 className={'mb-4 text-md leading-snug uppercase ' + styles.textTitle}>{title}</h3>

@@ -8,7 +8,7 @@ import styles from './style.module.css'
 export const ThirdScreen = () => {
   return (
     <main className={'section bg-[url("/aside_abstract.webp")] px-4 py-5 lg:px-[40px] lg:pt-[70px] pb-32 bg-no-repeat bg-[right_bottom_12%] lg:bg-right-bottom bg-contain bg-[length:80%_auto] lg:bg-[length:50%_auto]  ' + styles.screen}>
-      <h1 className={'text-4xl lg:text-5xl xl:text-6xl pb-16 uppercase ' + styles.title}>
+      <h1 className={'text-3xl sm:text-4xl lg:text-5xl xl:text-6xl pb-16 uppercase ' + styles.title}>
         С нами <br /> вы забудете о:
       </h1>
       <ul className="flex flex-col lg:flex-row items-center content-around w-full gap-6" style={{ justifyContent: 'space-around' }}>
@@ -45,20 +45,20 @@ export const ThirdScreen = () => {
 const CardPain = ({ pain, solution }: { pain: string; solution: string }) => {
   return (
     <li className="relative max-w-xl lg:max-w-full w-full">
-      <div className={styles.pain + ' py-4 px-4 gap-3 bg-gray-900 text-12 w-full flex items-center'}>
+      <div className={styles.pain + ' py-2 sm:py-4 px-2 sm:px-4 gap-3 bg-gray-900 text-12 w-full flex items-center'}>
         <div className={styles.painCircle + ' rounded-full'}>
           <XCross />
         </div>
-        <p className="leading-5 text-xs xl:text-sm " style={{ whiteSpace: 'pre' }}>
+        <p className="sm:leading-5 text-[10px] sm:text-xs xl:text-sm " style={{ whiteSpace: 'pre' }}>
           {pain}
         </p>
       </div>
 
-      <div className={styles.solution + '  py-4 px-4 gap-3 bg-gray-900 text-12 w-full flex items-center'} style={{ marginTop: '-3%' }}>
+      <div className={styles.solution + ' py-2 sm:py-4 px-2 sm:px-4 gap-3 bg-gray-900 text-12 w-full flex items-center'} style={{ marginTop: '-3%' }}>
         <div className={styles.solutionCircle + ' rounded-full'}>
           <CheckMark />
         </div>
-        <p className="leading-5 text-xs xl:text-sm " style={{ whiteSpace: 'pre' }}>
+        <p className="sm:leading-5 text-[10px] sm:text-xs xl:text-sm " style={{ whiteSpace: 'pre' }}>
           {solution}
         </p>
       </div>
@@ -68,11 +68,11 @@ const CardPain = ({ pain, solution }: { pain: string; solution: string }) => {
 
 const CardGet = ({ icon, title, text }: { icon: React.ReactNode; title: string; text: string }) => {
   return (
-    <li className={styles.getCard + ' py-8 px-10 lg:px-4 w-max xl:px-6 flex justify-center gap-3'} style={{ flex: 1 }}>
+    <li className={styles.getCard + ' py-3 sm:py-8 px-4 sm:px-10 lg:px-4 w-max xl:px-6 flex justify-center gap-3'} style={{ flex: 1 }}>
       <div className="flex items-center w-8 xl:w-20">{icon}</div>
       <div>
-        <h3 className="text-white text-xl nowrap">{title}</h3>
-        <p className="text-white text-xs xl:text-sm font-hairline leading-4 xl:leading-5 mt-2 xl:mt-[20px]" style={{ whiteSpace: 'pre-wrap' }}>
+        <h3 className="text-white text-base sm:text-xl nowrap">{title}</h3>
+        <p className="text-white text-[10px] sm:text-sm font-hairline leading-4 xl:leading-5 mt-2 xl:mt-[20px]" style={{ whiteSpace: 'pre-wrap' }}>
           {text}
         </p>
       </div>

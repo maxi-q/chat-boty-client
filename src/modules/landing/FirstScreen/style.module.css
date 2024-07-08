@@ -34,11 +34,6 @@
   margin-top: 60px;
   max-width: 1050px;
 }
-@media (max-width: 1023px) {
-  .adv {
-    flex-wrap: wrap;
-  }
-}
 
 .box {
   border-radius: 35px;

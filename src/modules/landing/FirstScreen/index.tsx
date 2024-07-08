@@ -21,7 +21,7 @@ export const FirstScreen = () => {
         </h1>
         <CallToActionButton>Обсудить проект</CallToActionButton>
       </section>
-      <ul className={styles.adv + ' flex'}>
+      <ul className={styles.adv + ' flex flex-col lg:flex-row'}>
         <Box
           num={1}
           title="Оперативность"
@@ -69,7 +69,7 @@ export const FirstScreen = () => {
 const Box = ({ num, title, p, style }: { num: number; title: string; p: React.JSX.Element; style?: CSSProperties }) => {
   return (
     <li className={styles.box + ' h-auto lg:h-[225px] w-full pl-16 lg:pl-20 xl:pl-[120px]'} style={style}>
-      <h2 className={styles.titleNumber + ' top-[-119px] left-[-25px] text-[100px] lg:top-[-59px] lg:left-[-46px] xl:left-[-56px] lg:text-[200px] xl:text-[260px]'}>{num}</h2>
+      <h2 className={styles.titleNumber + ' top-[-119px] left-[-10px] text-[100px] lg:top-[-59px] lg:left-[-46px] xl:left-[-56px] lg:text-[200px] xl:text-[260px]'}>{num}</h2>
       <h1 className={styles.h2 + ' pt-[20px] lg:pt-[80px] text-lg xl:text-xl'}>{title}</h1>
       <p className={styles.p + ' text-xs lg:text-sm xl:text-base  leading-none lg:leading-tight'}>{p}</p>
     </li>

@@ -54,7 +54,7 @@ export const FourScreen = () => {
 
 const Case = ({ title, text, link }: { title: string; text: string; link: string }) => {
   return (
-    <div className={'p-10 flex rounded-3xl ' + styles.case}>
+    <div className={'p-4 xs:p-10 flex rounded-3xl ' + styles.case}>
       <h3 className={'pb-3 text-lg font-bold uppercase'}>{title}</h3>
       <p className={'leading-4 font-thin text-sm ' + styles.text} style={{ whiteSpace: 'pre-wrap', flex: 1 }}>
         {text}
