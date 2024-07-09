@@ -1,5 +1,5 @@
 .screen {
-  background-color: #1C1C1C;
+  background-color: #1c1c1c;
   border-radius: 35px;
 }
 
@@ -13,8 +13,8 @@
 
 .pain {
   border: 2px solid #606356;
-  background: #2C2C2C80;
-  box-shadow: 0px 0px 36.5px -12px #FFFFFF40 inset;
+  background: #2c2c2c80;
+  box-shadow: 0px 0px 36.5px -12px #ffffff40 inset;
   border-radius: 82px;
   color: var(--color-additional-2);
 
@@ -26,7 +26,7 @@
 
 .painCircle {
   background: #61616133;
-  border: 1px solid #6F6F6F;
+  border: 1px solid #6f6f6f;
   padding: 15px;
 }
 
@@ -40,13 +40,13 @@
 }
 
 .solutionCircle {
-  background: #FFFFFF;
-  border: 1px solid #FFFFFF;
+  background: #ffffff;
+  border: 1px solid #ffffff;
   padding: 20px;
 }
 
 .getCard {
-  background: #2F2E32;
+  background: #2f2e32;
   border-radius: 35px;
 }
 
@@ -81,12 +81,10 @@
   position: relative;
   overflow: hidden;
 }
-
-.rotating-background::before {
-  content: '';
-  position: absolute;
-  background-size: contain; /* Или другое значение в зависимости от вашего требования */
-  transform: translate(-50%, -50%) rotate(0deg);
-  transform-origin: center;
-  animation: rotate 75s linear infinite;
+@media (min-width: 1024px) {
+  .rotating-background::before {
+    transform: translate(-50%, -50%) rotate(0deg);
+    transform-origin: center;
+    animation: rotate 75s linear infinite;
+  }
 }

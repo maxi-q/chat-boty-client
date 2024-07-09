@@ -7,7 +7,7 @@ import styles from './style.module.css'
 
 export const ThirdScreen = () => {
   return (
-    <main className={`section before:bg-[url("/aside_abstract.webp")] px-4 py-5 lg:px-[40px] lg:pt-[70px] pb-32  before:w-[50%] before:h-[50%] lg:before:right-[0] before:bottom-[0] ${styles['rotating-background']} ${styles.screen}`}>
+    <main className={`section before:bg-[url("/aside_abstract.webp")] px-4 py-5 lg:px-[40px] lg:pt-[70px] pb-32 before:bg-no-repeat  before:bg-contain before:content-[''] before:absolute before:h-[100%] before:max-h-[20%] before:max-h-[20%] before:w-[100%] lg:before:max-h-[100%] lg:before:max-h-[50%] lg:before:w-[50%] before:right-[0] before:bottom-[20%] lg:before:bg-bottom lg:before:right-[0] lg:before:bottom-[0] ${styles['rotating-background']} ${styles.screen}`}>
       <h1 className={'text-3xl relative sm:text-4xl lg:text-5xl xl:text-6xl pb-16 uppercase ' + styles.title}>
         С нами <br /> вы забудете о:
       </h1>
