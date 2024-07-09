@@ -7,11 +7,11 @@ import styles from './style.module.css'
 
 export const ThirdScreen = () => {
   return (
-    <main className={`section bg-[url("/aside_abstract.webp")] px-4 py-5 lg:px-[40px] lg:pt-[70px] pb-32 bg-no-repeat bg-[right_bottom_12%] lg:bg-right-bottom bg-contain bg-[length:80%_auto] lg:bg-[length:50%_auto] ${styles.screen}`}>
-      <h1 className={'text-3xl sm:text-4xl lg:text-5xl xl:text-6xl pb-16 uppercase ' + styles.title}>
+    <main className={`section before:bg-[url("/aside_abstract.webp")] px-4 py-5 lg:px-[40px] lg:pt-[70px] pb-32  before:w-[50%] before:h-[50%] lg:before:right-[0] before:bottom-[0] ${styles['rotating-background']} ${styles.screen}`}>
+      <h1 className={'text-3xl relative sm:text-4xl lg:text-5xl xl:text-6xl pb-16 uppercase ' + styles.title}>
         С нами <br /> вы забудете о:
       </h1>
-      <ul className="flex flex-col lg:flex-row items-center content-around w-full gap-6" style={{ justifyContent: 'space-around' }}>
+      <ul className="flex relative flex-col lg:flex-row items-center content-around w-full gap-6" style={{ justifyContent: 'space-around' }}>
         <CardPain pain={'А давайте ещё\nбольше рекламы?'} solution={'Давайте попробуем поработать\nс вашей базой, это в разы\nдешевле и им проще продать'} />
         <CardPain pain={'А куда делся\n{%Имя вашего тех.спеца%}?'} solution={'Мы каждый день на связи,\nвносим все правки оперативно'} />
         <CardPain
@@ -20,17 +20,17 @@ export const ThirdScreen = () => {
         />
       </ul>
 
-      <h1 className={'text-4xl lg:text-5xl xl:text-6xl pb-8 pt-32 uppercase ' + styles.subtitle}>и получите:</h1>
+      <h1 className={'text-4xl relative lg:text-5xl xl:text-6xl pb-8 pt-32 uppercase ' + styles.subtitle}>и получите:</h1>
 
-      <ul className={'flex gap-3 max-w-xl lg:max-w-full mx-auto flex-col lg:flex-row items-center lg:justify-around ' + styles.getBox}>
+      <ul className={'flex relative gap-3 max-w-xl lg:max-w-full mx-auto flex-col lg:flex-row items-center lg:justify-around ' + styles.getBox}>
         <CardGet icon={<GreenFilter />} title={'Воронку / бота'} text={'Которая приносит оплаты / заявки \nс минимальными затратами \nвашего времени'} />
         <CardGet icon={<ChillRock />} title={'Спокойствие'} text={'Заключаем договор и каждый\nдень оповещаем о продвижениях \nв вашем проекте'} />
         <CardGet icon={<GreenSettings />} title={'Воронку / бота'} text={'Которая приносит оплаты / заявки \nс минимальными затратами \nвашего времени'} />
       </ul>
 
-      <h1 className={'text-4xl lg:text-5xl xl:text-6xl pb-8 pt-32 ' + styles.subtitle}>итог:</h1>
+      <h1 className={'text-4xl relative lg:text-5xl xl:text-6xl pb-8 pt-32 ' + styles.subtitle}>итог:</h1>
 
-      <div className="flex">
+      <div className="flex relative">
         <aside className={styles.markerResult} />
         <div className={'text-xs lg:text-sm xl:text-base ' + styles.result}>
           Спокойный сон и уверенность, что конкурентов можно <br />
