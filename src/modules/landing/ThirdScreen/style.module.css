@@ -67,3 +67,16 @@
   display: block;
   margin-right: 30px;
 }
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.rotating-background {
+  animation: rotate 20s linear infinite;
+}

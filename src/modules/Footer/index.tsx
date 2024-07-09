@@ -9,8 +9,8 @@ export const Footer = () => {
   return (
     <footer className={styles.footer + ' justify-between w-100 flex p-10 lg:p-16 h-max flex-col lg:flex-row'}>
       <div className={styles.logoDiv + ' overflow-visible w-auto'}>
-        <Link href={'/'}>
-          <Image src="/logo.webp" alt="chat-boty" width={336} height={228} className={'w-32 lg:w-1/2'} />
+        <Link href={'/'} >
+          <Image src="/logo.webp" alt="chat-boty" width={336} height={228} className={'w-32 lg:w-1/2 lg:pl-10'} />
         </Link>
         <CallToActionButton className={'mt-8 ' + styles.cta}>Обсудить проект</CallToActionButton>
       </div>

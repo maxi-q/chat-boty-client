@@ -1,4 +1,5 @@
 'use client'
+
 import { AnimatePresence, motion } from 'framer-motion'
 import { create } from 'zustand'
 
@@ -9,6 +10,7 @@ import { useState } from 'react'
 import { CallToActionButton } from '../CallToAction'
 import PhoneInput from './InputMask'
 import styles from './style.module.css'
+
 enum contactType {
   Phone,
   Telegram,
@@ -126,7 +128,7 @@ export const PopUp = () => {
                   onChange={(e) => {
                     edit({ contact: e.target.value })
                   }}
-                  placeholder='Контакт для связи'
+                  placeholder="Контакт для связи"
                   className={'block w-full rounded-full text-base xl:text-lg py-3 px-4 sm:px-12 sm:py-6 my-6 ' + styles.feedbackInput}
                 />
               )}

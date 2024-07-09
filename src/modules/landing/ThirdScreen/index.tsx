@@ -7,7 +7,7 @@ import styles from './style.module.css'
 
 export const ThirdScreen = () => {
   return (
-    <main className={'section bg-[url("/aside_abstract.webp")] px-4 py-5 lg:px-[40px] lg:pt-[70px] pb-32 bg-no-repeat bg-[right_bottom_12%] lg:bg-right-bottom bg-contain bg-[length:80%_auto] lg:bg-[length:50%_auto]  ' + styles.screen}>
+    <main className={`section bg-[url("/aside_abstract.webp")] px-4 py-5 lg:px-[40px] lg:pt-[70px] pb-32 bg-no-repeat bg-[right_bottom_12%] lg:bg-right-bottom bg-contain bg-[length:80%_auto] lg:bg-[length:50%_auto] ${styles.screen}`}>
       <h1 className={'text-3xl sm:text-4xl lg:text-5xl xl:text-6xl pb-16 uppercase ' + styles.title}>
         С нами <br /> вы забудете о:
       </h1>
@@ -22,7 +22,7 @@ export const ThirdScreen = () => {
 
       <h1 className={'text-4xl lg:text-5xl xl:text-6xl pb-8 pt-32 uppercase ' + styles.subtitle}>и получите:</h1>
 
-      <ul className={'flex gap-3 max-w-xl lg:max-w-full mx-auto flex-col lg:flex-row items-center ' + styles.getBox}>
+      <ul className={'flex gap-3 max-w-xl lg:max-w-full mx-auto flex-col lg:flex-row items-center lg:justify-around ' + styles.getBox}>
         <CardGet icon={<GreenFilter />} title={'Воронку / бота'} text={'Которая приносит оплаты / заявки \nс минимальными затратами \nвашего времени'} />
         <CardGet icon={<ChillRock />} title={'Спокойствие'} text={'Заключаем договор и каждый\nдень оповещаем о продвижениях \nв вашем проекте'} />
         <CardGet icon={<GreenSettings />} title={'Воронку / бота'} text={'Которая приносит оплаты / заявки \nс минимальными затратами \nвашего времени'} />
@@ -68,7 +68,7 @@ const CardPain = ({ pain, solution }: { pain: string; solution: string }) => {
 
 const CardGet = ({ icon, title, text }: { icon: React.ReactNode; title: string; text: string }) => {
   return (
-    <li className={styles.getCard + ' py-3 sm:py-8 px-4 sm:px-10 lg:px-4 w-max xl:px-6 flex justify-center gap-3'} style={{ flex: 1 }}>
+    <li className={styles.getCard + ' py-3 sm:py-8 px-4 sm:px-10 lg:px-4 w-max xl:px-6 flex justify-center gap-3 lg:max-w-[430px]'} style={{ flex: 1 }}>
       <div className="flex items-center w-8 xl:w-20">{icon}</div>
       <div>
         <h3 className="text-white text-base sm:text-xl nowrap">{title}</h3>

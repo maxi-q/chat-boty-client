@@ -16,18 +16,10 @@ const nunitoFont = Manrope({
 export const FiveScreen = () => {
   const carousel1 = useRef<HTMLDivElement>(null)
 
-  const scrolling1 = (right: boolean) => {
-    carousel1.current?.scrollBy({ left: (carousel1.current.offsetWidth / 2) * (right ? 1 : -1), behavior: 'smooth' })
-  }
-  const [page1, setPage1] = useState(1)
-
-  const recalculate1 = () => {
-    setPage1(Math.round(Math.max(1, Math.min((carousel1.current?.scrollLeft || 0) / 340, 4))))
-  }
-
   return (
     <main className={'section bp-5 px-4 py-5 lg:px-[40px] lg:pt-[70px] pb-32 ' + styles.screen}>
       <h1 className={'text-4xl lg:text-5xl xl:text-6xl ' + styles.title}>отзывы:</h1>
+      {/* <iframe src="https://vk.com/video_ext.php?oid=-165380047&id=456239071&hd=2" width="853" height="480" allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;" frameBorder="0" allowFullScreen></iframe> */}
       <Carousel />
       <Carousel />
     </main>

@@ -30,7 +30,7 @@ export const SixScreen = () => {
           text={'Краткое описание о чем\nстатья, кому может быть\nполезна и так далее'}
           describe={'Время прочтения: 5 минут'}
         />
-        <br className={'hidden 2xl:block ' + styles.separator} />
+        {/* <br className={'hidden 2xl:block ' + styles.separator} /> */}
         <Card
           date={'04.05.2024'}
           title={'заголовок статьи\nв несколько строчек'}
