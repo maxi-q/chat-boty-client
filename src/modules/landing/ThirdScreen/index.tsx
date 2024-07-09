@@ -7,7 +7,7 @@ import styles from './style.module.css'
 
 export const ThirdScreen = () => {
   return (
-    <main className={`section bg-[url("/aside_abstract.webp")] px-4 py-5 lg:px-[40px] lg:pt-[70px] pb-32 bg-no-repeat bg-[right_bottom_12%] lg:bg-right-bottom bg-contain bg-[length:80%_auto] lg:bg-[length:50%_auto] ${styles.screen}`}>
+    <main className={`section bg-[url("/aside_abstract.webp")] px-4 py-5 lg:px-[40px] lg:pt-[70px] pb-32 bg-no-repeat bg-[right_bottom_12%] lg:bg-right-bottom bg-contain bg-[length:80%_auto] lg:bg-[length:50%_auto] ${styles['rotating-background'] } ${styles.screen}`}>
       <h1 className={'text-3xl sm:text-4xl lg:text-5xl xl:text-6xl pb-16 uppercase ' + styles.title}>
         С нами <br /> вы забудете о:
       </h1>
