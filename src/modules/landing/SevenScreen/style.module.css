@@ -4,6 +4,10 @@
   position: relative;
 }
 
+.title {
+  font-family: 'Igra Sans', sans-serif;
+}
+
 .titleSpan {
   color: var(--color-accent);
 }

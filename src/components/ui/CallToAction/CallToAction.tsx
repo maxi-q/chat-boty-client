@@ -28,7 +28,7 @@ export const CallToActionButton = ({
 					<Arrow className={styles.arrowCircle + ' h-8 w-8 top-[17px] right-[15px] lg:h-[30px] lg:w-[30px] lg:top-[25px] lg:right-[25px] ' + arrowClassName}/>
 				</div>
 			</div>
-      <p className={styles.text + ' left-[25px] md:left-[53px] top-[21px] lg:top-[23px] ' + textClassName}>{children}</p>
+      <p className={styles.text + ' left-[25px] md:left-[49px] top-[21px] lg:top-[23px] ' + textClassName}>{children}</p>
 		</button>
 	)
 }

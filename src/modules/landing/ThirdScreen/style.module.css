@@ -4,10 +4,12 @@
 }
 
 .title {
+  font-family: 'Igra Sans', sans-serif; 
   color: var(--color-accent);
 }
 
 .subtitle {
+  font-family: 'Igra Sans', sans-serif; 
   color: var(--color-main);
 }
 

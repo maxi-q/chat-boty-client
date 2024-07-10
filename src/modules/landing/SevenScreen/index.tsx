@@ -9,14 +9,14 @@ export const SevenScreen = () => {
   return (
     <main className={'section p-1 pt-2 lg:p-5 lg:pl-[50px] lg:pt-[70px] flex gap-16 xl:gap-10  ' + styles.screen}>
       <div className="lg:block flex flex-col items-center" style={{ flex: 1 }}>
-        <h1 className="text-xl xs:text-2xl md:text-3xl lg:text-4xl xl:text-5xl uppercase xs:w-max">
+        <h1 className={styles.title + " text-xl xs:text-2xl md:text-3xl lg:text-4xl xl:text-[2.75rem] uppercase xs:w-max"}>
           <span className={styles.titleSpan}>остались вопросы? </span> <br />
-          Не знаете нужен ли вам <br className="hidden xs:flex" />
+          Не зHаете нужен ли вам <br className="hidden xs:flex" />
           чат-бот/автоворонка?
         </h1>
         <h3 className="font-bold text-xs sm:text-base lg:text-lg uppercase pt-6 pb-10 tracking-wider xs:w-max">
-          Оставьте заявку на бесплатную консультацию, <br className="hidden xs:block" />
-          расскажите про свой проект и за 30 минут <br className="hidden xs:block" />
+          Оставьте заявку на бесплатную консультацию, <br className="hidden sm:inline" />
+          расскажите про свой проект и за 30 минут <br className="hidden sm:block" />
           определимся нужно ли вам это или нет
         </h3>
         <div className={'rounded-xl p-6 xl:p-14 xs:w-max ' + styles.feedback}>

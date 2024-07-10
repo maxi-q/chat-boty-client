@@ -6,6 +6,7 @@
 
 .title {
   color: var(--color-main);
+  font-family: 'Igra Sans', sans-serif;
 }
 
 .card {

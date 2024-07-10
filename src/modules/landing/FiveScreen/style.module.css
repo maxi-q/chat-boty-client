@@ -20,6 +20,7 @@
 
 .cardTitle {
   color: var(--color-additional);
+  font-family: 'Igra Sans', sans-serif;
 }
 
 .cardName {

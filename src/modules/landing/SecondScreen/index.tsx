@@ -13,7 +13,7 @@ const nunitoFont = Nunito({
 export const SecondScreen = () => {
   return (
     <main className={'section p-5 lg:pl-[40px] lg:pt-[70px] ' + styles.screen}>
-      <h1 className="text-3xl md:text-4xl lg:text-5xl uppercase">
+      <h1 className={styles.mainTitle + " text-3xl md:text-4xl lg:text-5xl uppercase"}>
         <span className={styles.titleSpan}>решения,</span> которые
         <br /> мы предлагаем:
       </h1>

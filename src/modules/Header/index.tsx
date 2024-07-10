@@ -17,7 +17,7 @@ export const Header = () => {
         <LiComponent active={false}>Контакты</LiComponent>
       </nav>
       <aside className={styles.contacts + ' flex-1 overflow-visible hidden justify-end items-center w-full lg:flex lg:w-auto lg:order-1'} style={{ minWidth: '370px' }}>
-        <a href={TelephoneLink} className={styles.telephone}>
+        <a href={TelephoneLink} className={styles.telephone + ' text-sm tracking-widest'}>
           8 904 424 05 10
         </a>
         <a target="_blank" href={WhatsAppLink}>
@@ -43,7 +43,7 @@ const LiComponent = ({
 }>) => {
   return (
     <Link href={''} className={styles.link + ' flex h-full items-center'}>
-      <p className={'flex items-center'}>{children}</p>
+      <p className={'flex items-center text-xs uppercase tracking-widest'}>{children}</p>
       <div className={styles.linkBar} />
     </Link>
   )

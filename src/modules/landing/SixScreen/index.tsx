@@ -4,7 +4,7 @@ import styles from './style.module.css'
 export const SixScreen = () => {
   return (
     <main className={'section bp-5 px-4 py-5 lg:px-[40px] lg:pt-8 pb-8  ' + styles.screen}>
-      <h1 className={'text-4xl lg:text-5xl xl:text-6xl pb-8 select-none uppercase ' + styles.title}>блог&ensp;|&ensp;статьи</h1>
+      <h1 className={'text-4xl lg:text-5xl xl:text-6xl pb-8 select-none uppercase tracking-wide ' + styles.title}>блог&ensp;|&ensp;статьи</h1>
       <div className={'flex flex-wrap gap-4 justify-center'}>
         <Card
           date={'04.05.2024'}

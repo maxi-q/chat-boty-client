@@ -29,7 +29,7 @@ export const FiveScreen = () => {
 const TextCard = ({ title, text, company, name, avatar = '123' }: { title: string; text: string; company: string; name: string; avatar: string }) => {
   return (
     <div className={styles.card + ' max-w-[340px] w-max p-8 sm:p-12 pt-14 pb-8 rounded-3xl'}>
-      <h3 className={'text-xl leading-6 font-semibold uppercase mb-10 ' + styles.cardTitle}>{title}</h3>
+      <h3 className={'text-xl leading-6 font-semibold uppercase mb-10 tracking-wide ' + styles.cardTitle}>{title}</h3>
       <p className={'lg:leading-[18.6px] text-sm lg:text-[15px] ' + styles.cardText} style={{ whiteSpace: 'pre-wrap', letterSpacing: '4%' }}>
         {text}
       </p>

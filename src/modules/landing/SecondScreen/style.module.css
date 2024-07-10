@@ -6,6 +6,10 @@
   position: relative;
 }
 
+.mainTitle {
+  font-family: 'Igra Sans', sans-serif; 
+}
+
 .titleSpan {
   color: var(--color-accent);
 } 

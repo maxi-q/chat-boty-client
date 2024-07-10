@@ -6,7 +6,7 @@ import styles from './style.module.css'
 export const FourScreen = () => {
   return (
     <main className={'section px-4 py-5 lg:px-[40px] lg:pt-[70px] pb-32 ' + styles.screen}>
-      <h1 className={'text-4xl lg:text-5xl xl:text-6xl pb-16 uppercase ' + styles.title}>кейсы:</h1>
+      <h1 className={'text-4xl lg:text-5xl xl:text-6xl pb-16 uppercase tracking-wide ' + styles.title}>кейсы:</h1>
 
       <div className="flex flex-wrap  gap-7">
         <Case title={'Новая школа'} text={'Автоматизируем CRM систему BlueSales для ЕГЭ школы'} link={''} />

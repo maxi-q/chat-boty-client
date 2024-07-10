@@ -11,6 +11,10 @@
   color: #0B0A0A;
 }
 
+.navTitle {
+  font-family: 'Igra Sans', sans-serif;
+}
+
 .contactLink:hover {
   transition: all .3s ease-out;
   fill: var(--color-accent-2);
