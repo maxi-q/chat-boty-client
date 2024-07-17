@@ -50,10 +50,18 @@
 	transform: rotate(90deg);
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1440px) {
 	.button:hover .action .arrowCircle,
 	.button:target .action .arrowCircle {
 		right: 20px;
 		top: 20px;
+	}
+}
+
+@media (min-width: 1920px) {
+	.button:hover .action .arrowCircle,
+	.button:target .action .arrowCircle {
+		right: 30px;
+		top: 30px;
 	}
 }

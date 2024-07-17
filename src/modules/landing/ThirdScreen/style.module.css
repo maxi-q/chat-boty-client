@@ -29,7 +29,6 @@
 .painCircle {
   background: #61616133;
   border: 1px solid #6f6f6f;
-  padding: 15px;
 }
 
 .solution {
@@ -44,7 +43,6 @@
 .solutionCircle {
   background: #ffffff;
   border: 1px solid #ffffff;
-  padding: 20px;
 }
 
 .getCard {
@@ -65,7 +63,7 @@
 .markerResult {
   content: '';
   background-color: var(--color-accent-2);
-  width: 10px;
+  width: 4px;
   display: block;
   margin-right: 30px;
 }

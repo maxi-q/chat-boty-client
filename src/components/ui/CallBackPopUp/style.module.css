@@ -35,7 +35,6 @@
   transition: all 0.3s ease;
   pointer-events: none;
   opacity: 0;
-  z-index: 7;
 }
 
 .section.active {

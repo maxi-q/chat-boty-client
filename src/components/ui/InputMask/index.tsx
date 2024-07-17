@@ -47,7 +47,7 @@ const PhoneInput = ({onChange, className}:{onChange: (value: string) => void, cl
   }, []);
 
   return (
-    <input type="text" className={className}  ref={inputRef} placeholder="+7 (___) ___-__-__" />
+    <input type="text" className={className} ref={inputRef} placeholder="+7 (___) ___-__-__" />
   );
 };
 

@@ -2,8 +2,8 @@ import * as React from "react"
 const ChillRock = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width={60}
-    height={60}
+    width={42}
+    height={42}
     fill="none"
     viewBox="0 0 50 50"
     {...props}

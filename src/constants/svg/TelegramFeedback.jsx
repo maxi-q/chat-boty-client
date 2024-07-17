@@ -2,8 +2,8 @@ import * as React from "react"
 const TelegramFeedback = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width={36}
-    height={36}
+    width={28}
+    height={28}
     fill="#000"
     viewBox='0 -5 45 45'
     {...props}

@@ -2,6 +2,7 @@
   border-radius: 35px;
   overflow: hidden;
   position: relative;
+  background-color: #fff;
 }
 
 .title {
@@ -26,7 +27,7 @@
   color: var(--color-additional);
   border: 1px solid #7001fe80;
   flex: 1;
-  transition: all .3s ease-out;
+  transition: all 0.3s ease-out;
 }
 
 .feedbackInput::placeholder {
@@ -50,19 +51,21 @@
   transition: all 0.3s ease-out;
 }
 
-.massagerLink:hover {
+.massagerLink:hover,
+.massagerLink.active {
   background-color: var(--color-accent);
   color: var(--color-main);
 }
 
-.massagerLink:hover svg {
+.massagerLink:hover svg,
+.massagerLink.active svg {
   fill: var(--color-main);
 }
 
 .cta {
   background-color: var(--color-accent-2);
   color: var(--color-additional);
-  transition: all .3s ease-out;
+  transition: all 0.3s ease-out;
 }
 
 .cta:hover {
@@ -78,8 +81,8 @@
 }
 
 .tablet {
-  background: #2C2C2C80;
-  box-shadow: 0px 0px 36.5px -12px #FFFFFF40 inset;
+  background: #2c2c2c80;
+  box-shadow: 0px 0px 36.5px -12px #ffffff40 inset;
   border-radius: 82px;
   padding: 15px 87px 15px 15px;
   color: var(--color-additional-2);
@@ -93,12 +96,12 @@
 
 .tabletCircle {
   padding: 15px;
-  background: #8FFE01;
-  border: 1px solid #61616133
+  background: #8ffe01;
+  border: 1px solid #61616133;
 }
 
 .tabletBox {
-  transition: left .5s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: left 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   left: 500px;
   opacity: 0;
 }
@@ -106,4 +109,56 @@
 .tabletBox.active {
   opacity: 1;
   left: 0;
+}
+
+.section {
+  top: 0;
+  left: 0;
+  transition: all 0.3s ease;
+  pointer-events: none;
+  opacity: 0;
+  z-index: 9;
+}
+
+.section.active {
+  opacity: 1;
+}
+
+.overlay {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  opacity: 1;
+  pointer-events: none;
+}
+
+.modal {
+  background-color: #1c1c1c;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.2);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  z-index: 9;
+  overflow: hidden;
+
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s linear;
+
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal.active {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+  pointer-events: all;
+}
+
+.gratitudeTitle {
+  color: var(--color-accent);
+}
+
+.gratitudeSubtitle {
+  color: #fff;
 }

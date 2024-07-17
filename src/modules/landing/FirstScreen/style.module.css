@@ -24,7 +24,7 @@
   font-family: 'Igra Sans', sans-serif; 
   text-transform: uppercase;
   margin-bottom: 30px;
-  letter-spacing: 0.5rem;
+  /* letter-spacing: 0.5rem; */
   /* z-index: 9; */
 
   /* position: fixed; */
@@ -33,7 +33,6 @@
 .adv {
   gap: 36px;
   margin-top: 60px;
-  max-width: 1050px;
 }
 
 .box {
@@ -53,9 +52,8 @@
 
 .titleNumber {
   position: absolute;
-  height: 360px;
-  line-height: 360px;
-  letter-spacing: 4%;
+  /* height: 360px; */
+  /* line-height: 360px; */
   font-weight: 800;
 }
 
@@ -67,7 +65,6 @@
 }
 
 .p {
-  letter-spacing: 0.04em;
   color: var(--color-additional-3);
   padding: 10px 0 10px 0;
   white-space: nowrap;

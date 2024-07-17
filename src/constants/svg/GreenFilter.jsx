@@ -2,8 +2,8 @@ import * as React from "react"
 const GreenFilter = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width={55}
-    height={55}
+    width={38}
+    height={38}
     fill="none"
     viewBox="0 0 40 40"
     {...props}

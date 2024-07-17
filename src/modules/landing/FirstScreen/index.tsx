@@ -11,9 +11,11 @@ const nunitoFont = Nunito({
 
 export const FirstScreen = () => {
   return (
-    <main className={'section bg-[url("/main_abstract_figure.webp")] p-5 lg:pl-[40px] lg:pt-[70px] bg-no-repeat bg-center lg:bg-right-bottom bg-contain ' + styles.screen}>
+    <main
+      className={`section bg-[url("/main_abstract_figure.webp")] p-5 laptop:pl-[40px] laptop:pt-[70px] bg-no-repeat bg-center desktop:h-[1000px] laptop:bg-right-bottom bg-contain ${styles.screen}`}
+    >
       <section className="">
-        <h1 className={styles.title + ' leading-tight bold text-2xl md:text-4xl lg:text-5xl ' }>
+        <h1 className={`${styles.title} bold text-2xl laptop:text-7xl `}>
           Техническое
           <br /> сопровождение
           <br /> Онлайн-школы
@@ -21,16 +23,16 @@ export const FirstScreen = () => {
         </h1>
         <CallToActionButton>Обсудить проект</CallToActionButton>
       </section>
-      <ul className={styles.adv + ' flex flex-col lg:flex-row'}>
+      <ul className={styles.adv + ' max-w-[1300px] flex flex-col laptop:flex-row'}>
         <Box
           num={1}
           title="Оперативность"
           p={
             <>
-              Находимся каждый день
-              <br /> на связи и в готовности
-              <br /> помогать по разным
-              <br /> вопросам
+              Находимся каждый день <br />
+              на связи и в <br />
+              готовности помогать <br />
+              по разным вопросам
             </>
           }
           style={{ backgroundColor: '#C5C5C533' }}
@@ -68,10 +70,14 @@ export const FirstScreen = () => {
 
 const Box = ({ num, title, p, style }: { num: number; title: string; p: React.JSX.Element; style?: CSSProperties }) => {
   return (
-    <li className={styles.box + ' h-auto lg:h-[225px] w-full pl-16 lg:pl-20 xl:pl-[120px]'} style={style}>
-      <h2 className={styles.titleNumber + ' top-[-119px] left-[-10px] text-[100px] lg:top-[-59px] lg:left-[-46px] xl:left-[-56px] lg:text-[200px] xl:text-[260px]'}>{num}</h2>
-      <h1 className={styles.h2 + ' pt-[20px] lg:pt-[80px] text-lg xl:text-xl'}>{title}</h1>
-      <p className={styles.p + ' text-xs lg:text-sm xl:text-base  leading-none lg:leading-tight'}>{p}</p>
+    <li className={`${styles.box} h-auto laptop:h-[225px] desktop:h-[305px] w-full pl-16 laptop:pl-20 desktop:pl-[120px]`} style={style}>
+      <h2
+        className={`${styles.titleNumber} top-[-119px] left-[-10px] text-[100px] laptop:top-[-59px] laptop:left-[-46px] desktop:left-[-56px] text-middle laptop:text-[200px] desktop:text-[260px]`}
+      >
+        {num}
+      </h2>
+      <h1 className={styles.h2 + ' pt-[20px] laptop:pt-[120px] text-lg desktop:text-xl'}>{title}</h1>
+      <p className={`${styles.p} text-xs laptop:text-sm desktop:text-lg laptop:leading-none leading-none desktop:leading-tight`}>{p}</p>
     </li>
   )
 }

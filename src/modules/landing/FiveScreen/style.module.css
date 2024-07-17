@@ -10,8 +10,6 @@
 
 .card {
   background-color: var(--color-additional-2);
-  width: 340px;
-  height: 100%;
 }
 
 .cardText {

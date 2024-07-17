@@ -3,9 +3,9 @@ import * as React from "react"
 function Vk(props) {
   return (
     <svg
-      width={50}
+      width={60}
       height={50}
-      viewBox="0 0 50 50"
+      viewBox="0 0 40 40"
       fill="#F2F2F2"
       xmlns="http://www.w3.org/2000/svg"
       {...props}
