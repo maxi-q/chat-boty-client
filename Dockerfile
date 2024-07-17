@@ -10,9 +10,10 @@ COPY package.json ./
 COPY package-lock.json ./
 
 RUN npm install
+RUN npm run build
 
 COPY . .
 
 # EXPOSE $FRONTEND_B2C_PORT
 
-CMD ["sh", "-c", "npm run dev"]
+CMD ["sh", "-c", "npm run start"]
