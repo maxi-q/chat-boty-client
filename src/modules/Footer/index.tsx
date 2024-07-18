@@ -5,8 +5,8 @@ import { TelephoneLink, TGLink, VKLink, WhatsAppLink } from '../../constants/sta
 import { Telegram, Vk, WhatsApp } from '../../constants/svg/'
 import styles from './style.module.css'
 
-const liClass = 'opacity-75 desktop:text-2xl font-medium desktop:leading-relaxed'
-const titleClass = 'text-2xl pt-3 pb-8 uppercase tracking-widest'
+const liClass = 'opacity-80 desktop:text-xl font-medium desktop:leading-loose'
+const titleClass = 'text-2xl pt-3 pb-6 uppercase tracking-widest'
 
 export const Footer = () => {
   return (

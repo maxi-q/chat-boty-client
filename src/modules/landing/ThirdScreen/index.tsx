@@ -53,9 +53,9 @@ const CardPain = ({ pain, solution }: { pain: string; solution: string }) => {
 
 const Tablet = ({ icon, text, className, classCircle }: { icon: React.ReactNode; text: string; className: string; classCircle: string }) => {
   return (
-    <div className={`${className} h-[138px] py-2 px-2 desktop:p-4 gap-3 desktop:gap-10 bg-gray-900 text-12 w-full flex items-center`} style={{ marginTop: '-3%' }}>
+    <div className={`${className} h-[138px] py-2 px-2 desktop:p-4 gap-3 desktop:gap-10 bg-gray-900 w-full flex items-center`} style={{ marginTop: '-3%' }}>
       <div className={`${classCircle} rounded-full p-[15px] desktop:p-[38px]`}>{icon}</div>
-      <p className="sm:leading-5 text-[10px] sm:text-xs desktop:text-2xl font-medium desktop:leading-7">{text}</p>
+      <p className="sm:leading-5 text-[10px] sm:text-xs desktop:text-[20px] font-medium desktop:leading-[30px]">{text}</p>
     </div>
   )
 }
