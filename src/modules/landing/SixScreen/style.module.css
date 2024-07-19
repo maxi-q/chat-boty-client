@@ -12,9 +12,6 @@
 .card {
   background-color: var(--color-additional-4);
   color: var(--color-main);
-  width: 300px;
-  height: 340px;
-  flex-direction: column;
 
   cursor: pointer;
 }
@@ -62,7 +59,6 @@
 
 .textTitle {
   white-space: pre-line;
-  font-weight: 600;
   letter-spacing: 2px;
 }
 

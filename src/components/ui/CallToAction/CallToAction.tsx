@@ -27,18 +27,18 @@ export const CallToActionButton = ({
     <button
       type={type}
       onClick={onClick ? onClick : openPopup}
-      className={`h-16 laptop:h-[80px] desktop:h-[100px] max-w-[320px] desktop:max-w-[400px] text-8 laptop:text-[20px] ${styles.button} ${className}`}
+      className={`h-16 tablet:h-[100px] max-w-[320px] tablet:max-w-[400px] text-8 ${styles.button} ${className}`}
     >
-      <div style={{ pointerEvents: 'none' }} className={`${styles.action} h-16 w-16 laptop:h-[80px] desktop:h-[100px] desktop:w-[100px] laptop:w-[80px] ${actionClassName}`}>
+      <div style={{ pointerEvents: 'none' }} className={`${styles.action} h-16 w-16 tablet:h-[100px] tablet:w-[100px] ${actionClassName}`}>
         <div>
           <Arrow
-            className={`${styles.arrowCircle} h-8 w-8 top-[17px] right-[15px] laptop:h-[30px] desktop:h-[38px] laptop:w-[30px] desktop:w-[38px] laptop:top-[25px] desktop:top-[31px] laptop:right-[25px] desktop:right-[31px] ${arrowClassName}`}
+            className={`${styles.arrowCircle} h-8 w-8 top-[17px] right-[15px] tablet:h-[38px] tablet:w-[38px] tablet:top-[31px] tablet:right-[31px] ${arrowClassName}`}
           />
         </div>
       </div>
       <p
         style={{ pointerEvents: 'none' }}
-        className={`${styles.text} left-[25px] laptop:left-[49px] top-[21px] laptop:top-[23px] desktop:top-[32px] desktop:text-2xl ${textClassName}`}
+        className={`${styles.text} left-[35px] top-[21px] tablet:top-[32px] tablet:text-2xl ${textClassName}`}
       >
         {children}
       </p>

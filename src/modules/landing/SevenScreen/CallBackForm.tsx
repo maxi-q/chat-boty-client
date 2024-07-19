@@ -18,7 +18,7 @@ export const CallBackForm = () => {
 
   return (
     <>
-      <div className="flex flex-col desktop:flex-row gap-6">
+      <div className="flex flex-col laptop:flex-row gap-6">
         <Link type={contactType.Phone} edit={edit} content={content}>
           <Telephone /> Позвонить
         </Link>
@@ -28,7 +28,7 @@ export const CallBackForm = () => {
       </div>
       {content.contactType === contactType.Telegram && (
         <input
-          className={`block w-full rounded-full text-base desktop:text-lg py-3 px-4 desktop:px-12 desktop:py-6 my-6 ${styles.feedbackInput}`}
+          className={`block w-full rounded-full text-base laptop:text-lg py-3 px-4 laptop:px-12 laptop:py-6 my-6 ${styles.feedbackInput}`}
           placeholder="ОСТАВЬТЕ КОНТАКТ"
           onChange={(e) => {
             edit({ contact: e.target.value })
@@ -37,13 +37,13 @@ export const CallBackForm = () => {
       )}
       {content.contactType === contactType.Phone && (
         <PhoneInput
-          className={`block w-full rounded-full text-base desktop:text-lg py-3 px-4 desktop:px-12 desktop:py-6 my-6 ${styles.feedbackInput}`}
+          className={`block w-full rounded-full text-base laptop:text-lg py-3 px-4 laptop:px-12 laptop:py-6 my-6 ${styles.feedbackInput}`}
           onChange={(value) => {
             edit({ contact: value })
           }}
         />
       )}
-      <button className={`uppercase px-8 py-4 desktop:px-12 desktop:py-6 text-base desktop:text-lg font-medium rounded-full ${styles.cta}`} onClick={openPopup}>
+      <button className={`uppercase px-8 py-4 laptop:px-12 laptop:py-6 text-base laptop:text-lg font-medium rounded-full ${styles.cta}`} onClick={openPopup}>
         получить консультацию
       </button>
       <Modal isOpen={show} closePopup={closePopup} />
@@ -55,7 +55,7 @@ const Link = ({ type, edit, children, content }: { type: contactType; edit: (val
   return (
     <a
       className={
-        `rounded-full py-2 px-4 desktop:px-12 desktop:py-6 desktop:px-12 flex items-center text-base desktop:text-lg uppercase font-medium laptop:gap-3 tracking-wide ` +
+        `rounded-full py-2 px-4 laptop:px-12 laptop:py-6 laptop:px-12 flex items-center text-base laptop:text-lg uppercase font-medium laptop:gap-3 tracking-wide ` +
         `${styles.massagerLink} ${content.contactType === type ? styles.active : ''}`
       }
       onClick={() => {

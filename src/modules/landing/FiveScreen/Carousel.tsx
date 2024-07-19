@@ -214,7 +214,7 @@ const TextCard = ({ title, text, company, name, avatar = '123' }: { title: strin
 
 const Card = ({ children, onClick }: { children: React.ReactNode; onClick?: () => void }) => {
   return (
-    <div onClick={onClick} className={`${styles.card} desktop:w-[409px] desktop:h-[574px] p-8 sm:p-12 pt-14 pb-8 rounded-3xl`}>
+    <div onClick={onClick} className={`${styles.card} laptop:w-[409px] laptop:h-[574px] desktop:w-[409px] desktop:h-[574px] p-8 sm:p-12 pt-14 pb-8 rounded-3xl`}>
       {children}
     </div>
   )

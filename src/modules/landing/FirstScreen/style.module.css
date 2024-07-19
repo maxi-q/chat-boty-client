@@ -1,6 +1,5 @@
 .screen {
   background-color: var(--color-white);
-  /* height: 900px; */
   border-radius: 35px;
   overflow: hidden;
   position: relative;
@@ -18,16 +17,9 @@
 }
 
 .title {
-  /* font-size: 46px; */
-  /* font-weight: 500; */
-  /* line-height: 47px; */
   font-family: 'Igra Sans', sans-serif; 
   text-transform: uppercase;
   margin-bottom: 30px;
-  /* letter-spacing: 0.5rem; */
-  /* z-index: 9; */
-
-  /* position: fixed; */
 }
 
 .adv {
@@ -52,8 +44,6 @@
 
 .titleNumber {
   position: absolute;
-  /* height: 360px; */
-  /* line-height: 360px; */
   font-weight: 800;
 }
 

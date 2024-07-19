@@ -2,25 +2,20 @@ import * as React from "react"
 const Clock = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width={40}
-    height={40}
-    viewBox='0 -10 50 50'
-    
+    width={24}
+    height={24}
     fill="none"
     {...props}
-    stroke="#8FFE01"
   >
     <path
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth={2}
-      d="M15 27.5c6.904 0 12.5-5.596 12.5-12.5S21.904 2.5 15 2.5 2.5 8.096 2.5 15 8.096 27.5 15 27.5Z"
+      fill="#fff"
+      d="M22 12c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2s10 4.477 10 10Z"
     />
     <path
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth={2}
-      d="M15 7.5V15l5 2.5"
+      fill="#0B0A0A"
+      fillRule="evenodd"
+      d="M12 7.25a.75.75 0 0 1 .75.75v3.69l2.28 2.28a.75.75 0 1 1-1.06 1.06l-2.5-2.5a.75.75 0 0 1-.22-.53V8a.75.75 0 0 1 .75-.75Z"
+      clipRule="evenodd"
     />
   </svg>
 )

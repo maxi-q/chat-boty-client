@@ -9,50 +9,49 @@ export const SixScreen = () => {
         <Card
           date={'04.05.2024'}
           title={'заголовок статьи\nв несколько строчек'}
-          text={'Краткое описание о чем\nстатья, кому может быть\nполезна и так далее'}
+          text={'Краткое описание о чем статья, кому может быть полезна и так далее'}
           describe={'Время прочтения: 5 минут'}
         />
         <Card
           date={'04.05.2024'}
           title={'заголовок статьи\nв несколько строчек'}
-          text={'Краткое описание о чем\nстатья, кому может быть\nполезна и так далее'}
+          text={'Краткое описание о чем статья, кому может быть полезна и так далее'}
           describe={'Время прочтения: 5 минут'}
         />
         <Card
           date={'04.05.2024'}
           title={'заголовок статьи\nв несколько строчек'}
-          text={'Краткое описание о чем\nстатья, кому может быть\nполезна и так далее'}
+          text={'Краткое описание о чем статья, кому может быть полезна и так далее'}
           describe={'Время прочтения: 5 минут'}
         />
         <Card
           date={'04.05.2024'}
           title={'заголовок статьи\nв несколько строчек'}
-          text={'Краткое описание о чем\nстатья, кому может быть\nполезна и так далее'}
-          describe={'Время прочтения: 5 минут'}
-        />
-        {/* <br className={'hidden 2desktop:block ' + styles.separator} /> */}
-        <Card
-          date={'04.05.2024'}
-          title={'заголовок статьи\nв несколько строчек'}
-          text={'Краткое описание о чем\nстатья, кому может быть\nполезна и так далее'}
+          text={'Краткое описание о чем статья, кому может быть полезна и так далее'}
           describe={'Время прочтения: 5 минут'}
         />
         <Card
           date={'04.05.2024'}
           title={'заголовок статьи\nв несколько строчек'}
-          text={'Краткое описание о чем\nстатья, кому может быть\nполезна и так далее'}
+          text={'Краткое описание о чем статья, кому может быть полезна и так далее'}
           describe={'Время прочтения: 5 минут'}
         />
         <Card
           date={'04.05.2024'}
           title={'заголовок статьи\nв несколько строчек'}
-          text={'Краткое описание о чем\nстатья, кому может быть\nполезна и так далее'}
+          text={'Краткое описание о чем статья, кому может быть полезна и так далее'}
           describe={'Время прочтения: 5 минут'}
         />
         <Card
           date={'04.05.2024'}
           title={'заголовок статьи\nв несколько строчек'}
-          text={'Краткое описание о чем\nстатья, кому может быть\nполезна и так далее'}
+          text={'Краткое описание о чем статья, кому может быть полезна и так далее'}
+          describe={'Время прочтения: 5 минут'}
+        />
+        <Card
+          date={'04.05.2024'}
+          title={'заголовок статьи\nв несколько строчек'}
+          text={'Краткое описание о чем статья, кому может быть полезна и так далее'}
           describe={'Время прочтения: 5 минут'}
         />
       </div>
@@ -62,18 +61,18 @@ export const SixScreen = () => {
 
 const Card = ({ date, title, text, describe }: { date: string; title: string; text: string; describe: string }) => {
   return (
-    <div className={'rounded-xl p-6 laptop:p-8 flex ' + styles.card}>
+    <div className={`rounded-xl p-6 laptop:p-8 w-[300px] h-[340px] desktop:w-[408px] desktop:h-[500px] flex flex-col ${styles.card}`}>
       <h5 className="text-xs select-none">{date}</h5>
       <Splitter />
-      <h3 className={'mb-4 text-md leading-snug uppercase ' + styles.textTitle}>{title}</h3>
-      <h4 className={'text-sm ' + styles.text}>{text}</h4>
+      <h3 className={`mb-4 text-md desktop:text-2xl leading-snug uppercase font-medium ${styles.textTitle}`}>{title}</h3>
+      <h4 className={`text-sm desktop:text-lg ${styles.text}`}>{text}</h4>
       <Splitter />
       <div className="flex items-center">
         <Clock />
-        <h4 className="text-xs select-none">{describe}</h4>
+        <h4 className="text-xs ml-2 desktop:text-base select-none">{describe}</h4>
       </div>
     </div>
   )
 }
 
-const Splitter = () => <div className={styles.splitter + ' my-5 spltr'} />
+const Splitter = () => <div className={`${styles.splitter} my-5 spltr`} />

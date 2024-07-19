@@ -24,17 +24,17 @@ export const ThirdScreen = () => {
 
       <h1 className={'text-4xl relative laptop:text-5xl desktop:text-6xl pb-8 pt-32 uppercase tracking-wide ' + styles.subtitle}>и получите:</h1>
 
-      <ul className={`flex relative gap-3 max-w-xl laptop:max-w-full mx-auto flex-col laptop:flex-row items-center laptop:justify-around desktop:h-[318px] ${styles.getBox}`}>
-        <CardGet icon={<GreenFilter />} title={'Воронку / бота'} text={'Которая приносит оплаты / заявки \nс минимальными затратами \nвашего времени'} />
-        <CardGet icon={<ChillRock />} title={'Спокойствие'} text={'Заключаем договор и каждый\nдень оповещаем о продвижениях \nв вашем проекте'} />
-        <CardGet icon={<GreenSettings />} title={'Воронку / бота'} text={'Которая приносит оплаты / заявки \nс минимальными затратами \nвашего времени'} />
+      <ul className={`flex relative gap-3 max-w-xl laptop:max-w-full mx-auto flex-col laptop:flex-row items-center laptop:justify-around h-max items-stretch ${styles.getBox}`}>
+        <CardGet icon={<GreenFilter />} title={'Воронку / бота'} text={'Которая приносит оплаты / заявки с минимальными затратами вашего времени'} />
+        <CardGet icon={<ChillRock />} title={'Спокойствие'} text={'Заключаем договор и каждый день оповещаем о продвижениях  в вашем проекте'} />
+        <CardGet icon={<GreenSettings />} title={'Большой функционал'} text={'Напишем свой скрипт, скопируем ЛЮБУЮ воронку, которая вам нравится и сделаем любые интеграции'} />
       </ul>
 
-      <h1 className={'text-4xl relative laptop:text-5xl desktop:text-6xl pb-8 pt-32 tracking-wide ' + styles.subtitle}>итог:</h1>
+      <h1 className={'text-4xl relative laptop:text-6xl pb-8 pt-32 tracking-wide ' + styles.subtitle}>итог:</h1>
 
       <div className="flex relative">
         <aside className={styles.markerResult} />
-        <div className={`text-xs laptop:text-sm desktop:text-2xl desktop:w-[630px] ${styles.result}`}>
+        <div className={`text-xs laptop:text-2xl laptop:w-[630px] ${styles.result}`}>
           Спокойный сон и уверенность, что конкурентов можно легко обойти, ведь подрядчики всё сделали оперативно, без ошибок и сделали много технических фишек
         </div>
       </div>
@@ -53,20 +53,20 @@ const CardPain = ({ pain, solution }: { pain: string; solution: string }) => {
 
 const Tablet = ({ icon, text, className, classCircle }: { icon: React.ReactNode; text: string; className: string; classCircle: string }) => {
   return (
-    <div className={`${className} h-[138px] py-2 px-2 desktop:p-4 gap-3 desktop:gap-10 bg-gray-900 w-full flex items-center`} style={{ marginTop: '-3%' }}>
-      <div className={`${classCircle} rounded-full p-[15px] desktop:p-[38px]`}>{icon}</div>
-      <p className="sm:leading-5 text-[10px] sm:text-xs desktop:text-[20px] font-medium desktop:leading-[30px]">{text}</p>
+    <div className={`${className} min-h-[138px] rounded-full py-2 px-2 laptop:p-4 gap-3 desktop:gap-10 bg-gray-900 w-full flex items-center`} style={{ marginTop: '-3%' }}>
+      <div className={`${classCircle} rounded-full p-[15px] laptop:p-[38px]`}>{icon}</div>
+      <p className="sm:leading-5 text-[10px] sm:text-xs laptop:text-[20px] font-medium laptop:leading-[30px] tracking-wide">{text}</p>
     </div>
   )
 }
 
 const CardGet = ({ icon, title, text }: { icon: React.ReactNode; title: string; text: string }) => {
   return (
-    <li className={`${styles.getCard} h-full py-3 sm:py-8 px-4 sm:px-10 laptop:px-4 w-max desktop:px-6 flex justify-center gap-3`} style={{ flex: 1 }}>
-      <div className="flex items-center w-8 desktop:w-20">{icon}</div>
+    <li className={`${styles.getCard} py-3 laptop:py-6 px-4 laptop:px-6 w-max flex justify-center gap-3`} style={{ flex: 1 }}>
+      <div className="flex items-center w-8 laptop:w-20 mr-[56px]">{icon}</div>
       <div className="flex flex-col justify-center">
-        <h3 className="text-white text-base desktop:text-3xl uppercase nowrap">{title}</h3>
-        <p className="text-white text-[10px] desktop:text-xl font-hairline desktop:leading-relaxed tracking-wider mt-1 desktop:mt-[20px]" style={{ whiteSpace: 'pre-wrap' }}>
+        <h3 className="text-white text-base laptop:text-2xl desktop:text-3xl uppercase nowrap">{title}</h3>
+        <p className="text-white text-[10px] laptop:text-lg desktop:text-xl font-hairline laptop:leading-relaxed tracking-wider mt-1 laptop:mt-[20px]" style={{ whiteSpace: 'pre-wrap' }}>
           {text}
         </p>
       </div>

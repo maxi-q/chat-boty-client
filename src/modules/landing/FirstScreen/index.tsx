@@ -12,9 +12,9 @@ const nunitoFont = Nunito({
 export const FirstScreen = () => {
   return (
     <main
-      className={`section bg-[url("/main_abstract_figure.webp")] p-5 laptop:pl-[40px] laptop:pt-[70px] bg-no-repeat bg-center desktop:h-[1000px] laptop:bg-right-bottom bg-contain ${styles.screen}`}
+      className={`section flex flex-col bg-[url("/main_abstract_figure.webp")] p-5 laptop:pl-[40px] laptop:pt-[70px] bg-no-repeat bg-center desktop:h-[1055px] laptop:h-[1011px] laptop:bg-right-bottom bg-contain ${styles.screen}`}
     >
-      <section className="">
+      <section className='flex-1'>
         <h1 className={`${styles.title} bold text-2xl laptop:text-7xl `}>
           Техническое
           <br /> сопровождение
@@ -23,7 +23,7 @@ export const FirstScreen = () => {
         </h1>
         <CallToActionButton>Обсудить проект</CallToActionButton>
       </section>
-      <ul className={styles.adv + ' max-w-[1300px] flex flex-col laptop:flex-row'}>
+      <ul className={styles.adv + ' laptop:max-w-[1300px] flex flex-col laptop:flex-row'}>
         <Box
           num={1}
           title="Оперативность"
@@ -70,14 +70,14 @@ export const FirstScreen = () => {
 
 const Box = ({ num, title, p, style }: { num: number; title: string; p: React.JSX.Element; style?: CSSProperties }) => {
   return (
-    <li className={`${styles.box} h-auto laptop:h-[225px] desktop:h-[305px] w-full pl-16 laptop:pl-20 desktop:pl-[120px]`} style={style}>
+    <li className={`${styles.box} h-auto laptop:h-[305px] w-full pl-16  laptop:pl-[120px]`} style={style}>
       <h2
-        className={`${styles.titleNumber} top-[-119px] left-[-10px] text-[100px] laptop:top-[-59px] laptop:left-[-46px] desktop:left-[-56px] text-middle laptop:text-[200px] desktop:text-[260px]`}
+        className={`${styles.titleNumber} top-[-119px] left-[-10px] text-[100px] laptop:top-[-59px] laptop:left-[-56px] text-middle laptop:text-[260px]`}
       >
         {num}
       </h2>
-      <h1 className={styles.h2 + ' pt-[20px] laptop:pt-[120px] text-lg desktop:text-xl'}>{title}</h1>
-      <p className={`${styles.p} text-xs laptop:text-sm desktop:text-lg laptop:leading-none leading-none desktop:leading-tight`}>{p}</p>
+      <h1 className={styles.h2 + ' pt-[20px] laptop:pt-[120px] text-lg laptop:text-xl'}>{title}</h1>
+      <p className={`${styles.p} text-xs laptop:text-lg leading-none laptop:leading-tight`}>{p}</p>
     </li>
   )
 }
