@@ -39,7 +39,7 @@ export const useCallBackStore = create<callBackState>((set) => ({
   content: {
     name: '',
     contact: '',
-    contactType: contactType.Telegram,
+    contactType: contactType.Phone,
   },
   edit: (value: callBackContent) => set((prev) => ({ content: { ...prev.content, ...value } })),
 }))
