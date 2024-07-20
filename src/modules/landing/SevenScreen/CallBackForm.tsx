@@ -9,6 +9,8 @@ import Telephone from '@/constants/svg/Telephone'
 import { useState } from 'react'
 import styles from './style.module.css'
 
+const inputClass = `block w-full rounded-full tablet:text-lg laptop:text-lg  tablet:px-12 tablet:py-6 laptop:px-12 laptop:py-6 my-6 ${styles.feedbackInput}`
+
 export const CallBackForm = () => {
   const { content, edit } = useCallBackStore()
   const [show, setShow] = useState(false)
@@ -18,7 +20,7 @@ export const CallBackForm = () => {
 
   return (
     <>
-      <div className="flex flex-col laptop:flex-row gap-6">
+      <div className="flex flex-row gap-6">
         <Link type={contactType.Phone} edit={edit} content={content}>
           <Telephone /> Позвонить
         </Link>
@@ -28,7 +30,7 @@ export const CallBackForm = () => {
       </div>
       {content.contactType === contactType.Telegram && (
         <input
-          className={`block w-full rounded-full text-base laptop:text-lg py-3 px-4 laptop:px-12 laptop:py-6 my-6 ${styles.feedbackInput}`}
+          className={`${inputClass}`}
           placeholder="ОСТАВЬТЕ КОНТАКТ"
           onChange={(e) => {
             edit({ contact: e.target.value })
@@ -37,13 +39,13 @@ export const CallBackForm = () => {
       )}
       {content.contactType === contactType.Phone && (
         <PhoneInput
-          className={`block w-full rounded-full text-base laptop:text-lg py-3 px-4 laptop:px-12 laptop:py-6 my-6 ${styles.feedbackInput}`}
+          className={`${inputClass}`}
           onChange={(value) => {
             edit({ contact: value })
           }}
         />
       )}
-      <button className={`uppercase px-8 py-4 laptop:px-12 laptop:py-6 text-base laptop:text-lg font-medium rounded-full ${styles.cta}`} onClick={openPopup}>
+      <button className={`uppercase tablet:px-12 tablet:py-6 tablet:text-lg laptop:px-12 laptop:py-6 laptop:text-lg font-medium rounded-full ${styles.cta}`} onClick={openPopup}>
         получить консультацию
       </button>
       <Modal isOpen={show} closePopup={closePopup} />
@@ -55,7 +57,7 @@ const Link = ({ type, edit, children, content }: { type: contactType; edit: (val
   return (
     <a
       className={
-        `rounded-full py-2 px-4 laptop:px-12 laptop:py-6 laptop:px-12 flex items-center text-base laptop:text-lg uppercase font-medium laptop:gap-3 tracking-wide ` +
+        `rounded-full tablet:px-12 tablet:py-6 tablet:px-12 laptop:px-12 laptop:py-6 laptop:px-12 flex items-center text-base tablet:text-lg laptop:text-lg uppercase font-medium tablet:gap-3 laptop:gap-3 tracking-wide ` +
         `${styles.massagerLink} ${content.contactType === type ? styles.active : ''}`
       }
       onClick={() => {

@@ -11,33 +11,35 @@ const titleClass = 'laptop:text-xl pt-3 pb-6 uppercase tracking-widest'
 export const Footer = () => {
   return (
     <footer className={`${styles.footer} justify-between w-100 flex py-16 desktop:pl-14 px-4 desktop:pe-[148px] gap-[36px] h-max flex-col tracking-wide laptop:flex-row`}>
-      <div className={`${styles.logoDiv} overflow-visible w-[409px] my-8`}>
+      <div className={`${styles.logoDiv} overflow-visible w-[409px] laptop:my-8`}>
         <Link href={'/'}>
           <Image src="/logo.webp" alt="chat-boty" width={336} height={228} className={'w-[168px] h-[114px]'} />
         </Link>
         <CallToActionButton className={`mt-8 ${styles.cta} w-full`}>Обсудить проект</CallToActionButton>
       </div>
-      <div className="flex-1">
-        <h3 className={`${styles.navTitle} ${titleClass}`}>Услуги</h3>
-        <ul className={liClass}>
-          <LiComponent active={false}>Автоматизация CRM</LiComponent>
-          <LiComponent active={false}>Создание чат-ботов и автоворонок</LiComponent>
-          <LiComponent active={false}>Настройки и оформление геткурс</LiComponent>
-          <LiComponent active={false}>Настройка вебинарных комнат</LiComponent>
-          <LiComponent active={false}>Рассылки crm</LiComponent>
-          <LiComponent active={false}>Email воронки</LiComponent>
-        </ul>
-      </div>
-      <div className="flex-1">
-        <h3 className={`${styles.navTitle} ${titleClass}`}>разделы</h3>
-        <ul className={liClass}>
-          <LiComponent active={false}>Главная</LiComponent>
-          <LiComponent active={false}>Услуги</LiComponent>
-          <LiComponent active={false}>Кейсы</LiComponent>
-          <LiComponent active={false}>Блог</LiComponent>
-          <LiComponent active={false}>Отзывы</LiComponent>
-          <LiComponent active={false}>Карта сайта</LiComponent>
-        </ul>
+      <div className='flex flex-1 tablet:flex-row gap-[36px]'>
+        <div className="">
+          <h3 className={`${styles.navTitle} ${titleClass}`}>Услуги</h3>
+          <ul className={liClass}>
+            <LiComponent active={false}>Автоматизация CRM</LiComponent>
+            <LiComponent active={false}>Создание чат-ботов и автоворонок</LiComponent>
+            <LiComponent active={false}>Настройки и оформление геткурс</LiComponent>
+            <LiComponent active={false}>Настройка вебинарных комнат</LiComponent>
+            <LiComponent active={false}>Рассылки crm</LiComponent>
+            <LiComponent active={false}>Email воронки</LiComponent>
+          </ul>
+        </div>
+        <div className="">
+          <h3 className={`${styles.navTitle} ${titleClass}`}>разделы</h3>
+          <ul className={liClass}>
+            <LiComponent active={false}>Главная</LiComponent>
+            <LiComponent active={false}>Услуги</LiComponent>
+            <LiComponent active={false}>Кейсы</LiComponent>
+            <LiComponent active={false}>Блог</LiComponent>
+            <LiComponent active={false}>Отзывы</LiComponent>
+            <LiComponent active={false}>Карта сайта</LiComponent>
+          </ul>
+        </div>
       </div>
       <div className="flex flex-col flex-1">
         <h3 className={`${styles.navTitle} ${titleClass}`}>связаться</h3>

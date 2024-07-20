@@ -25,7 +25,7 @@ const data = [
     src: 'https://www.youtube.com/embed/tILvQMkBqbw',
   },
   {
-    text: 'Неоднократно обращалась\nк Никите по технической части\nВк: сенлер, автопилот,\nигрофикация. Всегда очень\nдовольна результатом. Очень\nтерпеливо отвечает на кучу\nвопросов. Объясняет быстро,\nчётко и доходчиво. Когда нужно выполняет сам, так же быстро\nи с учётом всех моих пожеланий.\nВсегда на связи.',
+    text: 'Неоднократно обращалась\nк Никите по технической части\nВк: сенлер, автопилот,\nигрофикация. Всегда очень\nдовольна результатом. Очень\nтерпеливо отвечает на кучу\nвопросов. Объясняет быстро,\nчётко и доходчиво. Когда нужно выполняет сам, так же быстро\nи с учётом всех моих пожеланий.\nВсегда на связи. ',
     title: 'быстро, четко,\n доходчиво',
     company: 'додо пицца',
     name: 'Елена Попова',
@@ -193,9 +193,9 @@ const VideoCard = ({
 
 const TextCard = ({ title, text, company, name, avatar = '123' }: { title: string; text: string; company: string; name: string; avatar: string }) => {
   return (
-    <Card>
+    <Card className='tablet:h-max laptop:h-[574px]'>
       <h3 className={`text-2xl font-bold uppercase mb-10 tracking-wide ${styles.cardTitle}`}>{title}</h3>
-      <p className={`text-lg leading-6 font-medium ${styles.cardText}`} style={{ whiteSpace: 'pre-wrap', letterSpacing: '4%' }}>
+      <p className={`text-lg leading-6 font-medium whitespace-normal laptop:whitespace-pre-wrap ${styles.cardText}`} style={{  letterSpacing: '4%' }}>
         {text}
       </p>
       <Splitter />
@@ -205,16 +205,16 @@ const TextCard = ({ title, text, company, name, avatar = '123' }: { title: strin
         </div>
         <div className="">
           <h5 className="uppercase">{company}</h5>
-          <h6 className={'text-sm ' + styles.cardName}>{name}</h6>
+          <h6 className={`text-sm ${styles.cardName}`}>{name}</h6>
         </div>
       </div>
     </Card>
   )
 }
 
-const Card = ({ children, onClick }: { children: React.ReactNode; onClick?: () => void }) => {
+const Card = ({ children, onClick, className }: { children: React.ReactNode; onClick?: () => void; className?:string }) => {
   return (
-    <div onClick={onClick} className={`${styles.card} laptop:w-[409px] laptop:h-[574px] desktop:w-[409px] desktop:h-[574px] p-8 sm:p-12 pt-14 pb-8 rounded-3xl`}>
+    <div onClick={onClick} className={`${styles.card} tablet:w-[728px] tablet:h-[574px] laptop:w-[409px] laptop:h-[574px] desktop:w-[409px] desktop:h-[574px] p-8 sm:p-12 pt-14 pb-8 rounded-3xl ${className}`}>
       {children}
     </div>
   )

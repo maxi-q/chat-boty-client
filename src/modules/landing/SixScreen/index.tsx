@@ -3,8 +3,8 @@ import styles from './style.module.css'
 
 export const SixScreen = () => {
   return (
-    <main className={'section bp-5 px-4 py-5 laptop:px-[40px] laptop:pt-8 pb-8  ' + styles.screen}>
-      <h1 className={'text-4xl laptop:text-5xl desktop:text-6xl pb-8 select-none uppercase tracking-wide ' + styles.title}>блог&ensp;|&ensp;статьи</h1>
+    <main className={'section bp-5 px-4 py-5 laptop:px-[40px] tablet:pt-10 laptop:pt-8 pb-8  ' + styles.screen}>
+      <h1 className={'text-6xl laptop:text-5xl desktop:text-6xl pb-8 select-none uppercase tracking-wide ' + styles.title}>блог&ensp;|&ensp;статьи</h1>
       <div className={'flex flex-wrap gap-4 justify-center'}>
         <Card
           date={'04.05.2024'}
@@ -61,7 +61,7 @@ export const SixScreen = () => {
 
 const Card = ({ date, title, text, describe }: { date: string; title: string; text: string; describe: string }) => {
   return (
-    <div className={`rounded-xl p-6 laptop:p-8 w-[300px] h-[340px] desktop:w-[408px] desktop:h-[500px] flex flex-col ${styles.card}`}>
+    <div className={`rounded-xl p-6 laptop:p-8 h-max w-full laptop:w-[300px] laptop:h-[340px] desktop:w-[408px] desktop:h-[500px] flex flex-col ${styles.card}`}>
       <h5 className="text-xs select-none">{date}</h5>
       <Splitter />
       <h3 className={`mb-4 text-md desktop:text-2xl leading-snug uppercase font-medium ${styles.textTitle}`}>{title}</h3>
