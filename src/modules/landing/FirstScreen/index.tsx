@@ -15,7 +15,7 @@ export const FirstScreen = () => {
       className={`section flex flex-col bg-[url("/main_abstract_figure.webp")] p-5 laptop:pl-[40px] laptop:pt-[70px] bg-no-repeat bg-center desktop:h-[1055px] laptop:h-[1011px] laptop:bg-right-bottom bg-contain ${styles.screen}`}
     >
       <section className='flex-1'>
-        <h1 className={`${styles.title} bold text-2xl laptop:text-7xl `}>
+        <h1 className={`${styles.title} bold text-2xl laptop:text-6xl pb-5 desktop:text-7xl `}>
           Техническое
           <br /> сопровождение
           <br /> Онлайн-школы
