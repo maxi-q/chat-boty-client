@@ -6,7 +6,7 @@ import styles from './style.module.css'
 export const FourScreen = () => {
   return (
     <main className={`px-4 py-5 laptop:px-[40px] laptop:pt-[70px] pb-32 mt-[-70px] ${styles.screen}`}>
-      <h1 className={`text-6xl laptop:text-5xl desktop:text-6xl pb-16 uppercase tracking-wide ${styles.title}`}>кейсы:</h1>
+      <h1 className={`phone:text-4xl tablet:text-6xl laptop:text-5xl desktop:text-6xl pb-16 uppercase tracking-wide ${styles.title}`}>кейсы:</h1>
 
       <div className="flex flex-wrap  gap-7">
         <Case title={'Новая школа'} text={'Автоматизируем CRM систему BlueSales для ЕГЭ школы'} link={''} />
@@ -54,27 +54,30 @@ export const FourScreen = () => {
 
 const Case = ({ title, text, link }: { title: string; text: string; link: string }) => {
   return (
-    <div className={`p-8 xs:p-10 flex group rounded-xl desktop:h-[350px] ${styles.case}`}>
-      <h3 className={'pb-3 text-2xl font-bold uppercase'}>{title}</h3>
-      <p className={`text-xl font-medium ${styles.text}`} style={{ whiteSpace: 'pre-wrap', flex: 1 }}>
+    <div className={`p-5 tablet:p-10 flex group rounded-2xl desktop:h-[350px] ${styles.case}`}>
+      <h3 className={'pb-3 text-xl tablet:text-2xl font-bold uppercase'}>{title}</h3>
+      <p className={`text-lg tablet:text-xl font-medium ${styles.text}`} style={{ whiteSpace: 'pre-wrap', flex: 1 }}>
         {text}
       </p>
-      <Link className={`link uppercase laptop:opacity-0 laptop:group-hover:opacity-100 flex rounded-full text-2xl py-8 ps-16 pe-9 mt-9 laptop:mt-3 gap-5 ${styles.link}`} href={link}>
+      <Link
+        className={`link uppercase laptop:opacity-0 laptop:group-hover:opacity-100 flex rounded-full text-2xl py-8 ps-16 pe-9 mt-16 tablet:mt-9 laptop:mt-3 gap-5 ${styles.link}`}
+        href={link}
+      >
         <p>Читать кейс</p> <LinkIcon />
       </Link>
     </div>
-  ) 
+  )
 }
 
 const CTA = ({ title, text, link }: { title: string; text: string; link: string }) => {
   return (
-    <div className={`p-10 flex rounded-3xl ${styles.case} ${styles.CTA}`}>
+    <div className={`p-5 tablet:p-10 flex rounded-2xl ${styles.case} ${styles.CTA}`}>
       <h3 className={'pb-3 text-2xl font-bold uppercase'}>{title}</h3>
       <p className={`leading-4 text-xl font-medium ${styles.text}`} style={{ whiteSpace: 'pre-wrap', flex: 1 }}>
         {text}
       </p>
-      <CallToActionButton className={`mt-9 laptop:mt-3 ${styles.CTAButton}`} actionClassName={styles.CTAAction} arrowClassName={styles.CTAArrow}>
-        Обсудить проект
+      <CallToActionButton className={`mt-16 laptop:mt-3 ${styles.CTAButton}`} actionClassName={styles.CTAAction} arrowClassName={styles.CTAArrow}>
+        <span className='text-xl tablet:text-2xl'>Обсудить проект</span>
       </CallToActionButton>
     </div>
   )

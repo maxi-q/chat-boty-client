@@ -50,7 +50,7 @@
 	transform: rotate(90deg);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 480px) {
 	.button:hover .action .arrowCircle,
 	.button:target .action .arrowCircle {
 		right: 30px;

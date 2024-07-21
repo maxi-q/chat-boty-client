@@ -16,7 +16,7 @@ export const SecondScreen = () => {
         <span className={styles.titleSpan}>решения,</span> которые
         <br /> мы предлагаем:
       </h1>
-      <main className="flex flex-wrap pt-16 gap-1 laptop:gap-5 content-between justify-center">
+      <main className="inline-flex flex-wrap pt-16 gap-5 laptop:gap-5 content-between justify-center">
         <CardShadow className="hidden laptop:block" />
         <Card
           title={'АВТОМАТИЗАЦИЯ\n CRM'}
@@ -68,7 +68,7 @@ export const SecondScreen = () => {
           Не знаете, что нужно скачать на ПК? Как сделать трансляцию лица с телефона, а захват экрана с ПК? Мы всё сделаем, а также вся тех. часть по Bizon365
         </Card>
         <CardShadow className="hidden laptop:block">
-          <CallToActionButton className="text-[18px] pt-0" textClassName="left-[32px] md:left-[32px] top-[25px]">
+          <CallToActionButton className="text-[18px] pt-0" textClassName="left-[32px] top-[25px]">
             Обсудить проект
           </CallToActionButton>
         </CardShadow>
@@ -76,8 +76,8 @@ export const SecondScreen = () => {
         <br className={`hidden desktop:block ${styles.separator}`} />
         <CardShadow className="hidden desktop:block" />
         <CardShadow className={`hidden laptop:block ${styles.accentCard}`} />
-        <CardShadow className="hidden tablet:block laptop:hidden w-full">
-          <CallToActionButton className="text-[18px] pt-0 w-full tablet:max-w-[999px] laptop:max-w-[400px] " textClassName="left-[32px] md:left-[32px] top-[25px]">
+        <CardShadow className="block laptop:hidden w-full tablet:w-[684px]">
+          <CallToActionButton className="text-[18px] pt-0 w-full phone:max-w-[999px]" textClassName="left-[32px] top-[25px]">
             Обсудить проект
           </CallToActionButton>
         </CardShadow>
@@ -104,11 +104,6 @@ export const SecondScreen = () => {
         >
           Даа, канал жив и приносит заявки/покупки, не стоит его недооценивать, мы можем верстать любые письма и отправлять по вашей базе
         </Card>
-        <CardShadow className="block tablet:hidden">
-          <CallToActionButton className="text-[18px] pt-0" textClassName="left-[32px] md:left-[32px] top-[25px]">
-            Обсудить проект
-          </CallToActionButton>
-        </CardShadow>
       </main>
     </main>
   )
@@ -136,7 +131,7 @@ const Card = ({
   icons: React.ReactNode
 }>) => {
   return (
-    <div className={`${styles.card} flex flex-col w-[320px]  tablet:w-[346px] tablet:h-[480px] laptop:w-[400px] laptop:h-[540px] p-9 rounded-[35px]`}>
+    <div className={`${styles.card} flex flex-col w-full tablet:w-[346px] laptop:w-[400px] tablet:h-[480px] laptop:h-[540px] p-9 rounded-[35px]`}>
       <div className="flex flex-1 gap-2 align-middle" style={{ width: '40%' }}>
         {icons}
       </div>

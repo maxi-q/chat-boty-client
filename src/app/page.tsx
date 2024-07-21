@@ -1,10 +1,9 @@
 import { CallBackPopUp } from '@/components/ui/CallBackPopUp'
 import { FirstScreen, FiveScreen, FourScreen, SecondScreen, SevenScreen, SixScreen, ThirdScreen } from '@/modules'
-import styles from './styles.module.css'
 
 export default function Home() {
   return (
-    <main className={styles.main + ''}>
+    <main className={'tablet:mx-[15px]'}>
       <FirstScreen />
       <SecondScreen />
       <ThirdScreen />

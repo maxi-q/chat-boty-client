@@ -193,9 +193,9 @@ const VideoCard = ({
 
 const TextCard = ({ title, text, company, name, avatar = '123' }: { title: string; text: string; company: string; name: string; avatar: string }) => {
   return (
-    <Card className='tablet:h-max laptop:h-[574px]'>
-      <h3 className={`text-2xl font-bold uppercase mb-10 tracking-wide ${styles.cardTitle}`}>{title}</h3>
-      <p className={`text-lg leading-6 font-medium whitespace-normal laptop:whitespace-pre-wrap ${styles.cardText}`} style={{  letterSpacing: '4%' }}>
+    <Card className='phone:h-[356px] tablet:h-max laptop:h-[574px]'>
+      <h3 className={`phone:text-lg tablet:text-2xl font-bold uppercase phone:mb-4 tablet:mb-10 tracking-wide ${styles.cardTitle}`}>{title}</h3>
+      <p className={`text-base tablet:text-lg leading-6 font-medium whitespace-normal laptop:whitespace-pre-wrap  line-clamp-5 ${styles.cardText}`} style={{  letterSpacing: '4%' }}>
         {text}
       </p>
       <Splitter />
@@ -214,7 +214,7 @@ const TextCard = ({ title, text, company, name, avatar = '123' }: { title: strin
 
 const Card = ({ children, onClick, className }: { children: React.ReactNode; onClick?: () => void; className?:string }) => {
   return (
-    <div onClick={onClick} className={`${styles.card} tablet:w-[728px] tablet:h-[574px] laptop:w-[409px] laptop:h-[574px] desktop:w-[409px] desktop:h-[574px] p-8 sm:p-12 pt-14 pb-8 rounded-3xl ${className}`}>
+    <div onClick={onClick} className={`${styles.card} phone:w-[440px] phone:h-[574px] tablet:w-[728px] tablet:h-[574px] laptop:w-[409px] laptop:h-[574px] desktop:w-[409px] desktop:h-[574px] p-4 tablet:p-8 sm:p-12 pt-14 pb-8 rounded-3xl ${className}`}>
       {children}
     </div>
   )

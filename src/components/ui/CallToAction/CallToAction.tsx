@@ -27,18 +27,18 @@ export const CallToActionButton = ({
     <button
       type={type}
       onClick={onClick ? onClick : openPopup}
-      className={`h-16 tablet:h-[100px] max-w-[320px] tablet:max-w-[400px] text-8 ${styles.button} ${className}`}
+      className={`h-[100px] max-w-[400px] text-8 ${styles.button} ${className}`}
     >
-      <div style={{ pointerEvents: 'none' }} className={`${styles.action} h-16 w-16 tablet:h-[100px] tablet:w-[100px] ${actionClassName}`}>
+      <div style={{ pointerEvents: 'none' }} className={`${styles.action} h-[100px] w-[100px] ${actionClassName}`}>
         <div>
           <Arrow
-            className={`${styles.arrowCircle} h-8 w-8 top-[17px] right-[15px] tablet:h-[38px] tablet:w-[38px] tablet:top-[31px] tablet:right-[31px] ${arrowClassName}`}
+            className={`${styles.arrowCircle} h-8 w-8 top-[17px] right-[15px] phone:h-[38px] phone:w-[38px] phone:top-[31px] phone:right-[31px] ${arrowClassName}`}
           />
         </div>
       </div>
       <p
         style={{ pointerEvents: 'none' }}
-        className={`${styles.text} left-[35px] top-[21px] tablet:top-[32px] tablet:text-2xl ${textClassName}`}
+        className={`${styles.text} left-[35px] top-[32px] text-2xl ${textClassName}`}
       >
         {children}
       </p>

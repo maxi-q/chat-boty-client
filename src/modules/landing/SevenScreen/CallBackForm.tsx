@@ -9,7 +9,7 @@ import Telephone from '@/constants/svg/Telephone'
 import { useState } from 'react'
 import styles from './style.module.css'
 
-const inputClass = `block w-full rounded-full tablet:text-lg laptop:text-lg  tablet:px-12 tablet:py-6 laptop:px-12 laptop:py-6 my-6 ${styles.feedbackInput}`
+const inputClass = `block w-full rounded-full phone:text-lg phone:px-6 phone:py-4 tablet:text-lg tablet:px-12 tablet:py-6 laptop:text-lg laptop:px-12 laptop:py-6 my-6 ${styles.feedbackInput}`
 
 export const CallBackForm = () => {
   const { content, edit } = useCallBackStore()
@@ -45,7 +45,7 @@ export const CallBackForm = () => {
           }}
         />
       )}
-      <button className={`uppercase tablet:px-12 tablet:py-6 tablet:text-lg laptop:px-12 laptop:py-6 laptop:text-lg font-medium rounded-full ${styles.cta}`} onClick={openPopup}>
+      <button className={`uppercase phone:px-6 phone:py-4 phone:w-full tablet:w-auto phone:text-lg tablet:px-12 tablet:py-6 tablet:text-lg laptop:px-12 laptop:py-6 laptop:text-lg font-medium rounded-full ${styles.cta}`} onClick={openPopup}>
         получить консультацию
       </button>
       <Modal isOpen={show} closePopup={closePopup} />
@@ -57,7 +57,7 @@ const Link = ({ type, edit, children, content }: { type: contactType; edit: (val
   return (
     <a
       className={
-        `rounded-full tablet:px-12 tablet:py-6 tablet:px-12 laptop:px-12 laptop:py-6 laptop:px-12 flex items-center text-base tablet:text-lg laptop:text-lg uppercase font-medium tablet:gap-3 laptop:gap-3 tracking-wide ` +
+        `rounded-full phone:px-6 phone:py-4 tablet:py-6 tablet:px-12 laptop:px-12 laptop:py-6 laptop:px-12 flex items-center phone:text-lg tablet:text-lg laptop:text-lg uppercase font-medium tablet:gap-3 laptop:gap-3 tracking-wide ` +
         `${styles.massagerLink} ${content.contactType === type ? styles.active : ''}`
       }
       onClick={() => {

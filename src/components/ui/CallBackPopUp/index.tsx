@@ -12,6 +12,7 @@ import { PopUp } from '../PopUp'
 import styles from './style.module.css'
 
 import { ErrorMessage as Error, Field, Form, Formik } from 'formik'
+import PhoneInput from '../InputMask'
 import { initValues, schemas } from './helper'
 export enum contactType {
   Phone,
@@ -44,6 +45,8 @@ export const useCallBackStore = create<callBackState>((set) => ({
   edit: (value: callBackContent) => set((prev) => ({ content: { ...prev.content, ...value } })),
 }))
 
+const inputClass = `block w-full rounded-full text-base desktop:text-lg py-3 px-4 sm:px-12 sm:py-6 my-6 ${styles.feedbackInput}`
+
 export const CallBackPopUp = () => {
   const { isOpen, closePopup, content, edit } = useCallBackStore()
   const [send, setSend] = useState(false)
@@ -72,7 +75,7 @@ export const CallBackPopUp = () => {
                 console.log('123')
               }}
             >
-              <Form className={' flex flex-col items-center sm:w-[360px] mx-auto ' + styles.sending}>
+              <Form className={'flex flex-col items-center sm:w-[360px] mx-auto ' + styles.sending}>
                 <CloseMainPopUp className={'fixed'} style={{ right: '10px', top: '20px' }} onClick={closePopup} />
                 <h1 className={'text-3xl sm:text-5xl uppercase leading-13 pb-4 text-center sm:text-left ' + styles.title}>заполните форму ниже</h1>
                 <h2 className={'text-sm sm:text-xl bold uppercase text-center sm:text-left sm:w-full ' + styles.subtitle}>
@@ -121,28 +124,31 @@ export const CallBackPopUp = () => {
                     <TelegramFeedback /> Telegram
                   </a>
                 </div>
-                {/* {content.contactType === contactType.Phone ? (
-                <PhoneInput
-                  onChange={(value) => {
-                    edit({ contact: value })
-                  }}
-                  className={'block w-full rounded-full text-base desktop:text-lg py-3 px-4 sm:px-12 sm:py-6 my-6 ' + styles.feedbackInput}
-                />
-              ) : (
-                <input
-                  onChange={(e) => {
-                    edit({ contact: e.target.value })
-                  }}
-                  placeholder="Контакт для связи"
-                  className={'block w-full rounded-full text-base desktop:text-lg py-3 px-4 sm:px-12 sm:py-6 my-6 ' + styles.feedbackInput}
-                />
-              )} */}
+
+                {content.contactType === contactType.Telegram && (
+                  <input
+                    className={`${inputClass}`}
+                    placeholder="ОСТАВЬТЕ КОНТАКТ"
+                    onChange={(e) => {
+                      edit({ contact: e.target.value })
+                    }}
+                  />
+                )}
+                {content.contactType === contactType.Phone && (
+                  <PhoneInput
+                    className={`${inputClass}`}
+                    onChange={(value) => {
+                      edit({ contact: value })
+                    }}
+                  />
+                )}
 
                 <CallToActionButton
                   onClick={() => {
                     setSend(true)
                     handleToggle()
                   }}
+                  className='max-w-[9999px]'
                 >
                   оставить заявку
                 </CallToActionButton>
