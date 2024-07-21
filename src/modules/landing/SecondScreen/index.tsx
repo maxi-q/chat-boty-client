@@ -76,7 +76,7 @@ export const SecondScreen = () => {
         <br className={`hidden desktop:block ${styles.separator}`} />
         <CardShadow className="hidden desktop:block" />
         <CardShadow className={`hidden laptop:block ${styles.accentCard}`} />
-        <CardShadow className="hidden tablet:block w-full">
+        <CardShadow className="hidden tablet:block laptop:hidden w-full">
           <CallToActionButton className="text-[18px] pt-0 w-full tablet:max-w-[999px] laptop:max-w-[400px] " textClassName="left-[32px] md:left-[32px] top-[25px]">
             Обсудить проект
           </CallToActionButton>

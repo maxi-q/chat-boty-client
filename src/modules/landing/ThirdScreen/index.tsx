@@ -53,7 +53,7 @@ const Tablet = ({ icon, text, className, classCircle }: { icon: React.ReactNode;
   return (
     <div className={`${className} min-h-[138px] rounded-full py-2 px-2 laptop:p-4 gap-3 desktop:gap-10 bg-gray-900 w-full flex items-center`} style={{ marginTop: '-3%' }}>
       <div className={`${classCircle} rounded-full p-[15px] tablet:p-[38px]`}>{icon}</div>
-      <p className="sm:leading-5 text-[10px] tablet:text-lg laptop:text-lg desktop:text-[20px] font-medium laptop:leading-[30px] tracking-wide">{text}</p>
+      <p className="sm:leading-5 text-[10px] tablet:text-lg laptop:text-lg desktop:text-[18px] font-medium laptop:leading-[30px] tracking-wide">{text}</p>
     </div>
   )
 }
@@ -61,7 +61,7 @@ const Tablet = ({ icon, text, className, classCircle }: { icon: React.ReactNode;
 const CardGet = ({ icon, title, text }: { icon: React.ReactNode; title: string; text: string }) => {
   return (
     <li className={`${styles.getCard} py-3 laptop:py-6 px-4 laptop:px-6 laptop:w-max w-full flex laptop:justify-center gap-3`} style={{ flex: 1 }}>
-      <div className="flex items-center w-8 laptop:w-20 laptop:mr-[56px] mr-7 ms-4 laptop:ms-0">{icon}</div>
+      <div className="flex items-center w-8 laptop:w-20 laptop:mr-[45px] mr-7 ms-4">{icon}</div>
       <div className="flex flex-col justify-center">
         <h3 className="text-white tablet:text-2xl laptop:text-2xl desktop:text-3xl uppercase nowrap">{title}</h3>
         <p
