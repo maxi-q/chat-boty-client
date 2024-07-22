@@ -5,7 +5,7 @@ function WhatsApp(props) {
     <svg
       width={60}
       height={60}
-      viewBox="0 0 40 40"
+      viewBox="0 0 45 45"
       fill="#F2F2F2"
       xmlns="http://www.w3.org/2000/svg"
       {...props}
