@@ -11,12 +11,12 @@ const nunitoFont = Nunito({
 
 export const SecondScreen = () => {
   return (
-    <main className={`section p-5 laptop:pl-[40px] laptop:pt-[70px] ${styles.screen}`}>
+    <main className={`grid section p-5 laptop:pl-[40px] laptop:pt-[70px] ${styles.screen}`}>
       <h1 className={`${styles.mainTitle} text-3xl tablet:text-5xl laptop:text-5xl uppercase`}>
         <span className={styles.titleSpan}>решения,</span> которые
         <br /> мы предлагаем:
       </h1>
-      <main className="inline-flex flex-wrap pt-16 gap-5 laptop:gap-5 content-between justify-center">
+      <main className="inline-flex flex-wrap pt-16 gap-5 laptop:gap-5 content-between justify-center tablet:w-[800px] laptop:w-full mx-auto">
         <CardShadow className="hidden laptop:block" />
         <Card
           title={'АВТОМАТИЗАЦИЯ\n CRM'}
@@ -68,7 +68,7 @@ export const SecondScreen = () => {
           Не знаете, что нужно скачать на ПК? Как сделать трансляцию лица с телефона, а захват экрана с ПК? Мы всё сделаем, а также вся тех. часть по Bizon365
         </Card>
         <CardShadow className="hidden laptop:block">
-          <CallToActionButton className="text-[18px] pt-0" textClassName="left-[32px] top-[25px]">
+          <CallToActionButton className="text-[18px] pt-0" textClassName="left-[32px]">
             Обсудить проект
           </CallToActionButton>
         </CardShadow>
@@ -77,7 +77,7 @@ export const SecondScreen = () => {
         <CardShadow className="hidden desktop:block" />
         <CardShadow className={`hidden laptop:block ${styles.accentCard}`} />
         <CardShadow className="block laptop:hidden w-full tablet:w-[684px]">
-          <CallToActionButton className="text-[18px] pt-0 w-full phone:max-w-[999px]" textClassName="left-[32px] top-[25px]">
+          <CallToActionButton className="text-[18px] pt-0 w-full phone:max-w-[999px]" textClassName="left-[32px]">
             Обсудить проект
           </CallToActionButton>
         </CardShadow>
@@ -135,7 +135,7 @@ const Card = ({
       <div className="flex flex-1 gap-2 align-middle" style={{ width: '40%' }}>
         {icons}
       </div>
-      <h3 className={`${styles.number} font-thin opacity-50 tablet:pt-[50px] laptop:pt-0`}>{index}</h3>
+      <h3 className={`${styles.number} font-thin opacity-50 pt-[50px] phone:pt-0 tablet:pt-[50px] laptop:pt-0`}>{index}</h3>
       <h1 className={`${styles.title} uppercase font-bold text-xl`}>{title}</h1>
       <div className={`${styles.line} my-5`} />
       <p className={`${styles.p} text-lg`}>{children}</p>

@@ -6,9 +6,9 @@ import styles from './style.module.css'
 export const FourScreen = () => {
   return (
     <main className={`px-4 py-5 laptop:px-[40px] laptop:pt-[70px] pb-32 mt-[-70px] ${styles.screen}`}>
-      <h1 className={`phone:text-4xl tablet:text-6xl laptop:text-5xl desktop:text-6xl pb-16 uppercase tracking-wide ${styles.title}`}>кейсы:</h1>
+      <h1 className={`text-3xl phone:text-4xl tablet:text-6xl laptop:text-5xl desktop:text-6xl pb-16 uppercase tracking-wide ${styles.title}`}>кейсы:</h1>
 
-      <div className="flex flex-wrap  gap-7">
+      <div className="flex flex-wrap gap-7">
         <Case title={'Новая школа'} text={'Автоматизируем CRM систему BlueSales для ЕГЭ школы'} link={''} />
         <Case
           title={'Chukcha — Бренд одежды'}
@@ -60,7 +60,7 @@ const Case = ({ title, text, link }: { title: string; text: string; link: string
         {text}
       </p>
       <Link
-        className={`link uppercase laptop:opacity-0 laptop:group-hover:opacity-100 flex rounded-full text-2xl py-8 ps-16 pe-9 mt-16 tablet:mt-9 laptop:mt-3 gap-5 ${styles.link}`}
+        className={`link uppercase laptop:opacity-0 laptop:group-hover:opacity-100 flex rounded-full text-lg phone:w-max w-full phone:text-2xl py-5 ps-16 pe-9 phone:py-8 phone:ps-16 phone:pe-9 mt-16 tablet:mt-9 laptop:mt-3 gap-5 ${styles.link}`}
         href={link}
       >
         <p>Читать кейс</p> <LinkIcon />
@@ -77,7 +77,7 @@ const CTA = ({ title, text, link }: { title: string; text: string; link: string 
         {text}
       </p>
       <CallToActionButton className={`mt-16 laptop:mt-3 ${styles.CTAButton}`} actionClassName={styles.CTAAction} arrowClassName={styles.CTAArrow}>
-        <span className='text-xl tablet:text-2xl'>Обсудить проект</span>
+        <span className='phone:text-xl tablet:text-2xl'>Обсудить проект</span>
       </CallToActionButton>
     </div>
   )

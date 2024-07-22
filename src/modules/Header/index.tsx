@@ -6,8 +6,8 @@ import styles from './style.module.css'
 
 export const Header = () => {
   return (
-    <header className={`${styles.header} w-100 flex flex-wrap justify-between items-center px-16 h-24`}>
-      <Link href={'/'} className={styles.logoDiv + ' flex-1 overflow-visible w-auto'}>
+    <header className={`${styles.header} tablet:mx-[15px] w-100 flex flex-wrap justify-between items-center px-4 laptop:px-16 h-24`}>
+      <Link href={'/'} className={`${styles.logoDiv} flex-1 overflow-visible w-auto`}>
         <Image src="/logo.webp" alt="chat-boty" width={336} height={228} className={styles.logo} />
       </Link>
       <nav className={`${styles.navigation} gap-14 h-full items-center hidden laptop:flex`}>

@@ -24,7 +24,6 @@
 
 .link {
   background-color: var(--color-accent-2);
-  width: max-content;
   transition: all .3s ease-out;
   stroke: #0B0A0A;
 }

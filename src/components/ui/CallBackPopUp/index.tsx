@@ -164,7 +164,7 @@ export const CallBackPopUp = () => {
             variants={variants}
             transition={{ duration: 0.4 }}
             style={{ overflow: 'hidden' }}
-            className={(send ? '' : 'hidden') + ' flex flex-col items-center w-[360px]'}
+            className={(send ? '' : 'hidden') + ' flex flex-col items-center tablet:w-[360px]'}
           >
             <CloseMainPopUp className={'fixed'} style={{ right: '20px', top: '20px' }} onClick={closePopup} />
             <h1 className={'text-4xl uppercase pb-3 ' + styles.gratitudeTitle}>спасибо!</h1>
