@@ -56,7 +56,7 @@ const Tablet = ({ icon, text, className, classCircle }: { icon: React.ReactNode;
   return (
     <div className={`${className} min-h-[138px] rounded-xl tablet:rounded-full py-4 px-3 phone:py-4 phone:px-3 laptop:p-4 gap-3 desktop:gap-10 bg-gray-900 w-full flex flex-col tablet:flex-row items-start tablet:items-center`} style={{ marginTop: '-3%' }}>
       <div className={`${classCircle} rounded-full phone:p-[10px] tablet:p-[38px] `}>{icon}</div>
-      <p className="phone:text-base tablet:text-lg laptop:text-lg desktop:text-[18px] font-medium laptop:leading-[30px] tracking-wide">{text}</p>
+      <p className="phone:text-base tablet:text-[16px] laptop:text-[16px] desktop:text-[18px] font-medium laptop:leading-[22px] tracking-wide">{text}</p>
     </div>
   )
 }
@@ -67,7 +67,7 @@ const CardGet = ({ icon, title, text }: { icon: React.ReactNode; title: string; 
       className={`${styles.getCard} flex flex-col tablet:flex-row py-4 phone:py-4 tablet:py-3 laptop:py-6 px-5 phone:px-5 tablet:px-4 laptop:px-6 laptop:w-max w-full laptop:justify-center gap-3`}
       style={{ flex: 1 }}
     >
-      <div className="flex items-center w-8 laptop:w-20 laptop:mr-[45px] tablet:mr-7 tablet:ms-4 phone:mt-3 tablet:mt-0">{icon}</div>
+      <div className="flex items-center w-8 laptop:w-20 laptop:mr-7 tablet:mr-7 tablet:ms-4 phone:mt-3 tablet:mt-0">{icon}</div>
       <div className="flex flex-col justify-center">
         <h3 className="text-white text-lg phone:text-xl tablet:text-2xl laptop:text-2xl desktop:text-3xl uppercase nowrap">{title}</h3>
         <p className="text-white text-sm phone:text-sm tablet:text-lg laptop:text-lg desktop:text-xl font-hairline laptop:leading-relaxed tracking-wider mt-1 laptop:mt-[20px] tablet:whitespace-pre-wrap laptop:whitespace-normal">

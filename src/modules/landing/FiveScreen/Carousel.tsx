@@ -9,7 +9,7 @@ import { VideoModal } from './VideoModal'
 
 const data = [
   {
-    text: 'Неоднократно обращалась\nк Никите по технической части\nВк: сенлер, автопилот,\nигрофикация. Всегда очень\nдовольна результатом. Очень\nтерпеливо отвечает на кучу\nвопросов. Объясняет быстро,\nчётко и доходчиво. Когда нужно выполняет сам, так же быстро\nи с учётом всех моих пожеланий.\nВсегда на связи.',
+    text: 'Неоднократно обращалась\nк Никите по технической части\nВк: сенлер, автопилот,\nигрофикация. Всегда очень\nдовольна результатом. Очень\nтерпеливо отвечает на кучу\nвопросов. Объясняет быстро',
     title: 'быстро, четко,\n доходчиво',
     company: 'додо пицца',
     name: 'Елена Попова',
@@ -167,7 +167,7 @@ export const TextCarousel = () => {
         </div>
       </div>
       <div ref={carousel} onScroll={recalculate} className={styles.carousel + ' mx-auto'}>
-        <div className={`gap-5 ${styles.gallery}`}>
+        <div className={`gap-5 flex items-stretch ${styles.gallery}`}>
           {data.map((el, i) => (
             <TextCard key={i} text={el.text} title={el.title} company={el.company} name={el.name} avatar={el.avatar} />
           ))}
@@ -177,13 +177,7 @@ export const TextCarousel = () => {
   )
 }
 
-const VideoCard = ({
-  onClick,
-  src,
-}: {
-  onClick: (src: string) => void
-  src: string
-}) => {
+const VideoCard = ({ onClick, src }: { onClick: (src: string) => void; src: string }) => {
   return (
     <Card onClick={() => onClick(src)}>
       <h3 className={`text-xl leading-6 font-semibold uppercase mb-10 tracking-wide flex justify-center ${styles.cardTitle}`}>Video</h3>
@@ -193,31 +187,39 @@ const VideoCard = ({
 
 const TextCard = ({ title, text, company, name, avatar = '123' }: { title: string; text: string; company: string; name: string; avatar: string }) => {
   return (
-    <Card className='h-[301px] phone:h-[356px] tablet:h-max laptop:h-[574px]'>
+    <Card className="h-[301px] flex flex-col phone:h-[356px] tablet:h-max laptop:h-auto">
       <h3 className={`phone:text-lg tablet:text-2xl font-bold uppercase phone:mb-4 tablet:mb-10 tracking-wide ${styles.cardTitle}`}>{title}</h3>
-      <p className={`text-base tablet:text-lg leading-6 font-medium whitespace-normal laptop:whitespace-pre-wrap  line-clamp-5 ${styles.cardText}`} style={{  letterSpacing: '4%' }}>
+      <p
+        className={` text-base tablet:text-lg leading-6 font-medium whitespace-normal laptop:whitespace-pre-wrap line-clamp-5 tablet:line-clamp-none ${styles.cardText}`}
+        style={{ letterSpacing: '4%' }}
+      >
         {text}
       </p>
-      <Splitter />
-      <div className="flex gap-[28px] items-center">
-        <div className={`${styles.avatar} rounded-full overflow-hidden`}>
-          <Image src={avatar} width={50} height={50} alt={company} />
-        </div>
-        <div className="">
-          <h5 className="uppercase">{company}</h5>
-          <h6 className={`text-sm ${styles.cardName}`}>{name}</h6>
+      <div className='mt-5 flex-1 flex flex-col justify-end'>
+        <Splitter />
+        <div className="flex gap-[28px] items-center">
+          <div className={`${styles.avatar} rounded-full overflow-hidden`}>
+            <Image src={avatar} width={50} height={50} alt={company} />
+          </div>
+          <div className="">
+            <h5 className="uppercase">{company}</h5>
+            <h6 className={`text-sm ${styles.cardName}`}>{name}</h6>
+          </div>
         </div>
       </div>
     </Card>
   )
 }
 
-const Card = ({ children, onClick, className }: { children: React.ReactNode; onClick?: () => void; className?:string }) => {
+const Card = ({ children, onClick, className }: { children: React.ReactNode; onClick?: () => void; className?: string }) => {
   return (
-    <div onClick={onClick} className={`${styles.card} w-[320px] h-[574px] phone:w-[440px] phone:h-[574px] tablet:w-[728px] tablet:h-[574px] laptop:w-[409px] laptop:h-[574px] desktop:w-[409px] desktop:h-[574px] p-4 tablet:p-8 sm:p-12 phone:pt-14 pb-8 rounded-3xl ${className}`}>
+    <div
+      onClick={onClick}
+      className={`${styles.card} w-[320px] h-[574px] phone:w-[440px] phone:h-[574px] tablet:w-[728px] tablet:h-[574px] laptop:w-[409px] laptop:h-[574px] desktop:w-[409px] desktop:h-[574px] p-4 tablet:p-8 sm:p-12 phone:pt-14 pb-8 rounded-3xl ${className}`}
+    >
       {children}
     </div>
   )
 }
 
-const Splitter = () => <div className={styles.splitter + ' mt-5 mb-10'} />
+const Splitter = () => <div className={`${styles.splitter} mb-10`} />

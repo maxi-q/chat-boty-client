@@ -17,7 +17,7 @@ export const Footer = () => {
         </Link>
         <CallToActionButton className={`mt-8 ${styles.cta} w-full`}>Обсудить проект</CallToActionButton>
       </div>
-      <div className='flex flex-1 flex-col tablet:flex-row gap-[36px]'>
+      <div className='flex flex-1 flex-col tablet:flex-row justify-around gap-[36px]'>
         <div>
           <h3 className={`${styles.navTitle} ${titleClass}`}>Услуги</h3>
           <ul className={liClass}>
@@ -41,7 +41,7 @@ export const Footer = () => {
           </ul>
         </div>
       </div>
-      <div className="flex flex-col flex-1">
+      <div className="flex flex-col text-left">
         <h3 className={`${styles.navTitle} ${titleClass}`}>связаться</h3>
         <a href={TelephoneLink} className={liClass}>
           8 904 424 05 10

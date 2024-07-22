@@ -12,7 +12,7 @@ const nunitoFont = Nunito({
 export const FirstScreen = () => {
   return (
     <main
-      className={`section flex flex-col bg-[url("/main_abstract_figure.webp")] p-5 laptop:pl-[40px] laptop:pt-[70px] bg-no-repeat bg-[50vw_10%] bg-[length:927px] tablet:h-[1475px] desktop:h-[1055px] laptop:h-[1011px] laptop:bg-right-bottom laptop:bg-contain ${styles.screen}`}
+      className={`section flex flex-col bg-[url("/main_abstract_figure.webp")] p-5 laptop:pl-[40px] laptop:pt-[70px] bg-no-repeat bg-[50vw_10%] bg-[length:927px] tablet:h-[1475px] desktop:h-[1055px] laptop:h-[911px] laptop:bg-right-bottom laptop:bg-contain ${styles.screen}`}
     >
       <section className="tablet:flex-1">
         <h1 className={`${styles.title} phone:bold text-3xl phone:text-4xl tablet:text-6xl laptop:text-6xl pb-5 desktop:text-7xl leading-[120%]`}>
