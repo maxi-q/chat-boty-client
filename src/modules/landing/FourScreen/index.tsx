@@ -39,13 +39,13 @@ export const FourScreen = () => {
           text={'В момент блокировки популярной соц. сети предложил\nоснователю сделать курс, в итоге сделали лучше в 2 раза\nрезультат, чем они сам годом ранее'}
           link={''}
         />
-        <br className={'hidden laptop:block ' + styles.separator} />
+        <br className={`hidden laptop:block ${styles.separator}`} />
         <Case
           title={'Автоматизация для ЕГЭ школы «СОТКА»'}
           text={'Автоматический сбор отзывов и перенос их в гугл-таблицу\nдля проведения конкурса, а также чат-бот для беседы ВК'}
           link={''}
         />
-        <br className={'block laptop:hidden ' + styles.separator} />
+        <br className={`block laptop:hidden ${styles.separator}`} />
         <CTA title={'в этом месте может оказаться твой проект'} text={'тут предложение на 2-3 строчки'} link={''} />
       </div>
     </main>
@@ -60,7 +60,7 @@ const Case = ({ title, text, link }: { title: string; text: string; link: string
         {text}
       </p>
       <Link
-        className={`link uppercase laptop:opacity-0 laptop:group-hover:opacity-100 flex rounded-full text-lg phone:w-max w-full phone:text-2xl py-5 ps-16 pe-9 phone:py-8 phone:ps-16 phone:pe-9 mt-16 tablet:mt-9 laptop:mt-3 gap-5 ${styles.link}`}
+        className={`link uppercase opacity-100 flex rounded-full text-lg phone:w-max w-full phone:text-2xl py-5 ps-16 pe-9 phone:py-8 phone:ps-16 phone:pe-9 mt-16 tablet:mt-9 laptop:mt-3 gap-5 ${styles.link}`}
         href={link}
       >
         <p>Читать кейс</p> <LinkIcon />

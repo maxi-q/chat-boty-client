@@ -1,7 +1,7 @@
 'use client'
 
 import { callBackContent, contactType, useCallBackStore } from '@/components/ui/CallBackPopUp'
-import PhoneInput from '@/components/ui/InputMask'
+import PhoneInput from '@/components/ui/InputMask/PhoneInput'
 import { PopUp } from '@/components/ui/PopUp'
 import CloseMainPopUp from '@/constants/svg/CloseMainPopUp'
 import TelegramFeedback from '@/constants/svg/TelegramFeedback'
@@ -40,8 +40,8 @@ export const CallBackForm = () => {
       {content.contactType === contactType.Phone && (
         <PhoneInput
           className={`${inputClass}`}
-          onChange={(value) => {
-            edit({ contact: value })
+          onChange={(e) => {
+            edit({ contact: e.target.value })
           }}
         />
       )}
