@@ -3,3 +3,11 @@ export const TGLink = 'https://t.me/nipi_bz'
 export const VKLink = 'https://vk.com/develop_target'
 
 export const TelephoneLink = 'tel:+79044240510'
+
+export const SOURCE = {
+	url:
+		process.env.NEXT_PUBLIC_MODE === 'development'
+			? 'https://dev.chat-boty.com/api/v1/'
+			: 'https://chat-boty.com/api/v1/',
+	// source_url: 'https://resource.chat-boty.com/',
+}

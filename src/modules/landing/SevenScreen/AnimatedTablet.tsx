@@ -33,7 +33,7 @@ const Tablet = ({ text, icon, margin, last }: { text: string; icon: React.ReactN
 
   return (
     <>
-      <div className={`relative w-full ${styles.tabletBox} ${isVisible && styles.active}`} style={{ marginLeft: `${margin}px`, marginBottom: last ? '-20px' : '0' }}>
+      <div className={`hidden laptop:block relative w-full ${styles.tabletBox} ${isVisible && styles.active}`} style={{ marginLeft: `${margin}px`, marginBottom: last ? '-20px' : '0' }}>
         <div ref={tabletRef} className='absolute left-[-50%]' />
         <div className={styles.tablet + ' w-48 bg-gray-900 text-12 w-max flex items-center'}>
           <div className={styles.tabletCircle + ' rounded-full'}>{icon}</div>

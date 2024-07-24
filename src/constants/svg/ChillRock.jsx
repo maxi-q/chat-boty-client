@@ -2,10 +2,10 @@ import * as React from "react"
 const ChillRock = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width={42}
-    height={42}
+    width={50}
+    height={50}
     fill="none"
-    viewBox="0 0 50 50"
+    viewBox="0 0 55 55"
     {...props}
   >
     <g fill="#8FFE01" clipPath="url(#a)">

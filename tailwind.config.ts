@@ -16,6 +16,8 @@ const config: Config = {
       },
     },
     screens: {
+      'nokia': '360px',
+      'phone': '480px',
       'tablet': '768px',
       'laptop': '1440px',
       'desktop': '1920px',

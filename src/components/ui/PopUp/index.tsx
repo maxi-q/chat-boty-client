@@ -4,7 +4,7 @@ export const PopUp = ({ show, children, className }: { show: boolean; children: 
   return (
     <section className={`fixed h-full w-full ${show && styles.active} ${styles.section}`}>
       <span className={styles.overlay} />
-      <div className={`fixed py-9 px-[5%] tablet:px-24 tablet:rounded-3xl w-full tablet:w-auto ${styles.modal} ${show && styles.active} ${className}`}>{children}</div>
+      <div className={`fixed py-9 px-[5%] tablet:px-24 tablet:rounded-3xl w-full laptop:w-auto tablet:w-max ${styles.modal} ${show && styles.active} ${className}`}>{children}</div>
     </section>
   )
 }

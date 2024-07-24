@@ -5,7 +5,7 @@ function Telegram(props) {
     <svg
       width={50}
       height={50}
-      viewBox="0 0 40 40"
+      viewBox="0 0 45 45"
       fill="#F2F2F2"
       xmlns="http://www.w3.org/2000/svg"
       {...props}

@@ -27,18 +27,18 @@ export const CallToActionButton = ({
     <button
       type={type}
       onClick={onClick ? onClick : openPopup}
-      className={`h-16 laptop:h-[80px] desktop:h-[100px] max-w-[320px] desktop:max-w-[400px] text-8 laptop:text-[20px] ${styles.button} ${className}`}
+      className={`h-[84px] phone:h-[100px] max-w-[400px] text-8 pe-[110px] w-full ${styles.button} ${className}`}
     >
-      <div style={{ pointerEvents: 'none' }} className={`${styles.action} h-16 w-16 laptop:h-[80px] desktop:h-[100px] desktop:w-[100px] laptop:w-[80px] ${actionClassName}`}>
+      <div style={{ pointerEvents: 'none' }} className={`${styles.action} h-[84px] phone:h-[100px] w-[84px] phone:w-[100px] ${actionClassName}`}>
         <div>
           <Arrow
-            className={`${styles.arrowCircle} h-8 w-8 top-[17px] right-[15px] laptop:h-[30px] desktop:h-[38px] laptop:w-[30px] desktop:w-[38px] laptop:top-[25px] desktop:top-[31px] laptop:right-[25px] desktop:right-[31px] ${arrowClassName}`}
+            className={`${styles.arrowCircle} h-[36px] w-[36px] top-[24px] right-[24px] phone:h-[38px] phone:w-[38px] phone:top-[31px] phone:right-[31px] ${arrowClassName}`}
           />
         </div>
       </div>
       <p
         style={{ pointerEvents: 'none' }}
-        className={`${styles.text} left-[25px] laptop:left-[49px] top-[21px] laptop:top-[23px] desktop:top-[32px] desktop:text-2xl ${textClassName}`}
+        className={`${styles.text} pl-[28px] phone:left-[35px] text-xl phone:text-2xl text-start text-wrap ${textClassName}`}
       >
         {children}
       </p>
