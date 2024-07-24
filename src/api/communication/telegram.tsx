@@ -9,7 +9,7 @@ export async function telegramRequest(content: callBackContent) {
       method: 'POST',
       headers: {
         Accept: 'application/json',
-        'Content-Type': 'application/json',
+        'Content-Type': 'application/json'
       },
       body: JSON.stringify({
         contact_type: content.contactType,

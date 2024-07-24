@@ -3,7 +3,7 @@ export const TGLink = 'https://t.me/nipi_bz'
 export const VKLink = 'https://vk.com/develop_target'
 
 export const TelephoneLink = 'tel:+79044240510'
-console.log(process.env.NEXT_PUBLIC_MODE)
+
 export const SOURCE = {
 	url:
 		process.env.NEXT_PUBLIC_MODE === 'development'

@@ -24,4 +24,13 @@ export const schemas = {
       return Type == 'Phone' ? contactPhone : yup.string().notRequired()
     }),
   }),
+  main: yup.object().shape({
+    contactType: yup.string().oneOf(['Telegram', 'Phone']).required('Выберите тип контакта'),
+    contactTelegram: yup.string().when('contactType', ([Type], _) => {
+      return Type == 'Telegram' ? contactTelegram : yup.string().notRequired()
+    }),
+    contactPhone: yup.string().when('contactType', ([Type], _) => {
+      return Type == 'Phone' ? contactPhone : yup.string().notRequired()
+    }),
+  }),
 }

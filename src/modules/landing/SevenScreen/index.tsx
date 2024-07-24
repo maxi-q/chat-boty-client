@@ -17,9 +17,9 @@ export const SevenScreen = () => {
           <h3 className="font-bold text-sm tablet:text-lg laptop:text-lg desktop:text-base uppercase pt-6 pb-10 tracking-wider xs:w-max">
             Оставьте заявку на бесплатную консультацию, расскажите про свой проект и за 30 минут определимся нужно ли вам это или нет
           </h3>
-          <div className={`hidden desktop:block rounded-xl p-6 desktop:p-14 w-max ${styles.feedback}`}>
-            <CallBackForm />
-          </div>
+          
+            <CallBackForm className={`hidden desktop:block rounded-xl p-6 desktop:p-14 w-max ${styles.feedback}`}/>
+          
         </div>
         <aside
           className={`hidden laptop:ml-12 laptop:flex desktop:mb-5 desktop:pb-16 flex-1 w-[600px] bg-[url("/Nilita.webp")] bg-no-repeat bg-cover rounded-3xl justify-end gap-5 laptop:h-[625px] laptop:max-w-[496px] desktop:h-[980px] desktop:max-w-[777px] ${styles.aside}`}
@@ -30,9 +30,7 @@ export const SevenScreen = () => {
         </aside>
       </div>
       <aside className={`flex laptop:hidden flex-1 h-[625px] w-full bg-[url("/Nilita.webp")] bg-no-repeat bg-cover rounded-3xl justify-end gap-5 ${styles.aside}`} />
-      <div className={`desktop:hidden rounded-xl py-6 tablet:p-6 desktop:p-14 desktop:w-max ${styles.feedback}`}>
-        <CallBackForm />
-      </div>
+        <CallBackForm className={`desktop:hidden rounded-xl py-6 tablet:p-6 desktop:p-14 desktop:w-max ${styles.feedback}`}/>
     </main>
   )
 }

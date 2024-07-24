@@ -14,7 +14,7 @@ import { CallToActionButton } from '../CallToAction'
 import PhoneInput from '../InputMask/PhoneInput'
 import TelegramInput from '../InputMask/TelegramInput'
 import { PopUp } from '../PopUp'
-import { schemas } from './helper'
+import { schemas } from '../../../api/communication/communicationHelper'
 import styles from './style.module.css'
 
 export enum contactType {
