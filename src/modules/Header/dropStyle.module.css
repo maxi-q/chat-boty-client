@@ -1,0 +1,111 @@
+.overlay {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  opacity: 1;
+  pointer-events: none;
+}
+
+.modal {
+  background-color: #1c1c1c;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.2);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  z-index: 9;
+  overflow: hidden;
+
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s linear;
+
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal.active {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+  pointer-events: all;
+}
+
+.section {
+  top: 0;
+  left: 0;
+  transition: all 0.3s ease;
+  pointer-events: none;
+  opacity: 0;
+  z-index: 7;
+}
+
+.section.active {
+  opacity: 1;
+}
+
+.title {
+  color: var(--color-main);
+}
+
+
+.gratitudeTitle {
+  color: var(--color-accent);
+}
+
+.gratitudeSubtitle {
+  color: #fff;
+}
+
+.subtitle {
+  color: #fff;
+}
+
+.massagerLink {
+  color: var(--color-additional);
+  background-color: var(--color-additional-3);
+  flex: 1;
+
+  cursor: pointer;
+}
+.massagerLink:hover,
+.massagerLink.feedbackInput:not(:placeholder-shown) {
+  background-color: var(--color-accent-2);
+}
+
+.massagerLink,
+.massagerLink svg {
+  transition: all 0.3s ease-out;
+}
+
+.massagerLink:hover,
+.massagerLink.active {
+  background-color: var(--color-accent-2);
+}
+
+.massagers {
+  background-color: var(--color-additional-4);
+}
+
+.feedbackInput {
+  color: var(--color-main);
+  background-color: transparent;
+  border: 1px solid #7001fe80;
+  flex: 1;
+  transition: all 0.3s ease-out;
+}
+
+.feedbackInput::placeholder {
+  /* text-transform: uppercase; */
+  color: var(--color-additional-3);
+}
+
+.feedbackInput:not(:placeholder-shown) {
+  border: 1px solid #7001fe80;
+}
+
+.feedbackInput:focus {
+  outline: none;
+}
+
+.feedbackInput:hover {
+  border: 1px solid var(--color-accent) !important;
+}

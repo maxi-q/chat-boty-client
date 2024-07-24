@@ -6,10 +6,11 @@
   background-color: #1c1c1c;
   color: var(--color-white);
   border-radius: 20px;
-  /* font-family: 'Igra Sans'; */
+
+  z-index: 9;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1440px) {
   .header {
     margin: 0 0 5px 0;
     border-radius: 0 0 20px 20px;

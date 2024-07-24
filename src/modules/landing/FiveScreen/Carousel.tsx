@@ -187,7 +187,7 @@ const VideoCard = ({ onClick, src }: { onClick: (src: string) => void; src: stri
 
 const TextCard = ({ title, text, company, name, avatar = '123' }: { title: string; text: string; company: string; name: string; avatar: string }) => {
   return (
-    <Card className="h-[301px] flex flex-col phone:h-[356px] tablet:h-max laptop:h-auto">
+    <Card className="h-[301px] flex flex-col phone:h-[356px] tablet:h-auto laptop:h-auto">
       <h3 className={`phone:text-lg tablet:text-2xl font-bold uppercase phone:mb-4 tablet:mb-10 tracking-wide ${styles.cardTitle}`}>{title}</h3>
       <p
         className={` text-base tablet:text-lg leading-6 font-medium whitespace-normal laptop:whitespace-pre-wrap line-clamp-5 tablet:line-clamp-none ${styles.cardText}`}

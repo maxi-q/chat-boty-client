@@ -3,7 +3,7 @@ import { FirstScreen, FiveScreen, FourScreen, SecondScreen, SevenScreen, SixScre
 
 export default function Home() {
   return (
-    <main className={'tablet:mx-[15px]'}>
+    <main className={'laptop:mx-[15px]'}>
       <FirstScreen />
       <SecondScreen />
       <ThirdScreen />
