@@ -61,7 +61,7 @@ const LiComponent = ({
   active: boolean
 }>) => {
   return (
-    <Link href={''} className={styles.link + ' flex h-full items-center'}>
+    <Link href={''} className={`${styles.link} flex h-full items-center`}>
       <p className={'flex items-center text-base tracking-widest'}>{children}</p>
       <div className={styles.linkBar} />
     </Link>
