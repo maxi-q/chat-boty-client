@@ -10,7 +10,7 @@ export const ThirdScreen = () => {
     <main
       className={`section before:bg-[url("/aside_abstract.webp")] px-4 py-5 laptop:px-[40px] laptop:pt-[70px] pb-24 before:bg-no-repeat  before:bg-contain before:content-[''] before:absolute before:h-[100%] before:max-h-[20%] before:max-h-[30%] before:w-[100%] laptop:before:max-h-[100%] laptop:before:h-[60%] laptop:before:w-[50%] before:right-[0] before:bottom-[12%] sm:before:bottom-[7%] before:bg-right-bottom laptop:before:bg-bottom laptop:before:right-[0] laptop:before:bottom-[0] ${styles['rotating-background']} ${styles.screen}`}
     >
-      <h1 className={'relative text-3xl phone:text-4xl tablet:text-6xl laptop:text-5xl desktop:text-6xl pb-16 uppercase tracking-wide ' + styles.title}>
+      <h1 className={`relative text-3xl phone:text-4xl tablet:text-6xl laptop:text-5xl desktop:text-6xl pb-16 uppercase tracking-wide ${styles.title}`}>
         С Hами <br /> вы забудете о:
       </h1>
       <ul

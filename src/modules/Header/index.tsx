@@ -22,10 +22,10 @@ export const Header = () => {
           <Image src="/logo.webp" alt="chat-boty" width={336} height={228} className={styles.logo} />
         </Link>
         <nav className={`${styles.navigation} gap-14 h-full items-center hidden laptop:flex`}>
-          <LiComponent active={false}>Услуги</LiComponent>
-          <LiComponent active={false}>Кейсы</LiComponent>
-          <LiComponent active={false}>Блог</LiComponent>
-          <LiComponent active={false}>Контакты</LiComponent>
+          <LiComponent link='' active={false}>Услуги</LiComponent>
+          <LiComponent link='' active={false}>Кейсы</LiComponent>
+          <LiComponent link='blog' active={false}>Блог</LiComponent>
+          <LiComponent link='' active={false}>Контакты</LiComponent>
         </nav>
         <aside
           className={`${styles.contacts} flex-1 overflow-visible hidden justify-end items-center w-full laptop:flex laptop:w-auto laptop:order-1`}
@@ -56,12 +56,14 @@ export const Header = () => {
 const LiComponent = ({
   children,
   active,
+  link
 }: Readonly<{
   children: React.ReactNode
   active: boolean
+  link?: string
 }>) => {
   return (
-    <Link href={''} className={`${styles.link} flex h-full items-center`}>
+    <Link href={link || ''} className={`${styles.link} flex h-full items-center`}>
       <p className={'flex items-center text-base tracking-widest'}>{children}</p>
       <div className={styles.linkBar} />
     </Link>

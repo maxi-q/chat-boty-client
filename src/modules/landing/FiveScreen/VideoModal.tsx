@@ -4,10 +4,11 @@ import CloseMainPopUp from '@/constants/svg/CloseMainPopUp'
 export const VideoModal = ({ show, src, closePopup }: { show: boolean; src: string; closePopup: () => void }) => {
   return (
     <PopUp show={show}>
-      <div className={'flex flex-col items-center'}>
+      <div className={'flex flex-col items-center max-w-[840px] w-[80vw]'}>
         <CloseMainPopUp className={'fixed'} style={{ right: '20px', top: '20px' }} onClick={closePopup} />
         <iframe
-          width="560"
+          max-width="1380"
+          width="100%"
           height="315"
           src={src}
           srcDoc={`<style>*{padding:0;margin:0;overflow:hidden}

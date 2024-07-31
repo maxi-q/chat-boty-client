@@ -4,7 +4,6 @@ import { Footer } from '@/modules/Footer'
 import type { Metadata } from 'next'
 import { Manrope } from 'next/font/google'
 import './globals.css'
-import { useEffect } from 'react'
 
 const manrope = Manrope({ weight: ['300', '400', '500'], subsets: ['cyrillic'], variable: '--font-manrope'})
 
@@ -12,7 +11,6 @@ export const metadata: Metadata = {
   title: 'chat-boty',
   description: 'chat-boty app',
 }
-
 
 export default function RootLayout({
   children,

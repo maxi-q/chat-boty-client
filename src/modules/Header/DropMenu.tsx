@@ -46,7 +46,7 @@ export const DropMenu = ({ show }: { show: boolean }) => {
                 <nav className="flex flex-col gap-[16px] items-center">
                   <LiComponent active={false}>Услуги</LiComponent>
                   <LiComponent active={false}>Кейсы</LiComponent>
-                  <LiComponent active={false}>Блог</LiComponent>
+                  <LiComponent link='blog' active={false}>Блог</LiComponent>
                   <LiComponent active={false}>Контакты</LiComponent>
                 </nav>
                 <aside className={`${styles.contacts} flex flex-col flex-1 overflow-visible  items-center mt-[104px]`} style={{ minWidth: '390px' }}>
@@ -77,12 +77,14 @@ export const DropMenu = ({ show }: { show: boolean }) => {
 const LiComponent = ({
   children,
   active,
+  link
 }: Readonly<{
   children: React.ReactNode
   active: boolean
+  link?: string
 }>) => {
   return (
-    <Link href={''} className={`${styles.link} flex h-full items-center text-white`}>
+    <Link href={link || ''} className={`${styles.link} flex h-full items-center text-white`}>
       <p className={'flex items-center text-3xl tracking-widest uppercase '}>{children}</p>
     </Link>
   )
