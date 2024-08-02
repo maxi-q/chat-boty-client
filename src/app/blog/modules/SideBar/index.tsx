@@ -4,7 +4,7 @@ import styles from './style.module.css'
 
 export const SideBar = () => {
   return (
-    <aside className="w-[554px]">
+    <aside className="laptop:w-[554px]">
       <h1 className={`relative text-3xl phone:text-4xl tablet:text-6xl laptop:text-5xl desktop:text-6xl pb-16 uppercase tracking-wide ${styles.title}`}>Наши Кейсы</h1>
       <div className="flex flex-col gap-5">
         <Case title={'Новая школа'} text={'Автоматизируем CRM систему BlueSales для ЕГЭ школы'} link={''} />

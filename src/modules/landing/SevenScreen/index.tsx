@@ -6,7 +6,7 @@ import styles from './style.module.css'
 
 export const SevenScreen = () => {
   return (
-    <main className={`section p-5 tablet:p-1 pt-2 laptop:p-5 laptop:pl-[50px] laptop:pt-[70px] ${styles.screen}`}>
+    <main className={`section p-5 tablet:p-1 pt-2 laptop:p-5 laptop:pl-[50px] laptop:pt-[70px] bg-white desktop:bg-transparent ${styles.screen}`}>
       <div className="flex gap-16 desktop:gap-10">
         <div className="flex laptop:justify-center desktop:items-start desktop:justify-center flex-col laptop:items-center " style={{ flex: 1 }}>
           <h1

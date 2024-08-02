@@ -5,8 +5,8 @@ import style from './style.module.css'
 
 export default function Home() {
   return (
-    <main className={`${style.screen} laptop:mx-[15px]  pt-16`}>
-      <div className="flex justify-center">
+    <main className={`${style.screen} laptop:mx-[15px] pt-16 px-6`}>
+      <div className="flex justify-center flex-col laptop:flex-row">
         <Article />
         <SideBar />
       </div>

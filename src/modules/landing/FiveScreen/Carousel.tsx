@@ -179,8 +179,9 @@ export const TextCarousel = () => {
 
 const VideoCard = ({ onClick, src }: { onClick: (src: string) => void; src: string }) => {
   return (
-    <Card onClick={() => onClick(src)}>
-      <h3 className={`text-xl leading-6 font-semibold uppercase mb-10 tracking-wide flex justify-center ${styles.cardTitle}`}>Video</h3>
+    <Card onClick={() => onClick(src)} className='!p-0'>
+      <Image src={'/video/vertical.webp'} alt={'видео отзыв'} height={574} width={500}/>
+      {/* <h3 className={`text-xl leading-6 font-semibold uppercase mb-10 tracking-wide flex justify-center ${styles.cardTitle}`}>Video</h3> */}
     </Card>
   )
 }
@@ -215,7 +216,7 @@ const Card = ({ children, onClick, className }: { children: React.ReactNode; onC
   return (
     <div
       onClick={onClick}
-      className={`${styles.card} w-[320px] h-[574px] phone:w-[440px] phone:h-[574px] tablet:w-[728px] tablet:h-[574px] laptop:w-[409px] laptop:h-[574px] desktop:w-[409px] desktop:h-[574px] p-4 tablet:p-8 sm:p-12 phone:pt-14 pb-8 rounded-3xl ${className}`}
+      className={`${styles.card} w-[320px] h-[574px] phone:w-[440px] phone:h-[574px] tablet:w-[728px] tablet:h-[574px] laptop:w-[409px] laptop:h-[574px] desktop:w-[409px] desktop:h-[574px] p-4 tablet:p-8 sm:p-12 phone:pt-14 pb-8 rounded-3xl overflow-hidden ${className}`}
     >
       {children}
     </div>

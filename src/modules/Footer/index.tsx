@@ -35,7 +35,7 @@ export const Footer = () => {
             <LiComponent active={false}>Главная</LiComponent>
             <LiComponent active={false}>Услуги</LiComponent>
             <LiComponent active={false}>Кейсы</LiComponent>
-            <LiComponent active={false}>Блог</LiComponent>
+            <LiComponent href='/blog' active={false}>Блог</LiComponent>
             <LiComponent active={false}>Отзывы</LiComponent>
             <LiComponent active={false}>Карта сайта</LiComponent>
           </ul>
@@ -69,12 +69,14 @@ export const Footer = () => {
 const LiComponent = ({
   children,
   active,
+  href
 }: Readonly<{
   children: React.ReactNode
   active: boolean
+  href?: string
 }>) => {
   return (
-    <Link href={''} className={styles.link + ' flex h-full items-center'}>
+    <Link href={href || ''} className={styles.link + ' flex h-full items-center'}>
       <p className={'flex items-center'}>{children}</p>
       <div className={styles.linkBar} />
     </Link>
