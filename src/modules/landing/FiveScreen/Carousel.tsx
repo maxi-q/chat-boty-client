@@ -58,6 +58,34 @@ const data = [
   },
 ]
 
+const videoData = [
+  {
+    href: 'https://www.youtube.com/embed/KKhLx4ETy0M',
+    vertical: '/video/ivanovV.webp',
+    horizontal: '/video/ivanovH.webp',
+  },
+  {
+    href: 'https://www.youtube.com/embed/sW521Rh11Wo',
+    vertical: '/video/milovV.webp',
+    horizontal: '/video/milovH.webp',
+  },
+  {
+    href: 'https://www.youtube.com/embed/uUHp-eNZnkM',
+    vertical: '/video/nasirovV.webp',
+    horizontal: '/video/nasirovH.webp',
+  },
+  {
+    href: 'https://www.youtube.com/embed/LHmSlMMLcB8',
+    vertical: '/video/yanbukhtinV.webp',
+    horizontal: '/video/yanbukhtinH.webp',
+  },
+  {
+    href: 'https://www.youtube.com/embed/h74TsLk3xHA',
+    vertical: '/video/zhamkevichV.webp',
+    horizontal: '/video/zhamkevichH.webp',
+  },
+]
+
 export const VideoCarousel = () => {
   const carousel = useRef<HTMLDivElement>(null)
 
@@ -73,6 +101,7 @@ export const VideoCarousel = () => {
   const [video, setVideo] = useState({
     show: false,
     src: 'https://www.youtube.com/embed/G0fHsOQWG5g',
+    image: ''
   })
 
   const closeVideo = () => {
@@ -81,14 +110,13 @@ export const VideoCarousel = () => {
   const showVideo = () => {
     setVideo((p) => ({ ...p, show: true }))
   }
-  const setVideoLink = (src: string) => {
-    setVideo((p) => ({ ...p, src: src }))
+  const setVideoLink = (src: string, image: string) => {
+    setVideo((p) => ({ ...p, src: src, image: image }))
   }
 
-  const ClickVideo = (src: string) => {
-    setVideoLink(src)
+  const ClickVideo = (src: string, image: string) => {
+    setVideoLink(src, image)
     showVideo()
-    console.log('123')
   }
 
   useEffect(() => {
@@ -118,13 +146,13 @@ export const VideoCarousel = () => {
       </div>
       <div ref={carousel} onScroll={recalculate} className={`${styles.carousel} mx-auto`}>
         <div className={`gap-5 ${styles.gallery}`}>
-          {data.map((el, i) => (
-            <VideoCard key={i} src={el.src} onClick={ClickVideo} />
+          {videoData.map((el, i) => (
+            <VideoCard key={i} href={el.href} onClick={ClickVideo} vertical={el.vertical} horizontal={el.horizontal} />
           ))}
         </div>
       </div>
 
-      <VideoModal show={video.show} src={video.src} closePopup={closeVideo} />
+      <VideoModal show={video.show} src={video.src} image={video.image} closePopup={closeVideo} />
     </>
   )
 }
@@ -177,11 +205,10 @@ export const TextCarousel = () => {
   )
 }
 
-const VideoCard = ({ onClick, src }: { onClick: (src: string) => void; src: string }) => {
+const VideoCard = ({ onClick, vertical, href, horizontal }: { onClick: (src: string, horizontal: string) => void; href: string; vertical: string; horizontal: string }) => {
   return (
-    <Card onClick={() => onClick(src)} className='!p-0'>
-      <Image src={'/video/vertical.webp'} alt={'видео отзыв'} height={574} width={500}/>
-      {/* <h3 className={`text-xl leading-6 font-semibold uppercase mb-10 tracking-wide flex justify-center ${styles.cardTitle}`}>Video</h3> */}
+    <Card onClick={() => onClick(href, horizontal)} className="!p-0 h-auto !w-auto">
+      <Image src={`${vertical}`} alt={'видео отзыв'} height={640} width={360} />
     </Card>
   )
 }
@@ -196,7 +223,7 @@ const TextCard = ({ title, text, company, name, avatar = '123' }: { title: strin
       >
         {text}
       </p>
-      <div className='mt-5 flex-1 flex flex-col justify-end'>
+      <div className="mt-5 flex-1 flex flex-col justify-end">
         <Splitter />
         <div className="flex gap-[28px] items-center">
           <div className={`${styles.avatar} rounded-full overflow-hidden`}>
@@ -216,7 +243,7 @@ const Card = ({ children, onClick, className }: { children: React.ReactNode; onC
   return (
     <div
       onClick={onClick}
-      className={`${styles.card} w-[320px] h-[574px] phone:w-[440px] phone:h-[574px] tablet:w-[728px] tablet:h-[574px] laptop:w-[409px] laptop:h-[574px] desktop:w-[409px] desktop:h-[574px] p-4 tablet:p-8 sm:p-12 phone:pt-14 pb-8 rounded-3xl overflow-hidden ${className}`}
+      className={`${styles.card} w-[320px] h-[574px] phone:w-[440px] tablet:w-[728px] laptop:w-[409px] desktop:w-[409px] p-4 tablet:p-8 sm:p-12 phone:pt-14 pb-8 rounded-3xl overflow-hidden ${className}`}
     >
       {children}
     </div>

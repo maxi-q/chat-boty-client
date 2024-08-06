@@ -1,7 +1,7 @@
 import { PopUp } from '@/components/ui/PopUp'
 import CloseMainPopUp from '@/constants/svg/CloseMainPopUp'
 
-export const VideoModal = ({ show, src, closePopup }: { show: boolean; src: string; closePopup: () => void }) => {
+export const VideoModal = ({ show, src, closePopup, image }: { show: boolean; src: string; closePopup: () => void; image:string }) => {
   return (
     <PopUp show={show} className=''>
       <div className={'flex flex-col items-center '}>
@@ -17,7 +17,7 @@ export const VideoModal = ({ show, src, closePopup }: { show: boolean; src: stri
           span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}
           </style>
           <a href=${src}?si=Oyvu7VQgch-unNDs?autoplay=1>
-          <img src=/video/horizontal.webp alt='Demo video'>
+          <img src=${image} alt='Demo video'>
           <span>▶</span>
           </a>`}
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"

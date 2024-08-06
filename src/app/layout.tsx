@@ -10,6 +10,18 @@ const manrope = Manrope({ weight: ['300', '400', '500'], subsets: ['cyrillic'], 
 export const metadata: Metadata = {
   title: 'chat-boty',
   description: 'chat-boty app',
+  openGraph: {
+    title: 'chat-boty',
+    description: 'chat-boty app',
+    url: 'https://chat-boty.com',
+    images: [
+      {
+        url: 'https://chat-boty.com/logo.webp',
+        width: 363,
+        height: 247
+      }
+    ]
+  }
 }
 
 export default function RootLayout({
