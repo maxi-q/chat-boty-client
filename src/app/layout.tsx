@@ -17,8 +17,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: 'https://chat-boty.com/aside_abstract.webp',
-        width: 363,
-        height: 247
+        width: 800,
+        height: 800
       }
     ]
   }
