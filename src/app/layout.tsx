@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     url: 'https://chat-boty.com',
     images: [
       {
-        url: 'https://chat-boty.com/logo.webp',
+        url: 'https://chat-boty.com/aside_abstract.webp',
         width: 363,
         height: 247
       }
