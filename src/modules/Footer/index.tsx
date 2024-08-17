@@ -44,7 +44,7 @@ export const Footer = () => {
       <div className="flex flex-col text-left">
         <h3 className={`${styles.navTitle} ${titleClass}`}>связаться</h3>
         <a href={TelephoneLink} className={liClass}>
-          8 904 424 05 10
+        +7 904 424-05-10
         </a>
         <a href="mailto:nipi.bz@gmail.com?body=Привет, хочу уточнить по поводу бота&subject=Заказать чат бота" className={liClass}>
           nipi.bz@gmail.com

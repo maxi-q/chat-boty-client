@@ -84,6 +84,22 @@ const videoData = [
     vertical: '/video/zhamkevichV.webp',
     horizontal: '/video/zhamkevichH.webp',
   },
+
+  {
+    href: 'https://www.youtube.com/embed/G0fHsOQWG5g',
+    vertical: '/video/afoninV.webp',
+    horizontal: '/video/afoninH.webp',
+  },
+  {
+    href: 'https://www.youtube.com/embed/tUkagWy8nIQ',
+    vertical: '/video/blackV.webp',
+    horizontal: '/video/blackH.webp',
+  },
+  {
+    href: 'https://www.youtube.com/embed/tILvQMkBqbw',
+    vertical: '/video/emilV.webp',
+    horizontal: '/video/emilH.webp',
+  },
 ]
 
 export const VideoCarousel = () => {

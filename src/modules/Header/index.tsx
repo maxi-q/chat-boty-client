@@ -24,7 +24,7 @@ export const Header = () => {
         <nav className={`${styles.navigation} gap-14 h-full items-center hidden laptop:flex`}>
           <LiComponent link='' active={false}>Услуги</LiComponent>
           <LiComponent link='' active={false}>Кейсы</LiComponent>
-          <LiComponent link='blog' active={false}>Блог</LiComponent>
+          <LiComponent link='/blog' active={false}>Блог</LiComponent>
           <LiComponent link='' active={false}>Контакты</LiComponent>
         </nav>
         <aside
@@ -32,7 +32,7 @@ export const Header = () => {
           style={{ minWidth: '390px' }}
         >
           <a href={TelephoneLink} className={styles.telephone + ' text-base tracking-widest'}>
-            8 904 424 05 10
+          +7 904 424-05-10
           </a>
           <a target="_blank" href={WhatsAppLink}>
             <WhatsApp className={styles.contactLink} alt="whatsapp" height={40} />
