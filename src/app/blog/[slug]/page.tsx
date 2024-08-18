@@ -48,7 +48,7 @@ const ArticleHeader = async ({ params }: IPostPage) => {
   )
 }
 
-export default async function PostPage({ params }: IPostPage) {
+export default async function Page({ params }: IPostPage) {
   return (
     <Suspense fallback={<h1>Загрузка...</h1>}>
       <ArticleHeader params={params} />
