@@ -15,8 +15,9 @@ const Page = async ({ page }: { page: number }) => {
   })
 
   if (!res) return <h1>Не удалось получить статьи</h1>
-  if (res.total_items == 0) return redirect('?page=1')
+  if (res.size == 0) return redirect(`?page=${res.total_pages}`)
   
+  console.log(res)
   
   console.log(res, `page: ${page}`)
 
