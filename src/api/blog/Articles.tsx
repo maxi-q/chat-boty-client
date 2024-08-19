@@ -38,6 +38,7 @@ export async function getArticleFile(content: IGetArticleFile): Promise<GetArtic
       headers: {
         Accept: 'application/json',
         'Content-Type': 'application/json',
+        'Cache-Control': 'max-age=300',
       },
     })
 

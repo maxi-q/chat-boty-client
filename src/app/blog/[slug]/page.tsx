@@ -22,6 +22,7 @@ interface IPostPage {
 
 const MDXPage = async ({ params }: IPostPage) => {
   const content = await GetPost(params.slug)
+
   const overrideComponents = {
     Carousel: Carousel,
   }
@@ -35,7 +36,8 @@ const ArticleHeader = async ({ params }: IPostPage) => {
 
   return (
     <>
-      <Image className="rounded-xl m-0 mb-3" width={1600} height={900} src={`${SOURCE.url}posts/${articleInfo?.slug}/files/preview`} alt={'изображение'} />
+      {/* Image placeholder="blur" */}
+      <Image className="rounded-xl m-0 mb-3" width={1600} height={900}  src={`${SOURCE.url}posts/${articleInfo?.slug}/files/preview`} alt={'изображение'} />
       <div className="flex my-4 text-[16px] font-medium items-center text-center">
         {date}
         <span className={`${style.slash} mx-1`} />

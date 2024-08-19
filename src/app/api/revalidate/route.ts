@@ -1,7 +1,7 @@
 import { type NextRequest } from 'next/server'
 import { revalidatePath } from 'next/cache'
 
-export async function POST(request: NextRequest) {
+export async function GET(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams
   const page = searchParams?.get('page')
 

@@ -20,7 +20,6 @@ const Page = async ({ page }: { page: number }) => {
   if (!pageData) return <h1>Не удалось получить статьи</h1>
   if (pageData.size == 0) return redirect(`?page=${pageData.total_pages}`)
 
-
   const pageNumbs = getPagesNumbs(page, pageData.total_pages)
 
   return (
@@ -32,11 +31,15 @@ const Page = async ({ page }: { page: number }) => {
       </div>
       <div className="flex">
         <DefaultButton page={+page - 1} direction="left" />
-        {!pageNumbs.includes(1) && <><NumberButton number={1} /><span className='text-lg pt-2'>...</span></>}
-        
-        {pageNumbs.map((el, i) => <NumberButton key={i} number={el} disable={el == page} />)}
+        {!pageNumbs.includes(1) && <NumberButton number={1} />}
+        {!pageNumbs.includes(1) && !pageNumbs.includes(2) && <span className="text-lg pt-2">...</span>}
 
-        {!pageNumbs.includes(pageData.total_pages) && <><span className='text-lg pt-2'>...</span><NumberButton number={pageData.total_pages} /></>}
+        {pageNumbs.map((el, i) => (
+          <NumberButton key={i} number={el} disable={el == page} />
+        ))}
+
+        {!pageNumbs.includes(pageData.total_pages) && !pageNumbs.includes(pageData.total_pages - 1) && <span className="text-lg pt-2">...</span>}
+        {!pageNumbs.includes(pageData.total_pages) && <NumberButton number={pageData.total_pages} />}
         <DefaultButton page={+page + 1} direction="right" />
       </div>
     </>
