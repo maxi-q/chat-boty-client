@@ -8,3 +8,8 @@
   width: 0.5px;
   background-color: black;
 }
+
+.selectPage {
+  background-color: #8FFE01;
+  border-radius: 50%;
+}
