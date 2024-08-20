@@ -4,7 +4,7 @@ import Image from 'next/image'
 import ArticleNext from '../../../../constants/svg/ArticleNext'
 import ArticlePrev from '../../../../constants/svg/ArticlePrev'
 
-const IMAGES = ['/video/horizontal.webp', '/video/horizontal.webp', '/video/horizontal.webp', '/video/horizontal.webp']
+const IMAGES = ['horizontal', 'horizontal', 'horizontal', 'horizontal']
 
 import { useState } from 'react'
 
@@ -32,7 +32,7 @@ const Carousel: React.FC<CarouselProps> = ({ images=IMAGES, prevButton, nextButt
       <div className="w-full h-max aspect-video rounded-xl overflow-hidden">
         <div className="relative flex transition-transform duration-500 h-full" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
           {images.map((image, index) => (
-            <Image width={1600} height={900} key={index} src={image} alt={`Slide ${index}`} className="my-0" />
+            <Image width={1600} height={900} loading='lazy' key={index} src={`/video/${image}.webp`} alt={`Slide ${index}`} className="my-0" />
           ))}
         </div>
       </div>
