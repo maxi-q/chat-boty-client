@@ -1,0 +1,9 @@
+.card {
+  background-color: var(--color-additional-2);
+}
+
+.splitter {
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-additional-3);
+}
