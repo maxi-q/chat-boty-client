@@ -11,10 +11,10 @@ import styles from './style.module.css'
 
 const Page = async ({ page }: { page: number }) => {
   if (page < 1) return redirect('?page=1')
-
+  debugger
   const pageData = await getArticles({
     page: page,
-    size: 2,
+    size: 8,
   })
 
   if (!pageData) return <h1>Не удалось получить статьи</h1>

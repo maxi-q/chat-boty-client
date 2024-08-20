@@ -4,7 +4,7 @@ import Image from 'next/image'
 import ArticleNext from '../../../../constants/svg/ArticleNext'
 import ArticlePrev from '../../../../constants/svg/ArticlePrev'
 
-const images = ['/video/horizontal.webp', '/video/horizontal.webp', '/video/horizontal.webp', '/video/horizontal.webp']
+const IMAGES = ['/video/horizontal.webp', '/video/horizontal.webp', '/video/horizontal.webp', '/video/horizontal.webp']
 
 import { useState } from 'react'
 
@@ -14,7 +14,7 @@ type CarouselProps = {
   nextButton?: React.ReactNode
 }
 
-const Carousel: React.FC<CarouselProps> = ({ prevButton, nextButton }) => {
+const Carousel: React.FC<CarouselProps> = ({ images=IMAGES, prevButton, nextButton }) => {
   const [currentIndex, setCurrentIndex] = useState(0)
 
   const prevSlide = () => {
