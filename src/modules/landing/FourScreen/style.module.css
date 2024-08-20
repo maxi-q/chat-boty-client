@@ -19,7 +19,7 @@
 
 .separator {
   content: '';
-  width: 100vw;
+  width: 100%;
 }
 
 .link {

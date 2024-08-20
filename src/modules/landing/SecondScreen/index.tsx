@@ -72,7 +72,6 @@ export const SecondScreen = () => {
             Обсудить проект
           </CallToActionButton>
         </CardShadow>
-        <br className={`hidden laptop:block desktop:hidden ${styles.separator}`} />
         <CardShadow className="hidden desktop:block" />
         <br className={`hidden desktop:block ${styles.separator}`} />
         <CardShadow className="hidden desktop:block" />

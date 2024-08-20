@@ -2,19 +2,17 @@
   position: fixed;
   height: 100%;
   width: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.3);
   opacity: 1;
   pointer-events: none;
 }
 
-.overlay.active {
-  pointer-events: all;
-}
-
 .modal {
+  background-color: #1c1c1c;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1.2);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   z-index: 9;
   overflow: hidden;
 
@@ -29,18 +27,6 @@
   transform: translate(-50%, -50%) scale(1);
   opacity: 1;
   pointer-events: all;
-}
-
-.defaultModal {
-  background-color: #1c1c1c;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-}
-
-.whiteModal {
-  background-color: #F2F2F2B2;
-  /* backdrop-filter: blur(12rem);
-  -webkit-backdrop-filter: blur(7px); */
-  
 }
 
 .section {

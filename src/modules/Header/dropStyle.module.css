@@ -11,44 +11,11 @@
   top: 0;
   left: 0;
   transition: all 0.3s ease;
-  /* opacity: 0; */
+  pointer-events: none;
+  opacity: 0;
   z-index: 4;
-  
 }
 
 .section.active {
-  /* pointer-events: none; */
-  /* opacity: 1; */
-}
-
-.dropHead {
-  background-color: #1c1c1c;
-  z-index: 5;
-  top: 0;
-  left: 0;
-  border-radius: 0 0 20px 20px;
-}
-
-.link {
-  transition: all 0.3s ease-out;
-}
-
-.link:hover,
-.link.active {
-  color: var(--color-accent-2);
-}
-
-.telephone {
-  transition: all 0.3s ease-out;
-}
-.telephone:hover {
-  color: var(--color-accent-2);
-}
-.contactLink {
-  transition: all 0.3s ease-out;
-  cursor: pointer;
-}
-
-.contactLink:hover {
-  fill: var(--color-accent-2);
+  opacity: 1;
 }

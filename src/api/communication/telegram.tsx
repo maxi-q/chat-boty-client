@@ -26,7 +26,7 @@ export async function telegramRequest(content: callBackContent) {
 
     return true
   } catch (error) {
-    console.log(error, 'Не получилось оставить заявку')
-    return
+    console.log(error)
+    alert('Не получилось оставить заявку')
   }
 }

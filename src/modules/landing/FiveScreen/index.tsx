@@ -1,6 +1,12 @@
-import { TextCarousel } from './modules/TextCarousel'
-import { VideoCarousel } from './modules/VideoCarousel'
+import { Manrope } from 'next/font/google'
+import { TextCarousel, VideoCarousel } from './Carousel'
 import styles from './style.module.css'
+
+const nunitoFont = Manrope({
+  // weight: '700',
+  subsets: ['latin'],
+  // variable: '--font-poppins',
+})
 
 export const FiveScreen = () => {
   return (
