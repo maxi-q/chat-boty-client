@@ -1,10 +1,12 @@
 import { PopUp } from '@/components/ui/PopUp'
 import CloseMainPopUp from '@/constants/svg/CloseMainPopUp'
 
+import styles from './style.module.css'
+
 export const VideoModal = ({ show, oid, id, closePopup, image }: { show: boolean; oid: string; id: string; closePopup: () => void; image: string }) => {
   return (
     <PopUp show={show} className="">
-      <div className={'flex flex-col items-center '}>
+      <div className={`flex flex-col items-center`}>
         <CloseMainPopUp className={'fixed'} style={{ right: '20px', top: '20px' }} onClick={closePopup} />
         <iframe
           src={`https://vk.com/video_ext.php?oid=${oid}&id=${id}&hd=2&autoplay=1`}
