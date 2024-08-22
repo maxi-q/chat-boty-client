@@ -51,7 +51,7 @@ export const NotLeavePopUp = () => {
         <h3 className={`font-bold tracking-widest leading-5 uppercase text-base text-center ${styles.gratitudeSubtitle}`}>
           Получите бесплатно разбор воронки, которая окупилась в 10 раз
         </h3>
-        <CallToActionButton onClick={() => {alert('ссылка на разбор')}} className={`${styles.cta} w-[298px] mt-6`} textClassName={'ps-0'}>
+        <CallToActionButton onClick={() => {alert('ссылка на разбор')}} className={`${styles.cta} w-[298px] ps-8 mt-6`} textClassName={'ps-0'}>
           Хочу разбор
         </CallToActionButton>
       </div>

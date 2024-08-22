@@ -7,6 +7,7 @@ import { TelephoneLink, TGLink, VKLink, WhatsAppLink } from '../../constants/sta
 import { Telegram, Vk, WhatsApp } from '../../constants/svg/'
 import Burger from './../../constants/svg/Burger'
 import HeaderX from './../../constants/svg/HeaderX'
+import { NavLi } from './components/NavLi'
 import { DropMenu } from './DropMenu'
 import styles from './style.module.css'
 
@@ -17,22 +18,20 @@ export const Header = () => {
 
   return (
     <>
-      <header className={`${styles.header} relative laptop:mx-[15px] w-100 flex flex-wrap justify-between items-center px-4 laptop:px-16 h-24`}>  
+      <header className={`${styles.header} relative laptop:mx-[15px] w-100 flex flex-wrap justify-between items-center px-4 laptop:px-16 h-24`}>
         <Link href={'/'} className={`${styles.logoDiv} flex-1 overflow-visible w-auto`}>
           <Image src="/logo.webp" alt="chat-boty" width={336} height={228} className={styles.logo} />
         </Link>
         <nav className={`${styles.navigation} gap-14 h-full items-center hidden laptop:flex`}>
-          <LiComponent link='' active={false}>Услуги</LiComponent>
-          <LiComponent link='' active={false}>Кейсы</LiComponent>
-          <LiComponent link='/blog' active={false}>Блог</LiComponent>
-          <LiComponent link='' active={false}>Контакты</LiComponent>
+          <NavLi Component={LiComponent} />
         </nav>
+        
         <aside
           className={`${styles.contacts} flex-1 overflow-visible hidden justify-end items-center w-full laptop:flex laptop:w-auto laptop:order-1`}
           style={{ minWidth: '390px' }}
         >
           <a href={TelephoneLink} className={styles.telephone + ' text-base tracking-widest'}>
-          +7 904 424-05-10
+            +7 904 424-05-10
           </a>
           <a target="_blank" href={WhatsAppLink}>
             <WhatsApp className={styles.contactLink} alt="whatsapp" height={40} />
@@ -48,7 +47,7 @@ export const Header = () => {
           {show ? <HeaderX /> : <Burger />}
         </div>
       </header>
-      <DropMenu show={show}/>
+      <DropMenu show={show} />
     </>
   )
 }
@@ -56,7 +55,7 @@ export const Header = () => {
 const LiComponent = ({
   children,
   active,
-  link
+  link,
 }: Readonly<{
   children: React.ReactNode
   active: boolean
