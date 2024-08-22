@@ -61,7 +61,6 @@ const ArticleHeader = async ({ params }: IPostPage) => {
 
 export default function Page({ params }: IPostPage) {
   return (
-    // <h1>123</h1>
     <Suspense fallback={<h1>Загрузка...</h1>}>
       <ArticleHeader params={params} />
       <MDXPage params={params} />
