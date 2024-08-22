@@ -1,5 +1,5 @@
 import { SOURCE } from '@/constants/static'
-import { ArticleType, GetArticleFileType, getArticlesType, IGetArticleFile, IGetArticleInfo, IGetArticles } from './blogHelper'
+import { ArticleType, GetArticleFileType, getArticlesType, IGetArticleFile, IGetArticleInfo, IGetArticles } from './blogTypes'
 
 const API_URL = SOURCE.url
 

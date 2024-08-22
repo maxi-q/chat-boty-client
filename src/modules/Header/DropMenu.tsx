@@ -4,7 +4,7 @@ import { AnimatePresence, motion } from 'framer-motion'
 import Link from 'next/link'
 import { RemoveScroll } from 'react-remove-scroll'
 import styles from './dropStyle.module.css'
-import { NavLi } from './components/NavLi'
+import { NavLi } from '@/components/ui/NavLi/NavLi'
 
 export const DropMenu = ({ show }: { show: boolean }) => {
   const variants = {
@@ -45,7 +45,7 @@ export const DropMenu = ({ show }: { show: boolean }) => {
             >
               <header className={`${styles.dropHead} flex flex-col items-center absolute w-full h-[645px] pt-[185px]`}>
                 <nav className="flex flex-col gap-[16px] items-center">
-                  <NavLi Component={LiComponent}/>
+                  <NavLi Component={LiComponent} />
                 </nav>
                 <aside className={`${styles.contacts} flex flex-col flex-1 overflow-visible  items-center mt-[104px]`} style={{ minWidth: '390px' }}>
                   <div className="flex justify-center gap-[12px]">
@@ -75,7 +75,7 @@ export const DropMenu = ({ show }: { show: boolean }) => {
 const LiComponent = ({
   children,
   active,
-  link
+  link,
 }: Readonly<{
   children: React.ReactNode
   active: boolean

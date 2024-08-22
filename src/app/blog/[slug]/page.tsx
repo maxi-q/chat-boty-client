@@ -9,22 +9,19 @@ import BlogClock from '@/constants/svg/BlogClock'
 import ArticleImage from './components/ArticleImage'
 import Carousel from './components/Carousel'
 
+import { fetchAllBlogSlugs } from '@/api/blog/utils'
 import style from './style.module.css'
-
-const getPost = async (slug: string) => {
-  return getArticleFile({ slug })
-}
-
-const getPostInfo = async (slug: string) => {
-  return getArticleInfo({ slug })
-}
 
 interface IPostPage {
   params: { slug: string }
 }
 
 const MDXPage = async ({ params }: IPostPage) => {
-  const content = await getPost(params.slug)
+  const content = await getArticleFile({ slug: params.slug })
+
+  if (!content) {
+    return null
+  }
 
   const overrideComponents = {
     Carousel: Carousel,
@@ -40,7 +37,12 @@ const MDXPage = async ({ params }: IPostPage) => {
 }
 
 const ArticleHeader = async ({ params }: IPostPage) => {
-  const articleInfo = await getPostInfo(params.slug)
+  const articleInfo = await getArticleInfo({ slug: params.slug })
+  
+  if (!articleInfo) {
+    return null
+  }
+
   const date = new Date(articleInfo?.created_at || '').toLocaleDateString()
 
   return (
@@ -59,7 +61,7 @@ const ArticleHeader = async ({ params }: IPostPage) => {
   )
 }
 
-export default function Page({ params }: IPostPage) {
+const Page = ({ params }: IPostPage) => {
   return (
     <Suspense fallback={<h1>Загрузка...</h1>}>
       <ArticleHeader params={params} />
@@ -67,3 +69,29 @@ export default function Page({ params }: IPostPage) {
     </Suspense>
   )
 }
+export default Page
+
+export async function generateStaticParams() {
+  const slugs = await fetchAllBlogSlugs()
+
+  return slugs.map((slug) => ({
+    slug: slug, 
+  }))
+}
+
+export const dynamicParams = false
+
+// export async function getStaticProps() {
+//   // Call an external API endpoint to get posts.
+//   // You can use any data fetching library
+//   const res = await fetch('https://.../posts')
+//   const posts = await res.json()
+
+//   // By returning { props: { posts } }, the Blog component
+//   // will receive `posts` as a prop at build time
+//   return {
+//     props: {
+//       posts,
+//     },
+//   }
+// }

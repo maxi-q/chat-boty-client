@@ -55,6 +55,7 @@ export const CallBackForm = ({ className }: { className: string }) => {
       {content.contactType === contactType.Telegram && (
         <div className="my-6 w-full">
           <TelegramInput
+            placeholder='@username'
             className={`${inputClass}`}
             name="contactTelegram"
             setState={(value) => {

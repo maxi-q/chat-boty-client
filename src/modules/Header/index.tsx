@@ -3,11 +3,11 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
+import { NavLi } from '../../components/ui/NavLi/NavLi'
 import { TelephoneLink, TGLink, VKLink, WhatsAppLink } from '../../constants/static'
 import { Telegram, Vk, WhatsApp } from '../../constants/svg/'
 import Burger from './../../constants/svg/Burger'
 import HeaderX from './../../constants/svg/HeaderX'
-import { NavLi } from './components/NavLi'
 import { DropMenu } from './DropMenu'
 import styles from './style.module.css'
 
@@ -25,7 +25,7 @@ export const Header = () => {
         <nav className={`${styles.navigation} gap-14 h-full items-center hidden laptop:flex`}>
           <NavLi Component={LiComponent} />
         </nav>
-        
+
         <aside
           className={`${styles.contacts} flex-1 overflow-visible hidden justify-end items-center w-full laptop:flex laptop:w-auto laptop:order-1`}
           style={{ minWidth: '390px' }}
