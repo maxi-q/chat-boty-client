@@ -1,6 +1,6 @@
 import { MDXRemote } from 'next-mdx-remote/rsc'
-import { Suspense } from 'react'
 import Image from 'next/image'
+import { Suspense } from 'react'
 
 import { getArticleFile, getArticleInfo } from '@/api/blog/Articles'
 import { SOURCE } from '@/constants/static'
@@ -11,7 +11,7 @@ import Carousel from './components/Carousel'
 
 import style from './style.module.css'
 
-export const GetPost = async (slug: string) => {
+const getPost = async (slug: string) => {
   return getArticleFile({ slug })
 }
 
@@ -24,22 +24,18 @@ interface IPostPage {
 }
 
 const MDXPage = async ({ params }: IPostPage) => {
-  const content = await GetPost(params.slug)
+  const content = await getPost(params.slug)
 
   const overrideComponents = {
     Carousel: Carousel,
     Image: ArticleImage,
   }
 
-  console.log(content)
-
   try {
-    // return <>сигма1</>
     return <MDXRemote source={content || ''} components={overrideComponents} />
   } catch (e) {
     console.log(e)
-    return <>сигма</>
-
+    return <>Error</>
   }
 }
 
@@ -63,8 +59,9 @@ const ArticleHeader = async ({ params }: IPostPage) => {
   )
 }
 
-export default async function Page({ params }: IPostPage) {
+export default function Page({ params }: IPostPage) {
   return (
+    // <h1>123</h1>
     <Suspense fallback={<h1>Загрузка...</h1>}>
       <ArticleHeader params={params} />
       <MDXPage params={params} />
