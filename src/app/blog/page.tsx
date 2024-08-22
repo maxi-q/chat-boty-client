@@ -57,12 +57,13 @@ const NumberButton = ({ number, disable }: { number: number; disable?: boolean }
 const DefaultButton: React.FC<{ direction: 'left' | 'right'; page: number }> = ({ direction, page }) => (
   <Link href={{ query: { page: page } }} className={`p-2 cursor-pointer ${direction === 'left' ? 'ml-2' : 'mr-2'}`}>
     {direction === 'left' ? <ArticlePrev /> : <ArticleNext />}
+    <Blog />
   </Link>
 )
 
-const Blog = ({ searchParams }: { searchParams: { page: number } }) => (
+const Blog = ({ searchParams }: { searchParams?: { page?: number } }) => (
   <Suspense fallback={<h1>Загрузка...</h1>}>
-    <Page page={searchParams.page || 1} />
+    <Page page={searchParams?.page || 1} />
   </Suspense>
 )
 
