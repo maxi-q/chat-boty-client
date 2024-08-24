@@ -90,7 +90,8 @@ export const CallBackForm = ({ className }: { className: string }) => {
       >
         получить консультацию
       </button>
-      {createPortal(<Modal key={className} isOpen={show} closePopup={closePopup} />, document.body)}
+      <Modal key={className} isOpen={show} closePopup={closePopup} />
+      {/* {createPortal(<Modal key={className} isOpen={show} closePopup={closePopup} />, document.body)} */}
     </form>
   )
 }
