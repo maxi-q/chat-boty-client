@@ -1,5 +1,6 @@
-import { CallToActionButton } from '@/components/ui/CallToAction'
-import Link from 'next/link'
+import { Case } from './components/Case'
+import { CTA } from './components/CTA'
+
 import styles from './style.module.css'
 
 export const SideBar = () => {
@@ -18,38 +19,8 @@ export const SideBar = () => {
           text={'3 тарифа: на 1/3/6 месяцев. Настроен приём платежей и уведомление администратора, а также автоматическое одобрение в каналы и удаление в случае отсутствия оплаты'}
           link={''}
         />
-        <CTA title={'в этом месте может оказаться твой проект'} text={'тут предложение на 2-3 строчки'} link={''} />
+        <CTA title={'В этом вместе может оказаться ваш проект'} text={'Тут текст, который привлек ваше внимание, а теперь нажмите на кнопку ниже и оставьте заявку'} link={''} />
       </div>
     </aside>
-  )
-}
-
-const Case = ({ title, text, link }: { title: string; text: string; link: string }) => {
-  return (
-    <Link href={link} className={`p-5 flex group rounded-2xl ${styles.case}`}>
-      <h3 className={`pb-3 text-lg font-bold uppercase ${styles.subtitle}`}>{title}</h3>
-      <p className={`text-base font-medium ${styles.text}`} style={{ whiteSpace: 'pre-wrap', flex: 1 }}>
-        {text}
-      </p>
-    </Link>
-  )
-}
-
-const CTA = ({ title, text, link }: { title: string; text: string; link: string }) => {
-  return (
-    <div className={`p-5 flex rounded-2xl ${styles.case} ${styles.CTA}`}>
-      <h3 className={'pb-3 text-lg font-bold uppercase'}>{title}</h3>
-      <p className={`leading-4 text-base font-medium ${styles.text}`} style={{ whiteSpace: 'pre-wrap', flex: 1 }}>
-        {text}
-      </p>
-      <CallToActionButton
-        className={`mt-16 laptop:mt-3  !bg-[var(--color-main)] ${styles.CTAButton}`}
-        actionClassName={'!bg-[var(--color-accent)]'}
-        arrowClassName={'!fill-[var(--color-main)]'}
-        textClassName='laptop:left-[20px] desktop:left-[35px]'
-      >
-        <span className="phone:text-xl tablet:text-2xl">Обсудить проект</span>
-      </CallToActionButton>
-    </div>
   )
 }

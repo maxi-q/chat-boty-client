@@ -34,6 +34,7 @@ const TelegramInput: FC<InputProps> = (props) => {
       type="text"
       className={props.className}
       value={value}
+      placeholder={props.placeholder || '@username'}
       {...(props.register && {
         ...props.register(props.name, {
           onChange: handleInput,

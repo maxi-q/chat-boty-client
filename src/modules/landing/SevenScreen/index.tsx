@@ -1,3 +1,4 @@
+import WorkerMan from './../../../constants/svg/WorkerMan';
 import Chart from '@/constants/svg/Chart'
 import Diplomat from '@/constants/svg/Diplomat'
 import { Tablet } from './AnimatedTablet'
@@ -27,7 +28,7 @@ export const SevenScreen = () => {
         >
           <Tablet text={'Поможем увеличить продажи\nс помощью инструментов\nинтернет-маркетинга'} icon={<Chart />} margin={-90} />
           <Tablet text={'5+ лет опыта разработки\nчат-ботов и автоворонок'} icon={<Diplomat />} margin={-15} />
-          <Tablet text={'5+ лет опыта разработки\nчат-ботов и автоворонок'} icon={<Diplomat />} margin={40} last />
+          <Tablet text={'Спикер конференции:\nСуровый Питерский SMM,\nсотрудничал с Senler'} icon={<WorkerMan />} margin={40} last />
         </aside>
       </div>
       <aside className={`flex laptop:hidden flex-1 h-[625px] w-full bg-[url("/Nilita.webp")] bg-no-repeat bg-cover rounded-3xl justify-end gap-5 ${styles.aside}`} />

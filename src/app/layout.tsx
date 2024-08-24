@@ -20,9 +20,9 @@ export const metadata: Metadata = {
     url: 'https://chat-boty.com',
     images: [
       {
-        url: 'https://chat-boty.com/aside_abstract.webp',
-        width: 800,
-        height: 800,
+        url: 'https://static.chat-boty.com/snippet?field=slug',
+        width: 1200,
+        height: 630,
       },
     ],
   },
