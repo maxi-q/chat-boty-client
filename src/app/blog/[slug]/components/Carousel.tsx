@@ -1,12 +1,12 @@
 'use client'
 
-import Image from 'next/image'
 import ArticleNext from '../../../../constants/svg/ArticleNext'
 import ArticlePrev from '../../../../constants/svg/ArticlePrev'
 
 const IMAGES = ['horizontal', 'horizontal', 'horizontal', 'horizontal']
 
 import { useState } from 'react'
+import { MainImage } from './ui/MainImage'
 
 type CarouselProps = {
   images?: string[]
@@ -14,7 +14,7 @@ type CarouselProps = {
   nextButton?: React.ReactNode
 }
 
-const Carousel: React.FC<CarouselProps> = ({ images=IMAGES, prevButton, nextButton }) => {
+const Carousel: React.FC<CarouselProps> = ({ images = IMAGES, prevButton, nextButton }) => {
   const [currentIndex, setCurrentIndex] = useState(0)
 
   const prevSlide = () => {
@@ -32,7 +32,7 @@ const Carousel: React.FC<CarouselProps> = ({ images=IMAGES, prevButton, nextButt
       <div className="w-full h-max aspect-video rounded-xl overflow-hidden">
         <div className="relative flex transition-transform duration-500 h-full" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
           {images.map((image, index) => (
-            <Image width={1600} height={900} loading='lazy' key={index} src={`/video/${image}.webp`} alt={`Slide ${index}`} className="my-0" />
+            <MainImage key={index} image={image} />
           ))}
         </div>
       </div>
@@ -40,7 +40,7 @@ const Carousel: React.FC<CarouselProps> = ({ images=IMAGES, prevButton, nextButt
         <button onClick={prevSlide} className=" bottom-0 left-0 transform">
           {prevButton || <DefaultButton direction="left" />}
         </button>
-        <h4 className="my-0 px-2">
+        <h4 className="my-0 px-2 select-none">
           {currentIndex + 1}/{images.length}
         </h4>
         <button onClick={nextSlide} className=" bottom-0 right-0 transform">

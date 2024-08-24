@@ -39,7 +39,7 @@ const Box = ({ num, title, p, style }: { num: number; title: string; p: React.JS
       style={style}
     >
       <h2
-        className={`${styles.titleNumber} top-[-50px] phone:top-[-35px] tablet:top-[-69px] laptop:top-[-59px] left-[-48px] phone:left-[-56px] tablet:left-[-56px] laptop:left-[-56px] text-middle text-[260px] phone:text-[260px] tablet:text-[260px] laptop:text-[260px]`}
+        className={`${styles.titleNumber} top-[-50px] phone:top-[-35px] tablet:top-[-69px] laptop:top-[-59px] left-[-48px] phone:left-[-56px] tablet:left-[-56px] laptop:left-[-56px] text-middle text-[260px] phone:text-[260px] tablet:text-[260px] laptop:text-[260px] select-none`}
       >
         {num}
       </h2>
