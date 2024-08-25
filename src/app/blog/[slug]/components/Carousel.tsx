@@ -31,7 +31,7 @@ const Carousel: React.FC<CarouselProps> = ({ images = IMAGES, prevButton, nextBu
 
   return (
     <div className="relative w-full h-max pb-[30px]">
-      <div className="w-full h-max aspect-video rounded-xl overflow-hidden">
+      <div className={`w-full h-max aspect-[${width}/${height}] rounded-xl overflow-hidden`}>
         <div className="relative flex transition-transform duration-500 h-full" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
           {images.map((image, index) => (
             <MainImage key={index} image={image} width={width} height={height} />
