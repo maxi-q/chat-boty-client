@@ -8,6 +8,8 @@ jobs:
   build_and_push_images_to_docker_hub:
     name: Push Docker image to DockerHub
     runs-on: ubuntu-latest
+    env:
+      MODE: "production"
 
     steps:
       - name: Check out the repo
