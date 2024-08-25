@@ -34,7 +34,7 @@
     "src/constants/svg/CloseMainPopUp.jsx",
     "src/constants/helpers.js",
     "src/components/YandexMetrika/index.jsx",
-    "src/app/_api/revalidate/route.ts"
+    "src/app/client_api/revalidate/route.ts"
   ],
   "exclude": ["node_modules"]
 }

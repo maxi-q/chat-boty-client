@@ -9,9 +9,8 @@ export const SOURCE = {
 		process.env.NEXT_PUBLIC_MODE === 'development'
 			? 'https://dev.chat-boty.com/api/v1/'
 			: 'https://chat-boty.com/api/v1/',
-	// source_url: 'https://resource.chat-boty.com/',
+	static_url: 'https://static.chat-boty.com/',
 }
-
 
 export const textReviews = [
   {

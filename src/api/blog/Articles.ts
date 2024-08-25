@@ -15,6 +15,7 @@ export async function getArticles(content: IGetArticles): Promise<getArticlesTyp
       headers: {
         Accept: 'application/json',
         'Content-Type': 'application/json',
+        'Cache-Control': 'max-age=3600',
       },
     })
 
@@ -23,6 +24,7 @@ export async function getArticles(content: IGetArticles): Promise<getArticlesTyp
       ;(error as any).status = response.status
       throw error
     }
+
     const data = await response.json()
     return data
   } catch (error) {
@@ -40,6 +42,7 @@ export async function getArticleFile(content: IGetArticleFile): Promise<GetArtic
         'Content-Type': 'application/json',
         'Cache-Control': 'max-age=300',
       },
+      next: { tags: ['articles'] }
     })
 
     if (!response.ok) {
