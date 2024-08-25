@@ -9,7 +9,7 @@ jobs:
     name: Push Docker image to DockerHub
     runs-on: ubuntu-latest
     env:
-      MODE: "development"
+      NEXT_PUBLIC_MODE: "development"
 
     steps:
       - name: Check out the repo
@@ -31,7 +31,7 @@ jobs:
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/chat_boty_frontend_dev:latest
           build-args: |
-            MODE=${{ env.MODE }}
+            NEXT_PUBLIC_MODE =${{ env.NEXT_PUBLIC_MODE  }}
 
       - name: Logout from DockerHub
         run: docker logout
