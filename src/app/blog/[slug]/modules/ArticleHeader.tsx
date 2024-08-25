@@ -23,7 +23,7 @@ export const ArticleHeader = async ({ params }: IPostPage) => {
   return (
     <>
       {/* Image placeholder="blur" */}
-      <Image className="rounded-xl m-0 mb-3" width={1600} height={900} src={`${SOURCE.url}posts/${articleInfo?.slug}/files/preview`} alt={'изображение'} />
+      <Image className="rounded-xl m-0 mb-3" width={1600} height={900} src={`${SOURCE.url}posts/${articleInfo?.slug}/files/preview?field=slug`} alt={'изображение'} />
       <div className="flex my-4 text-[16px] font-medium items-center text-center">
         {date}
         <span className={`${style.slash} mx-1`} />
