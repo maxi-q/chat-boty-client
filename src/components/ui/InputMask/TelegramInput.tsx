@@ -13,7 +13,6 @@ const TelegramInput: FC<InputProps> = (props) => {
     const target = event.target as HTMLInputElement
     let value = target.value
 
-
     // Форматирование номера телефона
     if (value.slice(0, 1) == '@') {
       value = value
