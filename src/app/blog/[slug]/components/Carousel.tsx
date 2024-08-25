@@ -12,9 +12,11 @@ type CarouselProps = {
   images?: string[]
   prevButton?: React.ReactNode
   nextButton?: React.ReactNode
+  width?: number
+  height?: number
 }
 
-const Carousel: React.FC<CarouselProps> = ({ images = IMAGES, prevButton, nextButton }) => {
+const Carousel: React.FC<CarouselProps> = ({ images = IMAGES, prevButton, nextButton, width=1600, height = 900 }) => {
   const [currentIndex, setCurrentIndex] = useState(0)
 
   const prevSlide = () => {
@@ -32,7 +34,7 @@ const Carousel: React.FC<CarouselProps> = ({ images = IMAGES, prevButton, nextBu
       <div className="w-full h-max aspect-video rounded-xl overflow-hidden">
         <div className="relative flex transition-transform duration-500 h-full" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
           {images.map((image, index) => (
-            <MainImage key={index} image={image} />
+            <MainImage key={index} image={image} width={width} height={height} />
           ))}
         </div>
       </div>

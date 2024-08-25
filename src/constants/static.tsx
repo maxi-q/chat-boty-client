@@ -12,6 +12,8 @@ export const SOURCE = {
 	// source_url: 'https://resource.chat-boty.com/',
 }
 
+console.log('process.env: ', process.env)
+console.log('process.env.NEXT_PUBLIC_MODE: ', process.env.NEXT_PUBLIC_MODE)
 
 export const textReviews = [
   {
