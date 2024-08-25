@@ -2,6 +2,7 @@ FROM node:20-slim
 
 WORKDIR /usr/src/app
 
+ARG NEXT_PUBLIC_MODE
 ENV NEXT_PUBLIC_MODE=$NEXT_PUBLIC_MODE
 RUN echo "Mode is set to $NEXT_PUBLIC_MODE"
 
