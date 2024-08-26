@@ -1,8 +1,16 @@
+import { type Metadata } from 'next/types'
 import { Article } from './modules/Article'
 import { CallBackBlock } from './modules/CallBackBlock'
 import { SideBar } from './modules/SideBar'
 
 import style from './style.module.css'
+
+export const metadata: Metadata = {
+  title: {
+    default: "Chat Boty",
+    template: "%s | Chat Boty",
+  },
+};
 
 export default function Home({
   children,
