@@ -18,8 +18,8 @@ export default function Home({
   children: React.ReactNode
 }>) {
   return (
-    <main className={`${style.screen} laptop:mx-[15px] pt-16 px-6`}>
-      <div className="flex justify-center flex-col laptop:flex-row">
+    <main className={`laptop:mx-[15px] px-6`}>
+      <div className={`${style.screen} px-4 pt-8 laptop:pt-16 pb-6 flex justify-center flex-col laptop:flex-row`}>
         <Article>{children}</Article>
         <SideBar />
       </div>

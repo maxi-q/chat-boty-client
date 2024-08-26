@@ -17,7 +17,7 @@ export const DropMenu = ({ show }: { show: boolean }) => {
     animate: { opacity: 1 },
     exit: { opacity: 0 },
   }
-
+  
   return (
     <AnimatePresence>
       {show && (

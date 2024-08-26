@@ -5,7 +5,7 @@ import styles from './style.module.css'
 
 export const SideBar = () => {
   return (
-    <aside className="desktop:w-[554px] laptop:w-[425px] ml-[35px] flex justify-end flex-col">
+    <aside className="desktop:w-[554px] laptop:w-[425px] mt-16 laptop:mt-0 mx-5 laptop:ml-[35px] flex justify-end flex-col">
       <div className="sticky h-min bottom-0 pb-3">
         <h1 className={`relative text-3xl phone:text-4xl tablet:text-6xl laptop:text-5xl desktop:text-6xl pb-16 uppercase tracking-wide ${styles.title}`}>Наши Кейсы</h1>
         <div className="flex flex-col gap-5">

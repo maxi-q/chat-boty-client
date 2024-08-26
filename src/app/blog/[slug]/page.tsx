@@ -14,10 +14,12 @@ interface IPostPage {
 
 const Page = ({ params }: IPostPage) => {
   return (
-    <Suspense fallback={<h1>Загрузка...</h1>}>
-      <ArticleHeader params={params} />
-      <MDXPage params={params} />
-    </Suspense>
+    <div className="max-w-[852px] mx-auto">
+      <Suspense fallback={<h1>Загрузка...</h1>}>
+        <ArticleHeader params={params} />
+        <MDXPage params={params} />
+      </Suspense>
+    </div>
   )
 }
 
