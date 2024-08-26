@@ -49,7 +49,7 @@ export async function generateMetadata({ params }: IPostPage, parent: ResolvingM
       title: articleInfo?.title,
       description: articleInfo?.short_description,
       // images: [`https://static.tildacdn.com/tild3262-3165-4130-a530-396337393065/photo.png`],
-      images: [`${SOURCE.static_url}${articleInfo?.slug}-og`, ...previousImages],
+      images: [`${SOURCE.static_url}${articleInfo?.slug}-og?field=slug`, ...previousImages],
     },
   }
 }
