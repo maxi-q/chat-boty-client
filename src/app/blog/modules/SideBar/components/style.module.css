@@ -40,7 +40,7 @@
 }
 
 .case:hover .text {
-  text-decoration: underline;
+  /* text-decoration: underline; */
   text-decoration-color: var(--color-additional-3);
 }
 

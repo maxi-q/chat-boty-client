@@ -1,7 +1,10 @@
+import type { Metadata, ResolvingMetadata } from 'next'
 import { Suspense } from 'react'
 
 import { fetchAllBlogSlugs } from '@/api/blog/utils'
 
+import { getArticleInfo } from '@/api/blog/Articles'
+import { SOURCE } from '@/constants/static'
 import { ArticleHeader } from './modules/ArticleHeader'
 import { MDXPage } from './modules/MDXPage'
 
@@ -26,6 +29,27 @@ export async function generateStaticParams() {
   return slugs.map((slug) => ({
     slug: slug,
   }))
+}
+
+export async function generateMetadata({ params }: IPostPage, parent: ResolvingMetadata): Promise<Metadata> {
+  const slug = params.slug
+
+  const articleInfo = await getArticleInfo({ slug })
+
+  const previousImages = (await parent).openGraph?.images || []
+
+  return {
+    title: `${articleInfo?.title}`,
+    description: articleInfo?.short_description,
+    openGraph: {
+      url: `https://chat-boty.com/blog/${slug}`,
+      type: 'article',
+      title: articleInfo?.title,
+      description: articleInfo?.short_description,
+      // images: [`https://static.tildacdn.com/tild3262-3165-4130-a530-396337393065/photo.png`],
+      images: [`${SOURCE.static_url}${articleInfo?.slug}-og`, ...previousImages],
+    },
+  }
 }
 
 export const dynamicParams = false

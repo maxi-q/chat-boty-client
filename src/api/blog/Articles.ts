@@ -17,6 +17,7 @@ export async function getArticles(content: IGetArticles): Promise<getArticlesTyp
         'Content-Type': 'application/json',
         'Cache-Control': 'max-age=3600',
       },
+      next: { tags: ['articles'] }
     })
 
     if (!response.ok) {
@@ -67,6 +68,7 @@ export async function getArticleInfo(content: IGetArticleInfo): Promise<ArticleT
         Accept: 'application/json',
         'Content-Type': 'application/json',
       },
+      next: { tags: ['articles'] }
     })
 
     if (!response.ok) {
