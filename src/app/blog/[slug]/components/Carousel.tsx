@@ -6,7 +6,8 @@ import ArticlePrev from '../../../../constants/svg/ArticlePrev'
 const IMAGES = ['horizontal', 'horizontal', 'horizontal', 'horizontal']
 
 import { useState } from 'react'
-import { MainImage } from './ui/MainImage'
+
+import { CarouselImage } from './ui/MainImage'
 
 type CarouselProps = {
   images?: string[]
@@ -16,7 +17,7 @@ type CarouselProps = {
   height?: number
 }
 
-const Carousel: React.FC<CarouselProps> = ({ images = IMAGES, prevButton, nextButton, width=1600, height = 900 }) => {
+const Carousel: React.FC<CarouselProps> = ({ images = IMAGES, prevButton, nextButton, width = 1600, height = 900 }) => {
   const [currentIndex, setCurrentIndex] = useState(0)
 
   const prevSlide = () => {
@@ -28,23 +29,31 @@ const Carousel: React.FC<CarouselProps> = ({ images = IMAGES, prevButton, nextBu
     const newIndex = (currentIndex + 1) % images.length
     setCurrentIndex(newIndex)
   }
-
+  console.log(width, height)
   return (
-    <div className="relative w-full h-max pb-[30px]">
-      <div className={`w-full h-max aspect-[${width}/${height}] rounded-xl overflow-hidden`}>
-        <div className={`relative flex transition-transform duration-500`} style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
+    <div className="relative w-full pb-[30px]">
+      <div
+        className={`w-full overflow-hidden rounded-xl whitespace-nowrap`}
+        style={{
+          aspectRatio: `${width} / ${height}`,
+        }}
+      >
+        <div className={`block transition-transform duration-500 h-full`} style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
           {images.map((image, index) => (
-            <MainImage key={index} image={image} width={width} height={height} />
+            <div key={index} className="w-full h-full select-none inline-flex">
+              <CarouselImage image={image} width={width} height={height} />
+            </div>
           ))}
         </div>
       </div>
+
       <div className="flex justify-center items-center absolute inset-x-0 bottom-0 h-[30px]">
         <button onClick={prevSlide} className=" bottom-0 left-0 transform">
           {prevButton || <DefaultButton direction="left" />}
         </button>
-        <h4 className="my-0 px-2 select-none">
+        <span className="my-0 px-2 select-none font-medium">
           {currentIndex + 1}/{images.length}
-        </h4>
+        </span>
         <button onClick={nextSlide} className=" bottom-0 right-0 transform">
           {nextButton || <DefaultButton direction="right" />}
         </button>

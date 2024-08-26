@@ -22,8 +22,8 @@ export const Page = async ({ page }: { page: number }) => {
   const pageNumbs = getPagesNumbs(page, pageData.total_pages)
 
   return (
-    <>
-      <div className="flex flex-wrap">
+    <div className='max-w-full'>
+      <div className="flex flex-wrap w-full">
         {pageData.data.map((el) => (
           <Card key={el.id} created_at={el.created_at} duration={el.reading_time} title={el.title} link={el.slug} image={el.slug} />
         ))}
@@ -41,7 +41,7 @@ export const Page = async ({ page }: { page: number }) => {
         {!pageNumbs.includes(pageData.total_pages) && <NumberButton number={pageData.total_pages} />}
         <DefaultButton page={+page + 1} direction="right" />
       </div>
-    </>
+    </div>
   )
 }
 
