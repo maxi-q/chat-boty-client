@@ -12,11 +12,11 @@ import './globals.css'
 const manrope = Manrope({ weight: ['300', '400', '500'], subsets: ['cyrillic'] })
 
 export const metadata: Metadata = {
-  title: 'chat-boty',
-  description: 'chat-boty app',
+  title: 'Chat Boty',
+  description: 'Chat Boty агенство по чат ботам',
   openGraph: {
-    title: 'chat-boty',
-    description: 'chat-boty app',
+    title: 'Chat Boty',
+    description: 'Chat Boty агенство по чат ботам',
     url: 'https://chat-boty.com',
     images: [
       {

@@ -83,7 +83,7 @@ export const SecondScreen = () => {
           </CallToActionButton>
         </CardShadow>
         <Card
-          title={'Рассылки CRM'}
+          title={'Рассылки'}
           index={'05'}
           icons={
             <>

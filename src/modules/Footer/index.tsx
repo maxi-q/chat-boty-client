@@ -27,7 +27,7 @@ export const Footer = () => {
             <LiComponent active={false}>Создание чат-ботов и автоворонок</LiComponent>
             <LiComponent active={false}>Настройка и оформление геткурс</LiComponent>
             <LiComponent active={false}>Настройка вебинарных комнат</LiComponent>
-            <LiComponent active={false}>Рассылки crm</LiComponent>
+            <LiComponent active={false}>Рассылки</LiComponent>
             <LiComponent active={false}>Email воронки</LiComponent>
           </ul>
         </div>

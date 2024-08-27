@@ -3,3 +3,31 @@
   width: 0.5px;
   background-color: black;
 }
+
+.anchorLink {
+  position: absolute; /* Абсолютное позиционирование */
+  left: 0;  /* Сдвиг влево на нужное количество */
+  text-decoration: none; /* Убираем подчеркивание */
+  margin-left: 0; /* Обнуляем отступы */
+  width: 1.5em; /* Ширина, соответствующая размеру иконки */
+  display: inline-block; /* Позволяет задавать размеры */
+  opacity: 0.3;
+  transition: all .2s linear;
+}
+
+.anchorLink:hover {
+  opacity: 1;
+
+}
+
+.anchorLink {
+  display: block; /* Блок для спана внутри ссылки */
+}
+
+.MDXdocument h1 .anchorLink {
+  display: none !important;
+} 
+.MDXdocument h2, .MDXdocument h3, .MDXdocument h4, .MDXdocument h5, .MDXdocument h6 {
+  position: relative; /* Создаем контекст для абсолютного позиционирования */
+  padding-left: 1.5em; /* Оставляем место для иконки слева от текста*/
+}

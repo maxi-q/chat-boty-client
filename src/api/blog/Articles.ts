@@ -15,7 +15,9 @@ export async function getArticles(content: IGetArticles): Promise<getArticlesTyp
       headers: {
         Accept: 'application/json',
         'Content-Type': 'application/json',
+        'Cache-Control': 'max-age=3600',
       },
+      next: { tags: ['articles'] }
     })
 
     if (!response.ok) {
@@ -23,6 +25,7 @@ export async function getArticles(content: IGetArticles): Promise<getArticlesTyp
       ;(error as any).status = response.status
       throw error
     }
+
     const data = await response.json()
     return data
   } catch (error) {
@@ -33,13 +36,14 @@ export async function getArticles(content: IGetArticles): Promise<getArticlesTyp
 
 export async function getArticleFile(content: IGetArticleFile): Promise<GetArticleFileType | undefined> {
   try {
-    const response = await fetch(`${API_URL}posts/${content.slug}/files/content`, {
+    const response = await fetch(`${API_URL}posts/${content.slug}/files/content?field=slug`, {
       method: 'GET',
       headers: {
         Accept: 'application/json',
         'Content-Type': 'application/json',
         'Cache-Control': 'max-age=300',
       },
+      next: { tags: ['articles'] }
     })
 
     if (!response.ok) {
@@ -64,6 +68,7 @@ export async function getArticleInfo(content: IGetArticleInfo): Promise<ArticleT
         Accept: 'application/json',
         'Content-Type': 'application/json',
       },
+      next: { tags: ['articles'] }
     })
 
     if (!response.ok) {

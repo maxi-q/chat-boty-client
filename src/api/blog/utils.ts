@@ -6,9 +6,7 @@ export const fetchAllBlogSlugs = async () => {
     size: 100,
   })
 
-  const slugs = articles?.data.map((el) => (el.slug ))
+  const slugs = articles?.data.map((el) => el.slug)
 
-  return (
-    slugs || []
-  )
+  return slugs || []
 }

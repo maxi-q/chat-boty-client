@@ -1,5 +1,4 @@
 .button {
-
 	background-color: var(--color-accent-2);
 	border-radius: 150px;
 	position: relative;
@@ -11,6 +10,7 @@
 	user-select: none;
 	font-weight: 500;
 	text-transform: uppercase;
+	transition: 0.3s ease-out;
 }
 
 .action {

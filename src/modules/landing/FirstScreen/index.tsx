@@ -1,5 +1,6 @@
 import { CallToActionButton } from '@/components/ui/CallToAction'
 import { Nunito } from 'next/font/google'
+import Image from 'next/image'
 import { CSSProperties } from 'react'
 import styles from './style.module.css'
 
@@ -11,10 +12,14 @@ const nunitoFont = Nunito({
 
 export const FirstScreen = () => {
   return (
+    // bg-[url("/main_abstract_figure.webp")]
     <main
-      className={`section flex flex-col bg-[url("/main_abstract_figure.webp")] p-5 laptop:pl-[40px] laptop:pt-[70px] bg-no-repeat bg-[50vw_10%] bg-[length:927px] tablet:h-[1475px] desktop:h-[1055px] laptop:h-[911px] laptop:bg-right-bottom laptop:bg-contain ${styles.screen}`}
+      className={`relative section flex flex-col  p-5 laptop:pl-[40px] laptop:pt-[70px] bg-no-repeat bg-[50vw_10%] bg-[length:927px] tablet:h-[1475px] desktop:h-[1055px] laptop:h-[911px] laptop:bg-right-bottom laptop:bg-contain ${styles.screen}`}
     >
-      <section className="tablet:flex-1">
+      <div className="absolute left-[50vw] top-[0%] laptop:bottom-0 laptop:right-0 w-[927px] h-[927px]">
+        <Image fill={true} src={'/main_abstract_figure.webp'} alt={'абстрактная фигура'} />
+      </div>
+      <section className="tablet:flex-1 relative">
         <h1 className={`${styles.title} phone:bold text-3xl phone:text-4xl tablet:text-6xl laptop:text-6xl pb-5 desktop:text-7xl leading-[120%]`}>
           Техническое
           <br /> сопровождение
@@ -34,10 +39,7 @@ export const FirstScreen = () => {
 
 const Box = ({ num, title, p, style }: { num: number; title: string; p: React.JSX.Element; style?: CSSProperties }) => {
   return (
-    <li
-      className={`${styles.box} h-[223px] phone:h-[315px] tablet:h-[255px] laptop:h-[305px] w-full pe-6 phone:pe-[44px] pl-[120px] phone:pl-[150px]`}
-      style={style}
-    >
+    <li className={`${styles.box} h-[223px] phone:h-[315px] tablet:h-[255px] laptop:h-[305px] w-full pe-6 phone:pe-[44px] pl-[120px] phone:pl-[150px]`} style={style}>
       <h2
         className={`${styles.titleNumber} top-[-50px] phone:top-[-35px] tablet:top-[-69px] laptop:top-[-59px] left-[-48px] phone:left-[-56px] tablet:left-[-56px] laptop:left-[-56px] text-middle text-[260px] phone:text-[260px] tablet:text-[260px] laptop:text-[260px] select-none`}
       >

@@ -2,7 +2,9 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { useState } from 'react'
+import { usePathname, useSearchParams } from 'next/navigation'
+
+import { useEffect, useState } from 'react'
 import { NavLi } from '../../components/ui/NavLi/NavLi'
 import { TelephoneLink, TGLink, VKLink, WhatsAppLink } from '../../constants/static'
 import { Telegram, Vk, WhatsApp } from '../../constants/svg/'
@@ -14,7 +16,14 @@ import styles from './style.module.css'
 export const Header = () => {
   const [show, setShow] = useState(false)
 
-  const ToggleShow = () => setShow((p) => !p)
+  const toggleShow = () => setShow((p) => !p)
+  const closeShow = () => setShow(false)
+
+  const pathname = usePathname()
+
+  useEffect(() => {
+    closeShow()
+  }, [pathname])
 
   return (
     <>
@@ -43,7 +52,7 @@ export const Header = () => {
             <Vk className={styles.contactLink} alt="whatsapp" height={45} />
           </a>
         </aside>
-        <div className="laptop:hidden" onClick={ToggleShow}>
+        <div className="laptop:hidden" onClick={toggleShow}>
           {show ? <HeaderX /> : <Burger />}
         </div>
       </header>

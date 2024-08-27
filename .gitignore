@@ -25,9 +25,11 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# sitemap
-/public/sitemap.xml
-/public/sitemap-0.xml
+# SEO
+public/sitemap*.xml
+public/robots.txt
+public/feed.xml
+public/secret_key.txt
 
 # local env files
 .env*.local

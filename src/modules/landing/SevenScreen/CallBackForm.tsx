@@ -14,7 +14,7 @@ import { useForm } from 'react-hook-form'
 import styles from './style.module.css'
 import { telegramRequest } from '@/api/communication/telegram'
 
-const inputClass = `block w-full rounded-full text-lg px-6 py-4 phone:text-lg phone:px-6 phone:py-4 tablet:text-lg tablet:px-12 tablet:py-6 laptop:text-lg laptop:px-12 laptop:py-6 my-6 max-w-[340px] ${styles.feedbackInput}`
+const inputClass = `block w-full rounded-full text-lg px-6 py-4 phone:text-lg phone:px-6 phone:py-4 tablet:text-lg tablet:px-12 tablet:py-6 laptop:text-lg laptop:px-12 laptop:py-6 my-6 w-full ${styles.feedbackInput}`
 
 export const CallBackForm = ({ className }: { className: string }) => {
   const { content, edit } = useCallBackStore()
@@ -83,7 +83,7 @@ export const CallBackForm = ({ className }: { className: string }) => {
         </div>
       )}
       <button
-        className={`uppercase px-6 py-4 w-full text-lg phone:px-6 phone:py-4 phone:w-full tablet:w-auto phone:text-lg tablet:px-12 tablet:py-6 tablet:text-lg laptop:px-12 laptop:py-6 laptop:text-lg font-medium rounded-full ${styles.cta}`}
+        className={`uppercase px-6 py-4 w-full text-lg phone:px-6 phone:py-4 phone:w-full tablet:w-full phone:text-lg tablet:px-12 tablet:py-6 tablet:text-lg laptop:px-12 laptop:py-6 laptop:text-lg font-medium rounded-full ${styles.cta}`}
         type="submit"
       >
         получить консультацию
