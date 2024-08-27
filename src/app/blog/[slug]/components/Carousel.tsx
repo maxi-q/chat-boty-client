@@ -32,15 +32,10 @@ const Carousel: React.FC<CarouselProps> = ({ images = IMAGES, prevButton, nextBu
   console.log(width, height)
   return (
     <div className="relative w-full pb-[30px]">
-      <div
-        className={`w-full overflow-hidden rounded-xl whitespace-nowrap`}
-        style={{
-          aspectRatio: `${width} / ${height}`,
-        }}
-      >
+      <div className={`w-full overflow-hidden rounded-xl whitespace-nowrap`}>
         <div className={`block transition-transform duration-500 h-full`} style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
           {images.map((image, index) => (
-            <div key={index} className="w-full h-full select-none inline-flex">
+            <div key={index} className="w-full h-full select-none inline-flex justify-center">
               <CarouselImage image={image} width={width} height={height} />
             </div>
           ))}
