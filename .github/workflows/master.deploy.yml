@@ -8,8 +8,6 @@ jobs:
   build_and_push_images_to_docker_hub:
     name: Push Docker image to DockerHub
     runs-on: ubuntu-latest
-    env:
-      NEXT_PUBLIC_MODE: "production"
 
     steps:
       - name: Check out the repo
@@ -31,7 +29,8 @@ jobs:
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/chat_boty_frontend_prod:latest
           build-args: |
-            NEXT_PUBLIC_MODE=${{ env.NEXT_PUBLIC_MODE  }}
+            NEXT_PUBLIC_MODE=${{ env.NEXT_PUBLIC_MODE }}
+            WEBMASTER_INDEX_KEY=${{ env.WEBMASTER_INDEX_KEY }}
 
       - name: Logout from DockerHub
         run: docker logout
