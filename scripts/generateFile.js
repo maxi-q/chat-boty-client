@@ -1,12 +1,8 @@
-require('dotenv').config();
-const fs = require('fs');
-const path = require('path');
+require('dotenv').config()
+const fs = require('fs')
+const path = require('path')
 
-const filePath = path.join(__dirname, `../public/${process.env.WEBMASTER_INDEX_KEY}.txt`);
-const fileContent = process.env.WEBMASTER_INDEX_KEY || '';
+const filePath = path.join(__dirname, `../public/${process.env.WEBMASTER_INDEX_KEY}.txt`)
+const fileContent = process.env.WEBMASTER_INDEX_KEY || ''
 
-
-
-fs.writeFileSync(filePath, fileContent);
-console.log(`Файл сгенерирован: ${filePath}`);
-console.log(process.env.WEBMASTER_INDEX_KEY) // undefined
+fs.writeFileSync(filePath, fileContent)
