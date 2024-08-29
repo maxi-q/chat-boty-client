@@ -15,7 +15,7 @@ export const Footer = () => {
     >
       <div className={`${styles.logoDiv} overflow-visible phone:w-[409px] laptop:my-8`}>
         <Link href={'/'}>
-          <Image src="/logo.webp" alt="chat-boty" width={336} height={228} className={'w-[168px] h-[114px]'} />
+          <Image src="/logo.webp" alt="Chat Boty" width={336} height={228} className={'w-[168px] h-[114px]'} />
         </Link>
         <CallToActionButton className={`mt-8 ${styles.cta} w-full`}>Обсудить проект</CallToActionButton>
       </div>
@@ -62,7 +62,7 @@ export const Footer = () => {
             <Vk className={`cursor-pointer ${styles.contactLink}`} alt="whatsapp" height={45} />
           </a>
         </ul>
-        <h5 className="flex items-end underline text-lg">Политика конфиденциальности</h5>
+        <Link href={'/privacy'} className="flex items-end underline text-lg">Политика конфиденциальности</Link>
       </div>
     </footer>
   )
