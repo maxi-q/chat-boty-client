@@ -13,7 +13,7 @@ export const FourScreen = () => {
         <Case
           title={'Chukcha — Бренд одежды'}
           text={'Рассылки: ВК, ТГ, email. СМС. Постоянная работа с базой,\nпроведения геймификаций а также автоматизация amoCRM\nи работа с репутацией бренда: ORM'}
-          link={''}
+          link={'/cases/sotrudnichestvo-s-brendom-odezhdy-chukcha'}
         />
         <br className={styles.separator} />
         <Case
@@ -73,7 +73,7 @@ const CTA = ({ title, text, link }: { title: string; text: string; link: string 
   return (
     <div className={`p-5 tablet:p-10 flex rounded-2xl ${styles.case} ${styles.CTA}`}>
       <h3 className={'pb-3 text-2xl font-bold uppercase'}>{title}</h3>
-      <p className={`leading-4 text-xl font-medium ${styles.text}`} style={{ whiteSpace: 'pre-wrap', flex: 1 }}>
+      <p className={`text-lg tablet:text-xl font-medium ${styles.text}`} style={{ whiteSpace: 'pre-wrap', flex: 1 }}>
         {text}
       </p>
       <CallToActionButton className={`mt-16 laptop:mt-3 ${styles.CTAButton}`} actionClassName={styles.CTAAction} arrowClassName={styles.CTAArrow}>

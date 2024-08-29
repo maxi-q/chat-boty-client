@@ -1,21 +1,21 @@
-import { getArticles } from '@/api/blog/Articles'
 import PostsNext from '@/constants/svg/PostsNext'
 import PostsPrev from '@/constants/svg/PostsPrev'
 import Link from 'next/link'
 import { redirect } from 'next/navigation'
 import { Card } from '../../components/Card'
 
+import { getCases } from '@/api/cases/Cases'
 import { getPagesNumbs } from '../../helpers/pagination'
 import styles from './style.module.css'
 
 export const Page = async ({ page }: { page: number }) => {
   if (page < 1) return redirect('?page=1')
   debugger
-  const pageData = await getArticles({
+  const pageData = await getCases({
     page: page,
     size: 8,
   })
-
+  console.log(pageData)
   if (!pageData || !pageData.total_items) return <h1>Не удалось получить кейсы</h1>
   if (pageData.size == 0) return redirect(`?page=${pageData.total_pages}`)
 
