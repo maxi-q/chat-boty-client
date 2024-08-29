@@ -1,7 +1,7 @@
 'use client'
 
-import ArticleNext from '../../../../constants/svg/PostsNext'
-import ArticlePrev from '../../../../constants/svg/PostsPrev'
+import PostsNext from '../../../../constants/svg/PostsNext'
+import PostsPrev from '../../../../constants/svg/PostsPrev'
 
 const IMAGES = ['horizontal', 'horizontal', 'horizontal', 'horizontal']
 
@@ -58,19 +58,7 @@ const Carousel: React.FC<CarouselProps> = ({ images = IMAGES, prevButton, nextBu
 }
 
 const DefaultButton: React.FC<{ direction: 'left' | 'right' }> = ({ direction }) => (
-  <div className={`p-2 ${direction === 'left' ? 'ml-2' : 'mr-2'}`}>{direction === 'left' ? <ArticlePrev /> : <ArticleNext />}</div>
+  <div className={`p-2 ${direction === 'left' ? 'ml-2' : 'mr-2'}`}>{direction === 'left' ? <PostsPrev /> : <PostsNext />}</div>
 )
 
 export default Carousel
-
-// const CustomButton: React.FC<{ direction: 'left' | 'right'; onClick: () => void }> = ({ direction, onClick }) => (
-//   <button onClick={onClick} className={`p-2 bg-blue-500 text-white rounded-full ${direction === 'left' ? 'ml-2' : 'mr-2'}`}>
-//     {direction === 'left' ? 'Prev' : 'Next'}
-//   </button>
-// );
-
-// <Carousel
-//   images={images}
-//   prevButton={<CustomButton direction="left" onClick={prevSlide} />}
-//   nextButton={<CustomButton direction="right" onClick={nextSlide} />}
-// />
