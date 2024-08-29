@@ -32,7 +32,7 @@
     "src/modules/landing/ThirdScreen",
     "src/modules/landing/FourScreen",
     "src/constants/svg/CloseMainPopUp.jsx",
-    "src/constants/helpers.js",
+    "src/constants/_helpers.js",
     "src/components/YandexMetrika/index.jsx",
     "src/app/client_api/revalidate/route.ts"
   ],

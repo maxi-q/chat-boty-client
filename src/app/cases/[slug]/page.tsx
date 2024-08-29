@@ -1,23 +1,33 @@
 import type { Metadata, ResolvingMetadata } from 'next'
-import { Suspense } from 'react'
 
 import { getCaseInfo } from '@/api/cases/Cases'
 import { fetchAllCasesSlugs } from '@/api/cases/utils'
 import { SOURCE } from '@/constants/static'
 import { CaseHeader } from './modules/ArticleHeader'
 import { MDXPage } from './modules/MDXPage'
+import { notFound } from 'next/navigation'
 
 interface ICasePage {
   params: { slug: string }
 }
 
-const Page = ({ params }: ICasePage) => {
+/* <Suspense fallback={<h1>Загрузка...</h1>}> */
+// Ждем, пока пофиксят notFound в Suspense при SSG
+
+const Page = async ({ params }: ICasePage) => {
+  
+  const caseInfo = await getCaseInfo({ slug: params.slug })
+  
+  if (!caseInfo) {
+    return notFound()
+  }
+
   return (
     <div className="max-w-[852px] mx-auto">
-      <Suspense fallback={<h1>Загрузка...</h1>}>
-        <CaseHeader params={params} />
+      <div>
+        <CaseHeader caseInfo={caseInfo} />
         <MDXPage params={params} />
-      </Suspense>
+      </div>
     </div>
   )
 }
@@ -32,7 +42,7 @@ export async function generateStaticParams() {
   }))
 }
 
-export const dynamicParams = false
+export const dynamicParams = true
 
 export async function generateMetadata({ params }: ICasePage, parent: ResolvingMetadata): Promise<Metadata> {
   const slug = params.slug

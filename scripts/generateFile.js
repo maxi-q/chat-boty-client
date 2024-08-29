@@ -1,7 +1,5 @@
 require('dotenv').config()
 
-console.log('env: ', process.env)
-
 if (process.env.NEXT_PUBLIC_MODE === 'production') {
   const fs = require('fs')
   const path = require('path')

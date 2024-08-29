@@ -10,7 +10,6 @@ export function getPagesNumbs(center: number, end: number): number[] {
       } else {
         finish++
       }
-      console.log(start, finish)
     }
   }
 

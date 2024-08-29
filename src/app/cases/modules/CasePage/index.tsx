@@ -5,7 +5,7 @@ import { redirect } from 'next/navigation'
 import { Card } from '../../components/Card'
 
 import { getCases } from '@/api/cases/Cases'
-import { getPagesNumbs } from '../../helpers/pagination'
+import { getPagesNumbs } from '@/constants/helpers'
 import styles from './style.module.css'
 
 export const Page = async ({ page }: { page: number }) => {
@@ -15,7 +15,7 @@ export const Page = async ({ page }: { page: number }) => {
     page: page,
     size: 8,
   })
-  console.log(pageData)
+
   if (!pageData || !pageData.total_items) return <h1>Не удалось получить кейсы</h1>
   if (pageData.size == 0) return redirect(`?page=${pageData.total_pages}`)
 

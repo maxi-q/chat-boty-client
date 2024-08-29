@@ -1,23 +1,16 @@
 import Image from 'next/image'
 
-
-import { getArticleInfo } from '@/api/blog/Articles'
 import { SOURCE } from '@/constants/static'
 import PostClock from '@/constants/svg/PostClock'
 
+import { ArticleType } from '@/api/blog/blogTypes'
 import style from './style.module.css'
 
 interface IPostPage {
-  params: { slug: string }
+  articleInfo: ArticleType
 }
 
-export const ArticleHeader = async ({ params }: IPostPage) => {
-  const articleInfo = await getArticleInfo({ slug: params.slug })
-
-  if (!articleInfo) {
-    return null
-  }
-
+export const ArticleHeader = async ({ articleInfo }: IPostPage) => {
   const date = new Date(articleInfo?.created_at || '').toLocaleDateString()
 
   return (

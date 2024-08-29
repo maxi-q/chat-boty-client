@@ -5,12 +5,12 @@ import Link from 'next/link'
 import { redirect } from 'next/navigation'
 import { Card } from '../../components/Card'
 
-import { getPagesNumbs } from '../../helpers/pagination'
+import { getPagesNumbs } from '../../../../constants/helpers'
 import styles from './style.module.css'
 
 export const Page = async ({ page }: { page: number }) => {
   if (page < 1) return redirect('?page=1')
-  debugger
+
   const pageData = await getArticles({
     page: page,
     size: 8,

@@ -1,5 +1,4 @@
 import type { Metadata, ResolvingMetadata } from 'next'
-import { Suspense } from 'react'
 
 import { fetchAllBlogSlugs } from '@/api/blog/utils'
 
@@ -7,18 +6,29 @@ import { getArticleInfo } from '@/api/blog/Articles'
 import { SOURCE } from '@/constants/static'
 import { ArticleHeader } from './modules/ArticleHeader'
 import { MDXPage } from './modules/MDXPage'
+import { notFound } from 'next/navigation'
 
 interface IPostPage {
   params: { slug: string }
 }
 
-const Page = ({ params }: IPostPage) => {
+/* <Suspense fallback={<h1>Загрузка...</h1>}> */
+// Ждем, пока пофиксят notFound в Suspense при SSG
+
+const Page = async ({ params }: IPostPage) => {
+  
+  const articleInfo = await getArticleInfo({ slug: params.slug })
+  
+  if (!articleInfo) {
+    return notFound()
+  }
+
   return (
     <div className="max-w-[852px] mx-auto">
-      <Suspense fallback={<h1>Загрузка...</h1>}>
-        <ArticleHeader params={params} />
+      <div>
+        <ArticleHeader articleInfo={articleInfo} />
         <MDXPage params={params} />
-      </Suspense>
+      </div>
     </div>
   )
 }
@@ -33,7 +43,7 @@ export async function generateStaticParams() {
   }))
 }
 
-export const dynamicParams = false
+export const dynamicParams = true
 
 export async function generateMetadata({ params }: IPostPage, parent: ResolvingMetadata): Promise<Metadata> {
   const slug = params.slug
@@ -55,4 +65,3 @@ export async function generateMetadata({ params }: IPostPage, parent: ResolvingM
     },
   }
 }
-
