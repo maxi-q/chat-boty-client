@@ -29,7 +29,7 @@ export const Header = () => {
     <>
       <header className={`${styles.header} relative laptop:mx-[15px] w-100 flex flex-wrap justify-between items-center px-4 laptop:px-16 h-24`}>
         <Link href={'/'} className={`${styles.logoDiv} flex-1 overflow-visible w-auto`}>
-          <Image src="/logo.webp" alt="chat-boty" width={336} height={228} className={styles.logo} />
+          <Image src="/logo.webp" alt="Chat Boty" width={336} height={228} className={styles.logo} />
         </Link>
         <nav className={`${styles.navigation} gap-14 h-full items-center hidden laptop:flex`}>
           <NavLi Component={LiComponent} />

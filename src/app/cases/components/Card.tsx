@@ -23,7 +23,7 @@ export const Card = ({ created_at, duration, title, image, link }: ICard) => {
   const rgbDataURL = (r: number, g: number, b: number) => `data:image/gif;base64,R0lGODlhAQABAPAA${triplet(0, r, g) + triplet(b, 255, 255)}/yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==`
 
   return (
-    <Link href={`/blog/${link}`} className="laptop:w-1/2 p-2 no-underline overflow-hidden">
+    <Link href={`/cases/${link}`} className="laptop:w-1/2 p-2 no-underline overflow-hidden">
       <div className="max-w-[410px] w-full rounded-[12px]">
         <Image
           className="rounded-xl m-0 mb-3"
@@ -31,7 +31,7 @@ export const Card = ({ created_at, duration, title, image, link }: ICard) => {
           blurDataURL={rgbDataURL(242, 242, 242)}
           width={410}
           height={205}
-          src={`${SOURCE.url}posts/${link}/files/preview?field=slug`}
+          src={`${SOURCE.url}cases/${link}/files/preview?field=slug`}
           alt={'изображение'}
         />
         <div className="flex text-[16px] font-medium items-center text-center">

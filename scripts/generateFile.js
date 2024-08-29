@@ -1,12 +1,15 @@
-require('dotenv').config();
-const fs = require('fs');
-const path = require('path');
+require('dotenv').config()
 
-const filePath = path.join(__dirname, `../public/${process.env.WEBMASTER_INDEX_KEY}.txt`);
-const fileContent = process.env.WEBMASTER_INDEX_KEY || '';
+console.log('env: ', process.env)
 
+if (process.env.NEXT_PUBLIC_MODE === 'production') {
+  const fs = require('fs')
+  const path = require('path')
 
+  const filePath = path.join(__dirname, `../public/${process.env.WEBMASTER_INDEX_KEY}.txt`)
+  const fileContent = process.env.WEBMASTER_INDEX_KEY || ''
 
-fs.writeFileSync(filePath, fileContent);
-console.log(`Файл сгенерирован: ${filePath}`);
-console.log(process.env.WEBMASTER_INDEX_KEY) // undefined
+  fs.writeFileSync(filePath, fileContent)
+
+  console.log('WEBMASTER_INDEX_FILE generated successfully')
+}

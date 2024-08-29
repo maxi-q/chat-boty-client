@@ -1,22 +1,21 @@
 import type { Metadata, ResolvingMetadata } from 'next'
 import { Suspense } from 'react'
 
-import { fetchAllBlogSlugs } from '@/api/blog/utils'
-
-import { getArticleInfo } from '@/api/blog/Articles'
+import { getCaseInfo } from '@/api/cases/Cases'
+import { fetchAllCasesSlugs } from '@/api/cases/utils'
 import { SOURCE } from '@/constants/static'
-import { ArticleHeader } from './modules/ArticleHeader'
+import { CaseHeader } from './modules/ArticleHeader'
 import { MDXPage } from './modules/MDXPage'
 
-interface IPostPage {
+interface ICasePage {
   params: { slug: string }
 }
 
-const Page = ({ params }: IPostPage) => {
+const Page = ({ params }: ICasePage) => {
   return (
     <div className="max-w-[852px] mx-auto">
       <Suspense fallback={<h1>Загрузка...</h1>}>
-        <ArticleHeader params={params} />
+        <CaseHeader params={params} />
         <MDXPage params={params} />
       </Suspense>
     </div>
@@ -26,7 +25,7 @@ const Page = ({ params }: IPostPage) => {
 export default Page
 
 export async function generateStaticParams() {
-  const slugs = await fetchAllBlogSlugs()
+  const slugs = await fetchAllCasesSlugs()
 
   return slugs.map((slug) => ({
     slug: slug,
@@ -35,10 +34,10 @@ export async function generateStaticParams() {
 
 export const dynamicParams = false
 
-export async function generateMetadata({ params }: IPostPage, parent: ResolvingMetadata): Promise<Metadata> {
+export async function generateMetadata({ params }: ICasePage, parent: ResolvingMetadata): Promise<Metadata> {
   const slug = params.slug
 
-  const articleInfo = await getArticleInfo({ slug })
+  const articleInfo = await getCaseInfo({ slug })
 
   const previousImages = (await parent).openGraph?.images || []
 
@@ -46,7 +45,7 @@ export async function generateMetadata({ params }: IPostPage, parent: ResolvingM
     title: `${articleInfo?.title}`,
     description: articleInfo?.short_description,
     openGraph: {
-      url: `https://chat-boty.com/blog/${slug}`,
+      url: `https://chat-boty.com/cases/${slug}`,
       type: 'article',
       title: articleInfo?.title,
       description: articleInfo?.short_description,
@@ -55,4 +54,3 @@ export async function generateMetadata({ params }: IPostPage, parent: ResolvingM
     },
   }
 }
-
