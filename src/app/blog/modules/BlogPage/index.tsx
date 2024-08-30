@@ -17,7 +17,7 @@ export const Page = async ({ page }: { page: number }) => {
   })
 
   if (!pageData || !pageData.total_items) return <h1>Не удалось получить кейсы</h1>
-  if (pageData.size == 0) return redirect(`?page=${pageData.total_pages}`)
+  if (pageData.size == 0 && pageData.total_pages > 0) return redirect(`?page=${pageData.total_pages}`)
 
   const pageNumbs = getPagesNumbs(page, pageData.total_pages)
 

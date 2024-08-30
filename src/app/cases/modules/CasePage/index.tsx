@@ -10,14 +10,14 @@ import styles from './style.module.css'
 
 export const Page = async ({ page }: { page: number }) => {
   if (page < 1) return redirect('?page=1')
-  debugger
+
   const pageData = await getCases({
     page: page,
     size: 8,
   })
 
   if (!pageData || !pageData.total_items) return <h1>Не удалось получить кейсы</h1>
-  if (pageData.size == 0) return redirect(`?page=${pageData.total_pages}`)
+  if (pageData.size == 0 && pageData.total_pages > 0) return redirect(`?page=${pageData.total_pages}`)
 
   const pageNumbs = getPagesNumbs(page, pageData.total_pages)
 
