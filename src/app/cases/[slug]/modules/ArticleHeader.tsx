@@ -5,17 +5,14 @@ import { SOURCE } from '@/constants/static'
 import PostClock from '@/constants/svg/PostClock'
 
 import style from './style.module.css'
+import { notFound } from 'next/navigation'
+import { CaseType } from '@/api/cases/casesTypes'
 
 interface IPostPage {
-  params: { slug: string }
+  caseInfo: CaseType
 }
 
-export const CaseHeader = async ({ params }: IPostPage) => {
-  const caseInfo = await getCaseInfo({ slug: params.slug })
-
-  if (!caseInfo) {
-    return null
-  }
+export const CaseHeader = async ({ caseInfo }: IPostPage) => {
 
   const date = new Date(caseInfo?.created_at || '').toLocaleDateString()
 

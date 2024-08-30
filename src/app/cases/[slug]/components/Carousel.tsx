@@ -29,7 +29,7 @@ const Carousel: React.FC<CarouselProps> = ({ images = IMAGES, prevButton, nextBu
     const newIndex = (currentIndex + 1) % images.length
     setCurrentIndex(newIndex)
   }
-  console.log(width, height)
+
   return (
     <div className="relative w-full pb-[30px]">
       <div className={`w-full overflow-hidden rounded-xl whitespace-nowrap`}>

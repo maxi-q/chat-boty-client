@@ -4,6 +4,7 @@ import { compileMDX } from 'next-mdx-remote/rsc'
 import remarkAutolinkHeadings from 'remark-autolink-headings'
 import remarkSlug from 'remark-slug'
 import style from './style.module.css'
+import { notFound } from 'next/navigation'
 
 import { getCaseFile } from '@/api/cases/Cases'
 import CaseImage from '../components/ArticleImage'
@@ -17,7 +18,7 @@ export const MDXPage = async ({ params }: IPostPage) => {
   const content = await getCaseFile({ slug: params.slug })
 
   if (!content) {
-    return null
+    return notFound()
   }
 
   const overrideComponents = {

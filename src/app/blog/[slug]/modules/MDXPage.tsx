@@ -3,6 +3,7 @@ import { Plugin } from 'unified'
 import { compileMDX } from 'next-mdx-remote/rsc'
 import remarkAutolinkHeadings from 'remark-autolink-headings'
 import remarkSlug from 'remark-slug'
+import { notFound } from 'next/navigation'
 import style from './style.module.css'
 
 import { getArticleFile } from '@/api/blog/Articles'
@@ -18,7 +19,7 @@ export const MDXPage = async ({ params }: IPostPage) => {
   const content = await getArticleFile({ slug: params.slug })
 
   if (!content) {
-    return null
+    return notFound()
   }
 
   const overrideComponents = {
@@ -56,8 +57,8 @@ export const MDXPage = async ({ params }: IPostPage) => {
 
     // Передача скомпилированного контента в MDXRemote
     return <div className={style.MDXdocument}>{compiledContent}</div>
-  } catch (e) {
-    console.log(e)
+  } catch (error) {
+    console.log(error)
     return <>Error</>
   }
 }

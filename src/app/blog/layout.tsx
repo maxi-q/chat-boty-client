@@ -1,7 +1,7 @@
 import { type Metadata } from 'next/types'
 import { Article } from './modules/Article'
-import { CallBackBlock } from './modules/CallBackBlock'
-import { SideBar } from './modules/SideBar'
+import { CallBackBlock } from '../../modules/Posts/CallBackBlock'
+import { SideBar } from '../../modules/Posts/SideBar'
 
 import style from './style.module.css'
 

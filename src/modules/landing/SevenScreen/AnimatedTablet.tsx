@@ -17,7 +17,6 @@ const Tablet = ({ text, icon, margin, last }: { text: string; icon: React.ReactN
       (entries, observer) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            console.log('Tablet is visible')
             onEntry()
             observer.unobserve(entry.target)
           }
