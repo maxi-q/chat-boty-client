@@ -11,6 +11,20 @@ import './globals.css'
 
 const manrope = Manrope({ weight: ['300', '400', '500'], subsets: ['cyrillic'] })
 
+function logMemoryUsage() {
+  setInterval(() => {
+    const memoryUsage = process.memoryUsage();
+    
+    console.log('Memory Usage:');
+    console.log(`  RSS: ${Math.round(memoryUsage.rss / 1024 / 1024)} MB`);
+    console.log(`  Heap Total: ${Math.round(memoryUsage.heapTotal / 1024 / 1024)} MB`);
+    console.log(`  Heap Used: ${Math.round(memoryUsage.heapUsed / 1024 / 1024)} MB`);
+    console.log(`  External: ${Math.round(memoryUsage.external / 1024 / 1024)} MB`);
+  }, 60 * 1000);  // Каждую минуту (60 * 1000 миллисекунд)
+}
+
+logMemoryUsage();
+
 export const metadata: Metadata = {
   title: 'Chat Boty',
   description: 'Chat Boty агенство по чат ботам',
@@ -64,7 +78,7 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
-        <NotLeavePopUp />
+        {/* <NotLeavePopUp /> */}
       </body>
     </html>
   )
