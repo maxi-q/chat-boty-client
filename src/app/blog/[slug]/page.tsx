@@ -24,7 +24,7 @@ const Page = async ({ params }: IPostPage) => {
   }
 
   return (
-    <div className="max-w-[852px] mx-auto">
+    <div className="max-w-[852px] mx-auto break-words">
       <div>
         <ArticleHeader articleInfo={articleInfo} />
         <MDXPage params={params} />

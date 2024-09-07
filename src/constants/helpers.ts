@@ -21,3 +21,6 @@ export function getPagesNumbs(center: number, end: number): number[] {
 
   return range
 }
+
+
+
