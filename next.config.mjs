@@ -49,5 +49,4 @@ const nextConfig = {
     ]
   },
 }
-
 export default withMDX(nextConfig)

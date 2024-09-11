@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "postbuild": "node scripts/generateFile.js"
+    "postbuild": "next-sitemap && node scripts/generateFile.js"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",
@@ -27,6 +27,7 @@
   },
   "devDependencies": {
     "@mdx-js/loader": "^3.0.1",
+    "@next/bundle-analyzer": "^14.2.8",
     "@next/mdx": "^14.2.5",
     "@tailwindcss/typography": "^0.5.13",
     "@types/inputmask": "^5.0.7",
@@ -35,6 +36,7 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "cross-env": "^7.0.3",
     "eslint": "^8",
     "eslint-config-next": "14.2.3",
     "next-sitemap": "^4.2.3",

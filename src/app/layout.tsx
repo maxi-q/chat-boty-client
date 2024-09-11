@@ -1,3 +1,4 @@
+
 import { Footer } from '@/modules/Footer'
 import { Header } from '@/modules/Header'
 
@@ -20,17 +21,17 @@ function logMemoryUsage() {
     console.log(`  Heap Total: ${Math.round(memoryUsage.heapTotal / 1024 / 1024)} MB`);
     console.log(`  Heap Used: ${Math.round(memoryUsage.heapUsed / 1024 / 1024)} MB`);
     console.log(`  External: ${Math.round(memoryUsage.external / 1024 / 1024)} MB`);
-  }, 60 * 1000);  // Каждую минуту (60 * 1000 миллисекунд)
+  }, 1000 * 60);  // Каждую минуту (60 * 1000 миллисекунд)
 }
 
 logMemoryUsage();
 
 export const metadata: Metadata = {
-  title: 'Chat Boty',
-  description: 'Chat Boty агенство по чат ботам',
+  title: 'Создание чат-ботов в Телеграм, Вконтакте, Инстаграм, WhatsApp любой сложности',
+  description: 'Заказать разработку чат-бота в телеграм, Вконтакте, Инстаграм. Выделим вас на фоне конкурентов, приведём лидов за счёт работы с текущей базой и автоматизируем продажи и упростим работу с клиентами.',
   openGraph: {
-    title: 'Chat Boty',
-    description: 'Chat Boty агенство по чат ботам',
+    title: 'Создание чат-ботов в Телеграм, Вконтакте, Инстаграм, WhatsApp любой сложности',
+    description: 'Заказать разработку чат-бота в телеграм, Вконтакте, Инстаграм. Выделим вас на фоне конкурентов, приведём лидов за счёт работы с текущей базой и автоматизируем продажи и упростим работу с клиентами.',
     url: 'https://chat-boty.com',
     images: [
       {

@@ -15,7 +15,7 @@ export async function getArticles(content: IGetArticles): Promise<getArticlesTyp
       headers: {
         Accept: 'application/json',
         'Content-Type': 'application/json',
-        'Cache-Control': 'max-age=3600',
+        'Cache-Control': 'max-age=300',
       },
       next: { tags: ['articles'] }
     })
