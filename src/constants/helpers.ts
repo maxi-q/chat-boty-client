@@ -22,7 +22,7 @@ export function getPagesNumbs(center: number, end: number): number[] {
   return range
 }
 
-function logMemoryUsage() {
+export function logMemoryUsage() {
   setInterval(() => {
     const memoryUsage = process.memoryUsage();
     
@@ -34,3 +34,23 @@ function logMemoryUsage() {
   }, 1000 * 60);  // Каждую минуту (60 * 1000 миллисекунд)
 }
 
+export function formatHumanReadableDateTime(dateInput: string | Date): string {
+  // Преобразуем входные данные в объект Date, если это строка
+  const date = typeof dateInput === 'string' ? new Date(dateInput) : dateInput;
+
+  // Определяем компоненты даты
+  const day = date.getDate();
+  const months = [
+    'января', 'февраля', 'марта', 'апреля', 'мая', 'июня',
+    'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'
+  ];
+  const month = months[date.getMonth()];
+  const year = date.getFullYear();
+
+  // Определяем компоненты времени
+  const hours = String(date.getHours()).padStart(2, '0');
+  const minutes = String(date.getMinutes()).padStart(2, '0');
+
+  // Формируем строку: день месяц год, часы:минуты
+  return `${day} ${month} ${year}, ${hours}:${minutes}`;
+}

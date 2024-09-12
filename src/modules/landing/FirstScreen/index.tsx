@@ -14,7 +14,7 @@ export const FirstScreen = () => {
   return (
     // bg-[url("/main_abstract_figure.webp")]
     <main
-      className={`relative section flex flex-col  p-5 laptop:pl-[40px] laptop:pt-[70px] bg-no-repeat bg-[50vw_10%] bg-[length:927px] tablet:h-[1475px] desktop:h-[1055px] laptop:h-[911px] laptop:bg-right-bottom laptop:bg-contain ${styles.screen}`}
+      className={`relative section flex flex-col p-5 laptop:pl-[40px] laptop:pt-[70px] bg-no-repeat bg-[50vw_10%] bg-[length:927px] tablet:h-[1475px] desktop:h-[1055px] laptop:h-[911px] laptop:bg-right-bottom laptop:bg-contain ${styles.screen}`}
     >
       <div className="absolute left-[50vw] top-[0%] laptop:bottom-0 laptop:right-0 w-[927px] h-[927px]">
         <Image fill={true} src={'/main_abstract_figure.webp'} alt={'абстрактная фигура'} />
