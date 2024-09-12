@@ -7,7 +7,7 @@ export function middleware(req: NextRequest) {
     return NextResponse.next();
   }
 
-  console.log(`[INFO] Requested URL: ${url}, Method: ${req.method}`)
+  // console.log(`[INFO] Requested URL: ${url}, Method: ${req.method}`)
 
   return NextResponse.next()
 }

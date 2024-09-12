@@ -1,37 +1,23 @@
-
 import { Footer } from '@/modules/Footer'
 import { Header } from '@/modules/Header'
 
-import { NotLeavePopUp } from '@/components/ui/DontLeavePopUp'
+import { CallBackPopUp } from '@/components/ui/CallBackPopUp'
 import YandexMetrika from '@/components/YandexMetrika'
 import type { Metadata } from 'next'
 import { Manrope } from 'next/font/google'
 import Script from 'next/script'
 import { Suspense } from 'react'
 import './globals.css'
-
 const manrope = Manrope({ weight: ['300', '400', '500'], subsets: ['cyrillic'] })
-
-function logMemoryUsage() {
-  setInterval(() => {
-    const memoryUsage = process.memoryUsage();
-    
-    console.log('Memory Usage:');
-    console.log(`  RSS: ${Math.round(memoryUsage.rss / 1024 / 1024)} MB`);
-    console.log(`  Heap Total: ${Math.round(memoryUsage.heapTotal / 1024 / 1024)} MB`);
-    console.log(`  Heap Used: ${Math.round(memoryUsage.heapUsed / 1024 / 1024)} MB`);
-    console.log(`  External: ${Math.round(memoryUsage.external / 1024 / 1024)} MB`);
-  }, 1000 * 60);  // Каждую минуту (60 * 1000 миллисекунд)
-}
-
-logMemoryUsage();
 
 export const metadata: Metadata = {
   title: 'Создание чат-ботов в Телеграм, Вконтакте, Инстаграм, WhatsApp любой сложности',
-  description: 'Заказать разработку чат-бота в телеграм, Вконтакте, Инстаграм. Выделим вас на фоне конкурентов, приведём лидов за счёт работы с текущей базой и автоматизируем продажи и упростим работу с клиентами.',
+  description:
+    'Заказать разработку чат-бота в телеграм, Вконтакте, Инстаграм. Выделим вас на фоне конкурентов, приведём лидов за счёт работы с текущей базой и автоматизируем продажи и упростим работу с клиентами.',
   openGraph: {
     title: 'Создание чат-ботов в Телеграм, Вконтакте, Инстаграм, WhatsApp любой сложности',
-    description: 'Заказать разработку чат-бота в телеграм, Вконтакте, Инстаграм. Выделим вас на фоне конкурентов, приведём лидов за счёт работы с текущей базой и автоматизируем продажи и упростим работу с клиентами.',
+    description:
+      'Заказать разработку чат-бота в телеграм, Вконтакте, Инстаграм. Выделим вас на фоне конкурентов, приведём лидов за счёт работы с текущей базой и автоматизируем продажи и упростим работу с клиентами.',
     url: 'https://chat-boty.com',
     images: [
       {
@@ -79,6 +65,7 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
+        <CallBackPopUp />
         {/* <NotLeavePopUp /> */}
       </body>
     </html>
