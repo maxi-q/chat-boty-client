@@ -23,6 +23,11 @@ const nextConfig = {
         hostname: 'static.chat-boty.com',
         pathname: '**',
       },
+      {
+        protocol: 'https',
+        hostname: 'via.placeholder.com',
+        pathname: '**',
+      },
     ],
   },
   async headers() {

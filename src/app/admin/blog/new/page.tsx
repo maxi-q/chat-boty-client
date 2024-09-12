@@ -1,20 +1,22 @@
 'use client'
 
+import { IImages } from '@/api/static/Images'
 import EasyMDE from 'easymde'
 import 'easymde/dist/easymde.min.css'
 import { useEffect, useRef, useState } from 'react'
 import { MDXPage } from './components/MDXPage'
 import collection from './components/ui/collection'
+import ImageSelectorModal from './modules/ImageSelectorModal'
+import { getImagesCLIENT } from '@/api/static/Client'
 
 const customCarouselAction = (editor: EasyMDE) => {
-
-  const url = prompt('Введите URL изображения');
+  const url = prompt('Введите URL изображения')
 
   if (url) {
-    const cm = editor.codemirror;
-    const output = `<Carousel images={["${url}"]} width={400} height={400} />`;
-    
-    cm.replaceSelection(output);
+    const cm = editor.codemirror
+    const output = `<Carousel images={["${url}"]} width={400} height={400} />`
+
+    cm.replaceSelection(output)
   }
 }
 
@@ -47,13 +49,12 @@ const MarkdownEditor = () => {
         {
           name: 'custom-image',
           action: function customImageAction(editor) {
-
-            const url = prompt('Введите URL изображения');
+            const url = prompt('Введите URL изображения')
 
             if (url) {
-              const cm = editor.codemirror;
-              const output = `<Image image="${url}" width={400} height={400} />`;
-              cm.replaceSelection(output);
+              const cm = editor.codemirror
+              const output = `<Image image="${url}" width={400} height={400} />`
+              cm.replaceSelection(output)
             }
           },
           className: 'fa fa-image', // Используем стандартную иконку Font Awesome для изображений
@@ -78,8 +79,8 @@ const MarkdownEditor = () => {
         uniqueId: 'markdown-editor',
       },
       shortcuts: {
-        'custom-image': 'Ctrl-I', 
-        'carousel': 'Ctrl-C'
+        'custom-image': 'Ctrl-I',
+        carousel: 'Ctrl-C',
       },
     })
 
@@ -104,6 +105,22 @@ const MarkdownEditor = () => {
     // Здесь можно отправить content на сервер или сохранить в локальном хранилище
   }
 
+  const [isModalOpen, setIsModalOpen] = useState(true)
+
+  // Пример данных изображений
+  const [images, setImages] = useState<IImages>()
+  useEffect(() => {
+    const f = async () => {
+      const i = await getImagesCLIENT({ page: 1, size: 10 })
+      setImages(i)
+      console.log(i)
+    }
+    f()
+  }, [])
+
+  const openModal = () => setIsModalOpen(true)
+  const closeModal = () => setIsModalOpen(false)
+
   return (
     <div className="prose">
       <div className="flex w-screen">
@@ -120,6 +137,11 @@ const MarkdownEditor = () => {
       <button onClick={handleSave} className=" px-4 py-2 bg-blue-500 text-white rounded">
         Сохранить
       </button>
+      <button onClick={openModal} className="bg-blue-500 text-white px-4 py-2 rounded">
+        Открыть выбор изображений
+      </button>
+
+      <ImageSelectorModal images={images} isOpen={isModalOpen} onClose={closeModal} />
     </div>
   )
 }

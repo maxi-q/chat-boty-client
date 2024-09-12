@@ -10,6 +10,9 @@ export const SOURCE = {
 			? 'https://dev.chat-boty.com/api/v1/'
 			: 'https://chat-boty.com/api/v1/',
 	static_url: 'https://static.chat-boty.com/',
+  client_url: process.env.NEXT_PUBLIC_MODE === 'development'
+      ? 'https://dev.chat-boty.com/'
+      : 'https://chat-boty.com/',
 }
 
 export const textReviews = [
