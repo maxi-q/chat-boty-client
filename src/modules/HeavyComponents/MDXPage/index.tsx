@@ -1,22 +1,17 @@
-import { Plugin } from 'unified'
-
 import { compileMDX } from 'next-mdx-remote/rsc'
 import { notFound } from 'next/navigation'
-import remarkAutolinkHeadings from 'remark-autolink-headings'
-import remarkSlug from 'remark-slug'
 import style from './style.module.css'
 
 import { getArticleFile } from '@/api/blog/Articles'
 
-import ArticleImage from './components/ArticleImage'
-import Carousel from './components/Carousel'
 import { settings } from './helpers'
+import { getCaseFile } from '@/api/cases/Cases'
 
 interface IPostPage {
   params: { slug: string }
 }
 
-export const FileMDX = async ({ params }: IPostPage) => {
+export const FilePostMDX = async ({ params }: IPostPage) => {
   const content = await getArticleFile({ slug: params.slug })
 
   if (!content) {
@@ -26,13 +21,22 @@ export const FileMDX = async ({ params }: IPostPage) => {
   return <ContentMDX content={content} />
 }
 
-export const ContentMDX = async ({ content }: { content: string }) => {
+export const FileCaseMDX = async ({ params }: IPostPage) => {
+  const content = await getCaseFile({ slug: params.slug })
 
+  if (!content) {
+    return notFound()
+  }
+
+  return <ContentMDX content={content} />
+}
+
+export const ContentMDX = async ({ content }: { content: string }) => {
   try {
     const { content: compiledContent } = await compileMDX({
       source: content,
       options: settings.options,
-      components: settings.components
+      components: settings.components,
     })
 
     return <MDXBox compiledContent={compiledContent} />

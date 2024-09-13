@@ -3,7 +3,7 @@ import type { Metadata, ResolvingMetadata } from 'next'
 import { getCaseInfo } from '@/api/cases/Cases'
 import { fetchAllCasesSlugs } from '@/api/cases/utils'
 import { SOURCE } from '@/constants/static'
-import { FileMDX } from '@/modules/HeavyComponents/MDXPage'
+import { FileCaseMDX } from '@/modules/HeavyComponents/MDXPage'
 import { CaseHeader } from './modules/ArticleHeader'
 
 import { notFound } from 'next/navigation'
@@ -26,7 +26,7 @@ const Page = async ({ params }: ICasePage) => {
     <div className="max-w-[852px] mx-auto">
       <div>
         <CaseHeader caseInfo={caseInfo} />
-        <FileMDX params={params} />
+        <FileCaseMDX params={params} />
       </div>
     </div>
   )

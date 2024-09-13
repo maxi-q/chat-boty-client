@@ -4,7 +4,7 @@ import { fetchAllBlogSlugs } from '@/api/blog/utils'
 
 import { getArticleInfo } from '@/api/blog/Articles'
 import { SOURCE } from '@/constants/static'
-import { FileMDX } from '@/modules/HeavyComponents/MDXPage'
+import { FilePostMDX } from '@/modules/HeavyComponents/MDXPage'
 import { notFound } from 'next/navigation'
 import { ArticleHeader } from './modules/ArticleHeader'
 
@@ -26,7 +26,7 @@ const Page = async ({ params }: IPostPage) => {
     <div className="max-w-[852px] mx-auto break-words">
       <div>
         <ArticleHeader articleInfo={articleInfo} />
-        <FileMDX params={params} />
+        <FilePostMDX params={params} />
       </div>
     </div>
   )

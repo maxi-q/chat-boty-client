@@ -1,9 +1,6 @@
-'use client'
-
-import { compileMDX } from 'next-mdx-remote/rsc'
-
 import { MDXBox } from '@/modules/HeavyComponents/MDXPage'
 import { settings } from '@/modules/HeavyComponents/MDXPage/helpers'
+import { compileMDX } from 'next-mdx-remote/rsc'
 import { useEffect, useState } from 'react'
 
 export const AdminMDXPage = ({ content }: { content: string }) => {

@@ -45,7 +45,7 @@ export async function getArticleFile(content: IGetArticleFile): Promise<GetArtic
       },
       next: { tags: ['articles'] }
     })
-
+    
     if (!response.ok) {
       const error = new Error(`HTTP Error: ${response.status}`)
       ;(error as any).status = response.status

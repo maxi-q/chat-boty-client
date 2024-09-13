@@ -4,7 +4,6 @@ import { getImages } from '@/api/static/Images'
 import { type NextRequest } from 'next/server'
 
 export async function GET(request: NextRequest) {
-  console.log('123')
   const searchParams = request.nextUrl.searchParams
   const page = searchParams.get('page') || 1
   const size = searchParams.get('size') || 10

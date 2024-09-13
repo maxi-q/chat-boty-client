@@ -1,6 +1,7 @@
 import { getArticles } from '@/api/blog/Articles'
 import { formatHumanReadableDateTime } from '@/constants/helpers'
 import { SOURCE } from '@/constants/static'
+import dynamic from 'next/dynamic'
 import Link from 'next/link'
 
 const BlogPage = async () => {
@@ -47,3 +48,5 @@ const BlogPage = async () => {
 }
 
 export default BlogPage
+
+
