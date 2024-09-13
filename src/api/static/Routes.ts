@@ -1,21 +1,15 @@
-import { SOURCE } from '@/constants/static'
-import { cookies } from 'next/headers'
 import { IGetImages, IImages } from './types'
 
-const API_URL = SOURCE.static_url
-
-export async function getImages(content: IGetImages): Promise<IImages | undefined> {
+export async function getImagesCLIENT(content: IGetImages): Promise<IImages | undefined> {
   try {
     const params = new URLSearchParams()
 
-    const token = cookies().get('token')?.value.toString()
-    const response = await fetch(`${API_URL}?` + params, {
+    const response = await fetch(`/client_api/static?` + params, {
       method: 'GET',
       headers: {
         Accept: 'application/json',
         'Content-Type': 'application/json',
         'Cache-Control': 'max-age=300',
-        Authorization: token || '',
       },
       next: { tags: ['images'] },
     })
@@ -26,10 +20,10 @@ export async function getImages(content: IGetImages): Promise<IImages | undefine
       throw error
     }
 
-    const data = await response.json()
-    return data
+    const { images } = await response.json()
+    return images
   } catch (error) {
-    console.log(error, 'Error: getArticles')
+    console.log(error, 'Error: ImagesClient')
     return
   }
 }

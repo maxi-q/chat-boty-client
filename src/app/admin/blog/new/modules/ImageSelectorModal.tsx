@@ -1,4 +1,4 @@
-import { IImage, IImages } from '@/api/static/Images'
+import { IImage, IImages } from '@/api/static/types'
 import { SOURCE } from '@/constants/static'
 import Image from 'next/image'
 import React, { useEffect, useState } from 'react'
@@ -6,11 +6,12 @@ import Modal from './Modal' // Модальное окно
 
 interface ImageSelectorProps {
   images?: IImages // Массив изображений
+  onConfirm: (selectedImage: IImage | null) => void;
   isOpen: boolean
   onClose: () => void
 }
 
-const ImageSelectorModal: React.FC<ImageSelectorProps> = ({ images, isOpen, onClose }) => {
+const ImageSelectorModal: React.FC<ImageSelectorProps> = ({ images, isOpen, onClose, onConfirm }) => {
   const [selectedImage, setSelectedImage] = useState<IImage | null>(null)
 
   // Функция для выбора изображения
@@ -18,9 +19,10 @@ const ImageSelectorModal: React.FC<ImageSelectorProps> = ({ images, isOpen, onCl
     setSelectedImage(image)
   }
 
-  useEffect(() => {
-    console.log(images)
-  }, [images])
+  const handleConfirm = () => {
+    onConfirm(selectedImage); // Возвращаем выбранное изображение
+    onClose(); // Закрываем модальное окно
+  }
 
   return (
     <Modal isOpen={isOpen} onClose={onClose}>
@@ -30,7 +32,7 @@ const ImageSelectorModal: React.FC<ImageSelectorProps> = ({ images, isOpen, onCl
             <div
               key={index}
               className="cursor-pointer flex items-center justify-center border border-gray-300"
-              style={{ width: '200px', height: '150px' }} // Размеры миниатюр
+              style={{ width: '200px', height: '150px' }}
               onClick={() => handleImageSelect(image)}
             >
               <Image
@@ -61,6 +63,9 @@ const ImageSelectorModal: React.FC<ImageSelectorProps> = ({ images, isOpen, onCl
               <p>
                 <strong>Height:</strong> {selectedImage.size}px
               </p>
+              <button onClick={handleConfirm} className="bg-blue-500 text-white px-4 py-2 rounded">
+                Выбрать
+              </button>
             </div>
           ) : (
             <p>Выберите изображение для отображения информации.</p>
