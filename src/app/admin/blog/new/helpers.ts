@@ -1,11 +1,23 @@
-import collection from './components/ui/collection'
+import collection from './ui/collection'
+import openImageSelector from './modules/ImageSelector'
 
-const customCarouselAction = (editor: EasyMDE) => {
-  const url = prompt('Введите URL изображения')
+const customCarouselAction = async (editor: EasyMDE) => {
+  const selectedImage = await openImageSelector()
 
-  if (url) {
+  if (selectedImage?.slug) {
     const cm = editor.codemirror
-    const output = `<Carousel images={["${url}"]} width={400} height={400} />`
+    const output = `<Carousel images={["${selectedImage.slug}"]} width={400} height={300} />`
+
+    cm.replaceSelection(output)
+  }
+}
+
+const customImageAction = async (editor: EasyMDE) => {
+  const selectedImage = await openImageSelector()
+
+  if (selectedImage?.slug) {
+    const cm = editor.codemirror
+    const output = `<Image image="${selectedImage.slug}" width={400} height={400} />`
 
     cm.replaceSelection(output)
   }
@@ -27,15 +39,7 @@ export const settings: EasyMDE.Options = {
     'link',
     {
       name: 'custom-image',
-      action: function customImageAction(editor) {
-        const url = prompt('Введите URL изображения')
-
-        if (url) {
-          const cm = editor.codemirror
-          const output = `<Image image="${url}" width={400} height={400} />`
-          cm.replaceSelection(output)
-        }
-      },
+      action: customImageAction,
       className: 'fa fa-image',
       title: 'Вставить изображение',
     },
@@ -58,7 +62,7 @@ export const settings: EasyMDE.Options = {
   },
   shortcuts: {
     'custom-image': 'Ctrl-I',
-    carousel: 'Ctrl-C',
+    carousel: 'Ctrl-O',
   },
   spellChecker: false,
 }

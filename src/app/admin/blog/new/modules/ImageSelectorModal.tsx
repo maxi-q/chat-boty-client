@@ -1,51 +1,65 @@
+import { getImagesCLIENT } from '@/api/static/Routes'
 import { IImage, IImages } from '@/api/static/types'
 import { SOURCE } from '@/constants/static'
-import Image from 'next/image'
 import React, { useEffect, useState } from 'react'
+import ImageComponent from './Image'
 import Modal from './Modal' // Модальное окно
+import { getImageDimensions } from './helper'
 
 interface ImageSelectorProps {
-  images?: IImages // Массив изображений
-  onConfirm: (selectedImage: IImage | null) => void;
+  onConfirm: (selectedImage: IImage | null) => void
   isOpen: boolean
   onClose: () => void
 }
 
-const ImageSelectorModal: React.FC<ImageSelectorProps> = ({ images, isOpen, onClose, onConfirm }) => {
+const ImageSelectorModal: React.FC<ImageSelectorProps> = ({ isOpen, onClose, onConfirm }) => {
   const [selectedImage, setSelectedImage] = useState<IImage | null>(null)
+  const [images, setImages] = useState<IImages>()
 
-  // Функция для выбора изображения
+  useEffect(() => {
+    const f = async () => {
+      const i = await getImagesCLIENT({ page: 1, size: 12 })
+      setImages(i)
+    }
+    f()
+  }, [])
+
   const handleImageSelect = (image: IImage) => {
-    setSelectedImage(image)
+    setSelectedImage({ ...image })
+
+    getImageDimensions(`${SOURCE.static_url}${image.slug}?field=slug`).then((size) => {
+      setSelectedImage(p => {
+        if (!p) return null
+
+        return { ...p, width: size.width, height: size.height }
+      })
+    })
+    // тут добавлю
   }
 
   const handleConfirm = () => {
-    onConfirm(selectedImage); // Возвращаем выбранное изображение
-    onClose(); // Закрываем модальное окно
+    onConfirm(selectedImage)
+    onClose()
   }
 
   return (
     <Modal isOpen={isOpen} onClose={onClose}>
-      <div className="flex w-full h-full" >
+      <div className="flex w-full h-full">
         <div className="grid grid-cols-5 gap-4 w-4/5 overflow-y-auto" style={{ maxHeight: '400px', gridTemplateColumns: 'repeat(auto-fill, 200px)' }}>
-          {images?.data?.map((image, index) => (
-            <div
-              key={index}
-              className="cursor-pointer flex items-center justify-center border border-gray-300"
-              style={{ width: '200px', height: '150px' }}
-              onClick={() => handleImageSelect(image)}
-            >
-              <Image
-                width={500}
-                height={500}
-                loading="lazy"
-                src={`${SOURCE.static_url}${image.slug}?field=slug`}
-                alt={`Фото ${image.title}`}
-                className={`my-0 select-none relative object-contain block w-full h-full`}
-                style={{ backgroundColor: 'var(--color-additional-2)' }}
-              />
-            </div>
-          ))}
+          {images ? (
+            images?.data?.map((image, index) => (
+              <div
+                key={index}
+                className="cursor-pointer flex items-center justify-center border border-gray-300"
+                style={{ width: '200px', height: '150px' }}
+                onClick={() => handleImageSelect(image)}
+              >
+                <ImageComponent image={image} />
+              </div>
+            ))
+          ) : (
+            <h3>Секунду...</h3>
+          )}
         </div>
         <div className="w-1/5 pl-4">
           {selectedImage ? (
@@ -58,10 +72,10 @@ const ImageSelectorModal: React.FC<ImageSelectorProps> = ({ images, isOpen, onCl
                 <strong>Title:</strong> {selectedImage.title}
               </p>
               <p>
-                <strong>Width:</strong> {selectedImage.size}px
+                <strong>Width:</strong> {selectedImage?.width || '...'} px
               </p>
               <p>
-                <strong>Height:</strong> {selectedImage.size}px
+                <strong>Height:</strong> {selectedImage?.height || '...'} px
               </p>
               <button onClick={handleConfirm} className="bg-blue-500 text-white px-4 py-2 rounded">
                 Выбрать

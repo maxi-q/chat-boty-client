@@ -3,8 +3,9 @@ import type { Metadata, ResolvingMetadata } from 'next'
 import { getCaseInfo } from '@/api/cases/Cases'
 import { fetchAllCasesSlugs } from '@/api/cases/utils'
 import { SOURCE } from '@/constants/static'
+import { FileMDX } from '@/modules/HeavyComponents/MDXPage'
 import { CaseHeader } from './modules/ArticleHeader'
-import { MDXPage } from './modules/MDXPage'
+
 import { notFound } from 'next/navigation'
 
 interface ICasePage {
@@ -15,9 +16,8 @@ interface ICasePage {
 // Ждем, пока пофиксят notFound в Suspense при SSG
 
 const Page = async ({ params }: ICasePage) => {
-  
   const caseInfo = await getCaseInfo({ slug: params.slug })
-  
+
   if (!caseInfo) {
     return notFound()
   }
@@ -26,7 +26,7 @@ const Page = async ({ params }: ICasePage) => {
     <div className="max-w-[852px] mx-auto">
       <div>
         <CaseHeader caseInfo={caseInfo} />
-        <MDXPage params={params} />
+        <FileMDX params={params} />
       </div>
     </div>
   )

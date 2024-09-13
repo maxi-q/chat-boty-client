@@ -7,6 +7,9 @@ export interface IImage {
   slug: string
   title: string
   updated_at: string
+
+  width?: number
+  height?: number
 }
 
 export interface IImages {
