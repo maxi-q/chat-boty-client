@@ -1,21 +1,17 @@
 import { SOURCE } from '@/constants/static'
-import { cookies } from 'next/headers'
-import { IGetImages, IImages } from './types'
+import { GetPostInfo, PostPostInfo } from './ArticlesTypes'
+const API_URL = SOURCE.url
 
-const API_URL = SOURCE.static_url
-
-export async function getImages(content: IGetImages): Promise<IImages | undefined> {
+export async function postArticleClient(content: PostPostInfo): Promise<GetPostInfo | undefined> {
   try {
-    const token = cookies().get('token')?.value.toString()
-    const response = await fetch(`${API_URL}`, {
-      method: 'GET',
+
+    const response = await fetch(`/admin_api/posts`, {
+      method: 'POST',
       headers: {
         Accept: 'application/json',
         'Content-Type': 'application/json',
-        'Cache-Control': 'max-age=300',
-        Authorization: token || '',
       },
-      next: { tags: ['images'] },
+      body: JSON.stringify(content),
     })
 
     if (!response.ok) {

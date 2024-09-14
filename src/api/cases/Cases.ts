@@ -36,7 +36,7 @@ export async function getCases(content: IGetCases): Promise<getCasesType | undef
 
 export async function getCaseFile(content: IGetCaseFile): Promise<GetCaseFileType | undefined> {
   try {
-    const response = await fetch(`${API_URL}cases/${content.slug}/files/content?field=slug`, {
+    const response = await fetch(`${API_URL}cases/${content.slug}/content?field=slug`, {
       method: 'GET',
       headers: {
         Accept: 'application/json',
@@ -45,7 +45,7 @@ export async function getCaseFile(content: IGetCaseFile): Promise<GetCaseFileTyp
       },
       next: { tags: ['cases'] },
     })
-
+    
     if (!response.ok) {
       const error = new Error(`HTTP Error: ${response.status}`)
       ;(error as any).status = response.status

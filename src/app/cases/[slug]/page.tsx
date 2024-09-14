@@ -4,7 +4,8 @@ import { getCaseInfo } from '@/api/cases/Cases'
 import { fetchAllCasesSlugs } from '@/api/cases/utils'
 import { SOURCE } from '@/constants/static'
 import { FileCaseMDX } from '@/modules/HeavyComponents/MDXPage'
-import { CaseHeader } from './modules/ArticleHeader'
+
+import { PostHeader } from '@/modules/Posts/PostHeader'
 
 import { notFound } from 'next/navigation'
 
@@ -25,7 +26,7 @@ const Page = async ({ params }: ICasePage) => {
   return (
     <div className="max-w-[852px] mx-auto">
       <div>
-        <CaseHeader caseInfo={caseInfo} />
+        <PostHeader postInfo={caseInfo} />
         <FileCaseMDX params={params} />
       </div>
     </div>

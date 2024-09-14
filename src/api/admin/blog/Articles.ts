@@ -1,33 +1,38 @@
 import { SOURCE } from '@/constants/static'
+import { GetPostInfo, PostPostInfo } from './ArticlesTypes'
 import { cookies } from 'next/headers'
-import { IGetImages, IImages } from './types'
 
-const API_URL = SOURCE.static_url
+const API_URL = SOURCE.url
 
-export async function getImages(content: IGetImages): Promise<IImages | undefined> {
+export async function postArticle(content: PostPostInfo): Promise<GetPostInfo | undefined> {
   try {
     const token = cookies().get('token')?.value.toString()
-    const response = await fetch(`${API_URL}`, {
-      method: 'GET',
+
+
+    const response = await fetch(`${API_URL}posts/`, {
+      method: 'POST',
       headers: {
         Accept: 'application/json',
         'Content-Type': 'application/json',
-        'Cache-Control': 'max-age=300',
-        Authorization: token || '',
+        Authorization: token || ''
       },
-      next: { tags: ['images'] },
+      body: JSON.stringify(content),
     })
 
+    console.log(JSON.stringify(content))
+    const data = await response.json()
+    console.log(data)
     if (!response.ok) {
       const error = new Error(`HTTP Error: ${response.status}`)
       ;(error as any).status = response.status
       throw error
     }
-
-    const data = await response.json()
+    
     return data
   } catch (error) {
     console.log(error, 'Error: getArticles')
     return
   }
 }
+
+export const dynamic = 'force-dynamic'

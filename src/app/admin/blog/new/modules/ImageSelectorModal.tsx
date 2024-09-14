@@ -1,4 +1,4 @@
-import { getImagesCLIENT } from '@/api/static/Routes'
+import { getImagesClient } from '@/api/static/Routes'
 import { IImage, IImages } from '@/api/static/types'
 import { SOURCE } from '@/constants/static'
 import React, { useEffect, useState } from 'react'
@@ -18,7 +18,7 @@ const ImageSelectorModal: React.FC<ImageSelectorProps> = ({ isOpen, onClose, onC
 
   useEffect(() => {
     const f = async () => {
-      const i = await getImagesCLIENT({ page: 1, size: 12 })
+      const i = await getImagesClient({ page: 1, size: 20 })
       setImages(i)
     }
     f()
@@ -28,7 +28,7 @@ const ImageSelectorModal: React.FC<ImageSelectorProps> = ({ isOpen, onClose, onC
     setSelectedImage({ ...image })
 
     getImageDimensions(`${SOURCE.static_url}${image.slug}?field=slug`).then((size) => {
-      setSelectedImage(p => {
+      setSelectedImage((p) => {
         if (!p) return null
 
         return { ...p, width: size.width, height: size.height }

@@ -4,9 +4,12 @@ import EasyMDE from 'easymde'
 
 import 'easymde/dist/easymde.min.css'
 
+import { PostPostInfo } from '@/api/admin/blog/ArticlesTypes'
 import { useEffect, useRef, useState } from 'react'
+import ArticleForm from './components/InfoMenu'
 import { settings } from './helpers'
 import { AdminMDXPage } from './modules/AdminMDXPage'
+import { postArticleClient } from '@/api/admin/blog/Routes'
 
 const MarkdownEditor = () => {
   const [content, setContent] = useState<string>('')
@@ -22,6 +25,8 @@ const MarkdownEditor = () => {
 
     easyMDERef.current = easyMDE
 
+    setContent(easyMDE.value())
+
     easyMDE.codemirror.on('change', () => {
       setContent(easyMDE.value())
     })
@@ -36,9 +41,15 @@ const MarkdownEditor = () => {
     console.log('Содержимое редактора:', content)
   }
 
+  const PostData = (contentInfo: PostPostInfo) => {
+    postArticleClient({
+      ...contentInfo,
+      content
+    })
+  }
   return (
-    <div className="prose">
-      {/* <ArticleForm /> */}
+    <div className="prose section p-2">
+      <ArticleForm onSubmit={PostData} />
       <div className="flex w-screen">
         <div className="w-1/2 p-4">
           <textarea id="markdown-editor" className="w-full h-full border border-gray-300 rounded p-2" />
@@ -48,11 +59,6 @@ const MarkdownEditor = () => {
           <AdminMDXPage content={content} />
         </div>
       </div>
-
-      {/* Кнопка сохранения */}
-      <button onClick={handleSave} className=" px-4 py-2 bg-blue-500 text-white rounded">
-        Сохранить
-      </button>
     </div>
   )
 }

@@ -4,15 +4,16 @@ import style from './style.module.css'
 
 import { getArticleFile } from '@/api/blog/Articles'
 
-import { settings } from './helpers'
 import { getCaseFile } from '@/api/cases/Cases'
+import { settings } from './helpers'
 
 interface IPostPage {
   params: { slug: string }
 }
 
 export const FilePostMDX = async ({ params }: IPostPage) => {
-  const content = await getArticleFile({ slug: params.slug })
+  const result = (await getArticleFile({ slug: params.slug })) || ''
+  const content = JSON.parse(result)
 
   if (!content) {
     return notFound()
@@ -22,7 +23,8 @@ export const FilePostMDX = async ({ params }: IPostPage) => {
 }
 
 export const FileCaseMDX = async ({ params }: IPostPage) => {
-  const content = await getCaseFile({ slug: params.slug })
+  const result = (await getCaseFile({ slug: params.slug })) || ''
+  const content = JSON.parse(result)
 
   if (!content) {
     return notFound()

@@ -1,75 +1,120 @@
-import React, { useState } from 'react';
+import { FormEvent, useState } from 'react'
 
-const ArticleForm = () => {
-  // Состояния для полей формы
-  const [title, setTitle] = useState('');
-  const [description, setDescription] = useState('');
-  const [readingTime, setReadingTime] = useState<number | ''>('');
+// Предполагаем, что эта функция открывает модальное окно для выбора изображения
+import { PostPostInfo } from '@/api/admin/blog/ArticlesTypes'
+import openImageSelector from '../modules/ImageSelector'
+
+interface ImageData {
+  id: string
+  slug: string
+  title: string
+}
+
+const ArticleForm = ({ onSubmit }: { onSubmit: (content: PostPostInfo) => void }) => {
+  const [title, setTitle] = useState('')
+  const [description, setDescription] = useState('')
+  const [readingTime, setReadingTime] = useState<number | ''>('')
+
+  const [image1, setImage1] = useState<ImageData | null>(null)
+  const [image2, setImage2] = useState<ImageData | null>(null)
+
+  const handleSelectImage1 = async () => {
+    const selectedImage = await openImageSelector()
+    if (selectedImage) {
+      setImage1(selectedImage)
+    }
+  }
+
+  const handleSelectImage2 = async () => {
+    const selectedImage = await openImageSelector()
+    if (selectedImage) {
+      setImage2(selectedImage)
+    }
+  }
 
   const handleSave = () => {
-    console.log('Заголовок:', title);
-    console.log('Описание:', description);
-    console.log('Время чтения (в минутах):', readingTime);
-  };
+    onSubmit({
+      title: title,
+      short_description: description,
+      reading_time: readingTime || 0,
+      preview_file_id: image1?.id,
+      preview_og_file_id: image2?.id,
+    })
+  }
+
+  const onFormSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    handleSave()
+  }
 
   return (
-    <div className="p-6 bg-white rounded shadow-lg max-w-lg mx-auto">
-      <h2 className="text-2xl font-bold mb-4">Создать статью</h2>
-      
-      {/* Поле для заголовка */}
-      <div className="mb-4">
-        <label htmlFor="title" className="block text-sm font-medium text-gray-700">
-          Заголовок
-        </label>
-        <input
-          type="text"
-          id="title"
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
-          className="mt-1 block w-full border border-gray-300 rounded p-2"
-          placeholder="Введите заголовок статьи"
-        />
+    <form onSubmit={onFormSubmit} className="p-6 bg-white rounded shadow-lg max-w-full mx-auto">
+      <div className="flex space-x-4 mb-4">
+        <div className="flex-1">
+          <input
+            type="text"
+            id="title"
+            required
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
+            className="block w-full border border-gray-300 rounded p-2 focus:outline-none focus:border-blue-400"
+            placeholder="Заголовок"
+          />
+        </div>
+
+        <div className="flex-1">
+          <input
+            type="text"
+            id="description"
+            required
+            value={description}
+            onChange={(e) => setDescription(e.target.value)}
+            className="block w-full border border-gray-300 rounded p-2 focus:outline-none focus:border-blue-400"
+            placeholder="Описание"
+          />
+        </div>
+
+        <div className="w-32">
+          <input
+            type="number"
+            id="readingTime"
+            value={readingTime}
+            onChange={(e) => {
+              const value = parseInt(e.target.value)
+              setReadingTime(value >= 0 ? value : '')
+            }}
+            className="block w-full border border-gray-300 rounded p-2 focus:outline-none focus:border-blue-400"
+            placeholder="Минуты"
+            min="0"
+          />
+        </div>
       </div>
 
-      {/* Поле для описания */}
-      <div className="mb-4">
-        <label htmlFor="description" className="block text-sm font-medium text-gray-700">
-          Описание
-        </label>
-        <input
-          type="text"
-          id="description"
-          value={description}
-          onChange={(e) => setDescription(e.target.value)}
-          className="mt-1 block w-full border border-gray-300 rounded p-2"
-          placeholder="Введите краткое описание"
-        />
+      <div className="flex space-x-4 mb-4">
+        <div className="flex-1">
+          <label className="block text-sm font-medium text-gray-700">Первое изображение</label>
+          <button onClick={handleSelectImage1} type="button" className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 mt-1">
+            Выбрать изображение
+          </button>
+          {image1 && <p className="mt-2 text-sm text-gray-600">Выбранное изображение: {image1.title}</p>}
+        </div>
+
+        <div className="flex-1">
+          <label className="block text-sm font-medium text-gray-700">Второе изображение</label>
+          <button onClick={handleSelectImage2} type="button" className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 mt-1">
+            Выбрать изображение
+          </button>
+          {image2 && <p className="mt-2 text-sm text-gray-600">Выбранное изображение: {image2.title}</p>}
+        </div>
       </div>
 
-      {/* Поле для времени чтения */}
-      <div className="mb-4">
-        <label htmlFor="readingTime" className="block text-sm font-medium text-gray-700">
-          Время чтения (в минутах)
-        </label>
-        <input
-          type="number"
-          id="readingTime"
-          value={readingTime}
-          onChange={(e) => setReadingTime(e.target.value ? parseInt(e.target.value) : '')}
-          className="mt-1 block w-full border border-gray-300 rounded p-2"
-          placeholder="Введите время чтения"
-        />
+      <div className="mt-6">
+        <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+          Сохранить
+        </button>
       </div>
+    </form>
+  )
+}
 
-      {/* Кнопка сохранения */}
-      <button
-        onClick={handleSave}
-        className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
-      >
-        Сохранить
-      </button>
-    </div>
-  );
-};
-
-export default ArticleForm;
+export default ArticleForm

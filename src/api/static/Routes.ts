@@ -1,6 +1,6 @@
 import { IGetImages, IImages } from './types'
 
-export async function getImagesCLIENT(content: IGetImages): Promise<IImages | undefined> {
+export async function getImagesClient(content: IGetImages): Promise<IImages | undefined> {
   try {
     const params = new URLSearchParams()
 
@@ -9,7 +9,7 @@ export async function getImagesCLIENT(content: IGetImages): Promise<IImages | un
       headers: {
         Accept: 'application/json',
         'Content-Type': 'application/json',
-        'Cache-Control': 'max-age=300',
+        // 'Cache-Control': 'max-age=300',
       },
       next: { tags: ['images'] },
     })
