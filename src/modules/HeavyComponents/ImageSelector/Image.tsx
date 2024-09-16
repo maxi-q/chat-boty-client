@@ -10,7 +10,7 @@ const ImageComponent: React.FC<ImageComponentProps> = ({ image }) => {
   const [hasError, setHasError] = useState(false)
 
   const handleImageError = () => {
-    setHasError(true)
+    setHasError(false)
   }
 
   return (

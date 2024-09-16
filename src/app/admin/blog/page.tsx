@@ -15,7 +15,7 @@ const BlogPage = async () => {
 
   return (
     <div className="min-h-screen bg-gray-100 flex flex-col items-center">
-      <h1 className="text-4xl font-bold mt-10 mb-6">Блог</h1>
+      <h1 className="text-4xl font-bold mt-10 mb-6">Блог <Link href={'/admin/blog/new'} className='align-center text-gray-500 hover:text-black transition transition-500'>+</Link></h1>
 
       <div className="overflow-x-auto w-full max-w-4xl rounded-lg shadow-md">
         <table className="min-w-full bg-white">
@@ -32,7 +32,7 @@ const BlogPage = async () => {
               <tr key={index} className="border-b">
                 <td className="px-6 py-4 max-w-xs overflow-x-auto whitespace-nowrap">{article.title}</td>
                 <td className="px-6 py-4 max-w-xs overflow-x-auto whitespace-nowrap">
-                  <Link className="text-blue-500 underline hover:text-blue-700" href={`${SOURCE.url}blog/${article.slug}`}>
+                  <Link className="text-blue-500 underline hover:text-blue-700" href={`${SOURCE.client_url}blog/${article.slug}`}>
                     Ссылка
                   </Link>
                 </td>
