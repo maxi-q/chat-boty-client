@@ -17,6 +17,7 @@ export type SimpleCaseType = {
 
 export interface CaseType extends SimpleCaseType {
   preview_file_id: string
+  preview_og_file_id: string
 }
 
 export type getCasesType = {

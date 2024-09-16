@@ -18,6 +18,7 @@ export type SimpleArticleType = {
 
 export interface ArticleType extends SimpleArticleType {
   preview_file_id: string
+  preview_og_file_id: string
 }
 
 export type getArticlesType = {

@@ -2,7 +2,7 @@ import { FormEvent, useState } from 'react'
 
 // Предполагаем, что эта функция открывает модальное окно для выбора изображения
 import { PostPostInfo } from '@/api/admin/blog/ArticlesTypes'
-import openImageSelector from '../modules/ImageSelector'
+import openImageSelector from '@/modules/HeavyComponents/ImageSelector/ImageSelector'
 
 interface ImageData {
   id: string

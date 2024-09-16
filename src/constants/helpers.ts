@@ -54,3 +54,49 @@ export function formatHumanReadableDateTime(dateInput: string | Date): string {
   // Формируем строку: день месяц год, часы:минуты
   return `${day} ${month} ${year}, ${hours}:${minutes}`;
 }
+
+export class ServerError extends Response {}
+
+export class CustomError extends Error {
+  readonly response: Response
+
+  constructor(msg: string, response: Response) {
+    super(msg)
+    this.response = response
+
+    // Set the prototype explicitly.
+    Object.setPrototypeOf(this, CustomError.prototype)
+  }
+}
+
+export async function defaultResponseNoJson<T>(errorTitle: string, input: string | URL | globalThis.Request, init?: RequestInit): Promise<T | ServerError> {
+  try {
+    const response = await fetch(input, init)
+    if (!response.ok) {
+      const error = new CustomError(`HTTP Error: ${response.status}`, response)
+      throw error
+    }
+
+    return response
+  } catch (error: any) {
+    console.log(error, `Error: ${errorTitle}`)
+    return error.response
+  }
+}
+
+export async function defaultResponse<T>(errorTitle: string, input: string | URL | globalThis.Request, init?: RequestInit): Promise<T | ServerError> {
+  try {
+    const response = await fetch(input, init)
+
+    if (!response.ok) {
+      const error = new CustomError(`HTTP Error: ${response.status}`, response)
+      throw error
+    }
+
+    const data = await response.json()
+    return data
+  } catch (error: any) {
+    console.log(error, `Error: ${errorTitle}`)
+    return error.response
+  }
+}

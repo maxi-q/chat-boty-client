@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { redirect } from 'next/navigation'
 import { Card } from '../../components/Card'
 
-import { getPagesNumbs } from '../../../../constants/helpers'
+import { getPagesNumbs } from '@/constants/helpers'
 import styles from './style.module.css'
 
 export const Page = async ({ page }: { page: number }) => {

@@ -19,9 +19,8 @@ export async function postArticle(content: PostPostInfo): Promise<GetPostInfo | 
       body: JSON.stringify(content),
     })
 
-    console.log(JSON.stringify(content))
     const data = await response.json()
-    console.log(data)
+
     if (!response.ok) {
       const error = new Error(`HTTP Error: ${response.status}`)
       ;(error as any).status = response.status

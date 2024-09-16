@@ -20,8 +20,38 @@ export interface IImages {
   total_pages: number
 }
 
+export interface IImagesResponse {
+  images: IImages
+}
+
 export interface IGetImages {
   page: number
   size: number
   has_file?: boolean
+}
+
+export interface ICreateFile {
+  slug?: string
+  title: string
+  description: string
+}
+
+export interface IFileInfo {
+  id: string
+  slug: string
+  title: string
+  description: string
+  size: number
+  mime_type: string
+  created_at: string
+  updated_at: string
+}
+
+export interface IUploadFile {
+  file: File
+  id: string
+}
+
+export interface IDeleteFileInfo {
+  id: string
 }

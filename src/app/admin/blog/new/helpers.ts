@@ -1,5 +1,5 @@
+import openImageSelector from '../../../../modules/HeavyComponents/ImageSelector/ImageSelector'
 import collection from './ui/collection'
-import openImageSelector from './modules/ImageSelector'
 
 const customCarouselAction = async (editor: EasyMDE) => {
   const selectedImage = await openImageSelector()

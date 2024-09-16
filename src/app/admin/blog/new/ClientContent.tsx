@@ -5,11 +5,11 @@ import EasyMDE from 'easymde'
 import 'easymde/dist/easymde.min.css'
 
 import { PostPostInfo } from '@/api/admin/blog/ArticlesTypes'
+import { postArticleClient } from '@/api/admin/blog/Routes'
 import { useEffect, useRef, useState } from 'react'
 import ArticleForm from './components/InfoMenu'
 import { settings } from './helpers'
 import { AdminMDXPage } from './modules/AdminMDXPage'
-import { postArticleClient } from '@/api/admin/blog/Routes'
 
 const MarkdownEditor = () => {
   const [content, setContent] = useState<string>('')
@@ -37,14 +37,10 @@ const MarkdownEditor = () => {
     }
   }, [])
 
-  const handleSave = () => {
-    console.log('Содержимое редактора:', content)
-  }
-
   const PostData = (contentInfo: PostPostInfo) => {
     postArticleClient({
       ...contentInfo,
-      content
+      content,
     })
   }
   return (

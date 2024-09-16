@@ -17,13 +17,13 @@ const ImageComponent: React.FC<ImageComponentProps> = ({ image }) => {
     <>
       {!hasError ? (
         // eslint-disable-next-line @next/next/no-img-element
-        <img
-          src={`${SOURCE.static_url}${image.slug}?field=slug`}
-          alt={`Фото ${image.title}`}
-          className="my-0 select-none relative object-contain block w-full h-full"
-          style={{ backgroundColor: 'var(--color-additional-2)' }}
-          onError={handleImageError}
-        />
+          <img
+            src={`${SOURCE.static_url}${image.slug}?field=slug`}
+            alt={`Фото ${image.title}`}
+            className="my-0 select-none relative object-contain block w-full h-full"
+            style={{ backgroundColor: 'var(--color-additional-2)' }}
+            onError={handleImageError}
+          />
       ) : (
         <div className="flex items-center justify-center w-full h-full" style={{ backgroundColor: 'var(--color-additional-2)' }}>
           <p className="text-gray-500">Не удалось загрузить изображение</p>
