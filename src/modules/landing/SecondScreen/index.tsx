@@ -1,8 +1,8 @@
 import { CallToActionButton } from '@/components/ui/CallToAction'
 import { ChatBubbles, Filter, Learning, Mail, SettingRoll, Settings, Streaming } from '@/constants/svg'
 import { Nunito } from 'next/font/google'
-import styles from './style.module.css'
 import Link from 'next/link'
+import styles from './style.module.css'
 
 const nunitoFont = Nunito({
   // weight: '700',
@@ -59,16 +59,15 @@ export const SecondScreen = () => {
           Подключение, интеграции, процессы, создание тренингов, продуктов, предложений — оставьте всё нам, сделаем как надо
         </Card>
         <Card
-          title={'Настройка\n вебинарных\n комнат'}
+          title={'Рассылки'}
           index={'04'}
           icons={
             <>
-              <Settings />
-              <Streaming />
+              <Mail />
             </>
           }
         >
-          Не знаете, что нужно скачать на ПК? Как сделать трансляцию лица с телефона, а захват экрана с ПК? Мы всё сделаем, а также вся тех. часть по Bizon365
+          СМС и автопрозвоны, а также рассылки в Телеграм и WhatsApp. Нам нужны номера, мы даже можем выгрузить сами, нужен только доступ
         </Card>
         <CardShadow className="hidden laptop:block">
           <CallToActionButton className="text-[18px] pt-0" textClassName="left-[32px]">
@@ -86,15 +85,16 @@ export const SecondScreen = () => {
           </CallToActionButton>
         </CardShadow>
         <Card
-          title={'Рассылки'}
+          title={'Настройка\n вебинарных\n комнат'}
           index={'05'}
           icons={
             <>
-              <Mail />
+              <Settings />
+              <Streaming />
             </>
           }
         >
-          СМС и автопрозвоны, а также рассылки в Телеграм и WhatsApp. Нам нужны номера, мы даже можем выгрузить сами, нужен только доступ
+          Не знаете, что нужно скачать на ПК? Как сделать трансляцию лица с телефона, а захват экрана с ПК? Мы всё сделаем, а также вся тех. часть по Bizon365
         </Card>
         <Card
           title={'Email воронки'}
