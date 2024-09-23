@@ -31,7 +31,7 @@ export const Card = ({ created_at, duration, title, image, link }: ICard) => {
           blurDataURL={rgbDataURL(242, 242, 242)}
           width={410}
           height={205}
-          src={`${SOURCE.static_url}${image}?field=slug`}
+          src={`${SOURCE.static_url}${image}?field=id`}
           alt={'изображение'}
         />
         <div className="flex text-[16px] font-medium items-center text-center">

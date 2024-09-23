@@ -45,7 +45,7 @@ export async function getCaseFile(content: IGetCaseFile): Promise<GetCaseFileTyp
       },
       next: { tags: ['cases'] },
     })
-    
+
     if (!response.ok) {
       const error = new Error(`HTTP Error: ${response.status}`)
       ;(error as any).status = response.status
