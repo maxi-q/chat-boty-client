@@ -10,7 +10,7 @@ const NoSsr = async ({ params }: { params: { slug: string } }) => {
 
   if (!articleInfo) return <>Ошибка загрузки информации о статье</>
 
-  const patchArticle = (content: any) => {
+  const patchArticle = async (content: any) => {
     "use server"
     return patchArticleClient(params.slug, content)
   }

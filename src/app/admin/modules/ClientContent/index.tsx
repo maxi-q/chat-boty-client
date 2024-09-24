@@ -1,20 +1,18 @@
 'use client'
 
 import EasyMDE from 'easymde'
+import { usePathname, useRouter } from 'next/navigation'
+import { useEffect, useRef, useState } from 'react'
 
 import 'easymde/dist/easymde.min.css'
 
 import { PostInfoResponse } from '@/api/admin/blog/ArticlesTypes'
-
 import { PostCaseInfo } from '@/api/admin/cases/CasesTypes'
-import { usePathname } from 'next/navigation'
 
-import { useEffect, useRef, useState } from 'react'
 import { redirectToSlug, settings } from '../../helpers/helpers'
 import ArticleForm from '../../modules/ArticleForm/InfoMenu'
 import { AdminMDXPage } from '../AdminMDXPage'
 
-import { useRouter } from 'next/navigation'
 
 const MarkdownEditor = ({
   loadContent,
@@ -28,6 +26,7 @@ const MarkdownEditor = ({
   const [content, setContent] = useState<string>(JSON.parse(loadContent?.postFile || '""'))
   const currentPath = usePathname()
   const easyMDERef = useRef<EasyMDE | null>(null)
+
   useEffect(() => {
     const easyMDE = new EasyMDE({
       element: document.getElementById('markdown-editor') as HTMLTextAreaElement,

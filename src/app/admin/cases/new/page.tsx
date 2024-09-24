@@ -8,6 +8,7 @@ const NoSsr = () => {
     'use server'
     return postCase(content)
   }
+
   return (
     <React.Fragment>
       <MarkdownEditor postClient={postClient} isUpdatePost={false} />

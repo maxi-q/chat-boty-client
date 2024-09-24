@@ -12,7 +12,7 @@ const NoSsr = async ({ params }: { params: { slug: string } }) => {
   if (!caseInfo) return <>Ошибка загрузки информации о статье</>
 
   const patchCase = async (content: any) => {
-    "use server"
+    'use server'
     return patchCaseClient(content, params.slug)
   }
 
