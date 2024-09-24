@@ -1,4 +1,4 @@
-export interface PostPostInfo {
+export interface PostCaseInfo {
   title: string
   short_description: string
   reading_time: number
@@ -7,7 +7,7 @@ export interface PostPostInfo {
   preview_og_file_id?: string
 }
 
-export interface GetPostInfo {
+export interface GetCaseInfo {
   id: string
   created_at: string
   updated_at: string
@@ -17,13 +17,12 @@ export interface GetPostInfo {
   reading_time: number
 }
 
-export interface IGetArticles {
+export interface IGetCases {
   page: number
   size: number
   has_file?: boolean
 }
-
-export type SimpleArticleType = {
+export type SimpleCaseType = {
   id: string
   slug: string
   title: string
@@ -35,24 +34,24 @@ export type SimpleArticleType = {
   updated_at: string
 }
 
-export interface ArticleType extends SimpleArticleType {
+export interface CaseType extends SimpleCaseType {
   preview_file_id: string
   preview_og_file_id: string
 }
 
-export type getArticlesType = {
-  data: Array<ArticleType>
+export type getCasesType = {
+  data: Array<CaseType>
   page: number
   size: number
   total_items: number
   total_pages: number
 }
 
-export interface IGetArticleFile {
+export interface IGetCaseFile {
   slug: string
 }
-export type GetArticleFileType = string
+export type GetCaseFileType = string
 
-export interface IGetArticleInfo {
+export interface IGetCaseInfo {
   slug: string
 }

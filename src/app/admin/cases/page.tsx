@@ -1,22 +1,23 @@
-import { getArticles } from '@/api/blog/Articles'
+import { getAllCases } from '@/api/admin/cases/Cases'
+import { getCases } from '@/api/cases/Cases'
 import { formatHumanReadableDateTime } from '@/constants/helpers'
 import { SOURCE } from '@/constants/static'
 import Link from 'next/link'
 
 const BlogPage = async () => {
-  const result = await getArticles({
+  const result = await getAllCases({
     page: 1,
     size: 100,
     has_file: false,
   })
 
-  const articles = result?.data
+  const cases = result?.data
 
   return (
     <div className="min-h-screen bg-gray-100 flex flex-col items-center">
       <h1 className="text-4xl font-bold mt-10 mb-6">
-        Блог{' '}
-        <Link href={'/admin/blog/new'} className="align-center text-gray-500 hover:text-black transition transition-500">
+        Кейсы{' '}
+        <Link href={'/admin/cases/new'} className="align-center text-gray-500 hover:text-black transition transition-500">
           +
         </Link>
       </h1>
@@ -32,20 +33,20 @@ const BlogPage = async () => {
             </tr>
           </thead>
           <tbody>
-            {articles?.map((article, index) => (
+            {cases?.map((element, index) => (
               <tr key={index} className="border-b">
                 <td className="px-6 py-4 max-w-xs overflow-x-auto whitespace-nowrap">
-                  <Link className="text-blue-500 underline hover:text-blue-700" href={`/admin/blog/${article.slug}`}>
-                    {article.title}
+                  <Link className="text-blue-500 underline hover:text-blue-700" href={`/admin/cases/${element.slug}`}>
+                    {element.title}
                   </Link>
                 </td>
                 <td className="px-6 py-4 max-w-xs overflow-x-auto whitespace-nowrap">
-                  <Link className="text-blue-500 underline hover:text-blue-700" href={`${SOURCE.client_url}blog/${article.slug}`}>
+                  <Link className="text-blue-500 underline hover:text-blue-700" href={`${SOURCE.client_url}cases/${element.slug}`}>
                     Ссылка
                   </Link>
                 </td>
-                <td className="px-6 py-4 max-w-xs overflow-x-auto whitespace-nowrap">{formatHumanReadableDateTime(article.created_at)}</td>
-                <td className="px-6 py-4 max-w-xs overflow-x-auto whitespace-nowrap">{formatHumanReadableDateTime(article.updated_at)}</td>
+                <td className="px-6 py-4 max-w-xs overflow-x-auto whitespace-nowrap">{formatHumanReadableDateTime(element.created_at)}</td>
+                <td className="px-6 py-4 max-w-xs overflow-x-auto whitespace-nowrap">{formatHumanReadableDateTime(element.updated_at)}</td>
               </tr>
             ))}
           </tbody>

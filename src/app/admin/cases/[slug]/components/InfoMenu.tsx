@@ -1,7 +1,7 @@
 import { FormEvent, useEffect, useState } from 'react'
 
 // Предполагаем, что эта функция открывает модальное окно для выбора изображения
-import { PostPostInfo } from '@/api/admin/blog/ArticlesTypes'
+import { PostCaseInfo } from '@/api/admin/cases/CasesTypes'
 import openImageSelector from '@/modules/HeavyComponents/ImageSelector/ImageSelector'
 
 interface ImageData {
@@ -10,8 +10,7 @@ interface ImageData {
   title: string
 }
 
-const ArticleForm = ({ onSubmit, data }: { onSubmit: (content: PostPostInfo) => void; data?: PostPostInfo }) => {
-
+const CaseForm = ({ onSubmit, data }: { onSubmit: (content: PostCaseInfo) => void; data?: PostCaseInfo }) => {
   const [title, setTitle] = useState(data?.title || '')
   const [description, setDescription] = useState(data?.short_description || '')
   const [readingTime, setReadingTime] = useState<number | ''>(data?.reading_time || '')
@@ -124,4 +123,4 @@ const ArticleForm = ({ onSubmit, data }: { onSubmit: (content: PostPostInfo) => 
   )
 }
 
-export default ArticleForm
+export default CaseForm

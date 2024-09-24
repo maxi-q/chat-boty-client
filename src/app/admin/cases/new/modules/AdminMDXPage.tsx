@@ -14,8 +14,7 @@ export const AdminMDXPage = ({ content }: { content: string }) => {
         components: settings.components,
       })
       setCompileContent(compiledContent)
-    } catch (у) {
-      console.log(у)
+    } catch {
       setCompileContent(<h1>Ошибка</h1>)
     }
   }

@@ -4,15 +4,14 @@ import EasyMDE from 'easymde'
 
 import 'easymde/dist/easymde.min.css'
 
-import { PostPostInfo } from '@/api/admin/blog/ArticlesTypes'
-import { patchArticleClient } from '@/api/admin/blog/Routes'
-import { getArticleFile, getArticleInfo } from '@/api/blog/Articles'
+import { PostCaseInfo } from '@/api/admin/cases/CasesTypes'
+import { patchCaseClient } from '@/api/admin/cases/Routes'
 import { useEffect, useRef, useState } from 'react'
-import ArticleForm from './components/InfoMenu'
+import CaseForm from './components/InfoMenu'
 import { settings } from './helpers'
 import { AdminMDXPage } from './modules/AdminMDXPage'
 
-const MarkdownEditor = ({ params, loadContent }: { params: { slug: string }, loadContent: {articleFile: string, articleInfo: PostPostInfo} }) => {
+const MarkdownEditor = ({ params, loadContent }: { params: { slug: string }; loadContent: { articleFile: string; articleInfo: PostCaseInfo } }) => {
   const [content, setContent] = useState<string>(JSON.parse(loadContent.articleFile))
 
   const easyMDERef = useRef<EasyMDE | null>(null)
@@ -20,7 +19,7 @@ const MarkdownEditor = ({ params, loadContent }: { params: { slug: string }, loa
   useEffect(() => {
     const easyMDE = new EasyMDE({
       element: document.getElementById('markdown-editor') as HTMLTextAreaElement,
-      initialValue: content || `Статья была пустой`,
+      initialValue: content || `Кейс был пустой`,
       ...settings,
     })
 
@@ -38,8 +37,8 @@ const MarkdownEditor = ({ params, loadContent }: { params: { slug: string }, loa
     }
   }, [])
 
-  const PostData = (contentInfo: PostPostInfo) => {
-    patchArticleClient(params.slug, {
+  const PostData = (contentInfo: PostCaseInfo) => {
+    patchCaseClient(params.slug, {
       ...contentInfo,
       content,
     })
@@ -47,7 +46,7 @@ const MarkdownEditor = ({ params, loadContent }: { params: { slug: string }, loa
 
   return (
     <div className="prose section p-2">
-      <ArticleForm onSubmit={PostData} data={loadContent.articleInfo} />
+      <CaseForm onSubmit={PostData} data={loadContent.articleInfo} />
       <div className={`flex w-screen`}>
         <div className="w-1/2 p-4">
           <textarea id="markdown-editor" className="w-full h-full border border-gray-300 rounded p-2" />

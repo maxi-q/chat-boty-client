@@ -1,11 +1,10 @@
 import { SOURCE } from '@/constants/static'
-import { GetPostInfo, PostPostInfo } from './ArticlesTypes'
+import { GetCaseInfo, PostCaseInfo } from './CasesTypes'
 const API_URL = SOURCE.url
 
-export async function postArticleClient(content: PostPostInfo): Promise<GetPostInfo | undefined> {
+export async function postCaseClient(content: PostCaseInfo): Promise<GetCaseInfo | undefined> {
   try {
-
-    const response = await fetch(`/admin_api/posts`, {
+    const response = await fetch(`/admin_api/cases`, {
       method: 'POST',
       headers: {
         Accept: 'application/json',
@@ -23,15 +22,15 @@ export async function postArticleClient(content: PostPostInfo): Promise<GetPostI
     const data = await response.json()
     return data
   } catch (error) {
-    console.log(error, 'Error: getArticles')
+    console.log(error, 'Error: post case')
     return
   }
 }
 
-export async function patchArticleClient(slug: string, content: PostPostInfo): Promise<GetPostInfo | undefined> {
+export async function patchCaseClient(slug: string, content: PostCaseInfo): Promise<GetCaseInfo | undefined> {
+  console.log(content)
   try {
-
-    const response = await fetch(`/admin_api/posts/${slug}?field=slug`, {
+    const response = await fetch(`/admin_api/cases/${slug}?field=slug`, {
       method: 'PATCH',
       headers: {
         Accept: 'application/json',
@@ -49,7 +48,7 @@ export async function patchArticleClient(slug: string, content: PostPostInfo): P
     const data = await response.json()
     return data
   } catch (error) {
-    console.log(error, 'Error: getArticles')
+    console.log(error, 'Error: patch case')
     return
   }
 }

@@ -1,4 +1,4 @@
-import { FormEvent, useEffect, useState } from 'react'
+import { FormEvent, useState } from 'react'
 
 // Предполагаем, что эта функция открывает модальное окно для выбора изображения
 import { PostPostInfo } from '@/api/admin/blog/ArticlesTypes'
@@ -10,17 +10,10 @@ interface ImageData {
   title: string
 }
 
-const ArticleForm = ({ onSubmit, data }: { onSubmit: (content: PostPostInfo) => void; data?: PostPostInfo }) => {
-
-  const [title, setTitle] = useState(data?.title || '')
-  const [description, setDescription] = useState(data?.short_description || '')
-  const [readingTime, setReadingTime] = useState<number | ''>(data?.reading_time || '')
-
-  useEffect(() => {
-    setTitle(data?.title || '')
-    setDescription(data?.short_description || '')
-    setReadingTime(data?.reading_time || '')
-  }, [data])
+const ArticleForm = ({ onSubmit }: { onSubmit: (content: PostPostInfo) => void }) => {
+  const [title, setTitle] = useState('')
+  const [description, setDescription] = useState('')
+  const [readingTime, setReadingTime] = useState<number | ''>('')
 
   const [image1, setImage1] = useState<ImageData | null>(null)
   const [image2, setImage2] = useState<ImageData | null>(null)
@@ -101,7 +94,7 @@ const ArticleForm = ({ onSubmit, data }: { onSubmit: (content: PostPostInfo) => 
         <div className="flex-1">
           <label className="block text-sm font-medium text-gray-700">Первое изображение</label>
           <button onClick={handleSelectImage1} type="button" className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 mt-1">
-            Загрузить новое превью
+            Выбрать изображение
           </button>
           {image1 && <p className="mt-2 text-sm text-gray-600">Выбранное изображение: {image1.title}</p>}
         </div>
@@ -109,7 +102,7 @@ const ArticleForm = ({ onSubmit, data }: { onSubmit: (content: PostPostInfo) => 
         <div className="flex-1">
           <label className="block text-sm font-medium text-gray-700">Второе изображение</label>
           <button onClick={handleSelectImage2} type="button" className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 mt-1">
-            Загрузить OpenGraph превью
+            Выбрать изображение
           </button>
           {image2 && <p className="mt-2 text-sm text-gray-600">Выбранное изображение: {image2.title}</p>}
         </div>
