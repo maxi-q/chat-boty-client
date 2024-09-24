@@ -1,19 +1,16 @@
 import Image from 'next/image'
 
-import { getCaseInfo } from '@/api/cases/Cases'
 import { SOURCE } from '@/constants/static'
 import PostClock from '@/constants/svg/PostClock'
 
-import style from './style.module.css'
-import { notFound } from 'next/navigation'
 import { CaseType } from '@/api/cases/casesTypes'
+import style from './style.module.css'
 
 interface IPostPage {
   caseInfo: CaseType
 }
 
 export const CaseHeader = async ({ caseInfo }: IPostPage) => {
-
   const date = new Date(caseInfo?.created_at || '').toLocaleDateString()
 
   return (

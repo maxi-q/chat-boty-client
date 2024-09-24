@@ -1,4 +1,4 @@
-import { CallBackPopUp } from '@/components/ui/CallBackPopUp'
+
 import { FirstScreen, FiveScreen, FourScreen, SecondScreen, SevenScreen, SixScreen, ThirdScreen } from '@/modules'
 
 export default function Home() {
@@ -12,7 +12,7 @@ export default function Home() {
       <SixScreen />
       <SevenScreen />
 
-      <CallBackPopUp />
+
     </main>
   )
 }

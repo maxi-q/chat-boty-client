@@ -26,12 +26,12 @@ export const Card = ({ created_at, duration, title, image, link }: ICard) => {
     <Link href={`/cases/${link}`} className="laptop:w-1/2 p-2 no-underline overflow-hidden">
       <div className="max-w-[410px] w-full rounded-[12px]">
         <Image
-          className="rounded-xl m-0 mb-3"
+          className="rounded-xl m-0 mb-3 select-none"
           placeholder="blur"
           blurDataURL={rgbDataURL(242, 242, 242)}
           width={410}
           height={205}
-          src={`${SOURCE.url}cases/${link}/files/preview?field=slug`}
+          src={`${SOURCE.static_url}${image}?field=id`}
           alt={'изображение'}
         />
         <div className="flex text-[16px] font-medium items-center text-center">

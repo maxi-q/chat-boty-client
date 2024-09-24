@@ -36,7 +36,7 @@ export async function getCases(content: IGetCases): Promise<getCasesType | undef
 
 export async function getCaseFile(content: IGetCaseFile): Promise<GetCaseFileType | undefined> {
   try {
-    const response = await fetch(`${API_URL}cases/${content.slug}/files/content?field=slug`, {
+    const response = await fetch(`${API_URL}cases/${content.slug}/content?field=slug`, {
       method: 'GET',
       headers: {
         Accept: 'application/json',
@@ -67,6 +67,7 @@ export async function getCaseInfo(content: IGetCaseInfo): Promise<CaseType | und
       headers: {
         Accept: 'application/json',
         'Content-Type': 'application/json',
+        'Cache-Control': 'no-cache',
       },
       next: { tags: ['cases'] },
     })

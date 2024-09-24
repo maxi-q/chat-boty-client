@@ -1,13 +1,25 @@
+import { cookies } from 'next/headers'
 import { NextRequest, NextResponse } from 'next/server'
 
-export function middleware(req: NextRequest) {
-  const url = req.nextUrl.href
+const protectedRoutes = ['/admin', '/admin_api']
 
-  if (url.includes('/_next/static/')) {
-    return NextResponse.next();
+export default async function middleware(req: NextRequest) {
+  const path = req.nextUrl.pathname
+  const isProtectedRoute = protectedRoutes.includes(path)
+
+  if (!isProtectedRoute) {
+    return NextResponse.next()
   }
 
-  console.log(`[INFO] Requested URL: ${url}, Method: ${req.method}`)
+  const token = cookies().get('token')
+
+  if (!token) {
+    return NextResponse.redirect(new URL('/admin_login', req.nextUrl))
+  }
 
   return NextResponse.next()
+}
+
+export const config = {
+  matcher: ['/((?!api|_next/static|_next/image|.*\\.png$).*)'],
 }

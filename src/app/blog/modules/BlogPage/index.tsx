@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { redirect } from 'next/navigation'
 import { Card } from '../../components/Card'
 
-import { getPagesNumbs } from '../../../../constants/helpers'
+import { getPagesNumbs } from '@/constants/helpers'
 import styles from './style.module.css'
 
 export const Page = async ({ page }: { page: number }) => {
@@ -25,7 +25,7 @@ export const Page = async ({ page }: { page: number }) => {
     <div className="max-w-full">
       <div className="flex flex-wrap w-full">
         {pageData.data.map((el) => (
-          <Card key={el.id} created_at={el.created_at} duration={el.reading_time} title={el.title} link={el.slug} image={el.slug} />
+          <Card key={el.id} created_at={el.created_at} duration={el.reading_time} title={el.title} link={el.slug} image={el.preview_file_id} />
         ))}
       </div>
       <div className="flex">

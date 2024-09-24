@@ -3,15 +3,23 @@ export interface IGetCases {
   size: number
   has_file?: boolean
 }
-export type CaseType = {
+export type SimpleCaseType = {
   id: string
-  created_at: string
-  updated_at: string
+  slug: string
   title: string
   short_description: string
   reading_time: number
-  slug: string
+  preview_file_id?: string
+  preview_og_file_id?: string
+  created_at: string
+  updated_at: string
 }
+
+export interface CaseType extends SimpleCaseType {
+  preview_file_id: string
+  preview_og_file_id: string
+}
+
 export type getCasesType = {
   data: Array<CaseType>
   page: number

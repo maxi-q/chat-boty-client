@@ -4,9 +4,9 @@ import { fetchAllBlogSlugs } from '@/api/blog/utils'
 
 import { getArticleInfo } from '@/api/blog/Articles'
 import { SOURCE } from '@/constants/static'
-import { ArticleHeader } from './modules/ArticleHeader'
-import { MDXPage } from './modules/MDXPage'
+import { FilePostMDX } from '@/modules/HeavyComponents/MDXPage'
 import { notFound } from 'next/navigation'
+import { PostHeader } from '@/modules/Posts/PostHeader'
 
 interface IPostPage {
   params: { slug: string }
@@ -16,9 +16,8 @@ interface IPostPage {
 // Ждем, пока пофиксят notFound в Suspense при SSG
 
 const Page = async ({ params }: IPostPage) => {
-  
   const articleInfo = await getArticleInfo({ slug: params.slug })
-  
+
   if (!articleInfo) {
     return notFound()
   }
@@ -26,8 +25,8 @@ const Page = async ({ params }: IPostPage) => {
   return (
     <div className="max-w-[852px] mx-auto break-words">
       <div>
-        <ArticleHeader articleInfo={articleInfo} />
-        <MDXPage params={params} />
+        <PostHeader postInfo={articleInfo} />
+        <FilePostMDX params={params} />
       </div>
     </div>
   )
