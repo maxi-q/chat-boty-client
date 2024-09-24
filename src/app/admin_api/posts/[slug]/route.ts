@@ -1,11 +1,11 @@
 'use server'
 
 import { patchArticle } from '@/api/admin/blog/Articles'
-import { PostPostInfo } from '@/api/admin/blog/ArticlesTypes'
+import { PostInfoResponse } from '@/api/admin/blog/ArticlesTypes'
 import { type NextRequest } from 'next/server'
 
-export async function PATCH(request: NextRequest, { params }: { params: { slug: string } } ) {
-  const content: PostPostInfo = await request.json()
+export async function PATCH(request: NextRequest, { params }: { params: { slug: string } }) {
+  const content: PostInfoResponse = await request.json()
 
   const response = await patchArticle(params.slug, content)
 

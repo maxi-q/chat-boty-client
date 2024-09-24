@@ -1,11 +1,11 @@
 'use server'
 
 import { postArticle } from '@/api/admin/blog/Articles'
-import { PostPostInfo } from '@/api/admin/blog/ArticlesTypes'
+import { PostInfoResponse } from '@/api/admin/blog/ArticlesTypes'
 import { type NextRequest } from 'next/server'
 
 export async function POST(request: NextRequest) {
-  const content: PostPostInfo = await request.json()
+  const content: PostInfoResponse = await request.json()
 
   const response = await postArticle(content)
 

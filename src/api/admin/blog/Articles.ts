@@ -1,20 +1,19 @@
 import { SOURCE } from '@/constants/static'
-import { getArticlesType, GetPostInfo, IGetArticles, PostPostInfo } from './ArticlesTypes'
 import { cookies } from 'next/headers'
+import { getArticlesType, GetPostInfo, IGetArticles, PostInfoResponse } from './ArticlesTypes'
 
 const API_URL = SOURCE.url
 
-export async function postArticle(content: PostPostInfo): Promise<GetPostInfo | undefined> {
+export async function postArticle(content: PostInfoResponse): Promise<GetPostInfo | undefined> {
   try {
     const token = cookies().get('token')?.value.toString()
-
 
     const response = await fetch(`${API_URL}posts/`, {
       method: 'POST',
       headers: {
         Accept: 'application/json',
         'Content-Type': 'application/json',
-        Authorization: token || ''
+        Authorization: token || '',
       },
       body: JSON.stringify(content),
     })
@@ -34,17 +33,16 @@ export async function postArticle(content: PostPostInfo): Promise<GetPostInfo | 
   }
 }
 
-export async function patchArticle(slug: string, content: PostPostInfo): Promise<GetPostInfo | undefined> {
+export async function patchArticle(slug: string, content: PostInfoResponse): Promise<GetPostInfo | undefined> {
   try {
     const token = cookies().get('token')?.value.toString()
-
 
     const response = await fetch(`${API_URL}posts/${slug}`, {
       method: 'PATCH',
       headers: {
         Accept: 'application/json',
         'Content-Type': 'application/json',
-        Authorization: token || ''
+        Authorization: token || '',
       },
       body: JSON.stringify(content),
     })
@@ -77,7 +75,7 @@ export async function getAllArticles(content: IGetArticles): Promise<getArticles
         'Content-Type': 'application/json',
         'Cache-Control': 'max-age=300',
       },
-      next: { tags: ['articles'] }
+      next: { tags: ['articles'] },
     })
 
     if (!response.ok) {

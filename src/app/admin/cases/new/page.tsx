@@ -1,12 +1,20 @@
+import { postCase } from '@/api/admin/cases/Cases'
 import dynamic from 'next/dynamic'
 import React from 'react'
+import MarkdownEditor from '../../modules/ClientContent'
 
-import MarkdownEditor from './ClientContent'
-
-const NoSsr = () => (
-  <React.Fragment><MarkdownEditor/></React.Fragment>
-)
+const NoSsr = () => {
+  const postClient = async (content: any) => {
+    'use server'
+    return postCase(content)
+  }
+  return (
+    <React.Fragment>
+      <MarkdownEditor postClient={postClient} isUpdatePost={false} />
+    </React.Fragment>
+  )
+}
 
 export default dynamic(() => Promise.resolve(NoSsr), {
-  ssr: false
+  ssr: false,
 })

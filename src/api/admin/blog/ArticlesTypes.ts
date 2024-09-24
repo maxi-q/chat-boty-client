@@ -1,4 +1,4 @@
-export interface PostPostInfo {
+export interface PostInfoResponse {
   title: string
   short_description: string
   reading_time: number

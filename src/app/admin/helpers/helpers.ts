@@ -1,5 +1,5 @@
-import openImageSelector from '../../../../modules/HeavyComponents/ImageSelector/ImageSelector'
-import collection from './ui/collection'
+import openImageSelector from '@/modules/HeavyComponents/ImageSelector/ImageSelector'
+import collection from './collection'
 
 const customCarouselAction = async (editor: EasyMDE) => {
   const selectedImage = await openImageSelector()
@@ -66,3 +66,24 @@ export const settings: EasyMDE.Options = {
   },
   spellChecker: false,
 }
+
+/**
+ * Функция редиректа с заменой последнего сегмента пути.
+ * @param {NextRouter} router - объект роутера, полученный через useRouter().
+ * @param {string} slug - новый slug для замены последнего сегмента пути.
+ */
+export const redirectToSlug = (currentPath: string, slug: string) => {
+
+
+  // Разбиваем путь на сегменты
+  const pathArray = currentPath.split('/').filter((segment: any) => segment);
+
+  // Заменяем последний сегмент на переданный slug
+  pathArray[pathArray.length - 1] = slug;
+
+  // Собираем новый путь
+  const newPath = '/' + pathArray.join('/');
+
+  return newPath
+};
+
