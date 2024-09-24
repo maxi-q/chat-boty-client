@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useRef } from 'react'
+import NavBreadcrumbs from './modules/NavBreadcrumbs'
 
 export default function Admin({
   children,
@@ -17,6 +18,7 @@ export default function Admin({
 
   return (
     <main ref={sectionRef}>
+      <NavBreadcrumbs/>
       {children}
     </main>
   )

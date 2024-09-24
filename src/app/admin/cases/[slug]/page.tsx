@@ -1,18 +1,18 @@
 import dynamic from 'next/dynamic'
-import React from 'react'
 
+import { getCaseFileAdmin } from '@/api/admin/cases/Cases'
+import { getCaseInfo } from '@/api/cases/Cases'
 import MarkdownEditor from './ClientContent'
-import { getCaseInfo, getCaseFile } from '@/api/cases/Cases'
 
 const NoSsr = async ({ params }: { params: { slug: string } }) => {
   const caseInfo = await getCaseInfo({ slug: params.slug })
-  const caseFile = await getCaseFile({ slug: params.slug }) || ''
+  const caseFile = (await getCaseFileAdmin({ slug: params.slug })) || ''
 
   if (!caseInfo) return <>Ошибка загрузки информации о статье</>
 
-  return <React.Fragment><MarkdownEditor loadContent={{articleInfo: caseInfo, articleFile: caseFile}} params={params}/></React.Fragment>
+  return <MarkdownEditor loadContent={{ articleInfo: caseInfo, articleFile: caseFile }} params={params} />
 }
 
 export default dynamic(() => Promise.resolve(NoSsr), {
-  ssr: false
+  ssr: false,
 })

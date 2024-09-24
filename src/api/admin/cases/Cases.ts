@@ -1,6 +1,6 @@
 import { SOURCE } from '@/constants/static'
 import { cookies } from 'next/headers'
-import { GetCaseInfo, getCasesType, IGetCases, PostCaseInfo } from './CasesTypes'
+import { GetCaseFileType, GetCaseInfo, getCasesType, IGetCaseFile, IGetCases, PostCaseInfo } from './CasesTypes'
 
 const API_URL = SOURCE.url
 
@@ -89,6 +89,32 @@ export async function getAllCases(content: IGetCases): Promise<getCasesType | un
     return data
   } catch (error) {
     console.log(error, 'Error: getCases')
+    return
+  }
+}
+
+export async function getCaseFileAdmin(content: IGetCaseFile): Promise<GetCaseFileType | undefined> {
+  try {
+    const response = await fetch(`${API_URL}cases/${content.slug}/content?field=slug`, {
+      method: 'GET',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+        'Cache-Control': 'no-cache',
+      },
+      next: { tags: ['cases'] },
+    })
+
+    if (!response.ok) {
+      const error = new Error(`HTTP Error: ${response.status}`)
+      ;(error as any).status = response.status
+      throw error
+    }
+
+    const data = await response.text()
+    return data
+  } catch (error) {
+    console.log(error, 'Error: getCaseFile')
     return
   }
 }

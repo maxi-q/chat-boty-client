@@ -67,6 +67,7 @@ export async function getCaseInfo(content: IGetCaseInfo): Promise<CaseType | und
       headers: {
         Accept: 'application/json',
         'Content-Type': 'application/json',
+        'Cache-Control': 'no-cache',
       },
       next: { tags: ['cases'] },
     })

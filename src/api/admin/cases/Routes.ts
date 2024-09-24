@@ -28,7 +28,6 @@ export async function postCaseClient(content: PostCaseInfo): Promise<GetCaseInfo
 }
 
 export async function patchCaseClient(slug: string, content: PostCaseInfo): Promise<GetCaseInfo | undefined> {
-  console.log(content)
   try {
     const response = await fetch(`/admin_api/cases/${slug}?field=slug`, {
       method: 'PATCH',

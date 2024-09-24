@@ -7,9 +7,9 @@ import 'easymde/dist/easymde.min.css'
 import { PostPostInfo } from '@/api/admin/blog/ArticlesTypes'
 import { postArticleClient } from '@/api/admin/blog/Routes'
 import { useEffect, useRef, useState } from 'react'
-import ArticleForm from './components/InfoMenu'
-import { settings } from './helpers'
 import { AdminMDXPage } from './modules/AdminMDXPage'
+import ArticleForm from '../../modules/ArticleForm/InfoMenu'
+import { settings } from '../../helpers/helpers'
 
 const MarkdownEditor = () => {
   const [content, setContent] = useState<string>('')

@@ -6,13 +6,13 @@ import 'easymde/dist/easymde.min.css'
 
 import { PostPostInfo } from '@/api/admin/blog/ArticlesTypes'
 import { patchArticleClient } from '@/api/admin/blog/Routes'
-import { getArticleFile, getArticleInfo } from '@/api/blog/Articles'
 import { useEffect, useRef, useState } from 'react'
-import ArticleForm from './components/InfoMenu'
-import { settings } from './helpers'
-import { AdminMDXPage } from './modules/AdminMDXPage'
 
-const MarkdownEditor = ({ params, loadContent }: { params: { slug: string }, loadContent: {articleFile: string, articleInfo: PostPostInfo} }) => {
+import { AdminMDXPage } from './modules/AdminMDXPage'
+import ArticleForm from '../../modules/ArticleForm/InfoMenu'
+import { settings } from '../../helpers/helpers'
+
+const MarkdownEditor = ({ params, loadContent }: { params: { slug: string }; loadContent: { articleFile: string; articleInfo: PostPostInfo } }) => {
   const [content, setContent] = useState<string>(JSON.parse(loadContent.articleFile))
 
   const easyMDERef = useRef<EasyMDE | null>(null)
@@ -26,7 +26,7 @@ const MarkdownEditor = ({ params, loadContent }: { params: { slug: string }, loa
 
     easyMDERef.current = easyMDE
 
-    setContent(easyMDE.value())
+    easyMDE.value(content)
 
     easyMDE.codemirror.on('change', () => {
       setContent(easyMDE.value())
@@ -38,11 +38,12 @@ const MarkdownEditor = ({ params, loadContent }: { params: { slug: string }, loa
     }
   }, [])
 
-  const PostData = (contentInfo: PostPostInfo) => {
-    patchArticleClient(params.slug, {
+  const PostData = async (contentInfo: PostPostInfo) => {
+    const result = await patchArticleClient(params.slug, {
       ...contentInfo,
       content,
     })
+    alert(result)
   }
 
   return (

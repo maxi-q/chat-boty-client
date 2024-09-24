@@ -7,9 +7,9 @@ import 'easymde/dist/easymde.min.css'
 import { PostCaseInfo } from '@/api/admin/cases/CasesTypes'
 import { patchCaseClient } from '@/api/admin/cases/Routes'
 import { useEffect, useRef, useState } from 'react'
-import CaseForm from './components/InfoMenu'
-import { settings } from './helpers'
 import { AdminMDXPage } from './modules/AdminMDXPage'
+import ArticleForm from '../../modules/ArticleForm/InfoMenu'
+import { settings } from '../../helpers/helpers'
 
 const MarkdownEditor = ({ params, loadContent }: { params: { slug: string }; loadContent: { articleFile: string; articleInfo: PostCaseInfo } }) => {
   const [content, setContent] = useState<string>(JSON.parse(loadContent.articleFile))
@@ -25,7 +25,7 @@ const MarkdownEditor = ({ params, loadContent }: { params: { slug: string }; loa
 
     easyMDERef.current = easyMDE
 
-    setContent(easyMDE.value())
+    easyMDE.value(content)
 
     easyMDE.codemirror.on('change', () => {
       setContent(easyMDE.value())
@@ -37,21 +37,21 @@ const MarkdownEditor = ({ params, loadContent }: { params: { slug: string }; loa
     }
   }, [])
 
-  const PostData = (contentInfo: PostCaseInfo) => {
-    patchCaseClient(params.slug, {
+  const PostData = async (contentInfo: PostCaseInfo) => {
+    const result = await patchCaseClient(params.slug, {
       ...contentInfo,
       content,
     })
+    alert(result)
   }
 
   return (
     <div className="prose section p-2">
-      <CaseForm onSubmit={PostData} data={loadContent.articleInfo} />
+      <ArticleForm onSubmit={PostData} data={loadContent.articleInfo} />
       <div className={`flex w-screen`}>
         <div className="w-1/2 p-4">
           <textarea id="markdown-editor" className="w-full h-full border border-gray-300 rounded p-2" />
         </div>
-
         <div className="w-1/2 p-4 border-l border-gray-300 pt-16">
           <AdminMDXPage content={content} />
         </div>
