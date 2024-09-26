@@ -18,6 +18,7 @@ const ImageComponent: React.FC<ImageComponentProps> = ({ image }) => {
       {!hasError ? (
         // eslint-disable-next-line @next/next/no-img-element
           <img
+            referrerPolicy="no-referrer"
             src={`${SOURCE.static_url}${image.slug}?field=slug`}
             alt={`Фото ${image.title}`}
             className="my-0 select-none relative object-contain block w-full h-full"
