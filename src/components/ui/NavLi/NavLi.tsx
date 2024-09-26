@@ -13,7 +13,7 @@ export const NavLi = ({
 }) => {
   return (
     <>
-      <Component link="/service" active={false}>
+      <Component link="#service" active={false}>
         Услуги
       </Component>
       <Component link="/cases" active={false}>

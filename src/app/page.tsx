@@ -3,7 +3,7 @@ import { FirstScreen, FiveScreen, FourScreen, SecondScreen, SevenScreen, SixScre
 
 export default function Home() {
   return (
-    <main className={'laptop:mx-[15px]'}>
+    <main className={'laptop:mx-[15px] scroll-smooth'}>
       <FirstScreen />
       <SecondScreen />
       <ThirdScreen />
@@ -11,8 +11,6 @@ export default function Home() {
       <FiveScreen />
       <SixScreen />
       <SevenScreen />
-
-
     </main>
   )
 }

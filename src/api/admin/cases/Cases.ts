@@ -67,7 +67,6 @@ export async function getAllCases(content: IGetCases): Promise<getCasesType | un
     const params = new URLSearchParams()
     params.append('page', '' + content.page)
     params.append('size', '' + content.size)
-    params.append('hasFullContent', 'True')
 
     const response = await fetch(`${API_URL}cases?` + params, {
       method: 'GET',

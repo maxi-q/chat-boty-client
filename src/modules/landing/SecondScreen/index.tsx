@@ -12,8 +12,8 @@ const nunitoFont = Nunito({
 
 export const SecondScreen = () => {
   return (
-    <main className={`grid section p-5 laptop:pl-[40px] laptop:pt-[70px] ${styles.screen}`}>
-      <Link href={'/service'}>
+    <main className={`grid section p-5 laptop:pl-[40px] laptop:pt-[70px] ${styles.screen}`} id='service'>
+      <Link href={'#service'}>
         <h1 className={`${styles.mainTitle} text-3xl tablet:text-5xl laptop:text-5xl uppercase`}>
           <span className={styles.titleSpan}>решения,</span> которые
           <br /> мы предлагаем:
