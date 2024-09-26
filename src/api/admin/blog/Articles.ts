@@ -1,6 +1,6 @@
 import { SOURCE } from '@/constants/static'
 import { cookies } from 'next/headers'
-import { getArticlesType, GetPostInfo, IGetArticles, PostInfoResponse } from './ArticlesTypes'
+import { GetArticleFileType, getArticlesType, GetPostInfo, IGetArticleFile, IGetArticles, PostInfoResponse } from './ArticlesTypes'
 
 const API_URL = SOURCE.url
 
@@ -73,7 +73,7 @@ export async function getAllArticles(content: IGetArticles): Promise<getArticles
       headers: {
         Accept: 'application/json',
         'Content-Type': 'application/json',
-        'Cache-Control': 'max-age=300',
+        'Cache-Control': 'no-cache',
       },
       next: { tags: ['articles'] },
     })
@@ -88,6 +88,32 @@ export async function getAllArticles(content: IGetArticles): Promise<getArticles
     return data
   } catch (error) {
     console.log(error, 'Error: getAllArticles')
+    return
+  }
+}
+
+export async function getArticleFileAdmin(content: IGetArticleFile): Promise<GetArticleFileType | undefined> {
+  try {
+    const response = await fetch(`${API_URL}posts/${content.slug}/content?field=slug`, {
+      method: 'GET',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+        'Cache-Control': 'no-cache',
+      },
+      next: { tags: ['articles'] }
+    })
+
+    if (!response.ok) {
+      const error = new Error(`HTTP Error: ${response.status}`)
+      ;(error as any).status = response.status
+      throw error
+    }
+
+    const data = await response.text()
+    return data
+  } catch (error) {
+    console.log(error, 'Error: getArticleFile')
     return
   }
 }
