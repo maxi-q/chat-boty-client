@@ -1,6 +1,6 @@
 import dynamic from 'next/dynamic'
 
-import { getCaseFileAdmin } from '@/api/admin/cases/Cases'
+import { getCaseFileAdmin, patchCase } from '@/api/admin/cases/Cases'
 import { patchCaseClient } from '@/api/admin/cases/Routes'
 import { getCaseInfo } from '@/api/cases/Cases'
 import MarkdownEditor from '../../modules/ClientContent'
@@ -11,12 +11,12 @@ const NoSsr = async ({ params }: { params: { slug: string } }) => {
 
   if (!caseInfo) return <>Ошибка загрузки информации о статье</>
 
-  const patchCase = async (content: any) => {
+  const formFunction = async (content: any) => {
     'use server'
-    return patchCaseClient(content, params.slug)
+    return patchCase(params.slug, content)
   }
 
-  return <MarkdownEditor loadContent={{ postInfo: caseInfo, postFile: caseFile }} isUpdatePost={true} postClient={patchCase} />
+  return <MarkdownEditor loadContent={{ postInfo: caseInfo, postFile: caseFile }} isUpdatePost={true} postClient={formFunction} />
 }
 
 export default dynamic(() => Promise.resolve(NoSsr), {

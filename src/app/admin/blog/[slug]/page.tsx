@@ -3,6 +3,7 @@ import dynamic from 'next/dynamic'
 import { patchArticleClient } from '@/api/admin/blog/Routes'
 import { getArticleFile, getArticleInfo } from '@/api/blog/Articles'
 import MarkdownEditor from '../../modules/ClientContent'
+import { patchArticle } from '@/api/admin/blog/Articles'
 
 const NoSsr = async ({ params }: { params: { slug: string } }) => {
   const articleInfo = await getArticleInfo({ slug: params.slug })
@@ -10,12 +11,12 @@ const NoSsr = async ({ params }: { params: { slug: string } }) => {
 
   if (!articleInfo) return <>Ошибка загрузки информации о статье</>
 
-  const patchArticle = async (content: any) => {
+  const fromPost = async (content: any) => {
     "use server"
-    return patchArticleClient(params.slug, content)
+    return patchArticle(params.slug, content)
   }
 
-  return <MarkdownEditor loadContent={{ postInfo: articleInfo, postFile: articleFile }} isUpdatePost={true} postClient={(patchArticle)} />
+  return <MarkdownEditor loadContent={{ postInfo: articleInfo, postFile: articleFile }} isUpdatePost={true} postClient={fromPost} />
 }
 
 export default dynamic(() => Promise.resolve(NoSsr), {

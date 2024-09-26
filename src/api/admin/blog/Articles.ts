@@ -28,7 +28,7 @@ export async function postArticle(content: PostInfoResponse): Promise<GetPostInf
 
     return data
   } catch (error) {
-    console.log(error, 'Error: getArticles')
+    console.log(error, 'Error: postArticle')
     return
   }
 }
@@ -57,7 +57,7 @@ export async function patchArticle(slug: string, content: PostInfoResponse): Pro
 
     return data
   } catch (error) {
-    console.log(error, 'Error: getArticles')
+    console.log(error, 'Error: patchArticle')
     return
   }
 }
@@ -87,7 +87,7 @@ export async function getAllArticles(content: IGetArticles): Promise<getArticles
     const data = await response.json()
     return data
   } catch (error) {
-    console.log(error, 'Error: getArticles')
+    console.log(error, 'Error: getAllArticles')
     return
   }
 }

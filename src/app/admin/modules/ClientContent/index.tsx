@@ -13,7 +13,6 @@ import { redirectToSlug, settings } from '../../helpers/helpers'
 import ArticleForm from '../../modules/ArticleForm/InfoMenu'
 import { AdminMDXPage } from '../AdminMDXPage'
 
-
 const MarkdownEditor = ({
   loadContent,
   postClient,
@@ -23,7 +22,8 @@ const MarkdownEditor = ({
   postClient: (content: any) => Promise<any | undefined>
   isUpdatePost: boolean
 }) => {
-  const [content, setContent] = useState<string>(JSON.parse(loadContent?.postFile || '""'))
+  const postFile = loadContent?.postFile
+  const [content, setContent] = useState<string>(JSON.parse(postFile == 'null' ? '""' : loadContent?.postFile || '""'))
   const currentPath = usePathname()
   const easyMDERef = useRef<EasyMDE | null>(null)
 
@@ -37,6 +37,10 @@ const MarkdownEditor = ({
     easyMDERef.current = easyMDE
 
     if (isUpdatePost) {
+      console.log(typeof loadContent?.postFile)
+      console.log('eqw')
+
+      console.log(loadContent?.postFile || 'eqw')
       easyMDE.value(content)
     } else {
       setContent(easyMDE.value())
