@@ -119,3 +119,4 @@ export async function getCaseFileAdmin(content: IGetCaseFile): Promise<GetCaseFi
 }
 
 export const dynamic = 'force-dynamic'
+export const revalidate = 0

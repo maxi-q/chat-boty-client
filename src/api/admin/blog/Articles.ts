@@ -119,3 +119,4 @@ export async function getArticleFileAdmin(content: IGetArticleFile): Promise<Get
 }
 
 export const dynamic = 'force-dynamic'
+export const revalidate = 0
