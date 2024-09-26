@@ -22,14 +22,14 @@ export async function postArticleClient(content: PostInfoResponse): Promise<GetP
     const data = await response.json()
     return data
   } catch (error) {
-    console.log(error, 'Error: getArticles')
+    console.log(error, 'Error: postArticleClient')
     return
   }
 }
 
 export async function patchArticleClient(slug: string, content: PostInfoResponse): Promise<GetPostInfo | undefined> {
   try {
-    const response = await fetch(`/admin_api/posts/${slug}?field=slug`, {
+    const response = await fetch(`/admin_api/posts/${slug}`, {
       method: 'PATCH',
       headers: {
         Accept: 'application/json',
@@ -47,7 +47,7 @@ export async function patchArticleClient(slug: string, content: PostInfoResponse
     const data = await response.json()
     return data
   } catch (error) {
-    console.log(error, 'Error: getArticles')
+    console.log(error, 'Error: patchArticleClient')
     return
   }
 }

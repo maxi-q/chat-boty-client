@@ -1,17 +1,17 @@
-import { postArticleClient } from '@/api/admin/blog/Routes'
+import { postArticle } from '@/api/admin/blog/Articles'
 import dynamic from 'next/dynamic'
 import React from 'react'
 import MarkdownEditor from '../../modules/ClientContent'
 
 const NoSsr = () => {
-  const postArticle = async (content: any) => {
+  const fromPost = async (content: any) => {
     'use server'
-    return postArticleClient(content)
+    return postArticle(content)
   }
 
   return (
     <React.Fragment>
-      <MarkdownEditor postClient={postArticle} isUpdatePost={false} />
+      <MarkdownEditor postClient={fromPost} isUpdatePost={false} />
     </React.Fragment>
   )
 }

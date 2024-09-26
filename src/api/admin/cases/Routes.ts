@@ -29,7 +29,7 @@ export async function postCaseClient(content: PostCaseInfo): Promise<GetCaseInfo
 
 export async function patchCaseClient(content: PostCaseInfo, slug: string): Promise<GetCaseInfo | undefined> {
   try {
-    const response = await fetch(`/admin_api/cases/${slug}?field=slug`, {
+    const response = await fetch(`/admin_api/cases/${slug}`, {
       method: 'PATCH',
       headers: {
         Accept: 'application/json',
