@@ -1,5 +1,4 @@
 import { getAllCases } from '@/api/admin/cases/Cases'
-import { getCases } from '@/api/cases/Cases'
 import { formatHumanReadableDateTime } from '@/constants/helpers'
 import { SOURCE } from '@/constants/static'
 import Link from 'next/link'
@@ -8,7 +7,6 @@ const BlogPage = async () => {
   const result = await getAllCases({
     page: 1,
     size: 100,
-    has_file: false,
   })
 
   const cases = result?.data

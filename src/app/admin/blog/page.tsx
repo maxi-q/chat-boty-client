@@ -1,13 +1,12 @@
-import { getArticles } from '@/api/blog/Articles'
+import { getAllArticles } from '@/api/admin/blog/Articles'
 import { formatHumanReadableDateTime } from '@/constants/helpers'
 import { SOURCE } from '@/constants/static'
 import Link from 'next/link'
 
 const BlogPage = async () => {
-  const result = await getArticles({
+  const result = await getAllArticles({
     page: 1,
     size: 100,
-    has_file: false,
   })
 
   const articles = result?.data
