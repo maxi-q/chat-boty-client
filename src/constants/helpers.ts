@@ -88,12 +88,14 @@ export async function defaultResponse<T>(errorTitle: string, input: string | URL
   try {
     const response = await fetch(input, init)
 
+    const data = await response.json()
+
     if (!response.ok) {
       const error = new CustomError(`HTTP Error: ${response.status}`, response)
+      console.log(data || 'nodata')
       throw error
     }
 
-    const data = await response.json()
     return data
   } catch (error: any) {
     console.log(error, `Error: ${errorTitle}`)

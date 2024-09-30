@@ -26,24 +26,24 @@ export const FourScreen = () => {
           text={
             '3 тарифа: на 1/3/6 месяцев. Настроен приём платежей\nи уведомление администратора, а также автоматическое\nодобрение в каналы и удаление в случае отсутствия оплаты'
           }
-          link={''}
+          link={'/cases/klub-po-podpiske-dlya-eksperta-po-wildberries'}
         />
         <br className={styles.separator} />
         <Case
           title={'Запуск блогера с обучением по «Я. Дзен»'}
           text={'Техническая + маркетинговая часть Нашли блогера,\nдоговорились, что с него обучение, а с нас\nвсё остальное и сделали запуск на 500к+'}
-          link={''}
+          link={'/cases/sprodyusirovali-blogera-po-yandeks-dzen'}
         />
         <Case
           title={'Запуск сертификации с сервисом Senler'}
           text={'В момент блокировки популярной соц. сети предложил\nоснователю сделать курс, в итоге сделали лучше в 2 раза\nрезультат, чем они сам годом ранее'}
-          link={''}
+          link={'/cases/zapusk-sertifikatsii-s-servicom-senler'}
         />
         <br className={`hidden laptop:block ${styles.separator}`} />
         <Case
           title={'Автоматизация для ЕГЭ школы «СОТКА»'}
           text={'Автоматический сбор отзывов и перенос их в гугл-таблицу\nдля проведения конкурса, а также чат-бот для беседы ВК'}
-          link={''}
+          link={'/cases/avtomatizatsiya-vkontakte-dlya-ege-shkoly-sotka'}
         />
         <br className={`block laptop:hidden ${styles.separator}`} />
         <CTA title={'В этом вместе может оказаться ваш проект'} text={'Тут текст, который привлек ваше внимание, а теперь нажмите на кнопку ниже и оставьте заявку'} link={''} />

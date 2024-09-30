@@ -16,6 +16,7 @@ import TelegramInput from '../InputMask/TelegramInput'
 import { PopUp } from '../PopUp'
 import { schemas } from '../../../api/communication/communicationHelper'
 import styles from './style.module.css'
+import { useRouter } from 'next/navigation'
 
 export enum contactType {
   Phone = 'phone' as any,
@@ -51,13 +52,16 @@ export const useCallBackStore = create<callBackState>()((set) => ({
 const inputClass = `block w-full rounded-full text-base desktop:text-lg py-3 px-4 sm:px-12 sm:py-6 ${styles.feedbackInput}`
 
 export const CallBackPopUp = () => {
+  const router = useRouter()
+
   const { isOpen, closePopup, content, edit } = useCallBackStore()
   const [send, setSend] = useState(false)
 
   const [showFirst, setShowFirst] = useState(true)
 
-  const handleToggle = () => {
+  const handleToggle = async () => {
     setShowFirst(!showFirst)
+    router.push('/success')
   }
 
   const variants = {

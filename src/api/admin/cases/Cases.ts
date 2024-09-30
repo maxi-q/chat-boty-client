@@ -73,7 +73,7 @@ export async function getAllCases(content: IGetCases): Promise<getCasesType | un
       headers: {
         Accept: 'application/json',
         'Content-Type': 'application/json',
-        'Cache-Control': 'max-age=3600',
+        'Cache-Control': 'no-cache',
       },
       next: { tags: ['cases'] },
     })
@@ -119,3 +119,4 @@ export async function getCaseFileAdmin(content: IGetCaseFile): Promise<GetCaseFi
 }
 
 export const dynamic = 'force-dynamic'
+export const revalidate = 0
