@@ -8,8 +8,8 @@ export async function GET(request: NextRequest) {
   const page = searchParams.get('page') || 1
   const size = searchParams.get('size') || 10
   const images = await getImages({ page: +page, size: +size })
-  
-  if (!images) {
+
+  if (!!Object.keys(images).length) {
     return new Response('Ошибка при запросе файлов', {
       status: 500,
     })

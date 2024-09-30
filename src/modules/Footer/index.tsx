@@ -35,7 +35,7 @@ export const Footer = () => {
           <h3 className={`${styles.navTitle} ${titleClass}`}>разделы</h3>
           <ul className={liClass}>
             <LiComponent href='/' active={false}>Главная</LiComponent>
-            <LiComponent href='/service' active={false}>Услуги</LiComponent>
+            <LiComponent href='/#service' active={false}>Услуги</LiComponent>
             <LiComponent href='/cases' active={false}>Кейсы</LiComponent>
             <LiComponent href='/blog' active={false}>Блог</LiComponent>
             <LiComponent href='/reviews' active={false}>Отзывы</LiComponent>
