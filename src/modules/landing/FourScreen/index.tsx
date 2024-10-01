@@ -9,7 +9,7 @@ export const FourScreen = () => {
       <h1 className={`text-3xl phone:text-4xl tablet:text-6xl laptop:text-5xl desktop:text-6xl pb-16 uppercase tracking-wide ${styles.title}`}>кейсы:</h1>
 
       <div className="flex flex-wrap gap-7">
-        <Case title={'Новая школа'} text={'Автоматизируем CRM систему BlueSales для ЕГЭ школы'} link={''} />
+        <Case title={'Новая школа'} text={'Автоматизируем CRM систему BlueSales для ЕГЭ школы'} link={'/cases/nastroyka-bluesales-dlya-novoy-shkoly'} />
         <Case
           title={'Chukcha — Бренд одежды'}
           text={'Рассылки: ВК, ТГ, email. СМС. Постоянная работа с базой,\nпроведения геймификаций а также автоматизация amoCRM\nи работа с репутацией бренда: ORM'}
