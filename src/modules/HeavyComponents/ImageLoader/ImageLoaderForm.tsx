@@ -1,5 +1,6 @@
 import { createFileClient, uploadFileClient } from '@/api/static/Routes'
 import { FormEvent, useState } from 'react'
+import { createFileData } from './clientHelper'
 
 const ImageLoaderForm = ({ loadFile }: { loadFile: () => void }) => {
   const [title, setTitle] = useState('')
@@ -33,11 +34,9 @@ const ImageLoaderForm = ({ loadFile }: { loadFile: () => void }) => {
   }
 
   const loadImage = async () => {
-    const response = await createFileClient({
-      title: title,
-      description: description,
-      slug: slug || undefined,
-    })
+    const response = await createFileData({title, description, slug})
+
+    console.log(response)
 
     if (response instanceof Response) {
       if (response.status == 422) {
