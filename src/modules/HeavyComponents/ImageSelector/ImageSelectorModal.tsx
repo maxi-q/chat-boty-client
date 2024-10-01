@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react'
 
-import { deleteFileInfoClient, getImagesClient } from '@/api/static/Routes'
+import { deleteFileInfoClient } from '@/api/static/Routes'
 import { IImage, IImages } from '@/api/static/types'
 
 import { formatHumanReadableDateTime, ServerError } from '@/constants/helpers'
 import { SOURCE } from '@/constants/static'
 
-import Modal from '@/modules/main/Modal' // Модальное окно
 import openImageLoader from '@/modules/HeavyComponents/ImageLoader/ImageLoader'
+import Modal from '@/modules/main/Modal' // Модальное окно
 
 import { getPagesNumbs } from '@/constants/helpers'
 import PostsNext from '@/constants/svg/PostsNext'
@@ -15,6 +15,7 @@ import PostsPrev from '@/constants/svg/PostsPrev'
 import { getImageDimensions } from './helper'
 import ImageComponent from './Image'
 
+import { getData } from './serverHelper'
 import styles from './style.module.css'
 
 interface ImageSelectorProps {
@@ -30,11 +31,11 @@ const ImageSelectorModal: React.FC<ImageSelectorProps> = ({ isOpen, onClose, onC
 
   const updateImages = async () => {
     setImages(undefined)
-    const data = await getImagesClient({ page: page, size: 12 })
+    const data = await getData(page)
     if (data instanceof ServerError) {
       return
     }
-    setImages(data?.images)
+    setImages(data)
   }
 
   useEffect(() => {
