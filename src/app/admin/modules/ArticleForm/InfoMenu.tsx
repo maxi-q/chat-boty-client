@@ -47,7 +47,7 @@ const ArticleForm = ({ onSubmit, data }: { onSubmit: (content: PostInfoResponse)
     onSubmit({
       title: title,
       short_description: description,
-      reading_time: readingTime || 0,
+      reading_time: readingTime || 1,
       preview_file_id: image1?.id || data?.preview_file_id,
       preview_og_file_id: image2?.id || data?.preview_og_file_id,
     })
