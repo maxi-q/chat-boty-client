@@ -1,7 +1,7 @@
 import { defaultResponse, defaultResponseNoJson, ServerError } from '@/constants/helpers'
 import { SOURCE } from '@/constants/static'
 import { cookies } from 'next/headers'
-import { ICreateFile, IDeleteFileInfo, IGetImages, IImages } from './types'
+import { ICreateFile, IDeleteFileInfo, IFileInfo, IGetImages, IImages } from './types'
 
 const API_URL = SOURCE.static_url
 
@@ -24,7 +24,7 @@ export async function getImages(content: IGetImages): Promise<IImages | ServerEr
   })
 }
 
-export async function createFile(content: ICreateFile): Promise<Response> {
+export async function createFile(content: ICreateFile): Promise<IFileInfo | ServerError> {
   const token = cookies().get('token')?.value.toString()
 
   return defaultResponse('Error: createFile', `${API_URL}`, {
