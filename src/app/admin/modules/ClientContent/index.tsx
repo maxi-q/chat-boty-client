@@ -37,10 +37,6 @@ const MarkdownEditor = ({
     easyMDERef.current = easyMDE
 
     if (isUpdatePost) {
-      console.log(typeof loadContent?.postFile)
-      console.log('eqw')
-
-      console.log(loadContent?.postFile || 'eqw')
       easyMDE.value(content)
     } else {
       setContent(easyMDE.value())
@@ -63,6 +59,7 @@ const MarkdownEditor = ({
       ...contentInfo,
       content,
     })
+    if (!response) alert(`Произошла ошибка: ${response}`)
     if (response.slug) {
       alert(`Успех! сейчас перенесем вас на изменение ${response.slug}`)
       const redirectPath = redirectToSlug(currentPath, response.slug)
