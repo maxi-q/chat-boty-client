@@ -9,14 +9,14 @@ import { telegramRequest } from '@/api/communication/telegram'
 import CloseMainPopUp from '@/constants/svg/CloseMainPopUp'
 import TelegramFeedback from '@/constants/svg/TelegramFeedback'
 import Telephone from '@/constants/svg/Telephone'
+import { useRouter } from 'next/navigation'
 import { useState } from 'react'
+import { schemas } from '../../../api/communication/communicationHelper'
 import { CallToActionButton } from '../CallToAction'
 import PhoneInput from '../InputMask/PhoneInput'
 import TelegramInput from '../InputMask/TelegramInput'
 import { PopUp } from '../PopUp'
-import { schemas } from '../../../api/communication/communicationHelper'
 import styles from './style.module.css'
-import { useRouter } from 'next/navigation'
 
 export enum contactType {
   Phone = 'phone' as any,
@@ -37,6 +37,21 @@ type callBackState = {
   edit: (value: callBackContent) => void
 }
 
+const fillForm = (data: callBackContent) => {
+  const visited = sessionStorage.getItem('visit')
+
+  if (visited === null || document.location.href !== sessionStorage.getItem('lastPage')) {
+    if (data.name && data.contact) {
+      if (typeof window !== 'undefined' && typeof window.ym === 'function') {
+        window.ym(98094334, 'reachGoal', 'заполнил')
+        console.log('Yandex Metrica goal sent!')
+      }
+    }
+    sessionStorage.setItem('visit', '1')
+  }
+  sessionStorage.setItem('lastPage', document.location.href)
+}
+
 export const useCallBackStore = create<callBackState>()((set) => ({
   isOpen: false,
   openPopup: () => set({ isOpen: true }),
@@ -46,8 +61,26 @@ export const useCallBackStore = create<callBackState>()((set) => ({
     contact: '',
     contactType: contactType.Phone,
   },
-  edit: (value: callBackContent) => set((prev) => ({ content: { ...prev.content, ...value } })),
+  edit: (value: callBackContent) => {
+    set((prev) => {
+      fillForm(prev.content)
+      return { content: { ...prev.content, ...value } }
+    })
+  },
 }))
+
+const openPopupTarget = () => {
+  const visited = sessionStorage.getItem('openPopup')
+
+  if (visited === null || document.location.href !== sessionStorage.getItem('lastPage')) {
+      if (typeof window !== 'undefined' && typeof window.ym === 'function') {
+        window.ym(98094334,'reachGoal','open popup')
+        console.log('Yandex Metrica open popup sent!')
+      }
+    sessionStorage.setItem('openPopup', '1')
+  }
+  sessionStorage.setItem('lastPage', document.location.href)
+}
 
 const inputClass = `block w-full rounded-full text-base desktop:text-lg py-3 px-4 sm:px-12 sm:py-6 ${styles.feedbackInput}`
 
@@ -179,7 +212,7 @@ export const CallBackPopUp = () => {
                 </div>
               )}
 
-              <CallToActionButton type="submit" className="max-w-[9999px]" textClassName='pl-3'>
+              <CallToActionButton type="submit" className="max-w-[9999px]" textClassName="pl-3">
                 оставить заявку
               </CallToActionButton>
             </form>
