@@ -19,7 +19,7 @@ export const FourScreen = () => {
         <Case
           title={'Автоматизация ЕГЭ школы «Дайбобру»'}
           text={'Проведение геймификаций, постоянная работа\nс базой, исследование аудитории, создание\nреферальной системы и не только'}
-          link={''}
+          link={'/cases/avtomatizatsiya-ege-shkoly-daybobru'}
         />
         <Case
           title={'Клуб по подписке для эксперта по WildBerries'}
