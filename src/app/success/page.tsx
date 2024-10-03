@@ -1,6 +1,7 @@
 import ClockBlack from '@/constants/svg/ClockBlack'
 import { Close } from './close'
 import styles from './style.module.css'
+import Link from 'next/link'
 
 export default function NotFound() {
   return (
@@ -14,22 +15,25 @@ export default function NotFound() {
         </h2>
         <aside className="flex gap-5 mt-2 tablet:flex-row flex-col ">
           <Card
-            date={'04.05.2024'}
-            title={'заголовок статьи\nв несколько строчек'}
-            text={'Краткое описание о чем статья, кому может быть полезна и так далее'}
-            describe={'Время прочтения: 5 минут'}
+            date={'01.10.2024'}
+            title={'Настройка BlueSales для Новой Школы'}
+            text={'В феврале 2024 года мы встретили крупного клиента. Онлайн школу ЕГЭ «Новая Школа».'}
+            describe={'Время прочтения: 4 минуты'}
+            link={'/cases/nastroyka-bluesales-dlya-novoy-shkoly'}
           />
           <Card
-            date={'04.05.2024'}
-            title={'заголовок статьи\nв несколько строчек'}
-            text={'Краткое описание о чем статья, кому может быть полезна и так далее'}
-            describe={'Время прочтения: 5 минут'}
+            date={'04.09.2024'}
+            title={'Запуск сертификации с сервиcом Senler'}
+            text={'Когда инсту заблокировали пошёл большой приток людей в ВК и многим нужен был Senler'}
+            describe={'Время прочтения: 11 минут'}
+            link={'/cases/zapusk-sertifikatsii-s-servicom-senler'}
           />
           <Card
-            date={'04.05.2024'}
-            title={'заголовок статьи\nв несколько строчек'}
-            text={'Краткое описание о чем статья, кому может быть полезна и так далее'}
-            describe={'Время прочтения: 5 минут'}
+            date={'24.08.2024'}
+            title={'Что могут чат-боты в инстаграм в 2024'}
+            text={'Чат-боты в инсте желанная тема многих, возможность их делать в белую появилась летом 2021 года, инстаграм открыл API и понеслось.'}
+            describe={'Время прочтения: 4 минуты'}
+            link={'/blog/chto-mogut-chat-boty-v-instagram-v-2024-godu'}
           />
         </aside>
       </section>
@@ -38,9 +42,9 @@ export default function NotFound() {
   )
 }
 
-const Card = ({ date, title, text, describe }: { date: string; title: string; text: string; describe: string }) => {
+const Card = ({ date, title, text, describe, link }: { date: string; title: string; text: string; describe: string; link: string }) => {
   return (
-    <div className={`rounded-xl p-6 laptop:p-8 h-max w-full laptop:w-[300px] laptop:h-[300px] desktop:w-[408px] desktop:h-[380px] flex flex-col ${styles.card}`}>
+    <Link href={link} className={`rounded-xl p-6 laptop:p-8 h-max w-full laptop:w-[300px] laptop:h-[300px] desktop:w-[408px] desktop:h-[380px] flex flex-col ${styles.card}`}>
       <h5 className="text-xs select-none">{date}</h5>
       <Splitter />
       <h3 className={`mb-4 text-md desktop:text-2xl leading-snug uppercase font-bold ${styles.textTitle}`}>{title}</h3>
@@ -50,7 +54,7 @@ const Card = ({ date, title, text, describe }: { date: string; title: string; te
         <ClockBlack />
         <h4 className="text-xs ml-2 desktop:text-base select-none">{describe}</h4>
       </div>
-    </div>
+    </Link>
   )
 }
 
