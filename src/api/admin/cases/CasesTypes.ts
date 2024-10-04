@@ -5,6 +5,7 @@ export interface PostCaseInfo {
   content?: string
   preview_file_id?: string
   preview_og_file_id?: string
+  is_published: boolean
 }
 
 export interface GetCaseInfo {
@@ -32,6 +33,7 @@ export type SimpleCaseType = {
   preview_og_file_id?: string
   created_at: string
   updated_at: string
+  is_published: boolean
 }
 
 export interface CaseType extends SimpleCaseType {

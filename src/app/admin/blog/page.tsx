@@ -20,12 +20,13 @@ const BlogPage = async () => {
         </Link>
       </h1>
 
-      <div className="overflow-x-auto w-full max-w-4xl rounded-lg shadow-md">
+      <div className="overflow-x-auto w-full max-w-6xl rounded-lg shadow-md">
         <table className="min-w-full bg-white">
           <thead>
             <tr>
               <th className="px-6 py-3 text-left bg-gray-200 text-gray-600 font-bold uppercase tracking-wider">Название статьи</th>
               <th className="px-6 py-3 text-left bg-gray-200 text-gray-600 font-bold uppercase tracking-wider">Ссылка</th>
+              <th className="px-6 py-3 text-left bg-gray-200 text-gray-600 font-bold uppercase tracking-wider">Опубликовано</th>
               <th className="px-6 py-3 text-left bg-gray-200 text-gray-600 font-bold uppercase tracking-wider">Дата публикации</th>
               <th className="px-6 py-3 text-left bg-gray-200 text-gray-600 font-bold uppercase tracking-wider">Дата изменения</th>
             </tr>
@@ -42,6 +43,9 @@ const BlogPage = async () => {
                   <Link className="text-blue-500 underline hover:text-blue-700" href={`${SOURCE.client_url}blog/${article.slug}`}>
                     Ссылка
                   </Link>
+                </td>
+                <td className="px-6 py-4 max-w-xs overflow-x-auto whitespace-nowrap">
+                  {article.is_published ? 'Да' : 'Нет'}
                 </td>
                 <td className="px-6 py-4 max-w-xs overflow-x-auto whitespace-nowrap">{formatHumanReadableDateTime(article.created_at)}</td>
                 <td className="px-6 py-4 max-w-xs overflow-x-auto whitespace-nowrap">{formatHumanReadableDateTime(article.updated_at)}</td>

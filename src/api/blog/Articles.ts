@@ -9,6 +9,7 @@ export async function getArticles(content: IGetArticles): Promise<getArticlesTyp
     params.append('page', '' + content.page)
     params.append('size', '' + content.size)
     params.append('hasFullContent', 'True')
+    params.append('isPublished', 'True')
 
     const response = await fetch(`${API_URL}posts?` + params, {
       method: 'GET',

@@ -5,6 +5,7 @@ export interface PostInfoResponse {
   content?: string
   preview_file_id?: string
   preview_og_file_id?: string
+  is_published: boolean
 }
 
 export interface GetPostInfo {
@@ -33,6 +34,7 @@ export type SimpleArticleType = {
   preview_og_file_id?: string
   created_at: string
   updated_at: string
+  is_published: boolean
 }
 
 export interface ArticleType extends SimpleArticleType {
