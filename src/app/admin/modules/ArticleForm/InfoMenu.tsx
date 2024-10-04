@@ -14,6 +14,7 @@ const ArticleForm = ({ onSubmit, data }: { onSubmit: (content: PostInfoResponse)
   const [title, setTitle] = useState(data?.title || '')
   const [description, setDescription] = useState(data?.short_description || '')
   const [readingTime, setReadingTime] = useState<number | ''>(data?.reading_time || '')
+  const [isPublished, setIsPublished] = useState(data?.is_published || false)
 
   useEffect(() => {
     setTitle(data?.title || '')
@@ -21,35 +22,38 @@ const ArticleForm = ({ onSubmit, data }: { onSubmit: (content: PostInfoResponse)
     setReadingTime(data?.reading_time || '')
   }, [data])
 
-  const [image1, setImage1] = useState<ImageData | null>(null)
-  const [image2, setImage2] = useState<ImageData | null>(null)
+  const [preview, setPreview] = useState<ImageData | null>(null)
+  const [ogPreview, setOgPreview] = useState<ImageData | null>(null)
 
   const handleSelectImage1 = async () => {
     const selectedImage = await openImageSelector()
     if (selectedImage) {
-      setImage1(selectedImage)
+      setPreview(selectedImage)
     }
   }
 
   const handleSelectImage2 = async () => {
     const selectedImage = await openImageSelector()
     if (selectedImage) {
-      setImage2(selectedImage)
+      setOgPreview(selectedImage)
     }
   }
 
   const handleSave = () => {
-    if (!(image1?.id || data?.preview_file_id) || !(image2?.id || data?.preview_og_file_id)) {
-      alert('выберете превью')
-      return
+    if (isPublished) {
+      if (!(preview?.id || data?.preview_file_id) || !(ogPreview?.id || data?.preview_og_file_id)) {
+        alert('Выберете превью')
+        return
+      }
     }
 
     onSubmit({
       title: title,
       short_description: description,
       reading_time: readingTime || 1,
-      preview_file_id: image1?.id || data?.preview_file_id,
-      preview_og_file_id: image2?.id || data?.preview_og_file_id,
+      preview_file_id: preview?.id || data?.preview_file_id,
+      preview_og_file_id: ogPreview?.id || data?.preview_og_file_id,
+      is_published: isPublished,
     })
   }
 
@@ -94,6 +98,7 @@ const ArticleForm = ({ onSubmit, data }: { onSubmit: (content: PostInfoResponse)
               const value = parseInt(e.target.value)
               setReadingTime(value >= 0 ? value : '')
             }}
+            required
             className="block w-full border border-gray-300 rounded p-2 focus:outline-none focus:border-blue-400"
             placeholder="Минуты"
             min="0"
@@ -107,7 +112,7 @@ const ArticleForm = ({ onSubmit, data }: { onSubmit: (content: PostInfoResponse)
           <button onClick={handleSelectImage1} type="button" className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 mt-1">
             Загрузить новое превью
           </button>
-          {image1 && <p className="mt-2 text-sm text-gray-600">Выбранное изображение: {image1.title}</p>}
+          {preview ? <p className="mt-2 text-sm text-gray-600">Выбранное изображение: {preview.title}</p> : data?.preview_file_id ? <ImageLink id={data.preview_file_id} /> : ''}
         </div>
 
         <div className="flex-1">
@@ -115,8 +120,21 @@ const ArticleForm = ({ onSubmit, data }: { onSubmit: (content: PostInfoResponse)
           <button onClick={handleSelectImage2} type="button" className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 mt-1">
             Загрузить OpenGraph превью
           </button>
-          {image2 && <p className="mt-2 text-sm text-gray-600">Выбранное изображение: {image2.title}</p>}
+          {ogPreview ? (
+            <p className="mt-2 text-sm text-gray-600">Выбранное изображение: {ogPreview.title}</p>
+          ) : data?.preview_og_file_id ? (
+            <ImageLink id={data.preview_og_file_id} />
+          ) : (
+            ''
+          )}
         </div>
+      </div>
+
+      <div className="mb-4">
+        <label className="flex items-center">
+          <input type="checkbox" id="isPublished" checked={isPublished} onChange={(e) => setIsPublished(e.target.checked)} className="mr-2" />
+          <span className="text-sm font-medium text-gray-700">Опубликовать</span>
+        </label>
       </div>
 
       <div className="mt-6">
@@ -125,6 +143,14 @@ const ArticleForm = ({ onSubmit, data }: { onSubmit: (content: PostInfoResponse)
         </button>
       </div>
     </form>
+  )
+}
+
+const ImageLink = ({ id }: { id: string }) => {
+  return (
+    <a href={`https://static.chat-boty.com/${id}?field=id`} target="_blank">
+      Загружено
+    </a>
   )
 }
 

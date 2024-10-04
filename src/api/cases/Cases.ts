@@ -9,6 +9,7 @@ export async function getCases(content: IGetCases): Promise<getCasesType | undef
     params.append('page', '' + content.page)
     params.append('size', '' + content.size)
     params.append('hasFullContent', 'True')
+    params.append('isPublished', 'True')
 
     const response = await fetch(`${API_URL}cases?` + params, {
       method: 'GET',
