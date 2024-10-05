@@ -60,7 +60,7 @@ export async function generateMetadata({ params }: ICasePage, parent: ResolvingM
       type: 'article',
       title: articleInfo?.title,
       description: articleInfo?.short_description,
-      images: [`${SOURCE.static_url}${articleInfo?.slug}-og?field=slug`],
+      images: [`${SOURCE.static_url}${articleInfo?.preview_og_file_id}?field=id`],
       // images: [`${SOURCE.static_url}${articleInfo?.slug}-og?field=slug`, ...previousImages],
     },
   }
