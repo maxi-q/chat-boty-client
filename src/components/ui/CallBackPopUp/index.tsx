@@ -52,9 +52,26 @@ const fillForm = (data: callBackContent) => {
   sessionStorage.setItem('lastPage', document.location.href)
 }
 
+const openPopupTarget = () => {
+  const visited = sessionStorage.getItem('openPopup')
+
+  if (visited === null || document.location.href !== sessionStorage.getItem('lastPage')) {
+    if (typeof window !== 'undefined' && typeof window.ym === 'function') {
+      window.ym(98094334, 'reachGoal', 'open popup')
+      console.log('Yandex Metrica open popup sent!')
+    }
+    sessionStorage.setItem('openPopup', '1')
+  }
+  sessionStorage.setItem('lastPage', document.location.href)
+}
+
 export const useCallBackStore = create<callBackState>()((set) => ({
   isOpen: false,
-  openPopup: () => set({ isOpen: true }),
+  openPopup: () =>
+    set((_prev) => {
+      openPopupTarget()
+      return { isOpen: true }
+    }),
   closePopup: () => set({ isOpen: false }),
   content: {
     name: '',
@@ -68,19 +85,6 @@ export const useCallBackStore = create<callBackState>()((set) => ({
     })
   },
 }))
-
-const openPopupTarget = () => {
-  const visited = sessionStorage.getItem('openPopup')
-
-  if (visited === null || document.location.href !== sessionStorage.getItem('lastPage')) {
-      if (typeof window !== 'undefined' && typeof window.ym === 'function') {
-        window.ym(98094334,'reachGoal','open popup')
-        console.log('Yandex Metrica open popup sent!')
-      }
-    sessionStorage.setItem('openPopup', '1')
-  }
-  sessionStorage.setItem('lastPage', document.location.href)
-}
 
 const inputClass = `block w-full rounded-full text-base desktop:text-lg py-3 px-4 sm:px-12 sm:py-6 ${styles.feedbackInput}`
 
