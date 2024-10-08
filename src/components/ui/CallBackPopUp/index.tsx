@@ -212,7 +212,7 @@ export const CallBackPopUp = () => {
                 </div>
               )}
 
-              <CallToActionButton type="submit" className="max-w-[9999px]" textClassName="pl-3">
+              <CallToActionButton type="submit" className="max-w-[9999px]" textClassName="!left-0">
                 оставить заявку
               </CallToActionButton>
             </form>
