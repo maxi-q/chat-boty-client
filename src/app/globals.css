@@ -2,17 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face { 
-  font-family: "Igra Sans"; 
-  src: url('../fonts/IgraSans/IgraSans.otf'); 
-  font-style: normal; 
-} 
-/*   
-@font-face { 
-  font-family: "Igra Sans"; 
-  src: url('../fonts/rubik/Rubik-Bold.ttf'); 
-  font-weight: bold; 
-  font-style: normal; 
+@font-face {
+  font-family: 'Igra Sans';
+  src: url('../fonts/IgraSans/IgraSans.otf');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../fonts/IgraSans/IgraSans.otf');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Onest';
+  src: url('../fonts/IgraSans/IgraSans.otf');
+  font-style: normal;
+}
+
+/*
+@font-face {
+  font-family: "Igra Sans";
+  src: url('../fonts/rubik/Rubik-Bold.ttf');
+  font-weight: bold;
+  font-style: normal;
 }  */
 
 :root {
@@ -25,7 +38,7 @@
   --color-main: rgb(242, 242, 242);
   --color-additional: rgb(11, 10, 10);
   --color-additional-2: rgb(243, 243, 243);
-  --color-additional-3: rgb(82, 80, 80); 
+  --color-additional-3: rgb(82, 80, 80);
 }
 
 body {
