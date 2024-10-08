@@ -93,6 +93,7 @@ export const SecondScreen = () => {
               <Streaming />
             </>
           }
+          link='/service/vabinar'
         >
           Не знаете, что нужно скачать на ПК? Как сделать трансляцию лица с телефона, а захват экрана с ПК? Мы всё сделаем, а также вся тех. часть по Bizon365
         </Card>
@@ -128,14 +129,16 @@ const Card = ({
   title,
   index,
   icons,
+  link = '#'
 }: Readonly<{
   children: React.ReactNode
   title: string
   index: string
   icons: React.ReactNode
+  link?: string
 }>) => {
   return (
-    <div className={`${styles.card} flex flex-col w-full tablet:w-[346px] laptop:w-[400px] tablet:h-[480px] laptop:h-[540px] p-9 rounded-[35px]`}>
+    <Link href={link} className={`${styles.card} flex flex-col w-full tablet:w-[346px] laptop:w-[400px] tablet:h-[480px] laptop:h-[540px] p-9 rounded-[35px]`}>
       <div className="flex flex-1 gap-2 align-middle" style={{ width: '40%' }}>
         {icons}
       </div>
@@ -143,6 +146,6 @@ const Card = ({
       <h1 className={`${styles.title} uppercase font-bold text-xl`}>{title}</h1>
       <div className={`${styles.line} my-5`} />
       <p className={`${styles.p} text-lg`}>{children}</p>
-    </div>
+    </Link>
   )
 }
