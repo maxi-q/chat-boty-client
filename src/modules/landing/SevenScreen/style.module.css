@@ -132,13 +132,19 @@
 
 .tabletCircle {
   padding: 15px;
+}
+.tabletCircle.green {
   background: #8ffe01;
   border: 1px solid #61616133;
 }
+.tabletCircle.blue {
+  background: rgba(0, 139, 232);
+  border: 1px solid #61616133;
+}
+
 
 .tabletBox {
   transition: left 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  left: 500px;
   opacity: 0;
 }
 

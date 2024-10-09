@@ -5,6 +5,10 @@ import { VideoCarousel } from '@/modules/landing/FiveScreen/modules/VideoCarouse
 import Image from 'next/image'
 import styles from './style.module.css'
 
+import Chart from '@/constants/svg/Chart'
+import Diplomat from '@/constants/svg/Diplomat'
+import WorkerMan from '@/constants/svg/WorkerMan'
+import { Tablet } from '@/modules/landing/SevenScreen/AnimatedTablet'
 import { CallBackForm } from '@/modules/landing/SevenScreen/CallBackForm'
 import { Onest } from 'next/font/google'
 
@@ -76,7 +80,7 @@ export default function Page() {
               </div>
             </div>
             <div className={`${styles.container} w-full`}>
-              <div >
+              <div>
                 <Image width={607} height={250} loading={`lazy`} src={`${SOURCE.static_url}services2?field=slug`} alt={`Фото image`} className={`select-none w-full mb-9`} />
                 {/* <img className={`w-full mb-9` src={`./assets/images/services2.png` alt={``}/> */}
                 <h3
@@ -116,7 +120,7 @@ export default function Page() {
                 <h3
                   className={`${styles['font-Gilroy']} font-semibold desktop:text-[63px] desktop:leading-[67.2px] laptop:text-[56px] text-[28px] tablet:text-[48px] nokia:text-[36px] laptop:leading-[58px] tablet:leading-[50px] nokia:leading-[37px] leading-[29.9px] ${styles.textBluesales} nokia:mb-12 mb-5 whitespace-wrap`}
                 >
-                  Что можно автоматизировать?
+                  Что можно автоматизировать?
                 </h3>
                 <ul className={`flex flex-col nokia:gap-5 gap-3`}>
                   <li className={`flex gap-3 items-center`}>
@@ -225,7 +229,7 @@ export default function Page() {
                   <p
                     className={`${onest.className} font-normal text-black desktop:text-desktop laptop:text-20px phone:text-[20px] nokia:text-[18px] text-[16px] desktop:leading-[32.4px] laptop:leading-[27px] phone:leading-[27px] nokia:leading-[23.4px] leading-[21.6px]`}
                   >
-                    Идёт работа с клиентом, вместо траты время на проставление статусов и тегов.
+                    Идёт работа с клиентом, вместо траты времени на проставление статусов и тегов.
                   </p>
                 </div>
               </div>
@@ -275,7 +279,7 @@ export default function Page() {
                   <p
                     className={`${onest.className} font-normal text-black desktop:text-desktop laptop:text-20px phone:text-[20px] nokia:text-[18px] text-[16px] desktop:leading-[32.4px] laptop:leading-[27px] phone:leading-[27px] nokia:leading-[23.4px] leading-[21.6px]`}
                   >
-                    CRM создаст лида, распределит на менеджера и напомнит ему связаться.
+                    CRM создаст лида, распределит между менеджерами и напомнит ему связаться.
                   </p>
                 </div>
               </div>
@@ -445,7 +449,7 @@ export default function Page() {
                   <p
                     className={`${onest.className} font-normal text-black desktop:text-desktop laptop:text-20px phone:text-[20px] nokia:text-[18px] text-[16px] desktop:leading-[32.4px] laptop:leading-[27px] phone:leading-[27px] nokia:leading-[23.4px] leading-[21.6px]`}
                   >
-                    Как видите CRM подходит как для продажи услуг, так и для продажи товаров. Здесь также есть интеграция со СДЕК.
+                    Чтобы все работало, как часы и ваши менеджеры занимались только продажами, жмите на кнопку ниже.
                   </p>
                   <CallToActionButton color="blue" textClassName="p-0 !left-0" className={`phone:w-auto w-full max-w-full`}>
                     ОФОРМИТЬ ЗАКАЗ
@@ -497,17 +501,25 @@ export default function Page() {
                   Оставьте заявку на бесплатную консультацию, расскажите про свой проект и за 30 минут определимся нужно ли вам это или нет
                 </p>
 
-                <CallBackForm color='blue' className={`hidden laptop:block rounded-xl p-6 desktop:p-14 w-max ${styles.feedback}`} />
+                <CallBackForm color="blue" className={`hidden laptop:block rounded-xl p-6 desktop:p-14 w-max ${styles.feedback}`} />
               </div>
 
               <aside
                 className={`hidden laptop:ml-12 laptop:flex desktop:mb-5 desktop:pb-16 flex-1 w-[600px] bg-[url("/Nilita.webp")] bg-no-repeat bg-cover rounded-3xl justify-end gap-5 laptop:h-[980px] laptop:max-w-[777px] ${styles.aside}`}
-              ></aside>
+              >
+                <Tablet text={'Поможем увеличить продажи\nс помощью инструментов\nинтернет-маркетинга'} icon={<Chart />} margin={-90} />
+                <Tablet text={'5+ лет опыта разработки\nчат-ботов и автоворонок'} icon={<Diplomat />} margin={-15} />
+                <Tablet text={'Спикер конференции:\nСуровый Питерский SMM,\nсотрудничал с Senler'} icon={<WorkerMan />} margin={40} last />
+              </aside>
             </div>
 
-            <CallBackForm color='blue' className={`laptop:hidden rounded-xl mx-auto p-6 desktop:p-14 my-5 w-full max-w-[728px] ${styles.feedback}`} />
+            <CallBackForm color="blue" className={`laptop:hidden rounded-xl mx-auto p-6 desktop:p-14 my-5 w-full max-w-[728px] ${styles.feedback}`} />
 
-            <aside className={`flex laptop:hidden flex-1 h-[625px] w-full bg-[url("/Nilita.webp")] bg-no-repeat bg-cover rounded-3xl justify-end gap-5 ${styles.aside}`} />
+            <aside className={`flex laptop:hidden flex-1 h-[625px] w-full bg-[url("/Nilita.webp")] bg-no-repeat bg-cover rounded-3xl justify-end gap-5 ${styles.aside}`}>
+              <Tablet text={'Поможем увеличить продажи\nс помощью инструментов\nинтернет-маркетинга'} icon={<Chart />} margin={40} color="blue" />
+              <Tablet text={'5+ лет опыта разработки\nчат-ботов и автоворонок'} icon={<Diplomat />} margin={85} color="blue" />
+              <Tablet text={'Спикер конференции:\nСуровый Питерский SMM,\nсотрудничал с Senler'} icon={<WorkerMan />} margin={120} color="blue" last />
+            </aside>
           </main>
         </section>
       </main>
