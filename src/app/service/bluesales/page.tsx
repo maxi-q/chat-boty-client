@@ -8,12 +8,12 @@ import styles from './style.module.css'
 import { CallBackForm } from '@/modules/landing/SevenScreen/CallBackForm'
 import { Onest } from 'next/font/google'
 
-export const onest = Onest({
+const onest = Onest({
   subsets: ['latin'],
   display: 'swap',
 })
 
-export default function NotFound() {
+export default function Page() {
   return (
     <div className={`overflow-hidden laptop:px-5 px-0`}>
       <main>
@@ -510,88 +510,6 @@ export default function NotFound() {
             <aside className={`flex laptop:hidden flex-1 h-[625px] w-full bg-[url("/Nilita.webp")] bg-no-repeat bg-cover rounded-3xl justify-end gap-5 ${styles.aside}`} />
           </main>
         </section>
-        {/* <section>
-          <div className={`${styles.contact_container} bg-bg-color`}>
-            <div className={`flex items-start desktop:gap-[42px] gap-5 laptop:flex-row flex-col`}>
-              <div className={`desktop:max-w-[921px] laptop:max-w-[628px] w-full`}>
-                <h3
-                  className={`${styles['font-Gilroy']} font-semibold desktop:text-[63px] desktop:leading-[67.2px] laptop:text-[56px] text-[28px] tablet:text-[48px] nokia:text-[36px] flex-wrap laptop:leading-[58px] tablet:leading-[50px] nokia:leading-[37px] leading-[29.9px] text-black phone:mb-8 nokia:mb-6 mb-4`}
-                >
-                  <span className={`${styles.textBluesales}`}>Остались вопросы?</span> Нужна ли CRM, оставьте заявку с главной страницы?
-                </h3>
-                <p
-                  className={`${onest.className} font-normal text-black desktop:text-desktop laptop:text-20px phone:text-[20px] nokia:text-[18px] text-[16px] desktop:leading-[32.4px] laptop:leading-[27px] phone:leading-[27px] nokia:leading-[23.4px] leading-[21.6px] phone:mb-12 mb-6`}
-                >
-                  Оставьте заявку на бесплатную консультацию, расскажите про свой проект и за 30 минут определимся нужно ли вам это или нет
-                </p>
-                <div className={`rounded-[20px] bg-white desktop:p-6 nokia:p-5 p-0 desktop:max-w-[704px] laptop:max-w-[628px]`}>
-                  <h6
-                    className={`${onest.className} font-medium desktop:mb-[36px] laptop:mb-[24px] tablet:mb-[36px] mb-[16px] desktop:text-[28px] laptop:text-[24px] tablet:text-[28px] nokia:text-[20px] text-[18px] desktop:leading-[29.4px] laptop:leading-[25px] tablet:leading-[33px] nokia:leading-[16px] leading-[18px]`}
-                  >
-                    ГДЕ С ВАМИ СВЯЗАТЬСЯ?
-                  </h6>
-                  <form action={`#`}>
-                    <div className={`flex gap-5 nokia:flex-row flex-col`}>
-                      <div
-                        className={`p-8 nokia:h-auto h-[88px] rounded-[999px] nokia:w-[50%] w-full ${styles.borderBluesales} border-[1px] flex items-center justify-center gap-6`}
-                      >
-                        <svg className={`flex-shrink-0`} width={`25`} height={`24`} viewBox={`0 0 25 24`} fill={`none`} xmlns={`http://www.w3.org/2000/svg`}>
-                          <path
-                            d={`M7.12 10.79C8.56 13.62 10.88 15.93 13.71 17.38L15.91 15.18C16.18 14.91 16.58 14.82 16.93 14.94C18.05 15.31 19.26 15.51 20.5 15.51C21.05 15.51 21.5 15.96 21.5 16.51V20C21.5 20.55 21.05 21 20.5 21C11.11 21 3.5 13.39 3.5 4C3.5 3.45 3.95 3 4.5 3H8C8.55 3 9 3.45 9 4C9 5.25 9.2 6.45 9.57 7.57C9.68 7.92 9.6 8.31 9.32 8.59L7.12 10.79Z`}
-                            fill={`#0B0A0A`}
-                          />
-                        </svg>
-                        <input
-                          type={`text`}
-                          placeholder={`Позвонить`}
-                          className={`max-w-[113px] ${onest.className} font-normal text-black-dark desktop:text-desktop laptop:text-20px phone:text-[20px] nokia:text-[18px] text-[16px] focus:outline-none desktop:leading-[32.4px] laptop:leading-[27px] phone:leading-[27px] nokia:leading-[23.4px] leading-[21.6px] placeholder:text-black-dark`}
-                        />
-                      </div>
-                      <div
-                        className={`p-8 nokia:h-auto h-[88px] rounded-[999px] nokia:w-[50%] w-full ${styles.borderBluesales} border-[1px] flex items-center justify-center gap-6`}
-                      >
-                        <svg className={`flex-shrink-0`} width={`25`} height={`24`} viewBox={`0 0 25 24`} fill={`none`} xmlns={`http://www.w3.org/2000/svg`}>
-                          <path
-                            fill-rule={`evenodd`}
-                            clip-rule={`evenodd`}
-                            d={`M18.0094 5.85828C18.2101 5.77105 18.4297 5.74097 18.6454 5.77116C18.8612 5.80135 19.0651 5.89071 19.2361 6.02994C19.407 6.16918 19.5387 6.35319 19.6174 6.56284C19.6962 6.77248 19.7191 7.00008 19.6837 7.22196L17.8421 18.7596C17.6635 19.8725 16.4812 20.5107 15.4931 19.9564C14.6664 19.4926 13.4387 18.778 12.3344 18.0325C11.7823 17.6593 10.0909 16.4641 10.2988 15.6137C10.4774 14.8866 13.3194 12.1542 14.9433 10.5297C15.5807 9.89146 15.2901 9.52328 14.5373 10.1104C12.6681 11.568 9.66703 13.7846 8.67478 14.4086C7.79945 14.9587 7.34311 15.0527 6.79746 14.9587C5.80196 14.7876 4.87872 14.5226 4.1252 14.1997C3.10696 13.7636 3.15649 12.3177 4.12439 11.8967L18.0094 5.85828Z`}
-                            fill={`#0B0A0A`}
-                          />
-                        </svg>
-                        <input
-                          type={`text`}
-                          placeholder={`Написать`}
-                          className={`max-w-[113px] font-Onest font-normal text-black-dark desktop:text-desktop laptop:text-20px phone:text-[20px] nokia:text-[18px] text-[16px] focus:outline-none desktop:leading-[32.4px] laptop:leading-[27px] phone:leading-[27px] nokia:leading-[23.4px] leading-[21.6px] placeholder:text-black-dark`}
-                        />
-                      </div>
-                    </div>
-                    <input
-                      type={`text`}
-                      placeholder={`Placeholder`}
-                      className={`nokia:h-auto h-[88px] mt-[20px] p-8 rounded-[999px] w-full ${styles.borderBluesales} border-[1px] ${onest.className} font-normal text-black-dark desktop:text-desktop laptop:text-20px phone:text-[20px] nokia:text-[18px] text-[16px] focus:outline-none desktop:leading-[32.4px] laptop:leading-[27px] phone:leading-[27px] nokia:leading-[23.4px] leading-[21.6px] placeholder:text-black-light`}
-                    />
-                    <button
-                      type={`submit`}
-                      className={`${onest.className} rounded-[150px] font-normal text-white ${styles.bgBluesales} p-8 desktop:text-desktop laptop:text-20px phone:text-[20px] nokia:text-[18px] text-[16px] desktop:leading-[32.4px] laptop:leading-[27px] phone:leading-[27px] nokia:leading-[23.4px] leading-[21.6px] desktop:mt-9 mt-[20px] w-full`}
-                    >
-                      ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ
-                    </button>
-                  </form>
-                </div>
-              </div>
-              <div className={`desktop:max-w-[777px] w-full`}>
-                <Image
-                  width={335}
-                  height={348}
-                  loading={`lazy`}
-                  src={`${SOURCE.static_url}contact?field=slug`}
-                  alt={`Фото image`}
-                  className={`select-none desktop:max-w-[777px] laptop:max-w-[634px] w-full desktop:rounded-[35px] phone:rounded-[20px] rounded-[4px]`}
-                />
-              </div>
-            </div>
-          </div>
-        </section> */}
       </main>
     </div>
   )

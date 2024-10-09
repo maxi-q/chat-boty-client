@@ -29,6 +29,7 @@ export const SecondScreen = () => {
               <SettingRoll />
             </>
           }
+          link='/service/bluesales'
         >
           Настраиваем BlueSales проставление тегов, статусов, пишем всё на JSON, а также настраиваем amoCRM
         </Card>
