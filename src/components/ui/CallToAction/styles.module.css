@@ -13,6 +13,11 @@
   fill: #7001FE;
 }
 
+.button.blue {
+  background-color: rgb(0 139 232);
+  fill: rgb(0 139 232);
+}
+
 .text {
   z-index: 0;
   position: relative;
@@ -20,6 +25,14 @@
   font-weight: 500;
   text-transform: uppercase;
   transition: 0.3s ease-out;
+}
+
+.button.blue .text {
+  color: white;
+}
+
+.button:hover.blue .text {
+  color: black;
 }
 
 .action {

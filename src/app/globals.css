@@ -10,9 +10,18 @@
 
 @font-face {
   font-family: 'Gilroy';
-  src: url('../fonts/IgraSans/IgraSans.otf');
-  font-style: normal;
+  src: url('../fonts/Gilory/Gilroy.otf');
 }
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../fonts/Gilory/Gilroy-SemiBold.ttf');
+  font-style: 'semibold';
+}
+/* @font-face {
+  font-family: 'Gilroy';
+  src: url('../fonts/Gilory/Gilroy-ExtraBold.otf');
+  font-style: 'bold';
+} */
 
 @font-face {
   font-family: 'Onest';
