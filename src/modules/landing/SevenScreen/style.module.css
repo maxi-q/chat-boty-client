@@ -17,32 +17,51 @@
 }
 
 .massagerLink {
+  flex: 1;
+}
+.massagerLink.blueviolet {
   color: var(--color-additional);
   border: 1px solid var(--color-accent);
-  flex: 1;
+}
+.massagerLink.blue {
+  color: var(--color-additional);
+  border: 1px solid rgba(0, 139, 232);
 }
 
 .feedbackInput {
-  color: var(--color-additional);
-  border: 1px solid #7001fe80;
   flex: 1;
   transition: all 0.3s ease-out;
+}
+.feedbackInput.blueviolet {
+  color: var(--color-additional);
+  border: 1px solid #7001fe80;
+}
+
+.feedbackInput.blue {
+  color: var(--color-additional);
+  border: 1px solid rgba(0, 139, 232, 0.8);
 }
 
 .feedbackInput::placeholder {
   text-transform: uppercase;
 }
 
-.feedbackInput:not(:placeholder-shown) {
+.feedbackInput:not(:placeholder-shown).blueviolet {
   border: 1px solid #7001fe80;
+}
+.feedbackInput:not(:placeholder-shown).blue {
+  border: 1px solid rgba(0, 139, 232, 0.8);
 }
 
 .feedbackInput:focus {
   outline: none;
 }
 
-.feedbackInput:hover {
+.feedbackInput.blueviolet:hover {
   border: 1px solid var(--color-accent) !important;
+}
+.feedbackInput.blue:hover {
+  border: 1px solid rgb(0 139 232) !important;
 }
 
 .massagerLink,
@@ -50,21 +69,39 @@
   transition: all 0.3s ease-out;
 }
 
-.massagerLink:hover,
-.massagerLink.active {
+.massagerLink:hover.blueviolet,
+.massagerLink.active.blueviolet {
   background-color: var(--color-accent);
   color: var(--color-main);
 }
 
-.massagerLink:hover svg,
-.massagerLink.active svg {
+.massagerLink:hover.blueviolet svg,
+.massagerLink.active.blueviolet svg {
+  fill: var(--color-main);
+}
+
+.massagerLink:hover.blue,
+.massagerLink.active.blue {
+  background-color: rgba(0, 139, 232, 0.8);
+  color: var(--color-main);
+}
+
+.massagerLink:hover.blue svg,
+.massagerLink.active.blue svg {
   fill: var(--color-main);
 }
 
 .cta {
+  transition: all 0.3s ease-out;
+}
+
+.cta.blueviolet {
   background-color: var(--color-accent-2);
   color: var(--color-additional);
-  transition: all 0.3s ease-out;
+}
+.cta.blue {
+  background-color: rgba(0, 139, 232);
+  color: var(--color-main);
 }
 
 .cta:hover {

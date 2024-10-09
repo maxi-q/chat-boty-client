@@ -1,6 +1,7 @@
 'use client'
 
 import { schemas } from '@/api/communication/communicationHelper'
+import { telegramRequest } from '@/api/communication/telegram'
 import { callBackContent, contactType, useCallBackStore } from '@/components/ui/CallBackPopUp'
 import PhoneInput from '@/components/ui/InputMask/PhoneInput'
 import TelegramInput from '@/components/ui/InputMask/TelegramInput'
@@ -12,11 +13,10 @@ import { yupResolver } from '@hookform/resolvers/yup'
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import styles from './style.module.css'
-import { telegramRequest } from '@/api/communication/telegram'
 
 const inputClass = `block w-full rounded-full text-lg px-6 py-4 phone:text-lg phone:px-6 phone:py-4 tablet:text-lg tablet:px-12 tablet:py-6 laptop:text-lg laptop:px-12 laptop:py-6 my-6 w-full ${styles.feedbackInput}`
 
-export const CallBackForm = ({ className }: { className: string }) => {
+export const CallBackForm = ({ className, color = 'blueviolet' }: { className: string; color?: 'blueviolet' | 'blue' }) => {
   const { content, edit } = useCallBackStore()
   const [show, setShow] = useState(false)
 
@@ -38,13 +38,22 @@ export const CallBackForm = ({ className }: { className: string }) => {
     resolver: yupResolver(schemas.main),
   })
 
+  let elementColor = styles.blueviolet
+  if (color == 'blueviolet') {
+    elementColor = styles.blueviolet
+  }
+  if (color == 'blue') {
+    elementColor = styles.blue
+  }
+  console.log(color, elementColor)
+
   return (
     <form className={className} onSubmit={handleSubmit(communicationRequests)}>
       <div className="flex flex-col phone:flex-row gap-6">
-        <Link type={contactType.Phone} edit={edit} content={content} setValue={setValue}>
+        <Link color={elementColor} type={contactType.Phone} edit={edit} content={content} setValue={setValue}>
           <Telephone /> Позвонить
         </Link>
-        <Link type={contactType.Telegram} edit={edit} content={content} setValue={setValue}>
+        <Link color={elementColor} type={contactType.Telegram} edit={edit} content={content} setValue={setValue}>
           <TelegramFeedback /> Telegram
         </Link>
         <select className="hidden" {...register('contactType')} value={content.contactType === contactType.Phone ? 'Phone' : 'Telegram'}>
@@ -55,8 +64,8 @@ export const CallBackForm = ({ className }: { className: string }) => {
       {content.contactType === contactType.Telegram && (
         <div className="my-6 w-full">
           <TelegramInput
-            placeholder='@username'
-            className={`${inputClass}`}
+            placeholder="@username"
+            className={`${inputClass} ${elementColor}`}
             name="contactTelegram"
             setState={(value) => {
               edit({ contact: value })
@@ -71,7 +80,7 @@ export const CallBackForm = ({ className }: { className: string }) => {
       {content.contactType === contactType.Phone && (
         <div className="my-6 w-full">
           <PhoneInput
-            className={`${inputClass}`}
+            className={`${inputClass} ${elementColor}`}
             name="contactPhone"
             setState={(value) => {
               edit({ contact: value })
@@ -83,7 +92,7 @@ export const CallBackForm = ({ className }: { className: string }) => {
         </div>
       )}
       <button
-        className={`uppercase px-6 py-4 w-full text-lg phone:px-6 phone:py-4 phone:w-full tablet:w-full phone:text-lg tablet:px-12 tablet:py-6 tablet:text-lg laptop:px-12 laptop:py-6 laptop:text-lg font-medium rounded-full ${styles.cta}`}
+        className={`uppercase px-6 py-4 w-full text-lg phone:px-6 phone:py-4 phone:w-full tablet:w-full phone:text-lg tablet:px-12 tablet:py-6 tablet:text-lg laptop:px-12 laptop:py-6 laptop:text-lg font-medium rounded-full ${styles.cta} ${elementColor}`}
         type="submit"
       >
         получить консультацию
@@ -99,18 +108,20 @@ const Link = ({
   children,
   content,
   setValue,
+  color
 }: {
   type: contactType
   edit: (value: callBackContent) => void
   children: React.ReactNode
   content: callBackContent
   setValue: any
+  color: string
 }) => {
   return (
     <a
       className={
         `rounded-full px-6 py-4 phone:px-6 phone:py-4 tablet:py-6 tablet:px-12 laptop:px-12 laptop:py-6 laptop:px-12 flex items-center text-lg phone:text-lg tablet:text-lg laptop:text-lg uppercase font-medium tablet:gap-3 laptop:gap-3 tracking-wide max-w-[340px] ` +
-        `${styles.massagerLink} ${content.contactType === type ? styles.active : ''}`
+        `${styles.massagerLink} ${color} ${content.contactType === type ? styles.active : ''}`
       }
       onClick={() => {
         edit({ contactType: type })

@@ -5,6 +5,7 @@ import { VideoCarousel } from '@/modules/landing/FiveScreen/modules/VideoCarouse
 import Image from 'next/image'
 import styles from './style.module.css'
 
+import { CallBackForm } from '@/modules/landing/SevenScreen/CallBackForm'
 import { Onest } from 'next/font/google'
 
 export const onest = Onest({
@@ -18,10 +19,10 @@ export default function NotFound() {
       <main>
         <section className={`mb-5 mt-5`}>
           <div className={`${styles.container} relative`}>
-            <div className={`flex items-center w-full tablet:gap-x-9 gap-x-0 laptop:flex-row nokia:flex-col-reverse flex-col`}>
+            <div className={`flex items-center w-full tablet:gap-x-9 gap-x-0 laptop:flex-row tablet:flex-col-reverse flex-col`}>
               <div className={`desktop:max-w-[1000px] w-full z-[2] relative`}>
                 <h1
-                  className={`font-bold desktop:text-8xl laptop:text-[88px] phone:text-[72px] nokia:text-[48px] text-[36px] desktop:leading-[100px] laptop:leading-[92px] phone:leading-[75px] nokia:leading-[50.4px] leading-[37.8px] text-black uppercase text-center nokia:text-start`}
+                  className={`font-bold desktop:text-8xl laptop:text-[88px] phone:text-[48px] text-[36px] desktop:leading-[100px] laptop:leading-[92px] phone:leading-[50.4px] leading-[37.8px] text-black uppercase text-center nokia:text-start`}
                 >
                   Автоматизация CRM BlueSales
                 </h1>
@@ -48,7 +49,7 @@ export default function NotFound() {
                   loading={`lazy`}
                   src={`${SOURCE.static_url}homeimg?field=slug`}
                   alt={`Фото image`}
-                  className={`select-none nokia:absolute nokia:mt-0 nokia:translate-x-0 translate-x-5 mt-3 static desktop:top-0 laptop:top-[70px] desktop:-bottom-4 bottom-[20px] right-0 desktop:w-[990px] nokia:h-[277px] laptop:w-[650px] desktop:h-[552px] laptop:h-[383px] h-full`}
+                  className={`select-none tablet:absolute tablet:mt-0 nokia:translate-x-0 translate-x-5 mt-3 static desktop:top-0 laptop:top-[70px] desktop:-bottom-4 bottom-[20px] right-0 desktop:w-[990px] tablet:h-[277px] laptop:w-[650px] desktop:h-[552px] laptop:h-[383px] w-full tablet:w-auto`}
                 />
                 {/* <img className={`nokia:absolute nokia:mt-0 nokia:translate-x-0 translate-x-5 mt-3 static desktop:top-0 laptop:top-[70px] desktop:-bottom-4 bottom-[20px] right-0 desktop:w-[990px] nokia:h-[277px] laptop:w-[650px] desktop:h-[552px] laptop:h-[383px] h-full` src={`./assets/images/home_img.png` alt={``}/> */}
               </div>
@@ -57,11 +58,11 @@ export default function NotFound() {
         </section>
 
         <section className={`mb-5`}>
-          <div className={`flex laptop:flex-row flex-col nokia:gap-5 gap-3 max-w-[1880px] mx-auto`}>
-            <div className={`${styles.container}`}>
+          <div className={`flex laptop:flex-row flex-col tablet:gap-5 gap-3 w-full max-w-[1880px] mx-auto`}>
+            <div className={`${styles.container} w-full`}>
               <div>
-                <Image width={607} height={250} loading={`lazy`} src={`${SOURCE.static_url}services1?field=slug`} alt={`Фото image`} className={`select-none w-full mb-9`} />
-                {/* <img className={`w-full mb-9` src={`./assets/images/services1.png` alt={``}/> */}
+                <Image width={834} height={344} loading={`lazy`} src={`${SOURCE.static_url}services1?field=slug`} alt={`Фото image`} className={`select-none w-full mb-9`} />
+                {/* <img className={`w-full mb-9`} src={`${SOURCE.static_url}services1?field=slug`} alt={``}/> */}
                 <h3
                   className={`${styles['font-Gilroy']} font-semibold desktop:text-[63px] desktop:leading-[67.2px] laptop:text-[56px] text-[28px] tablet:text-[48px] nokia:text-[36px] laptop:leading-[58px] tablet:leading-[50px] nokia:leading-[37px] leading-[29.9px] ${styles.textBluesales} mb-3`}
                 >
@@ -74,8 +75,8 @@ export default function NotFound() {
                 </p>
               </div>
             </div>
-            <div className={`${styles.container}`}>
-              <div>
+            <div className={`${styles.container} w-full`}>
+              <div >
                 <Image width={607} height={250} loading={`lazy`} src={`${SOURCE.static_url}services2?field=slug`} alt={`Фото image`} className={`select-none w-full mb-9`} />
                 {/* <img className={`w-full mb-9` src={`./assets/images/services2.png` alt={``}/> */}
                 <h3
@@ -109,7 +110,7 @@ export default function NotFound() {
               </div>
             </div>
           </div>
-          <div className={`${styles.container} mt-5 relative flex nokia:flex-row flex-col`}>
+          <div className={`${styles.container} mt-5 relative flex tablet:flex-row flex-col`}>
             <div className={`relative z-[2] flex laptop:flex-row flex-col items-center gap-9`}>
               <div className={`laptop:max-w-[1165px] w-full`}>
                 <h3
@@ -188,9 +189,9 @@ export default function NotFound() {
                 loading={`lazy`}
                 src={`${SOURCE.static_url}eskalator?field=slug`}
                 alt={`Фото image`}
-                className={`select-none nokia:absolute static ml-auto nokia:translate-x-0 nokia:mt-0 mt-3 translate-x-5 desktop:top-[17px] laptop:bottom-0 bottom-[58px] right-0 desktop:h-[426px] laptop:h-[304px] h-[158px]`}
+                className={`select-none w-auto tablet:absolute static ml-auto tablet:translate-x-0 tablet:mt-0 mt-3 translate-x-5 desktop:top-[17px] laptop:bottom-0 bottom-[58px] right-0 desktop:h-[426px] laptop:h-[304px] h-[158px]`}
               />
-              {/* <img className={`nokia:absolute static ml-auto nokia:translate-x-0 nokia:mt-0 mt-3 translate-x-5 desktop:top-[17px] laptop:bottom-0 bottom-[58px] right-0 desktop:h-[426px] laptop:h-[304px] h-[158px]` src={`./assets/images/eskalator.png` alt={``}/> */}
+              {/* <img className={`nokia:absolute static ml-auto nokia:translate-x-0 nokia:mt-0 mt-3 translate-x-5 desktop:top-[17px] laptop:bottom-0 bottom-[58px] right-0 desktop:h-[426px] laptop:h-[304px] h-[158px]`} src={`${SOURCE.static_url}eskalator?field=slug`} alt={``}/> */}
             </div>
           </div>
         </section>
@@ -204,7 +205,7 @@ export default function NotFound() {
             </h3>
             <div className={`laptop:flex block gap-[12px] flex-wrap`}>
               <div
-                className={`rounded-laptop bg-card-bg px-6 py-12 text-center laptop:max-w-[calc(100%_/_3_-_8px)] max-w-full laptop:block flex laptop:flex-col nokia:flex-row flex-col items-center laptop:mb-0 mb-3`}
+                className={`rounded-laptop bg-card-bg px-6 py-12 text-center laptop:max-w-[calc(100%_/_3_-_8px)] max-w-full laptop:block flex laptop:flex-col tablet:flex-row flex-col items-center laptop:mb-0 mb-3`}
               >
                 <Image
                   width={387}
@@ -215,7 +216,7 @@ export default function NotFound() {
                   className={`select-none laptop:mb-9 nokia:mb-0 mb-5 w-full laptop:max-w-full nokia:max-w-[250px]`}
                 />
                 {/* <img className={`laptop:mb-9 nokia:mb-0 mb-5 w-full laptop:max-w-full nokia:max-w-[250px]` src={`./assets/images/card1.png` alt={``}/> */}
-                <div className={`laptop:text-center nokia:text-start`}>
+                <div className={`laptop:text-center tablet:text-start text-center`}>
                   <h6
                     className={`${styles['font-Gilroy']} font-semibold mb-3 desktop:text-[36px] laptop:text-[32px] phone:text-[28px] nokia:text-[24px] text-[20px] desktop:leading-[42.95px] laptop:leading-[38px] phone:leading-[33px] nokia:leading-[28px] leading-[23.86px]`}
                   >
@@ -229,7 +230,7 @@ export default function NotFound() {
                 </div>
               </div>
               <div
-                className={`rounded-laptop bg-card-bg px-6 py-12 text-center laptop:max-w-[calc(100%_/_3_-_8px)] max-w-full laptop:block flex laptop:flex-col nokia:flex-row flex-col items-center laptop:mb-0 mb-3`}
+                className={`rounded-laptop bg-card-bg px-6 py-12 text-center laptop:max-w-[calc(100%_/_3_-_8px)] max-w-full laptop:block flex laptop:flex-col tablet:flex-row flex-col items-center laptop:mb-0 mb-3`}
               >
                 <Image
                   width={387}
@@ -240,7 +241,7 @@ export default function NotFound() {
                   className={`select-none laptop:mb-9 nokia:mb-0 mb-5 w-full laptop:max-w-full nokia:max-w-[250px]`}
                 />
                 {/* <img className={`laptop:mb-9 nokia:mb-0 mb-5 w-full laptop:max-w-full nokia:max-w-[250px]`} src={`./assets/images/card2.png`} alt={``} /> */}
-                <div className={`laptop:text-center nokia:text-start`}>
+                <div className={`laptop:text-center tablet:text-start text-center`}>
                   <h6
                     className={`${styles['font-Gilroy']} font-semibold mb-3 desktop:text-[36px] laptop:text-[32px] phone:text-[28px] nokia:text-[24px] text-[20px] desktop:leading-[42.95px] laptop:leading-[38px] phone:leading-[33px] nokia:leading-[28px] leading-[23.86px]`}
                   >
@@ -254,7 +255,7 @@ export default function NotFound() {
                 </div>
               </div>
               <div
-                className={`rounded-laptop bg-card-bg px-6 py-12 text-center laptop:max-w-[calc(100%_/_3_-_8px)] max-w-full laptop:block flex laptop:flex-col nokia:flex-row flex-col items-center`}
+                className={`rounded-laptop bg-card-bg px-6 py-12 text-center laptop:max-w-[calc(100%_/_3_-_8px)] max-w-full laptop:block flex laptop:flex-col tablet:flex-row flex-col items-center`}
               >
                 <Image
                   width={387}
@@ -265,7 +266,7 @@ export default function NotFound() {
                   className={`select-none laptop:mb-9 nokia:mb-0 mb-5 w-full laptop:max-w-full nokia:max-w-[250px]`}
                 />
                 {/* <img className={`laptop:mb-9 nokia:mb-0 mb-5 w-full laptop:max-w-full nokia:max-w-[250px]` src={`./assets/images/card3.png` alt={``}/> */}
-                <div className={`laptop:text-center nokia:text-start`}>
+                <div className={`laptop:text-center tablet:text-start text-center`}>
                   <h6
                     className={`${styles['font-Gilroy']} font-semibold mb-3 desktop:text-[36px] laptop:text-[32px] phone:text-[28px] nokia:text-[24px] text-[20px] desktop:leading-[42.95px] laptop:leading-[38px] phone:leading-[33px] nokia:leading-[28px] leading-[23.86px]`}
                   >
@@ -447,7 +448,7 @@ export default function NotFound() {
                     Как видите CRM подходит как для продажи услуг, так и для продажи товаров. Здесь также есть интеграция со СДЕК.
                   </p>
                   <CallToActionButton color="blue" textClassName="p-0 !left-0" className={`phone:w-auto w-full max-w-full`}>
-                  ОФОРМИТЬ ЗАКАЗ
+                    ОФОРМИТЬ ЗАКАЗ
                   </CallToActionButton>
                   {/* <button
                     className={`flex phone:w-auto w-full relative rounded-[999px] ${styles.bgBluesales} nokia:py-[34px] p-[30px] pl-[20px] nokia:pl-[48px] nokia:pr-[124px] desktop:mt-[68px] laptop:mt-[75px] mt-0`}
@@ -482,6 +483,34 @@ export default function NotFound() {
         </section>
 
         <section>
+          <main className={`section p-5  pt-2 laptop:p-5 laptop:pl-[50px] laptop:pt-[70px] bg-transparent ${styles.screen}`}>
+            <div className="flex gap-16 desktop:gap-10">
+              <div className="flex laptop:items-start laptop:justify-center flex-col " style={{ flex: 1 }}>
+                <h3
+                  className={`${styles['font-Gilroy']} font-semibold desktop:text-[63px] desktop:leading-[67.2px] laptop:text-[56px] text-[28px] tablet:text-[48px] nokia:text-[36px] flex-wrap laptop:leading-[58px] tablet:leading-[50px] nokia:leading-[37px] leading-[29.9px] text-black phone:mb-8 nokia:mb-6 mb-4`}
+                >
+                  <span className={`${styles.textBluesales}`}>Остались вопросы?</span> Нужна ли CRM, оставьте заявку с главной страницы?
+                </h3>
+                <p
+                  className={`${onest.className} font-normal text-black desktop:text-desktop laptop:text-20px phone:text-[20px] nokia:text-[18px] text-[16px] desktop:leading-[32.4px] laptop:leading-[27px] phone:leading-[27px] nokia:leading-[23.4px] leading-[21.6px] phone:mb-12 mb-6`}
+                >
+                  Оставьте заявку на бесплатную консультацию, расскажите про свой проект и за 30 минут определимся нужно ли вам это или нет
+                </p>
+
+                <CallBackForm color='blue' className={`hidden laptop:block rounded-xl p-6 desktop:p-14 w-max ${styles.feedback}`} />
+              </div>
+
+              <aside
+                className={`hidden laptop:ml-12 laptop:flex desktop:mb-5 desktop:pb-16 flex-1 w-[600px] bg-[url("/Nilita.webp")] bg-no-repeat bg-cover rounded-3xl justify-end gap-5 laptop:h-[980px] laptop:max-w-[777px] ${styles.aside}`}
+              ></aside>
+            </div>
+
+            <CallBackForm color='blue' className={`laptop:hidden rounded-xl mx-auto p-6 desktop:p-14 my-5 w-full max-w-[728px] ${styles.feedback}`} />
+
+            <aside className={`flex laptop:hidden flex-1 h-[625px] w-full bg-[url("/Nilita.webp")] bg-no-repeat bg-cover rounded-3xl justify-end gap-5 ${styles.aside}`} />
+          </main>
+        </section>
+        {/* <section>
           <div className={`${styles.contact_container} bg-bg-color`}>
             <div className={`flex items-start desktop:gap-[42px] gap-5 laptop:flex-row flex-col`}>
               <div className={`desktop:max-w-[921px] laptop:max-w-[628px] w-full`}>
@@ -559,11 +588,10 @@ export default function NotFound() {
                   alt={`Фото image`}
                   className={`select-none desktop:max-w-[777px] laptop:max-w-[634px] w-full desktop:rounded-[35px] phone:rounded-[20px] rounded-[4px]`}
                 />
-                {/* <img className={`desktop:max-w-[777px] laptop:max-w-[634px] w-full desktop:rounded-[35px] phone:rounded-[20px] rounded-[4px]` src={`./assets/images/contact.png` alt={``}/> */}
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
       </main>
     </div>
   )
