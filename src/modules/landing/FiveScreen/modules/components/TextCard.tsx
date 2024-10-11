@@ -16,7 +16,7 @@ interface ITextCard {
 export const TextCard = ({ title, text, company, name, avatar, authorLink }: ITextCard) => {
   return (
     <Card className="flex flex-col h-auto">
-      <h3 className={`phone:text-lg tablet:text-2xl font-bold uppercase phone:mb-4 tablet:mb-10 tracking-wide h-[56px] laptop:h-[96px] whitespace-pre-line ${styles.cardTitle}`}>{title}</h3>
+      <h3 className={`phone:text-lg tablet:text-2xl font-bold uppercase phone:mb-4 tablet:mb-10 tracking-wide h-[76px] laptop:h-[96px] whitespace-pre-line ${styles.cardTitle}`}>{title}</h3>
       <p
         className={`text-base tablet:text-lg leading-6 font-medium whitespace-normal laptop:whitespace-pre-wrap ${styles.cardText}`}
         style={{ letterSpacing: '4%' }}

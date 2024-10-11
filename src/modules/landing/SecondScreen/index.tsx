@@ -29,6 +29,7 @@ export const SecondScreen = () => {
               <SettingRoll />
             </>
           }
+          link='/service/bluesales'
         >
           Настраиваем BlueSales проставление тегов, статусов, пишем всё на JSON, а также настраиваем amoCRM
         </Card>
@@ -93,7 +94,7 @@ export const SecondScreen = () => {
               <Streaming />
             </>
           }
-          link='/service/vabinar'
+          link='/service/vebinar'
         >
           Не знаете, что нужно скачать на ПК? Как сделать трансляцию лица с телефона, а захват экрана с ПК? Мы всё сделаем, а также вся тех. часть по Bizon365
         </Card>
