@@ -15,7 +15,7 @@
 @font-face {
   font-family: 'Gilroy';
   src: url('../fonts/Gilory/Gilroy-SemiBold.ttf');
-  font-style: 'semibold';
+  font-style: normal;
 }
 /* @font-face {
   font-family: 'Gilroy';
@@ -63,4 +63,16 @@ body {
 
 .section {
   margin: 10px 0;
+}
+
+.font-Gilroy {
+  font-family: "Gilroy";
+}
+
+.font-IgraSans {
+  font-family: "Igra Sans";
+}
+
+.font-Onest {
+  font-family: "Onest";
 }
