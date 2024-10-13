@@ -283,8 +283,8 @@ export default function Page() {
                     </div>
                   </div>
                   <div className="desktop:max-w-[1243px] w-full phone:p-[44px] bg-bg-color desktop:rounded-[36px] nokia:rounded-[23px] rounded-[17px] nokia:p-[30px] p-[21px] flex phone:gap-x-4 gap-x-2">
-                    <Image width={1242} height={499} loading={`lazy`} src={`${SOURCE.static_url}block5?field=slug`} alt={`Фото image`} className={`select-none`} />
-                    <Image width={1242} height={499} loading={`lazy`} src={`${SOURCE.static_url}block7?field=slug`} alt={`Фото image`} className={`select-none`} />
+                    <Image width={1242} height={499} loading={`lazy`} src={`${SOURCE.static_url}block5?field=slug`} alt={`Фото image`} className={`select-none phone:w-1/2 w-full`} />
+                    <Image width={1242} height={499} loading={`lazy`} src={`${SOURCE.static_url}block7?field=slug`} alt={`Фото image`} className={`select-none phone:w-1/2 w-full`} />
                   </div>
                 </div>
 
@@ -509,42 +509,42 @@ export default function Page() {
           </section>
 
           <section className="mb-5">
-            <div className="max-w-[1880px] mx-auto bg-black-bg-dark nokia:rounded-[20px] rounded-[12px] relative overflow-hidden">
+            <div className="max-w-[1880px] mx-auto bg-black-bg-dark phone:rounded-[20px] rounded-[12px] relative overflow-hidden">
               <div className="desktop:pt-[150px] desktop:pb-[190px] py-[57px] laptop:pt-[87px] laptop:pb-[150px] desktop:px-[50px] px-[10px]">
-                <h3 className="font-IgraSans font-normal desktop:text-[48px] desktop:leading-[48px] laptop:text-[56px] text-[30px] nokia:text-[42px] nokia:leading-[42px] leading-[30px] text-white nokia:mb-16 mb-6 uppercase text-center">
+                <h3 className="font-IgraSans font-normal desktop:text-[48px] desktop:leading-[48px] laptop:text-[56px] text-[30px] phone:text-[42px] phone:leading-[42px] leading-[30px] text-white phone:mb-16 mb-6 uppercase text-center">
                   почему мы?
                 </h3>
-                <div className="desktop:w-full tablet:w-full mx-auto nokia:w-[500px] flex items-center justify-center tablet:flex-row flex-col desktop:gap-[36px] nokia:gap-[32px] gap-[20px]  desktop:rounded-[16px] rounded-[20px]  desktop:mt-[32px] mt-[30px] relative z-30 ">
-                  <div className="laptop:w-[430px] relative flex flex-col justify-center items-start nokia:gap-[16px] gap-[12px] desktop:rounded-[32px] rounded-[23px] bg-number_bg desktop:p-[48px] nokia:p-[35px] py-[20px] px-[30px] overflow-hidden nokia:h-[330px] h-[270px]">
-                    <h6 className="absolute left-[-61px] top-0 bottom-0 my-auto font-Manrope font-extrabold nokia:text-[300px] text-[231px] nokia:leading-[348px] leading-[277px] text-green">
+                <div className="desktop:w-full tablet:w-full mx-auto phone:w-[500px] flex items-center justify-center tablet:flex-row flex-col desktop:gap-[36px] phone:gap-[32px] gap-[20px]  desktop:rounded-[16px] rounded-[20px]  desktop:mt-[32px] mt-[30px] relative z-30 ">
+                  <div className="laptop:w-[430px] relative flex flex-col justify-center items-start phone:gap-[16px] gap-[12px] desktop:rounded-[32px] rounded-[23px] bg-number_bg desktop:p-[48px] phone:p-[35px] py-[20px] px-[30px] overflow-hidden phone:h-[330px] h-[270px]">
+                    <h6 className="absolute left-[-61px] top-0 bottom-0 my-auto font-Manrope font-extrabold phone:text-[300px] text-[231px] phone:leading-[348px] leading-[277px] text-green">
                       1
                     </h6>
-                    <span className="max-w-[249px] nokia:ml-[100px] ml-[50px] font-Manrope font-bold nokia:text-[24px] nokia:leading-[28px] text-[18px] leading-[22px] uppercase text-green">
+                    <span className="max-w-[249px] phone:ml-[100px] ml-[50px] font-Manrope font-bold phone:text-[24px] phone:leading-[28px] text-[18px] leading-[22px] uppercase text-green">
                       любая задача под силу:
                     </span>
-                    <p className="max-w-[249px] nokia:ml-[100px] ml-[50px] font-Manrope font-medium text-white nokia:text-[20px] text-[18px] nokia:leading-[30px] leading-[23px]">
+                    <p className="max-w-[249px] phone:ml-[100px] ml-[50px] font-Manrope font-medium text-white phone:text-[20px] text-[18px] phone:leading-[30px] leading-[23px]">
                       В нашей команде есть BackEnd и FrontEnd разработчики
                     </p>
                   </div>
-                  <div className="laptop:w-[430px] relative flex flex-col justify-center items-start nokia:gap-[16px] gap-[12px] desktop:rounded-[32px] rounded-[23px] bg-number_bg desktop:p-[48px] nokia:p-[35px] py-[20px] px-[30px] overflow-hidden nokia:h-[390px] h-[270px]">
-                    <h6 className="absolute left-[-61px] top-0 bottom-0 my-auto font-Manrope font-extrabold nokia:text-[300px] text-[231px] nokia:leading-[348px] leading-[277px] text-green">
+                  <div className="laptop:w-[430px] relative flex flex-col justify-center items-start phone:gap-[16px] gap-[12px] desktop:rounded-[32px] rounded-[23px] bg-number_bg desktop:p-[48px] phone:p-[35px] py-[20px] px-[30px] overflow-hidden phone:h-[390px] h-[270px]">
+                    <h6 className="absolute left-[-61px] top-0 bottom-0 my-auto font-Manrope font-extrabold phone:text-[300px] text-[231px] phone:leading-[348px] leading-[277px] text-green">
                       2
                     </h6>
-                    <span className="max-w-[249px] nokia:ml-[100px] ml-[50px] font-Manrope font-bold nokia:text-[24px] nokia:leading-[28px] text-[18px] leading-[22px] uppercase text-green">
+                    <span className="max-w-[249px] phone:ml-[100px] ml-[50px] font-Manrope font-bold phone:text-[24px] phone:leading-[28px] text-[18px] leading-[22px] uppercase text-green">
                       Каждый день на связи:
                     </span>
-                    <p className="max-w-[249px] nokia:ml-[100px] ml-[50px] font-Manrope font-medium text-white nokia:text-[20px] text-[18px] nokia:leading-[30px] leading-[23px]">
-                      Делаем всю работуза несколько дней, вам не нужно месяцами ждать воронку
+                    <p className="max-w-[249px] phone:ml-[100px] ml-[50px] font-Manrope font-medium text-white phone:text-[20px] text-[18px] phone:leading-[30px] leading-[23px]">
+                      Делаем всю работу за несколько дней, вам не нужно месяцами ждать воронку
                     </p>
                   </div>
-                  <div className="laptop:w-[430px] relative flex flex-col justify-center items-start nokia:gap-[16px] gap-[12px] desktop:rounded-[32px] rounded-[23px] bg-number_bg desktop:p-[48px] nokia:p-[35px] py-[20px] px-[30px] overflow-hidden nokia:h-[330px] h-[270px]">
-                    <h6 className="absolute left-[-61px] top-0 bottom-0 my-auto font-Manrope font-extrabold nokia:text-[300px] text-[231px] nokia:leading-[348px] leading-[277px] text-green">
+                  <div className="laptop:w-[430px] relative flex flex-col justify-center items-start phone:gap-[16px] gap-[12px] desktop:rounded-[32px] rounded-[23px] bg-number_bg desktop:p-[48px] phone:p-[35px] py-[20px] px-[30px] overflow-hidden phone:h-[330px] h-[270px]">
+                    <h6 className="absolute left-[-61px] top-0 bottom-0 my-auto font-Manrope font-extrabold phone:text-[300px] text-[231px] phone:leading-[348px] leading-[277px] text-green">
                       3
                     </h6>
-                    <span className="max-w-[249px] nokia:ml-[100px] ml-[50px] font-Manrope font-bold nokia:text-[24px] nokia:leading-[28px] text-[18px] leading-[22px] uppercase text-green">
+                    <span className="max-w-[249px] phone:ml-[100px] ml-[50px] font-Manrope font-bold phone:text-[24px] phone:leading-[28px] text-[18px] leading-[22px] uppercase text-green">
                       Сопровождение
                     </span>
-                    <p className="max-w-[249px] nokia:ml-[100px] ml-[50px]  font-Manrope font-medium text-white nokia:text-[20px] text-[18px] nokia:leading-[30px] leading-[23px]">
+                    <p className="max-w-[249px] phone:ml-[100px] ml-[50px]  font-Manrope font-medium text-white phone:text-[20px] text-[18px] phone:leading-[30px] leading-[23px]">
                       Оказываем сопровождение в течение 5 дней после сдачи работ
                     </p>
                   </div>
