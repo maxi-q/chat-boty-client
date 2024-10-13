@@ -283,8 +283,22 @@ export default function Page() {
                     </div>
                   </div>
                   <div className="desktop:max-w-[1243px] w-full phone:p-[44px] bg-bg-color desktop:rounded-[36px] nokia:rounded-[23px] rounded-[17px] nokia:p-[30px] p-[21px] flex phone:gap-x-4 gap-x-2">
-                    <Image width={1242} height={499} loading={`lazy`} src={`${SOURCE.static_url}block5?field=slug`} alt={`Фото image`} className={`select-none phone:w-1/2 w-full`} />
-                    <Image width={1242} height={499} loading={`lazy`} src={`${SOURCE.static_url}block7?field=slug`} alt={`Фото image`} className={`select-none phone:w-1/2 w-full`} />
+                    <Image
+                      width={1242}
+                      height={499}
+                      loading={`lazy`}
+                      src={`${SOURCE.static_url}block5?field=slug`}
+                      alt={`Фото image`}
+                      className={`select-none phone:w-1/2 w-full`}
+                    />
+                    <Image
+                      width={1242}
+                      height={499}
+                      loading={`lazy`}
+                      src={`${SOURCE.static_url}block7?field=slug`}
+                      alt={`Фото image`}
+                      className={`select-none phone:w-1/2 w-full`}
+                    />
                   </div>
                 </div>
 
@@ -411,15 +425,15 @@ export default function Page() {
           </section>
 
           <section className="mb-5">
-            <div className="max-w-[1880px] mx-auto bg-black-bg-dark nokia:rounded-[20px] rounded-[12px] relative overflow-hidden">
+            <div className="max-w-[1880px] mx-auto bg-black-bg-dark phone:rounded-[20px] rounded-[12px] relative overflow-hidden">
               <div className="desktop:py-[132px] py-[57px] desktop:px-[50px] px-[10px]">
-                <h3 className="font-IgraSans font-normal desktop:text-[48px] desktop:leading-[48px] laptop:text-[56px] text-[30px] nokia:text-[42px] nokia:leading-[42px] leading-[30px] text-white nokia:mb-3 mb-2 uppercase text-center">
+                <h3 className="font-IgraSans font-normal desktop:text-[48px] desktop:leading-[48px] laptop:text-[56px] text-[30px] phone:text-[42px] phone:leading-[42px] leading-[30px] text-white phone:mb-3 mb-2 uppercase text-center">
                   мы не делаем:
                 </h3>
-                <div className="desktop:w-full tablet:w-full mx-auto nokia:w-[500px] flex tablet:flex-row flex-col desktop:gap-[36px] nokia:gap-[32px] gap-[20px] desktop:p-[32px] nokia:py-[40px] nokia:px-[28px] py-[28px] px-[33px] desktop:rounded-[16px] rounded-[20px] border-border-line border-[1px] desktop:mt-[32px] mt-[30px] relative z-30 bg-what-bg">
-                  <div className="flex items-center desktop:gap-[36px] nokia:gap-[32px] gap-[23px] desktop:rounded-[16px] rounded-[10px] bg-grey-dark desktop:p-[48px] nokia:p-[35px] py-[20px] px-[30px]">
+                <div className="desktop:w-full tablet:w-full mx-auto phone:w-[500px] flex tablet:flex-row flex-col desktop:gap-[36px] phone:gap-[32px] gap-[20px] desktop:p-[32px] phone:py-[40px] phone:px-[28px] py-[28px] px-[33px] desktop:rounded-[16px] rounded-[20px] border-border-line border-[1px] desktop:mt-[32px] mt-[30px] relative z-30 bg-what-bg">
+                  <div className="flex items-center desktop:gap-[36px] phone:gap-[32px] gap-[23px] desktop:rounded-[16px] rounded-[10px] bg-grey-dark desktop:p-[48px] phone:p-[35px] py-[20px] px-[30px]">
                     <svg
-                      className="desktop:w-[56px] desktop:h-[56px] nokia:w-[50px] nokia:h-[50px] w-[35px] h-[35px] flex-shrink-0"
+                      className="desktop:w-[56px] desktop:h-[56px] phone:w-[50px] phone:h-[50px] w-[35px] h-[35px] flex-shrink-0"
                       width="56"
                       height="56"
                       viewBox="0 0 56 56"
@@ -431,13 +445,13 @@ export default function Page() {
                         fill="#8FFE01"
                       />
                     </svg>
-                    <span className="font-Manrope font-medium desktop:text-[24px] desktop:leading-[28.8px] laptop:text-[19px] laptop:leading-[22px] nokia:text-[18px] nokia:leading-[22px] text-[13px] leading-[16px] uppercase text-bg-color">
+                    <span className="font-Manrope font-medium desktop:text-[24px] desktop:leading-[28.8px] laptop:text-[19px] laptop:leading-[22px] phone:text-[18px] phone:leading-[22px] text-[13px] leading-[16px] uppercase text-bg-color">
                       Прописывание сценария вебинара
                     </span>
                   </div>
-                  <div className="flex items-center desktop:gap-[36px] nokia:gap-[32px] gap-[23px] desktop:rounded-[16px] rounded-[10px] bg-grey-dark desktop:p-[48px] nokia:p-[35px] py-[20px] px-[30px]">
+                  <div className="flex items-center desktop:gap-[36px] phone:gap-[32px] gap-[23px] desktop:rounded-[16px] rounded-[10px] bg-grey-dark desktop:p-[48px] phone:p-[35px] py-[20px] px-[30px]">
                     <svg
-                      className="desktop:w-[56px] desktop:h-[56px] nokia:w-[50px] nokia:h-[50px] w-[35px] h-[35px] flex-shrink-0"
+                      className="desktop:w-[56px] desktop:h-[56px] phone:w-[50px] phone:h-[50px] w-[35px] h-[35px] flex-shrink-0"
                       width="57"
                       height="56"
                       viewBox="0 0 57 56"
@@ -449,13 +463,13 @@ export default function Page() {
                         fill="#8FFE01"
                       />
                     </svg>
-                    <span className="font-Manrope font-medium desktop:text-[24px] desktop:leading-[28.8px] laptop:text-[19px] laptop:leading-[22px] nokia:text-[18px] nokia:leading-[22px] text-[13px] leading-[16px] uppercase text-bg-color">
+                    <span className="font-Manrope font-medium desktop:text-[24px] desktop:leading-[28.8px] laptop:text-[19px] laptop:leading-[22px] phone:text-[18px] phone:leading-[22px] text-[13px] leading-[16px] uppercase text-bg-color">
                       Смыслы в ботах и e-mail рассылках
                     </span>
                   </div>
-                  <div className="flex items-center desktop:gap-[36px] nokia:gap-[32px] gap-[23px] desktop:rounded-[16px] rounded-[10px] bg-grey-dark desktop:p-[48px] nokia:p-[35px] py-[20px] px-[30px]">
+                  <div className="flex items-center desktop:gap-[36px] phone:gap-[32px] gap-[23px] desktop:rounded-[16px] rounded-[10px] bg-grey-dark desktop:p-[48px] phone:p-[35px] py-[20px] px-[30px]">
                     <svg
-                      className="desktop:w-[56px] desktop:h-[56px] nokia:w-[50px] nokia:h-[50px] w-[35px] h-[35px] flex-shrink-0"
+                      className="desktop:w-[56px] desktop:h-[56px] phone:w-[50px] phone:h-[50px] w-[35px] h-[35px] flex-shrink-0"
                       width="57"
                       height="56"
                       viewBox="0 0 57 56"
@@ -471,17 +485,17 @@ export default function Page() {
                         fill="#8FFE01"
                       />
                     </svg>
-                    <span className="font-Manrope font-medium desktop:text-[24px] desktop:leading-[28.8px] laptop:text-[19px] laptop:leading-[22px] nokia:text-[18px] nokia:leading-[22px] text-[13px] leading-[16px] uppercase text-bg-color">
+                    <span className="font-Manrope font-medium desktop:text-[24px] desktop:leading-[28.8px] laptop:text-[19px] laptop:leading-[22px] phone:text-[18px] phone:leading-[22px] text-[13px] leading-[16px] uppercase text-bg-color">
                       Дизайн тренингов/уроков
                     </span>
                   </div>
                 </div>
 
-                <div className="desktop:pt-[118px] pt-[80px] nokia:pb-0 pb-[150px] desktop:w-full tablet:w-full mx-auto nokia:w-[500px] z-20 relative">
-                  <h3 className="font-IgraSans font-normal desktop:text-[48px] desktop:leading-[48px] laptop:text-[56px] text-[30px] nokia:text-[42px] nokia:leading-[42px] leading-[30px] text-white nokia:mb-4 mb-4 uppercase nokia:text-start text-center">
+                <div className="desktop:pt-[118px] pt-[80px] phone:pb-0 pb-[150px] desktop:w-full tablet:w-full mx-auto phone:w-[500px] z-20 relative">
+                  <h3 className="font-IgraSans font-normal desktop:text-[48px] desktop:leading-[48px] laptop:text-[56px] text-[30px] phone:text-[42px] phone:leading-[42px] leading-[30px] text-white phone:mb-4 mb-4 uppercase phone:text-start text-center">
                     делаем:
                   </h3>
-                  <p className="max-w-[839px] pl-[18px] relative before:absolute before:left-0 before:h-[69px] before:w-[3px] before:bg-green before:top-0 before:bottom-0 before:my-auto desktop:mt-[32px] desktop:mb-[170px] font-Manrope font-medium text-white desktop:text-[29px] laptop:text-[29px] phone:text-[29px] nokia:text-[29px] text-[18] desktop:leading-[44px] laptop:leading-[44px] phone:leading-[44px] nokia:leading-[44px] leading-[27.6px] nokia:mb-[25px] mb-[18px]">
+                  <p className="max-w-[839px] pl-[18px] relative before:absolute before:left-0 before:h-[69px] before:w-[3px] before:bg-green before:top-0 before:bottom-0 before:my-auto desktop:mt-[32px] desktop:mb-[170px] font-Manrope font-medium text-white desktop:text-[29px] laptop:text-[29px] phone:text-[29px] phone:text-[29px] text-[18] desktop:leading-[44px] laptop:leading-[44px] phone:leading-[44px] phone:leading-[44px] leading-[27.6px] phone:mb-[25px] mb-[18px]">
                     Только техническую часть и работаем с контентом, который вы нам предоставляете
                   </p>
                   <CallToActionButton textClassName="p-0 !left-0 " className={`tablet:w-auto w-full max-w-full`}>
@@ -494,7 +508,7 @@ export default function Page() {
                   loading={`lazy`}
                   src={`${SOURCE.static_url}graficimg1?field=slug`}
                   alt={`Фото image`}
-                  className={`select-none absolute desktop:w-[1098px] laptop:w-[925px] phone:w-[587px] nokia:w-[500px] w-[100%] laptop:bottom-[-410px] laptop:right-[-30px] z-10 nokia:bottom-[110px] nokia:right-[-250px] nokia:block hidden bottom-[-200px] right-[50px]`}
+                  className={`select-none absolute desktop:w-[1098px] laptop:w-[925px] phone:w-[500px] w-[100%] laptop:bottom-[-410px] laptop:right-[-30px] z-10 phone:bottom-[110px] phone:right-[-250px] phone:block hidden bottom-[-200px] right-[50px]`}
                 />
                 <Image
                   width={673}
@@ -502,7 +516,7 @@ export default function Page() {
                   loading={`lazy`}
                   src={`${SOURCE.static_url}graficimg2?field=slug`}
                   alt={`Фото image`}
-                  className={`select-none absolute desktop:w-[1098px] nokia:hidden block laptop:w-[925px] phone:w-[587px] nokia:w-[500px] w-[100%] laptop:bottom-[-410px] laptop:right-[-30px] z-10 nokia:bottom-[110px] nokia:right-[-250px] bottom-[-120px] right-[0px]`}
+                  className={`select-none absolute desktop:w-[1098px] phone:hidden block laptop:w-[925px] phone:w-[500px] w-[100%] laptop:bottom-[-410px] laptop:right-[-30px] z-10 phone:bottom-[110px] phone:right-[-250px] bottom-[-120px] right-[0px]`}
                 />
               </div>
             </div>
