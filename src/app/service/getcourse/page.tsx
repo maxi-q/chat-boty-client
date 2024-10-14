@@ -13,12 +13,23 @@ import WorkerMan from '@/constants/svg/WorkerMan'
 import { Tablet } from '@/modules/landing/SevenScreen/AnimatedTablet'
 import { CallBackForm } from '@/modules/landing/SevenScreen/CallBackForm'
 
+import type { Metadata } from 'next'
 import { Onest } from 'next/font/google'
 
 const onest = Onest({
   subsets: ['latin'],
   display: 'swap',
 })
+
+export const metadata: Metadata = {
+  title: 'Настройка Getcourse (Геткурс) - настройка доменов, тренингов по низкой цене',
+  description: 'Ищите специалиста по настройке Getcourse (Геткурс)? Проведём полную базовую настройку доменов и тренингов в вашем профиле. Скидка при первом образении!',
+  openGraph: {
+    title: 'Настройка Getcourse (Геткурс) - настройка доменов, тренингов по низкой цене',
+    description: 'Ищите специалиста по настройке Getcourse (Геткурс)? Проведём полную базовую настройку доменов и тренингов в вашем профиле. Скидка при первом образении!',
+    url: 'https://chat-boty.com/service/getcourse',
+  },
+}
 
 export default function Page() {
   return (
