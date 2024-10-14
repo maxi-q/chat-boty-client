@@ -12,7 +12,7 @@ const nunitoFont = Nunito({
 
 export const SecondScreen = () => {
   return (
-    <main className={`grid section p-5 laptop:pl-[40px] laptop:pt-[70px] ${styles.screen}`} id='service'>
+    <main className={`grid section p-5 laptop:pl-[40px] laptop:pt-[70px] ${styles.screen}`} id="service">
       <Link href={'#service'}>
         <h1 className={`${styles.mainTitle} text-3xl tablet:text-5xl laptop:text-5xl uppercase`}>
           <span className={styles.titleSpan}>решения,</span> которые
@@ -29,7 +29,7 @@ export const SecondScreen = () => {
               <SettingRoll />
             </>
           }
-          link='/service/bluesales'
+          link="/service/bluesales"
         >
           Настраиваем BlueSales проставление тегов, статусов, пишем всё на JSON, а также настраиваем amoCRM
         </Card>
@@ -56,6 +56,7 @@ export const SecondScreen = () => {
               <Learning />
             </>
           }
+          link="/service/getcourse"
         >
           Подключение, интеграции, процессы, создание тренингов, продуктов, предложений — оставьте всё нам, сделаем как надо
         </Card>
@@ -94,7 +95,7 @@ export const SecondScreen = () => {
               <Streaming />
             </>
           }
-          link='/service/vebinar'
+          link="/service/vebinar"
         >
           Не знаете, что нужно скачать на ПК? Как сделать трансляцию лица с телефона, а захват экрана с ПК? Мы всё сделаем, а также вся тех. часть по Bizon365
         </Card>
@@ -130,7 +131,7 @@ const Card = ({
   title,
   index,
   icons,
-  link = '#'
+  link = '#',
 }: Readonly<{
   children: React.ReactNode
   title: string
