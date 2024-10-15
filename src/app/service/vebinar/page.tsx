@@ -1,9 +1,21 @@
+import { CallToActionButton } from '@/components/ui/CallToAction'
 import { SOURCE } from '@/constants/static'
 import { TextCarousel } from '@/modules/landing/FiveScreen/modules/TextCarousel'
 import { VideoCarousel } from '@/modules/landing/FiveScreen/modules/VideoCarousel'
 import Image from 'next/image'
 import styles from './style.module.css'
-import { CallToActionButton } from '@/components/ui/CallToAction'
+
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Настройка и сопровождение вебинаров и вебинарных комнат по доступной цене',
+  description: 'Помогаем школам и экспертам: настройка и сопровождение вебинаров и вебинарных компнат под ключ. Все подробности на нашем сайте, скидка первым клиентам.',
+  openGraph: {
+    title: 'Настройка и сопровождение вебинаров и вебинарных комнат по доступной цене',
+    description: 'Помогаем школам и экспертам: настройка и сопровождение вебинаров и вебинарных компнат под ключ. Все подробности на нашем сайте, скидка первым клиентам.',
+    url: 'https://chat-boty.com/service/vebinar',
+  },
+}
 
 const Service = () => (
   <main className="overflow-hidden desktop:px-5 px-0">
@@ -23,7 +35,9 @@ const Service = () => (
             >
               Полное техническое сопровождение вашей трансляции
             </p>
-            <CallToActionButton color='yellow' textClassName='p-0 !left-0' className={`tablet:w-auto w-full max-w-full`}>ЗАПИСАТЬСЯ НА КОНСУЛЬТАЦИЮ</CallToActionButton>
+            <CallToActionButton color="yellow" textClassName="p-0 !left-0" className={`tablet:w-auto w-full max-w-full`}>
+              ЗАПИСАТЬСЯ НА КОНСУЛЬТАЦИЮ
+            </CallToActionButton>
 
             {/* <button className={`flex tablet:w-auto w-full relative rounded-[999px] ${styles.bgAccent} phone:py-[34px] p-[20px] pl-[20px] phone:pl-[48px] phone:pr-[124px]`}>
               <span className="text-start font-Onest font-normal desktop:text-desktop phone:text-laptop text-xs text-black">ЗАПИСАТЬСЯ НА КОНСУЛЬТАЦИЮ</span>
@@ -196,7 +210,9 @@ const Service = () => (
                   <h6 className="font-Onest font-medium desktop:text-[28px] desktop:leading-[29.4px] text-secondary">4 500 ₽/час*</h6>
                 </div>
               </div>
-            <CallToActionButton color='yellow' textClassName='p-0 !left-0' className={`tablet:w-auto w-full max-w-full`}>ОФОРМИТЬ ЗАКАЗ</CallToActionButton>
+              <CallToActionButton color="yellow" textClassName="p-0 !left-0" className={`tablet:w-auto w-full max-w-full`}>
+                ОФОРМИТЬ ЗАКАЗ
+              </CallToActionButton>
 
               {/* <button className="flex tablet:w-auto w-full relative rounded-[999px] bg-accent phone:py-[34px] p-[20px] pl-[20px] phone:pl-[48px] phone:pr-[124px]">
                 <span className="text-start font-Onest font-medium desktop:text-[32px] text-[16px] text-black">ОФОРМИТЬ ЗАКАЗ</span>
@@ -219,7 +235,9 @@ const Service = () => (
 
     <section className={`mt-5`}>
       <div className={`${styles.container}`}>
-        <h1 className={`font-Gilroy font-semibold desktop:text-[63px] desktop:leading-[67.2px] laptop:text-[56px] text-[28px] tablet:text-[48px] phone:text-[36px]  laptop:leading-[58px] tablet:leading-[50px] phone:leading-[37px] leading-[29.9px] ${styles.textAccent}`}>
+        <h1
+          className={`font-Gilroy font-semibold desktop:text-[63px] desktop:leading-[67.2px] laptop:text-[56px] text-[28px] tablet:text-[48px] phone:text-[36px]  laptop:leading-[58px] tablet:leading-[50px] phone:leading-[37px] leading-[29.9px] ${styles.textAccent}`}
+        >
           отзывы
         </h1>
         <VideoCarousel />

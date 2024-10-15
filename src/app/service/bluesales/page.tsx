@@ -11,11 +11,24 @@ import WorkerMan from '@/constants/svg/WorkerMan'
 import { Tablet } from '@/modules/landing/SevenScreen/AnimatedTablet'
 import { CallBackForm } from '@/modules/landing/SevenScreen/CallBackForm'
 import { Onest } from 'next/font/google'
+import type { Metadata } from 'next'
 
 const onest = Onest({
   subsets: ['latin'],
   display: 'swap',
 })
+
+export const metadata: Metadata = {
+  title: 'Автоматизация продаж с помощью crm системы Bluesales',
+  description:
+    'Столкнулись с проблемой в настройске crm системы Bluesales? Поможем автоматизировать ваши продажи: написание ботов на json, скриптов и настройка каналов. Подробности тут!',
+  openGraph: {
+    title: 'Автоматизация продаж с помощью crm системы Bluesales',
+    description:
+      'Столкнулись с проблемой в настройске crm системы Bluesales? Поможем автоматизировать ваши продажи: написание ботов на json, скриптов и настройка каналов. Подробности тут!',
+    url: 'https://chat-boty.com/service/bluesales',
+  },
+}
 
 export default function Page() {
   return (
