@@ -17,6 +17,10 @@
   background-color: rgb(0 139 232);
   fill: rgb(0 139 232);
 }
+.button.white {
+  background-color: var(--color-main);
+  fill: #7001FE;;
+}
 
 .text {
   z-index: 0;

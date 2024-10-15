@@ -21,7 +21,7 @@ export const CallToActionButton = ({
   arrowClassName?: string
   onClick?: MouseEventHandler<HTMLButtonElement>
   type?: 'submit' | 'reset' | 'button'
-  color?: 'green' | 'yellow' | 'blue'
+  color?: 'green' | 'yellow' | 'blue' | 'white'
 }>) => {
   const { openPopup } = useCallBackStore()
 
@@ -34,6 +34,9 @@ export const CallToActionButton = ({
   }
   else if (color == 'blue') {
     buttonColor = styles.blue
+  }
+  else if (color == 'white') {
+    buttonColor = styles.white
   }
 
   return (
