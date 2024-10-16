@@ -15,7 +15,6 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1.2);
-  z-index: 9;
   overflow: hidden;
 
   -webkit-transition: all 0.3s ease;
@@ -49,7 +48,6 @@
   transition: all 0.3s ease;
   pointer-events: none;
   opacity: 0;
-  z-index: 7;
 }
 
 .section.active {
