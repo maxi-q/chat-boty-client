@@ -293,7 +293,7 @@ export default function Page() {
                       </ul>
                     </div>
                   </div>
-                  <div className="desktop:max-w-[1243px] w-full phone:p-[44px] bg-bg-color desktop:rounded-[36px] nokia:rounded-[23px] rounded-[17px] nokia:p-[30px] p-[21px] flex phone:gap-x-4 gap-x-2">
+                  <div className="desktop:max-w-[1243px] w-full flex-col phone:flex-row phone:p-[44px] bg-bg-color desktop:rounded-[36px] nokia:rounded-[23px] rounded-[17px] nokia:p-[30px] p-[21px] flex phone:gap-x-4 gap-x-2">
                     <Image
                       width={1242}
                       height={499}
@@ -441,7 +441,7 @@ export default function Page() {
                 <h3 className="font-IgraSans font-normal desktop:text-[48px] desktop:leading-[48px] laptop:text-[56px] text-[30px] phone:text-[42px] phone:leading-[42px] leading-[30px] text-white phone:mb-3 mb-2 uppercase text-center">
                   мы не делаем:
                 </h3>
-                <div className="desktop:w-full tablet:w-full mx-auto phone:w-[500px] flex tablet:flex-row flex-col desktop:gap-[36px] phone:gap-[32px] gap-[20px] desktop:p-[32px] phone:py-[40px] phone:px-[28px] py-[28px] px-[33px] desktop:rounded-[16px] rounded-[20px] border-border-line border-[1px] desktop:mt-[32px] mt-[30px] relative z-30 bg-what-bg">
+                <div className="tablet:w-full mx-auto phone:w-[500px] flex tablet:flex-row flex-col desktop:gap-[36px] phone:gap-[32px] gap-[20px] desktop:p-[32px] phone:py-[40px] phone:px-[28px] py-[28px] px-[33px] desktop:rounded-[16px] rounded-[20px] border-border-line border-[1px] desktop:mt-[32px] mt-[30px] relative z-30 bg-what-bg">
                   <div className="flex items-center desktop:gap-[36px] phone:gap-[32px] gap-[23px] desktop:rounded-[16px] rounded-[10px] bg-grey-dark desktop:p-[48px] phone:p-[35px] py-[20px] px-[30px]">
                     <svg
                       className="desktop:w-[56px] desktop:h-[56px] phone:w-[50px] phone:h-[50px] w-[35px] h-[35px] flex-shrink-0"
