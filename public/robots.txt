@@ -1,0 +1,11 @@
+# *
+User-agent: *
+Disallow: */_next/
+Disallow: *?page=
+
+
+# Host
+Host: https://chat-boty.com
+
+# Sitemaps
+Sitemap: https://chat-boty.com/sitemap.xml
