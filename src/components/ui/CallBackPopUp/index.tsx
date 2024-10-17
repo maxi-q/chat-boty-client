@@ -110,6 +110,7 @@ export const CallBackPopUp = () => {
   const communicationRequests = async () => {
     const status = await telegramRequest(content)
     if (!status) return
+    console.log('Yandex Metrica communicationRequests sent!')
 
     setSend(true)
     handleToggle()
