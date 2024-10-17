@@ -43,8 +43,8 @@ const fillForm = (data: callBackContent) => {
   if (visited === null || document.location.href !== sessionStorage.getItem('lastPage')) {
     if (data.name && data.contact) {
       if (typeof window !== 'undefined' && typeof window.ym === 'function') {
-        window.ym(98094334, 'reachGoal', 'заполнил')
-        console.log('Yandex Metrica goal sent!')
+        window.ym(98094334,'reachGoal','fillform')
+        console.log('Yandex Metrica fillform sent!')
       }
     }
     sessionStorage.setItem('visit', '1')
