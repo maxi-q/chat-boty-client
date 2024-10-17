@@ -27,7 +27,6 @@ yarn-error.log*
 
 # SEO
 public/sitemap*.xml
-public/robots.txt
 public/feed.xml
 public/secret_key.txt
 

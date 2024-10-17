@@ -76,7 +76,7 @@ const CTA = ({ title, text, link }: { title: string; text: string; link: string 
       <p className={`text-lg tablet:text-xl font-medium ${styles.text}`} style={{ whiteSpace: 'pre-wrap', flex: 1 }}>
         {text}
       </p>
-      <CallToActionButton className={`mt-16 laptop:mt-3 ${styles.CTAButton}`} actionClassName={styles.CTAAction} arrowClassName={styles.CTAArrow}>
+      <CallToActionButton className={`mt-16 laptop:mt-3 ${styles.CTAButton}`} color='white' actionClassName={styles.CTAAction} arrowClassName={styles.CTAArrow}>
         <span className='phone:text-xl tablet:text-2xl'>Обсудить проект</span>
       </CallToActionButton>
     </div>
