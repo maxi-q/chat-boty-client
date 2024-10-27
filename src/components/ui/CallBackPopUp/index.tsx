@@ -40,14 +40,14 @@ type callBackState = {
 const fillForm = (data: callBackContent) => {
   const visited = sessionStorage.getItem('visit')
 
-  if (visited === null || document.location.href !== sessionStorage.getItem('lastPage')) {
+  if (!visited || document.location.href !== sessionStorage.getItem('lastPage')) {
     if (data.name && data.contact) {
       if (typeof window !== 'undefined' && typeof window.ym === 'function') {
-        window.ym(98094334, 'reachGoal', 'заполнил')
-        console.log('Yandex Metrica goal sent!')
+        const a = window.ym(98094334, 'reachGoal', 'fillform')
+        console.log('Yandex Metrica fillform sent!')
+        sessionStorage.setItem('visit', '1')
       }
     }
-    sessionStorage.setItem('visit', '1')
   }
   sessionStorage.setItem('lastPage', document.location.href)
 }
@@ -59,8 +59,8 @@ const openPopupTarget = () => {
     if (typeof window !== 'undefined' && typeof window.ym === 'function') {
       window.ym(98094334, 'reachGoal', 'open popup')
       console.log('Yandex Metrica open popup sent!')
+      sessionStorage.setItem('openPopup', '1')
     }
-    sessionStorage.setItem('openPopup', '1')
   }
   sessionStorage.setItem('lastPage', document.location.href)
 }
@@ -110,6 +110,7 @@ export const CallBackPopUp = () => {
   const communicationRequests = async () => {
     const status = await telegramRequest(content)
     if (!status) return
+    console.log('Yandex Metrica communicationRequests sent!')
 
     setSend(true)
     handleToggle()
