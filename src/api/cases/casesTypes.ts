@@ -1,39 +1,20 @@
-export interface IGetCases {
-  page: number
-  size: number
-  has_file?: boolean
-}
-export type SimpleCaseType = {
-  id: string
-  slug: string
-  title: string
-  short_description: string
-  reading_time: number
-  preview_file_id?: string
-  preview_og_file_id?: string
-  created_at: string
-  updated_at: string
-  is_published: boolean
-}
+import {
+  CaseType as _CaseType,
+  GetCaseFileType as _GetCaseFileType,
+  getCasesType as _getCasesType,
+  IGetCaseFile as _IGetCaseFile,
+  IGetCaseInfo as _IGetCaseInfo,
+  IGetCases as _IGetCases,
+} from '../admin/cases/CasesTypes'
 
-export interface CaseType extends SimpleCaseType {
-  preview_file_id: string
-  preview_og_file_id: string
-}
+export interface IGetCases extends _IGetCases {}
 
-export type getCasesType = {
-  data: Array<CaseType>
-  page: number
-  size: number
-  total_items: number
-  total_pages: number
-}
+export interface CaseType extends _CaseType {}
 
-export interface IGetCaseFile {
-  slug: string
-}
-export type GetCaseFileType = string
+export type getCasesType = _getCasesType
 
-export interface IGetCaseInfo {
-  slug: string
-}
+export interface IGetCaseFile extends _IGetCaseFile {}
+
+export type GetCaseFileType = _GetCaseFileType
+
+export interface IGetCaseInfo extends _IGetCaseInfo {}

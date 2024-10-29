@@ -19,11 +19,12 @@ const onest = Onest({
 })
 
 export const metadata: Metadata = {
-  title: 'Автоматизация продаж с помощью crm системы Bluesales',
+  title: 'CRM система Bluesales - автоматизация продаж в Вконтакте',
   description:
     'Столкнулись с проблемой в настройске crm системы Bluesales? Поможем автоматизировать ваши продажи: написание ботов на json, скриптов и настройка каналов. Подробности тут!',
+  keywords: 'автоматизация продаж crm, crm Bluesales',
   openGraph: {
-    title: 'Автоматизация продаж с помощью crm системы Bluesales',
+    title: 'CRM система Bluesales - автоматизация продаж в Вконтакте',
     description:
       'Столкнулись с проблемой в настройске crm системы Bluesales? Поможем автоматизировать ваши продажи: написание ботов на json, скриптов и настройка каналов. Подробности тут!',
     url: 'https://chat-boty.com/service/bluesales',

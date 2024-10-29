@@ -22,10 +22,11 @@ const onest = Onest({
 })
 
 export const metadata: Metadata = {
-  title: 'Настройка Getcourse (Геткурс) - настройка доменов, тренингов по низкой цене',
+  title: 'Настройка и оформление Getcourse (Геткурс) - настройка доменов, тренингов по низкой цене',
   description: 'Ищите специалиста по настройке Getcourse (Геткурс)? Проведём полную базовую настройку доменов и тренингов в вашем профиле. Скидка при первом образении!',
+  keywords: 'настройка домена геткурс, настройка тренинга геткурс',
   openGraph: {
-    title: 'Настройка Getcourse (Геткурс) - настройка доменов, тренингов по низкой цене',
+    title: 'Настройка и оформление Getcourse (Геткурс) - настройка доменов, тренингов по низкой цене',
     description: 'Ищите специалиста по настройке Getcourse (Геткурс)? Проведём полную базовую настройку доменов и тренингов в вашем профиле. Скидка при первом образении!',
     url: 'https://chat-boty.com/service/getcourse',
   },
@@ -41,11 +42,11 @@ export default function Page() {
               <div className="flex items-center w-full tablet:gap-x-9 gap-x-0 laptop:flex-row flex-col nokia:gap-y-12 gap-y-9">
                 <div className="desktop:max-w-[780px] w-full z-[2] relative">
                   <h1 className="font-normal font-IgraSans desktop:text-[64px] laptop:text-[64px] phone:text-[64px] nokia:text-[39px] text-[30px] desktop:leading-[76px] laptop:leading-[76px] phone:leading-[76px] nokia:leading-[46.4px] leading-[36.8px] text-black uppercase desktop:text-left tablet:text-center">
-                    Трансформируем онлайн-школу
+                  Н <span className="relative phone:-left-4 -left-2">А</span>стройка и оформление
                     <br />
                     <span className={`${styles.textPink} no-underline`}>
-                      Н <span className="relative phone:-left-4 -left-2">А</span> GetCourse
-                    </span>
+                      GetCourse
+                    </span> (Геткурс)
                   </h1>
                   <p
                     className={`${onest.className} font-medium desktop:text-[29px] laptop:text-[28px] tablet:text-[24px] nokia:text-[20px] text-[16px] desktop:leading-[44px] laptop:leading-[29.4px] tablet:leading-[25.2px] nokia:leading-[21px] leading-[16px] mt-[24px] phone:mb-[48px] mb-[20px] desktop:text-left tablet:text-center`}

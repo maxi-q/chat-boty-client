@@ -25,7 +25,7 @@ export const Page = async ({ page }: { page: number }) => {
     <div className="max-w-full">
       <div className="flex flex-wrap w-full">
         {pageData.data.map((el) => (
-          <Card key={el.id} created_at={el.created_at} duration={el.reading_time} title={el.title} link={el.slug} image={el.preview_file_id} />
+          <Card key={el.id} created_at={el.created_at} duration={el.reading_time} title={el.title} link={el.slug} image={el.preview_file_id} views_count={el.views_count} />
         ))}
       </div>
       <div className="flex">

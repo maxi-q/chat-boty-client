@@ -9,10 +9,11 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Настройка и сопровождение вебинаров и вебинарных комнат по доступной цене',
-  description: 'Помогаем школам и экспертам: настройка и сопровождение вебинаров и вебинарных компнат под ключ. Все подробности на нашем сайте, скидка первым клиентам.',
+  description: 'У вас скоро вебинар? Настроим вебинарную компанту и предоставим услуги по сопровождению всего вебинара. Получите персональное предложение уже сейчас!',
+  keywords: 'настройка вебинаров, сопровождение вебинаров',
   openGraph: {
     title: 'Настройка и сопровождение вебинаров и вебинарных комнат по доступной цене',
-    description: 'Помогаем школам и экспертам: настройка и сопровождение вебинаров и вебинарных компнат под ключ. Все подробности на нашем сайте, скидка первым клиентам.',
+    description: 'У вас скоро вебинар? Настроим вебинарную компанту и предоставим услуги по сопровождению всего вебинара. Получите персональное предложение уже сейчас!',
     url: 'https://chat-boty.com/service/vebinar',
   },
 }
@@ -24,10 +25,10 @@ const Service = () => (
         <div className="flex items-center w-full tablet:gap-x-9 gap-x-0 phone:gap-y-12 gap-y-9 laptop:flex-row phone:flex-col-reverse flex-col">
           <div className="max-w-[1000px]">
             <h1 className="font-bold desktop:text-8xl laptop:text-[88px] tablet:text-[72px] phone:text-[48px] text-[36px] desktop:leading-[100px] laptop:leading-[92px] tablet:leading-[75px] phone:leading-[50.4px] leading-[37.8px] text-black uppercase text-center phone:text-start">
-              Настроим
-              <br className="phone:hidden block" /> и поможем
-              <br className="phone:hidden block" /> провести
-              <br className="phone:hidden block" /> вебинар
+              Настройка
+              <br className="phone:hidden block" /> и сопровождение
+              <br className="phone:hidden block" /> вебинаров
+              <br className="phone:hidden block" /> и вебинарных комнат
             </h1>
             <p
               className="font-Onest font-medium desktop:text-[32px] laptop:text-[28px] tablet:text-[24px] phone:text-[20px] text-[16px]

@@ -1,8 +1,8 @@
 import { SOURCE } from '@/constants/static'
-import { GetPostInfo, PostInfoResponse } from './ArticlesTypes'
+import { GetPostInfo, PostInfo } from './ArticlesTypes'
 const API_URL = SOURCE.url
 
-export async function postArticleClient(content: PostInfoResponse): Promise<GetPostInfo | undefined> {
+export async function postArticleClient(content: PostInfo): Promise<GetPostInfo | undefined> {
   try {
     const response = await fetch(`/admin_api/posts`, {
       method: 'POST',
@@ -27,7 +27,7 @@ export async function postArticleClient(content: PostInfoResponse): Promise<GetP
   }
 }
 
-export async function patchArticleClient(slug: string, content: PostInfoResponse): Promise<GetPostInfo | undefined> {
+export async function patchArticleClient(slug: string, content: PostInfo): Promise<GetPostInfo | undefined> {
   try {
     const response = await fetch(`/admin_api/posts/${slug}`, {
       method: 'PATCH',

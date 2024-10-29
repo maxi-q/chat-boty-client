@@ -23,6 +23,9 @@ export const Page = async ({ page }: { page: number }) => {
 
   return (
     <div className="max-w-full">
+      <h1 className='mb-7 text-5xl'>
+      Кейсы продвижения услуг онлайн школ и <span className='whitespace-nowrap'>интернет-магазинов</span>
+      </h1>
       <div className="flex flex-wrap w-full">
         {pageData.data.map((el) => (
           <Card key={el.id} created_at={el.created_at} duration={el.reading_time} title={el.title} link={el.slug} image={el.preview_file_id} />

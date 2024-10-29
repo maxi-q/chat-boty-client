@@ -21,10 +21,10 @@ export const FirstScreen = () => {
       </div>
       <section className="tablet:flex-1 relative">
         <h1 className={`${styles.title} phone:bold text-3xl phone:text-4xl tablet:text-6xl laptop:text-6xl pb-5 desktop:text-7xl leading-[120%]`}>
-          Техническое
-          <br /> сопровождение
-          <br /> Онлайн-школы
-          <br /> под ключ
+          Продюсирование <br />
+          и техническое <br />
+          сопровождение <br />
+          онлайн школ
         </h1>
         <CallToActionButton>Обсудить проект</CallToActionButton>
       </section>
