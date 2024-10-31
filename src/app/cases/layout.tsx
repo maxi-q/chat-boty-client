@@ -18,7 +18,7 @@ export const metadata: Metadata = {
       template: '%s | Chat Boty',
     },
     description: 'Как эффективно осуществить рост продаж в интернете? Рассказываем на реальных кейсах наших клиентов из сферы онлайн школ и интернет магазинов. Подробности тут!',
-    url: 'https://chat-boty.com',
+    url: 'https://chat-boty.com/cases',
   },
 }
 

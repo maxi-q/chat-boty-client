@@ -1,5 +1,7 @@
 import { Suspense } from 'react'
 import { Page } from './modules/BlogPage'
+import { Metadata } from 'next'
+
 
 const Blog = ({ searchParams }: { searchParams: { page: number } }) => (
   <Suspense fallback={<h1>Загрузка...</h1>}>
