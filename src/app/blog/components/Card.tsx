@@ -43,7 +43,7 @@ export const Card = ({ created_at, duration, title, image, link, views_count }: 
             <PostClock />
           </span>
           {duration}
-          <span className="me-1">
+          <span className="ms-2 me-1">
             <Eye />
           </span>
           {views_count || 0}
