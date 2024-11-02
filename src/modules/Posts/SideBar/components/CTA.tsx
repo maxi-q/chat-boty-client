@@ -2,7 +2,7 @@ import { CallToActionButton } from '@/components/ui/CallToAction'
 import styles from './style.module.css'
 
 
-export const CTA = ({ title, text, link }: { title: string; text: string; link: string }) => {
+export const CTA = ({ title, text }: { title: string; text: string }) => {
   return (
     <div className={`p-5 flex rounded-2xl ${styles.case} ${styles.CTA}`}>
       <h3 className={`pb-3 text-lg font-bold uppercase ${styles.subtitle}`}>{title}</h3>

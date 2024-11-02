@@ -1,9 +1,8 @@
 import dynamic from 'next/dynamic'
 
-import { patchArticleClient } from '@/api/admin/blog/Routes'
-import { getArticleFile, getArticleInfo } from '@/api/blog/Articles'
-import MarkdownEditor from '../../modules/ClientContent'
 import { getArticleFileAdmin, patchArticle } from '@/api/admin/blog/Articles'
+import { getArticleInfo } from '@/api/blog/Articles'
+import MarkdownEditor from '../../modules/ClientContent'
 
 const NoSsr = async ({ params }: { params: { slug: string } }) => {
   const articleInfo = await getArticleInfo({ slug: params.slug })
@@ -12,7 +11,7 @@ const NoSsr = async ({ params }: { params: { slug: string } }) => {
   if (!articleInfo) return <>Ошибка загрузки информации о статье</>
 
   const fromPost = async (content: any) => {
-    "use server"
+    'use server'
     return patchArticle(params.slug, content)
   }
 

@@ -1,10 +1,10 @@
 import { SOURCE } from '@/constants/static'
 import { cookies } from 'next/headers'
-import { GetArticleFileType, getArticlesType, GetPostInfo, IGetArticleFile, IGetArticles, PostInfoResponse } from './ArticlesTypes'
+import { GetArticleFileType, getArticlesType, GetPostInfo, IGetArticleFile, IGetArticles, PostInfo } from './ArticlesTypes'
 
 const API_URL = SOURCE.url
 
-export async function postArticle(content: PostInfoResponse): Promise<GetPostInfo | undefined> {
+export async function postArticle(content: PostInfo): Promise<GetPostInfo | undefined> {
   try {
     const token = cookies().get('token')?.value.toString()
 
@@ -33,7 +33,7 @@ export async function postArticle(content: PostInfoResponse): Promise<GetPostInf
   }
 }
 
-export async function patchArticle(slug: string, content: PostInfoResponse): Promise<GetPostInfo | undefined> {
+export async function patchArticle(slug: string, content: PostInfo): Promise<GetPostInfo | undefined> {
   try {
     const token = cookies().get('token')?.value.toString()
 
@@ -101,7 +101,7 @@ export async function getArticleFileAdmin(content: IGetArticleFile): Promise<Get
         'Content-Type': 'application/json',
         'Cache-Control': 'no-cache',
       },
-      next: { tags: ['articles'] }
+      next: { tags: ['articles'] },
     })
 
     if (!response.ok) {

@@ -1,40 +1,23 @@
-export interface IGetArticles {
-  page: number
-  size: number
-  has_file?: boolean
-}
+import {
+  Article as _ArticleType,
+  GetArticleFileType as _GetArticleFileType,
+  getArticlesType as _getArticlesType,
+  IGetArticleFile as _IGetArticleFile,
+  IGetArticleInfo as _IGetArticleInfo,
+  IGetArticles as _IGetArticles,
+  SimpleArticleType as _SimpleArticleType,
+} from '../admin/blog/ArticlesTypes'
 
-export type SimpleArticleType = {
-  id: string
-  slug: string
-  title: string
-  short_description: string
-  reading_time: number
-  preview_file_id?: string
-  preview_og_file_id?: string
-  created_at: string
-  updated_at: string
-  is_published: boolean
-}
+export interface IGetArticles extends _IGetArticles {}
 
-export interface ArticleType extends SimpleArticleType {
-  preview_file_id: string
-  preview_og_file_id: string
-}
+export type SimpleArticleType = _SimpleArticleType
 
-export type getArticlesType = {
-  data: Array<ArticleType>
-  page: number
-  size: number
-  total_items: number
-  total_pages: number
-}
+export interface ArticleType extends _ArticleType {}
 
-export interface IGetArticleFile {
-  slug: string
-}
-export type GetArticleFileType = string
+export type getArticlesType = _getArticlesType
 
-export interface IGetArticleInfo {
-  slug: string
-}
+export interface IGetArticleFile extends _IGetArticleFile {}
+
+export type GetArticleFileType = _GetArticleFileType
+
+export interface IGetArticleInfo extends _IGetArticleInfo {}

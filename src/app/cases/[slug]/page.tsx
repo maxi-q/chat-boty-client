@@ -53,13 +53,14 @@ export async function generateMetadata({ params }: ICasePage, parent: ResolvingM
   const previousImages = (await parent).openGraph?.images || []
 
   return {
-    title: `${articleInfo?.title}`,
-    description: articleInfo?.short_description,
+    title: articleInfo?.web_title || articleInfo?.title,
+    description: articleInfo?.web_description || articleInfo?.short_description,
+    keywords: articleInfo?.keywords,
     openGraph: {
       url: `https://chat-boty.com/cases/${slug}`,
       type: 'article',
-      title: articleInfo?.title,
-      description: articleInfo?.short_description,
+      title: articleInfo?.og_title,
+      description: articleInfo?.og_description,
       images: [`${SOURCE.static_url}${articleInfo?.preview_og_file_id}?field=id`],
       // images: [`${SOURCE.static_url}${articleInfo?.slug}-og?field=slug`, ...previousImages],
     },

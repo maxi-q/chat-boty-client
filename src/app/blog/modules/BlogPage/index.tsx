@@ -23,9 +23,10 @@ export const Page = async ({ page }: { page: number }) => {
 
   return (
     <div className="max-w-full">
+      <h1 className="mb-7 text-2xl phone:text-3xl tablet:text-4xl laptop:text-4xl desktop:text-5xl">Статьи блога о продвижении с помощью чат бота</h1>
       <div className="flex flex-wrap w-full">
         {pageData.data.map((el) => (
-          <Card key={el.id} created_at={el.created_at} duration={el.reading_time} title={el.title} link={el.slug} image={el.preview_file_id} />
+          <Card key={el.id} created_at={el.created_at} duration={el.reading_time} title={el.title} link={el.slug} image={el.preview_file_id} views_count={el.views_count} />
         ))}
       </div>
       <div className="flex">

@@ -11,10 +11,10 @@ export async function GET(request: NextRequest) {
     // Принудительная пере-валидация
     if (page) revalidatePath(`/blog?page=${page}`)
     else revalidatePath(`/blog`)
-    
+
     if (page) revalidatePath(`/cases?page=${page}`)
       else revalidatePath(`/cases`)
-    
+
     revalidateTag('articles')
     revalidateTag('cases')
 
