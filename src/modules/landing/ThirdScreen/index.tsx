@@ -36,7 +36,7 @@ export const ThirdScreen = () => {
       <div className="flex relative">
         <aside className={styles.markerResult} />
         <div className={`text-lg phone:text-lg tablet:text-2xl laptop:text-2xl laptop:w-[630px] ${styles.result}`}>
-          Спокойный сон и уверенность, что конкурентов можно легко обойти, ведь подрядчики всё сделали оперативно, без ошибок и сделали много технических фишек
+        Спокойный сон и уверенность, что конкурентов можно легко обойти, ведь подрядчики всё сделали оперативно, без ошибок и с множеством фишек
         </div>
       </div>
     </main>

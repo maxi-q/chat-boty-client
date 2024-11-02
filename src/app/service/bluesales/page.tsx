@@ -512,7 +512,7 @@ export default function Page() {
                 <p
                   className={`${onest.className} font-normal text-black desktop:text-desktop laptop:text-20px phone:text-[20px] nokia:text-[18px] text-[16px] desktop:leading-[32.4px] laptop:leading-[27px] phone:leading-[27px] nokia:leading-[23.4px] leading-[21.6px] phone:mb-12 mb-6`}
                 >
-                  Оставьте заявку на бесплатную консультацию, расскажите про свой проект и за 30 минут определимся нужно ли вам это или нет
+                  Оставьте заявку на бесплатную консультацию, обсудим насколько наши решения (применимы или полезны) для вашего бизнеса
                 </p>
 
                 <CallBackForm color="blue" className={`hidden laptop:block rounded-xl p-6 desktop:p-14 w-max ${styles.feedback}`} />

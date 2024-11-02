@@ -5,6 +5,7 @@ import PostClock from '@/constants/svg/PostClock'
 
 import { CaseType } from '@/api/cases/casesTypes'
 import style from './style.module.css'
+import { getMinutesText } from '@/constants/helpers'
 
 interface IPostPage {
   caseInfo: CaseType
@@ -23,7 +24,7 @@ export const CaseHeader = async ({ caseInfo }: IPostPage) => {
         <span className="me-1">
           <PostClock />
         </span>
-        {caseInfo?.reading_time} минут
+        {caseInfo?.reading_time} {getMinutesText(caseInfo?.reading_time)}
       </div>
     </>
   )
