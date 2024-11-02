@@ -45,7 +45,6 @@ export const CallBackForm = ({ className, color = 'blueviolet' }: { className: s
   if (color == 'blue') {
     elementColor = styles.blue
   }
-  console.log(color, elementColor)
 
   return (
     <form className={className} onSubmit={handleSubmit(communicationRequests)}>

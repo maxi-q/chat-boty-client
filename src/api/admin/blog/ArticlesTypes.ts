@@ -1,4 +1,4 @@
-export interface PostInfoResponse {
+export interface PostInfo {
   title: string
   short_description: string
   reading_time: number
@@ -6,6 +6,19 @@ export interface PostInfoResponse {
   preview_file_id?: string
   preview_og_file_id?: string
   is_published: boolean
+  web_description?: string
+  og_description?: string
+  web_title?: string
+  og_title?: string
+  keywords?: string
+  views_count: number
+}
+
+export interface SimpleArticleType extends Omit<Required<PostInfo>, 'content'> {
+  id: string
+  slug: string
+  created_at: string
+  updated_at: string
 }
 
 export interface GetPostInfo {
@@ -24,26 +37,13 @@ export interface IGetArticles {
   has_file?: boolean
 }
 
-export type SimpleArticleType = {
-  id: string
-  slug: string
-  title: string
-  short_description: string
-  reading_time: number
-  preview_file_id?: string
-  preview_og_file_id?: string
-  created_at: string
-  updated_at: string
-  is_published: boolean
-}
-
-export interface ArticleType extends SimpleArticleType {
+export interface Article extends SimpleArticleType {
   preview_file_id: string
   preview_og_file_id: string
 }
 
 export type getArticlesType = {
-  data: Array<ArticleType>
+  data: Array<Article>
   page: number
   size: number
   total_items: number

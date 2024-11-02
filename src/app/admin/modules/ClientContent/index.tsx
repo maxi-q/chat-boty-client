@@ -6,7 +6,7 @@ import { useEffect, useRef, useState } from 'react'
 
 import 'easymde/dist/easymde.min.css'
 
-import { PostInfoResponse } from '@/api/admin/blog/ArticlesTypes'
+import { PostInfo } from '@/api/admin/blog/ArticlesTypes'
 import { PostCaseInfo } from '@/api/admin/cases/CasesTypes'
 
 import { redirectToSlug, settings } from '../../helpers/helpers'
@@ -54,7 +54,7 @@ const MarkdownEditor = ({
 
   const router = useRouter()
 
-  const PostData = async (contentInfo: PostInfoResponse) => {
+  const PostData = async (contentInfo: PostInfo) => {
     const response = await postClient({
       ...contentInfo,
       content,

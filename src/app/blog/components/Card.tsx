@@ -1,4 +1,5 @@
 import { SOURCE } from '@/constants/static'
+import Eye from '@/constants/svg/Eye'
 import PostClock from '@/constants/svg/PostClock'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -10,9 +11,10 @@ interface ICard {
   title: string
   image: string
   link: string
+  views_count: number
 }
 
-export const Card = ({ created_at, duration, title, image, link }: ICard) => {
+export const Card = ({ created_at, duration, title, image, link, views_count }: ICard) => {
   const date = new Date(created_at).toLocaleDateString()
 
   const keyStr = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/='
@@ -41,8 +43,12 @@ export const Card = ({ created_at, duration, title, image, link }: ICard) => {
             <PostClock />
           </span>
           {duration}
+          <span className="ms-2 me-1">
+            <Eye />
+          </span>
+          {views_count || 0}
         </div>
-        <h1 className='text-2xl tablet:text-2xl laptop:text-3xl'>{title}</h1>
+        <h1 className="text-2xl tablet:text-2xl laptop:text-3xl">{title}</h1>
       </div>
     </Link>
   )
