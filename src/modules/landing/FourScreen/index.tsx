@@ -24,7 +24,7 @@ export const FourScreen = () => {
         <Case
           title={'Клуб по подписке для эксперта по WildBerries'}
           text={
-            '3 тарифа: на 1/3/6 месяцев. Настроен приём платежей\nи уведомление администратора, а также автоматическое\nодобрение в каналы и удаление в случае отсутствия оплаты'
+            'Сделана подписка с 3-мя тарифами: на 1/3/6 месяцев.\nНастроен приём платежей и уведомление администратора,\nа также автоматическое одобрение в каналы и удаление в случае отсутствия оплаты'
           }
           link={'/cases/klub-po-podpiske-dlya-eksperta-po-wildberries'}
         />
@@ -36,7 +36,7 @@ export const FourScreen = () => {
         />
         <Case
           title={'Запуск сертификации с сервисом Senler'}
-          text={'В момент блокировки популярной соц. сети предложил\nоснователю сделать курс, в итоге сделали лучше в 2 раза\nрезультат, чем они сам годом ранее'}
+          text={'В момент блокировки популярной соц. сети предложил\nоснователю сделать курс, в итоге результат \n сделали лучше в 2 раза, чем они сам годом ранее'}
           link={'/cases/zapusk-sertifikatsii-s-servicom-senler'}
         />
         <br className={`hidden laptop:block ${styles.separator}`} />
@@ -56,7 +56,7 @@ const Case = ({ title, text, link }: { title: string; text: string; link: string
   return (
     <div className={`p-5 tablet:p-10 flex group rounded-2xl desktop:h-[350px] ${styles.case}`}>
       <h3 className={'pb-3 text-xl tablet:text-2xl font-bold uppercase'}>{title}</h3>
-      <p className={`text-lg tablet:text-xl font-medium ${styles.text}`} style={{ whiteSpace: 'pre-wrap', flex: 1 }}>
+      <p className={`text-lg tablet:text-xl font-medium laptop:whitespace-pre-wrap ${styles.text}`} style={{ flex: 1 }}>
         {text}
       </p>
       <Link

@@ -14,7 +14,7 @@ export const CallBackBlock = () => {
             чат-бот/автоворонка?
           </h1>
           <h3 className="font-bold text-sm tablet:text-lg laptop:text-lg desktop:text-base uppercase pt-6 pb-10 tracking-wider xs:w-max">
-            Оставьте заявку на бесплатную консультацию, расскажите про свой проект и за 30 минут определимся нужно ли вам это или нет
+            Оставьте заявку на Оставьте заявку на бесплатную консультацию, обсудим насколько наши решения (применимы или полезны) для вашего бизнеса
           </h3>
 
           <CallBackForm className={`hidden laptop:block rounded-xl p-6 desktop:p-14 w-max ${styles.feedback}`} />

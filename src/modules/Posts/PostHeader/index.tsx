@@ -5,6 +5,7 @@ import PostClock from '@/constants/svg/PostClock'
 
 import { ArticleType as PostType } from '@/api/blog/blogTypes'
 import style from './style.module.css'
+import { getMinutesText } from '@/constants/helpers'
 
 interface IPostPage {
   postInfo: PostType
@@ -23,7 +24,7 @@ export const PostHeader = async ({ postInfo }: IPostPage) => {
         <span className="me-1">
           <PostClock />
         </span>
-        {postInfo?.reading_time} минут
+        {postInfo?.reading_time} {getMinutesText(postInfo?.reading_time)}
       </div>
     </>
   )

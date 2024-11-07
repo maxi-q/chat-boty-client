@@ -102,3 +102,20 @@ export async function defaultResponse<T>(errorTitle: string, input: string | URL
     return error.response
   }
 }
+
+export function getMinutesText(minutes: number) {
+  const lastDigit = minutes % 10;
+  const lastTwoDigits = minutes % 100;
+
+  if (lastTwoDigits >= 11 && lastTwoDigits <= 14) {
+    return 'минут';
+  }
+
+  if (lastDigit === 1) {
+    return 'минута';
+  } else if (lastDigit >= 2 && lastDigit <= 4) {
+    return 'минуты';
+  } else {
+    return 'минут';
+  }
+}

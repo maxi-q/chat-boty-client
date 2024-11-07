@@ -20,7 +20,7 @@ export const SixScreen = () => {
           date={'30.08.2024'}
           title={'Сотрудничество с брендом одежды CHUKCHA'}
           text={'C февраля 2023 работаем с данной компанией. Стоит отметить, что ребята давно на рынке: с 2009 года.'}
-          describe={'Время прочтения: 4 минут'}
+          describe={'Время прочтения: 4 минуты'}
           link={'/cases/sotrudnichestvo-s-brendom-odezhdy-chukcha'}
         />
         <Card
@@ -62,7 +62,7 @@ export const SixScreen = () => {
           date={'02.09.2024'}
           title={'Как сделать А/Б тест в Senler'}
           text={'Зачем вообще делить аудиторию? Из статьи вы узнаете как это делать на столько частей, сколько вам нужно.'}
-          describe={'Время прочтения: 4 минут'}
+          describe={'Время прочтения: 4 минуты'}
           link={'/blog/kak-sdelat-ab-test-v-senler'}
         />
       </div>
@@ -72,7 +72,7 @@ export const SixScreen = () => {
 
 const Card = ({ date, title, text, describe, link }: { date: string; title: string; text: string; describe: string; link: string }) => {
   return (
-    <Link href={link} className={`rounded-xl p-6 laptop:p-8 h-max w-full laptop:w-[300px] laptop:h-[340px] desktop:w-[408px] desktop:h-[500px] flex flex-col ${styles.card}`}>
+    <Link href={link} className={`rounded-xl p-6 laptop:p-8 h-max w-full laptop:w-[300px] laptop:h-[350px] desktop:w-[408px] desktop:h-[500px] flex flex-col ${styles.card}`}>
       <h5 className="text-xs select-none">{date}</h5>
       <Splitter />
       <h3 className={`mb-4 text-md desktop:text-2xl leading-snug uppercase font-medium ${styles.textTitle}`}>{title}</h3>

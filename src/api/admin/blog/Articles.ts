@@ -1,6 +1,6 @@
 import { SOURCE } from '@/constants/static'
 import { cookies } from 'next/headers'
-import { GetArticleFileType, getArticlesType, GetPostInfo, IGetArticleFile, IGetArticles, PostInfo } from './ArticlesTypes'
+import { Article, GetArticleFileType, getArticlesType, GetPostInfo, IGetArticleFile, IGetArticleInfo, IGetArticles, PostInfo } from './ArticlesTypes'
 
 const API_URL = SOURCE.url
 
@@ -117,6 +117,33 @@ export async function getArticleFileAdmin(content: IGetArticleFile): Promise<Get
     return
   }
 }
+
+export async function getArticleInfoAdmin(content: IGetArticleInfo): Promise<Article | undefined> {
+  try {
+    const response = await fetch(`${API_URL}posts/${content.slug}/?field=slug`, {
+      method: 'GET',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+        'Cache-Control': 'no-cache',
+      },
+      next: { tags: ['articles'], 'revalidate': false }
+    })
+
+    if (!response.ok) {
+      const error = new Error(`HTTP Error: ${response.status}`)
+      ;(error as any).status = response.status
+      throw error
+    }
+
+    const data = await response.json()
+    return data
+  } catch (error) {
+    console.log(error, 'Error: getArticleInfo')
+    return
+  }
+}
+
 
 export const dynamic = 'force-dynamic'
 export const revalidate = 0

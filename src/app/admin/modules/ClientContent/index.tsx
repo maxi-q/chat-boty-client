@@ -59,7 +59,10 @@ const MarkdownEditor = ({
       ...contentInfo,
       content,
     })
-    if (!response) alert(`Произошла ошибка: ${response}`)
+    if (!response) {
+      alert(`Произошла ошибка: ${response}`)
+      return
+    }
     if (response.slug) {
       alert(`Успех! сейчас перенесем вас на изменение ${response.slug}`)
       const redirectPath = redirectToSlug(currentPath, response.slug)

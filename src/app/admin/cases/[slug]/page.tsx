@@ -1,11 +1,10 @@
 import dynamic from 'next/dynamic'
 
-import { getCaseFileAdmin, patchCase } from '@/api/admin/cases/Cases'
-import { getCaseInfo } from '@/api/cases/Cases'
+import { getCaseFileAdmin, getCaseInfoAdmin, patchCase } from '@/api/admin/cases/Cases'
 import MarkdownEditor from '../../modules/ClientContent'
 
 const NoSsr = async ({ params }: { params: { slug: string } }) => {
-  const caseInfo = await getCaseInfo({ slug: params.slug })
+  const caseInfo = await getCaseInfoAdmin({ slug: params.slug })
   const caseFile = (await getCaseFileAdmin({ slug: params.slug })) || ''
 
   if (!caseInfo) return <>Ошибка загрузки информации о статье</>
@@ -21,3 +20,5 @@ const NoSsr = async ({ params }: { params: { slug: string } }) => {
 export default dynamic(() => Promise.resolve(NoSsr), {
   ssr: false,
 })
+
+export const fetchCache = 'force-no-store'
