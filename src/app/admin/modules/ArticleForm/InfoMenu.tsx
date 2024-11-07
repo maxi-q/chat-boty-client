@@ -54,7 +54,7 @@ const ArticleForm = ({ onSubmit, data }: { onSubmit: (content: PostInfo) => void
 
   const handleSave = () => {
     if (isPublished) {
-      if(title || description || readingTime) {
+      if(title || description) {
         alert('Заполните основные данные')
         return
       }
@@ -64,10 +64,6 @@ const ArticleForm = ({ onSubmit, data }: { onSubmit: (content: PostInfo) => void
       }
       if(webDescription || ogDescription || webTitle || ogTitle || keywords ) {
         alert('Заполните метаданные')
-        return
-      }
-      if(viewsCount) {
-        alert('Заполните количество просмотров')
         return
       }
     }
