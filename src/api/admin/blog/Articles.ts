@@ -48,6 +48,8 @@ export async function patchArticle(slug: string, content: PostInfo): Promise<Get
     })
 
     const data = await response.json()
+    
+    console.log(data)
 
     if (!response.ok) {
       const error = new Error(`HTTP Error: ${response.status}`)
