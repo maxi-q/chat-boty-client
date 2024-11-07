@@ -1,11 +1,10 @@
 import dynamic from 'next/dynamic'
 
-import { getArticleFileAdmin, patchArticle } from '@/api/admin/blog/Articles'
-import { getArticleInfo } from '@/api/blog/Articles'
+import { getArticleFileAdmin, getArticleInfoAdmin, patchArticle } from '@/api/admin/blog/Articles'
 import MarkdownEditor from '../../modules/ClientContent'
 
 const NoSsr = async ({ params }: { params: { slug: string } }) => {
-  const articleInfo = await getArticleInfo({ slug: params.slug })
+  const articleInfo = await getArticleInfoAdmin({ slug: params.slug })
   const articleFile = (await getArticleFileAdmin({ slug: params.slug })) || ''
 
   if (!articleInfo) return <>Ошибка загрузки информации о статье</>
@@ -21,3 +20,5 @@ const NoSsr = async ({ params }: { params: { slug: string } }) => {
 export default dynamic(() => Promise.resolve(NoSsr), {
   ssr: false,
 })
+
+export const fetchCache = 'force-no-store'
