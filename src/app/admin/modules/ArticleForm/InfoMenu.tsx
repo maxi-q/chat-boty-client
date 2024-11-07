@@ -54,15 +54,15 @@ const ArticleForm = ({ onSubmit, data }: { onSubmit: (content: PostInfo) => void
 
   const handleSave = () => {
     if (isPublished) {
-      if(title || description) {
+      if(!(title && description)) {
         alert('Заполните основные данные')
         return
       }
-      if (!(preview?.id || data?.preview_file_id) || !(ogPreview?.id || data?.preview_og_file_id)) {
+      if (!((preview?.id || data?.preview_file_id) && (ogPreview?.id || data?.preview_og_file_id))) {
         alert('Выберете превью')
         return
       }
-      if(webDescription || ogDescription || webTitle || ogTitle || keywords ) {
+      if(!(webDescription && ogDescription && webTitle && ogTitle && keywords)) {
         alert('Заполните метаданные')
         return
       }
