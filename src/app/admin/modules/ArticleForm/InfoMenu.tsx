@@ -13,7 +13,7 @@ interface ImageData {
 const ArticleForm = ({ onSubmit, data }: { onSubmit: (content: PostInfo) => void; data?: PostInfo }) => {
   const [title, setTitle] = useState(data?.title || '')
   const [description, setDescription] = useState(data?.short_description || '')
-  const [readingTime, setReadingTime] = useState<number | ''>(data?.reading_time || '')
+  const [readingTime, setReadingTime] = useState<number>(data?.reading_time || 1)
   const [isPublished, setIsPublished] = useState(data?.is_published || false)
 
   const [webDescription, setWebDescription] = useState(data?.web_description || '')
@@ -21,18 +21,18 @@ const ArticleForm = ({ onSubmit, data }: { onSubmit: (content: PostInfo) => void
   const [webTitle, setWebTitle] = useState(data?.web_title || '')
   const [ogTitle, setOgTitle] = useState(data?.og_title || '')
   const [keywords, setKeywords] = useState(data?.keywords || '')
-  const [viewsCount, setViewsCount] = useState<number | ''>(data?.views_count || '')
+  const [viewsCount, setViewsCount] = useState<number>(data?.views_count || 0)
 
   useEffect(() => {
     setTitle(data?.title || '')
     setDescription(data?.short_description || '')
-    setReadingTime(data?.reading_time || '')
+    setReadingTime(data?.reading_time || 1)
     setWebDescription(data?.web_description || '')
     setOgDescription(data?.og_description || '')
     setWebTitle(data?.web_title || '')
     setOgTitle(data?.og_title || '')
     setKeywords(data?.keywords || '')
-    setViewsCount(data?.views_count || '')
+    setViewsCount(data?.views_count || 0)
   }, [data])
 
   const [preview, setPreview] = useState<ImageData | null>(null)
@@ -54,8 +54,20 @@ const ArticleForm = ({ onSubmit, data }: { onSubmit: (content: PostInfo) => void
 
   const handleSave = () => {
     if (isPublished) {
+      if(title || description || readingTime) {
+        alert('Заполните основные данные')
+        return
+      }
       if (!(preview?.id || data?.preview_file_id) || !(ogPreview?.id || data?.preview_og_file_id)) {
         alert('Выберете превью')
+        return
+      }
+      if(webDescription || ogDescription || webTitle || ogTitle || keywords ) {
+        alert('Заполните метаданные')
+        return
+      }
+      if(viewsCount) {
+        alert('Заполните количество просмотров')
         return
       }
     }
@@ -117,7 +129,7 @@ const ArticleForm = ({ onSubmit, data }: { onSubmit: (content: PostInfo) => void
               value={readingTime}
               onChange={(e) => {
                 const value = parseInt(e.target.value)
-                setReadingTime(value >= 0 ? value : '')
+                setReadingTime(value > 0 ? value : 1)
               }}
               required
               className="block w-full border border-gray-300 rounded p-2 focus:outline-none focus:border-blue-400"
@@ -229,7 +241,7 @@ const ArticleForm = ({ onSubmit, data }: { onSubmit: (content: PostInfo) => void
               value={viewsCount}
               onChange={(e) => {
                 const value = parseInt(e.target.value)
-                setViewsCount(value >= 0 ? value : '')
+                setViewsCount(value >= 0 ? value : 0)
               }}
               className="block w-full border border-gray-300 rounded p-2 focus:outline-none focus:border-blue-400"
               placeholder="Количество просмотров"
