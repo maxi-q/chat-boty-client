@@ -5,7 +5,7 @@ import { Tablet } from './AnimatedTablet'
 import { CallBackForm } from './CallBackForm'
 import styles from './style.module.css'
 
-export const SevenScreen = () => {
+const SevenScreen = () => {
   return (
     <main className={` section p-5  pt-2 laptop:p-5 laptop:pl-[50px] laptop:pt-[70px] bg-transparent ${styles.screen}`}>
       <div className="flex gap-16 desktop:gap-10">
@@ -39,3 +39,5 @@ export const SevenScreen = () => {
     </main>
   )
 }
+
+export default SevenScreen
