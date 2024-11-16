@@ -3,6 +3,9 @@ User-agent: *
 Disallow: */_next/
 Disallow: *?page=
 Disallow: */admin_login
+Disallow: *?_rsc=
+Disallow: */static/
+Disallow: */api/
 
 
 # Host

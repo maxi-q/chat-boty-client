@@ -10,7 +10,7 @@ const nunitoFont = Nunito({
   // variable: '--font-poppins',
 })
 
-export const SecondScreen = () => {
+const SecondScreen = () => {
   return (
     <main className={`grid section p-5 laptop:pl-[40px] laptop:pt-[70px] ${styles.screen}`} id="service">
       <Link href={'#service'}>
@@ -151,3 +151,5 @@ const Card = ({
     </Link>
   )
 }
+
+export default SecondScreen

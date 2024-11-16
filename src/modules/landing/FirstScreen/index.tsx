@@ -10,7 +10,7 @@ const nunitoFont = Nunito({
   // variable: '--font-poppins',
 })
 
-export const FirstScreen = () => {
+const FirstScreen = () => {
   return (
     // bg-[url("/main_abstract_figure.webp")]
     <main
@@ -50,3 +50,5 @@ const Box = ({ num, title, p, style }: { num: number; title: string; p: React.JS
     </li>
   )
 }
+
+export default FirstScreen

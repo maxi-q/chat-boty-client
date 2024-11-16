@@ -5,7 +5,7 @@ import GreenSettings from '../../../constants/svg/GreenSettings'
 import XCross from '../../../constants/svg/XCross'
 import styles from './style.module.css'
 
-export const ThirdScreen = () => {
+const ThirdScreen = () => {
   return (
     <main
       className={`section before:bg-[url("/aside_abstract.webp")] px-4 py-5 laptop:px-[40px] laptop:pt-[70px] pb-24 before:bg-no-repeat  before:bg-contain before:content-[''] before:absolute before:h-[100%] before:max-h-[30%] before:w-[100%] laptop:before:max-h-[100%] laptop:before:h-[60%] laptop:before:w-[50%] before:right-[0] before:bottom-[12%] sm:before:bottom-[7%] before:bg-right-bottom laptop:before:bg-bottom laptop:before:right-[0] laptop:before:bottom-[0] ${styles['rotating-background']} ${styles.screen}`}
@@ -77,3 +77,6 @@ const CardGet = ({ icon, title, text }: { icon: React.ReactNode; title: string; 
     </li>
   )
 }
+
+
+export default ThirdScreen

@@ -2,7 +2,7 @@ import Clock from '@/constants/svg/Clock'
 import styles from './style.module.css'
 import Link from 'next/link'
 
-export const SixScreen = () => {
+ const SixScreen = () => {
   return (
     <main className={'section bp-5 px-4 py-5 laptop:px-[40px] tablet:pt-10 laptop:pt-8 pb-8  ' + styles.screen}>
       <h1 className={'text-3xl phone:text-4xl tablet:text-6xl laptop:text-5xl desktop:text-6xl pb-8 select-none uppercase tracking-wide ' + styles.title}>
@@ -87,3 +87,5 @@ const Card = ({ date, title, text, describe, link }: { date: string; title: stri
 }
 
 const Splitter = () => <div className={`${styles.splitter} my-5 spltr`} />
+
+export default SixScreen

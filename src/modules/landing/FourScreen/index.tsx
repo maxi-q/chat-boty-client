@@ -3,7 +3,7 @@ import Link from 'next/link'
 import LinkIcon from '../../../constants/svg/LinkIcon'
 import styles from './style.module.css'
 
-export const FourScreen = () => {
+const FourScreen = () => {
   return (
     <main className={`px-4 py-5 laptop:px-[40px] laptop:pt-[70px] pb-32 mt-[-70px] ${styles.screen}`}>
       <h1 className={`text-3xl phone:text-4xl tablet:text-6xl laptop:text-5xl desktop:text-6xl pb-16 uppercase tracking-wide ${styles.title}`}>кейсы:</h1>
@@ -82,3 +82,5 @@ const CTA = ({ title, text, link }: { title: string; text: string; link: string 
     </div>
   )
 }
+
+export default FourScreen
