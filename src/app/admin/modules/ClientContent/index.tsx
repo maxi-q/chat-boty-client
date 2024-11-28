@@ -13,6 +13,7 @@ import { redirectToSlug, settings } from '../../helpers/helpers'
 import ArticleForm from '../../modules/ArticleForm/InfoMenu'
 import { AdminMDXPage } from '../AdminMDXPage'
 
+
 const MarkdownEditor = ({
   loadContent,
   postClient,
@@ -54,7 +55,7 @@ const MarkdownEditor = ({
 
   const router = useRouter()
 
-  const PostData = async (contentInfo: PostInfo) => {
+  const PostData = async (contentInfo?: PostInfo, autosave?: boolean) => {
     const response = await postClient({
       ...contentInfo,
       content,
@@ -64,15 +65,21 @@ const MarkdownEditor = ({
       return
     }
     if (response.slug) {
-      alert(`Успех! сейчас перенесем вас на изменение ${response.slug}`)
-      const redirectPath = redirectToSlug(currentPath, response.slug)
-      router.push(redirectPath)
+      if (currentPath.split('/')[3] == 'new') {
+        alert(`Успех! сейчас перенесем вас на изменение ${response.slug} ${currentPath}`)
+        const redirectPath = redirectToSlug(currentPath, response.slug)
+        router.push(redirectPath)
+      }
+      else if (!autosave) {
+        alert(`Успех! Для обновления данных на клиенте нужно 5 минут`)
+      }
     }
   }
 
+
   return (
     <div className="prose section p-2">
-      <ArticleForm onSubmit={PostData} data={loadContent?.postInfo} />
+      <ArticleForm onSubmit={PostData} data={loadContent?.postInfo} content={content} />
       <div className="flex w-screen">
         <div className="w-1/2 p-4">
           <textarea id="markdown-editor" className="w-full h-full border border-gray-300 rounded p-2" />

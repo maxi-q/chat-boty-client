@@ -1,4 +1,4 @@
-import { FormEvent, useEffect, useState } from 'react'
+import { FormEvent, useEffect, useRef, useState } from 'react'
 
 // Предполагаем, что эта функция открывает модальное окно для выбора изображения
 import { PostInfo } from '@/api/admin/blog/ArticlesTypes'
@@ -10,7 +10,26 @@ interface ImageData {
   title: string
 }
 
-const ArticleForm = ({ onSubmit, data }: { onSubmit: (content: PostInfo) => void; data?: PostInfo }) => {
+// =------=
+type DebouncedFunction<T extends any[]> = (...args: T) => void;
+
+export const useDebounceCallback = <T extends any[]>(func: DebouncedFunction<T>, delay: number) => {
+  const [args, setArgs] = useState<T | null>(null);
+
+  useEffect(() => {
+    if (args === null) return;
+
+    const timeout = setTimeout(() => func(...args), delay);
+
+    return () => clearTimeout(timeout);
+  }, [args]); // DO NOT add func and delay to deps
+
+  return (...args: T) => setArgs(args);
+};
+// =------=
+
+
+const ArticleForm = ({ onSubmit, data, content }: { onSubmit: (content: PostInfo, autosave?: boolean) => void; data?: PostInfo; content: string }) => {
   const [title, setTitle] = useState(data?.title || '')
   const [description, setDescription] = useState(data?.short_description || '')
   const [readingTime, setReadingTime] = useState<number>(data?.reading_time || 1)
@@ -35,6 +54,7 @@ const ArticleForm = ({ onSubmit, data }: { onSubmit: (content: PostInfo) => void
     setViewsCount(data?.views_count || 0)
   }, [data])
 
+
   const [preview, setPreview] = useState<ImageData | null>(null)
   const [ogPreview, setOgPreview] = useState<ImageData | null>(null)
 
@@ -52,7 +72,7 @@ const ArticleForm = ({ onSubmit, data }: { onSubmit: (content: PostInfo) => void
     }
   }
 
-  const handleSave = () => {
+  const handleSave = (autosave: boolean = false) => {
     if (isPublished) {
       if(!(title && description)) {
         alert('Заполните основные данные')
@@ -64,6 +84,11 @@ const ArticleForm = ({ onSubmit, data }: { onSubmit: (content: PostInfo) => void
       }
       if(!(webDescription && ogDescription && webTitle && ogTitle && keywords)) {
         alert('Заполните метаданные')
+        return
+      }
+    } else {
+      if(!title) {
+        alert('Заполните Заголовок')
         return
       }
     }
@@ -81,8 +106,24 @@ const ArticleForm = ({ onSubmit, data }: { onSubmit: (content: PostInfo) => void
       og_title: ogTitle,
       keywords: keywords,
       views_count: viewsCount || 0,
-    })
+    }, autosave)
   }
+
+  const saveContent = useDebounceCallback(() => handleSave(true), 500)
+
+  const isFirstRender = useRef(true);
+
+  useEffect(()=>{
+    if (!content) return
+
+    if (isFirstRender.current) {
+      isFirstRender.current = false;
+      return; // Просто не выполняем callback в первый раз
+    }
+
+
+    saveContent()
+  }, [content])
 
   const onFormSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
