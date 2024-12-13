@@ -23,12 +23,12 @@ export const Footer = () => {
         <div>
           <h3 className={`${styles.navTitle} ${titleClass}`}>Услуги</h3>
           <ul className={liClass}>
-            <LiComponent active={false}>Автоматизация CRM</LiComponent>
-            <LiComponent active={false}>Создание чат-ботов и автоворонок</LiComponent>
-            <LiComponent active={false}>Настройка и оформление геткурс</LiComponent>
-            <LiComponent active={false}>Настройка вебинарных комнат</LiComponent>
-            <LiComponent active={false}>Рассылки</LiComponent>
-            <LiComponent active={false}>Email воронки</LiComponent>
+            <LiComponent href='/service/bluesales'  active={false}>Автоматизация CRM</LiComponent>
+            <LiComponent href='/service/autofunnel'  active={false}>Создание чат-ботов и автоворонок</LiComponent>
+            <LiComponent href='/service/getcourse'  active={false}>Настройка и оформление геткурс</LiComponent>
+            <LiComponent href='/#service'  active={false}>Рассылки</LiComponent>
+            <LiComponent href='/service/vebinar'  active={false}>Настройка вебинарных комнат</LiComponent>
+            <LiComponent href='/#service'  active={false}>SERM</LiComponent>
           </ul>
         </div>
         <div>

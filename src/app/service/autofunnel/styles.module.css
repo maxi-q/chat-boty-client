@@ -1,0 +1,115 @@
+
+.container {
+  @apply max-w-[1880px] mx-auto p-16 rounded-[20px] bg-white;
+}
+
+.contact_container {
+  @apply max-w-[1880px] mx-auto p-16 rounded-[20px] desktop:bg-transparent bg-white;
+}
+
+@media (max-width: 1500px) {
+  .container {
+    @apply p-12;
+  }
+  .contact_container {
+    @apply p-12;
+  }
+}
+
+@media (max-width: 991px) {
+  .container {
+    @apply p-5 rounded-xl;
+  }
+
+  .contact_container {
+    @apply p-5 rounded-xl;
+  }
+}
+
+.bgBgColor {
+  --tw-bg-opacity: 1;
+  background-color: rgb(242 242 242 / var(--tw-bg-opacity));
+}
+
+.\!bg-black-dark {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(11 10 10 / var(--tw-bg-opacity)) !important;
+}
+
+.bg-green {
+  --tw-bg-opacity: 1;
+  background-color: rgb(143 254 1 / var(--tw-bg-opacity));
+}
+
+.CTAButton {
+  background-color: var(--color-main);
+}
+
+.CTAAction {
+  background-color: #7001FE !important;
+}
+
+.CTAArrow {
+  fill: var(--color-main);
+}
+
+.hover\:bg-green:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(143 254 1 / var(--tw-bg-opacity));
+}
+
+.bg-grey-dark {
+  --tw-bg-opacity: 1;
+  background-color: rgb(47 46 50 / var(--tw-bg-opacity));
+}
+
+/* btn green */
+.btn_green {
+  transition: .2s ease all;
+  @apply z-[1] relative uppercase py-[16.44px] phone:py-[22.25px]  pl-[22.5px] phone:pl-[30px] laptop:pl-[52px] pr-[58.13px] phone:pr-[77.5px]  laptop:pr-[136px] rounded-full bg-green-700 text-[11.25px] phone:text-[15px] font-medium leading-[120%] inline-flex items-center
+}
+
+.btn_green::before {
+  content: "";
+  transition: .2s ease all;
+  @apply absolute w-[46px] phone:w-[62px] h-full rounded-full right-0 top-0 z-[-1]
+}
+
+.btn_green img {
+  transition: .2s ease all;
+  @apply w-[14px] phone:w-[19px] tablet:w-[30px] absolute right-[16.41px] phone:right-[21.88px] tablet:right-[35px] top-1/2 -translate-y-1/2
+}
+
+.btn_green:hover::before {
+  @apply w-full
+}
+
+.btn_green:hover img {
+  @apply w-[22px] phone:w-[30px] tablet:w-10 rotate-90
+}
+
+/* btn purple */
+.btn_purple {
+  transition: .2s ease all;
+  @apply z-[1] relative uppercase hover:text-white py-[16.44px] phone:py-[22.25px] tablet:py-[35.5px] pl-[22.5px] phone:pl-[30px] tablet:pl-12 laptop:pl-[52px] pr-[58.13px] phone:pr-[77.5px] tablet:pr-[124px] laptop:pr-[136px] rounded-full text-[11.25px] phone:text-[15px] tablet:text-2xl font-medium leading-[120%] inline-flex items-center
+}
+
+.btn_purple::before {
+  content: "";
+  transition: .2s ease all;
+  @apply absolute w-[46px] phone:w-[62px] tablet:w-[100px] h-full rounded-full bg-purple-700 right-0 top-0 z-[-1]
+}
+
+.btn_purple img {
+  transition: .2s ease all;
+  @apply w-[14px] phone:w-[19px] tablet:w-[30px] absolute right-[16.41px] phone:right-[21.88px] tablet:right-[35px] top-1/2 -translate-y-1/2
+}
+
+.btn_purple:hover::before {
+  @apply w-full
+}
+
+.btn_purple:hover img {
+  @apply w-[22px] phone:w-[30px] tablet:w-10 rotate-90
+}
+
