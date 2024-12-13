@@ -1,6 +1,6 @@
 import { CallBackBlock } from '@/modules/Posts/CallBackBlock'
 
-import Image from 'next/Image'
+import Image from 'next/image'
 
 import { CallToActionButton } from '@/components/ui/CallToAction'
 import SettingsIcon from './svg/settings-icon'
