@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 
-import mdx from '@next/mdx'
+import mdx from '@next/mdx';
+import withSvgr from '@svgr/webpack';
 
 const withMDX = mdx()
 
@@ -52,6 +53,14 @@ const nextConfig = {
         ],
       },
     ]
+  },
+  webpack(config) {
+    config.module.rules.push({
+      test: /\.svg$/,
+      use: ['@svgr/webpack'],  // обрабатываем SVG как React-компоненты
+    });
+
+    return config;
   },
 }
 export default withMDX(nextConfig)

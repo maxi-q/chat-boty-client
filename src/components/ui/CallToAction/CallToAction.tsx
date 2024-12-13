@@ -45,7 +45,7 @@ export const CallToActionButton = ({
       onClick={onClick ? onClick : openPopup}
       className={`${className} ${styles.button} ${buttonColor} h-[84px] phone:h-[100px] max-w-[400px] text-8 pe-[110px] w-full `}
     >
-      <div style={{ pointerEvents: 'none' }} className={`${actionClassName} ${styles.action} ${actionClassName} h-[84px] phone:h-[100px] w-[84px] phone:w-[100px] `}>
+      <div style={{ pointerEvents: 'none' }} className={`${actionClassName} ${styles.action} h-[84px] phone:h-[100px] w-[84px] phone:w-[100px] `}>
         <div>
           <Arrow
             className={`${arrowClassName} ${styles.arrowCircle} ${buttonColor} h-[36px] w-[36px] top-[24px] right-[24px] phone:h-[38px] phone:w-[38px] phone:top-[31px] phone:right-[31px]`}
