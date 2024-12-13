@@ -53,7 +53,7 @@ export default function Page() {
               </div>
               {/* <Image width={100} height={100} unoptimized src={`${SOURCE.static_url}settings-icon?field=slug`} alt="" className="w-[44px] nokia:w-[59px] tablet:w-[95px] desktop:w-[90px] absolute left-[-11px] nokia:left-[-15px] tablet:left-[-24px] laptop:left-auto laptop:right-[595px] desktop:right-[679px] top-[154px] nokia:top-[205px] tablet:top-[329px] laptop:top-auto laptop:bottom-[-25px] desktop:bottom-[78px] z-[-1]"/> */}
               <Image width={300} height={300} src={`${SOURCE.static_url}msg-icon-1?field=slug`} alt="" className="w-[64px] nokia:w-[86px] tablet:w-[138px] desktop:w-auto absolute left-[19px] nokia:left-9 tablet:left-[58px] laptop:left-auto laptop:right-[257px] desktop:right-[356px] bottom-[181px] nokia:bottom-[252px] tablet:bottom-[404px] laptop:bottom-auto laptop:top-[55px] desktop:top-[113px] z-[-1]"/>
-              <Image width={600} height={600} src={`${SOURCE.static_url}home-robot?field=slug`} alt="" className="min-w-[321px] nokia:min-w-[428px] tablet:min-w-[685px] w-[321px] nokia:w-[428px] tablet:w-[685px] laptop:w-[549px] desktop:w-[840px] absolute translate-x-1/2 laptop:translate-x-0 right-1/2 laptop:right-[-119px] desktop:right-[-167px] bottom-[-61px] nokia:bottom-[-82.5px] tablet:bottom-[-132px] desktop:bottom-[-212px] z-[-1]"/>
+              <Image width={800} height={800} src={`${SOURCE.static_url}home-robot?field=slug`} alt="" className="min-w-[321px] nokia:min-w-[428px] tablet:min-w-[685px] w-[321px] nokia:w-[428px] tablet:w-[685px] laptop:w-[549px] desktop:w-[840px] absolute translate-x-1/2 laptop:translate-x-0 right-1/2 laptop:right-[-119px] desktop:right-[-167px] bottom-[-61px] nokia:bottom-[-82.5px] tablet:bottom-[-132px] desktop:bottom-[-212px] z-[-1]"/>
               <h2 className="order-1 text-[25px] nokia:text-[30px] tablet:text-[50px] laptop:text-[55px] desktop:text-[64px] leading-[120%] font-IgraSans uppercase mb-[22px] nokia:mb-[19px] tablet:mb-[29px] laptop:mb-[34px] desktop:mb-16 text-center laptop:text-start"><span className="inline text-purple">Техническая сборка <br/> автоворонки</span> в соцсетях <br/> и мессенджерах за 72 часа </h2>
               <ul className="order-3 flex flex-col laptop:flex-row  items-stretch gap-[17px] nokia:gap-[22px] tablet:gap-[28px] desktop:gap-[34px] mb-[247px] nokia:mb-[356px] tablet:mb-[571px] laptop:mb-[46px] desktop:mb-[52px]">
                 <li className="w-[194px] nokia:w-[260px] tablet:w-[415px] laptop:w-[318px] desktop:w-[386px] flex flex-col items-start gap-2 nokia:gap-[10px] tablet:gap-[13px] desktop:gap-4 bg-[rgba(243,243,243,0.5)] rounded-[16px] nokia:rounded-[21px] laptop:rounded-[26px] desktop:rounded-[32px] pt-2 nokia:pt-[10px] tablet:pt-[13px] desktop:pt-[16px] pr-[22px] desktop:pr-[60px] pb-[23px] nokia:pb-8 tablet:pb-[37px] desktop:pb-[45px] pl-[23px] nokia:pl-[30px] tablet:pl-[37px] desktop:pl-[46px]">
@@ -210,7 +210,7 @@ export default function Page() {
                 </div>
                 <div className="w-full laptop:w-[calc(100%_-_629px)] desktop:w-[calc(100%_-_846px)]">
                   <div className={`mb-[15px] tablet:mb-[25px] laptop:mb-[22px] desktop:mb-[30px] relative z-[1] p-[25px_26px_24px_111px] tablet:p-[40px_42px_40px_178px] laptop:pt-[42px] desktop:pt-[57px] laptop:pr-[43px] desktop:pr-[59px] laptop:pb-[36px] desktop:pb-[49px] laptop:pl-[186px] desktop:pl-[250px] ${styles.bgBgColor} rounded-[9px] tablet:rounded-[14px] desktop:rounded-[20px]`}>
-                    <Image width={100} height={100} src={`${SOURCE.static_url}with-us-card-1?field=slug`} alt="" className="absolute w-[73px] tablet:w-[118px] laptop:w-[122px] desktop:w-[165px] bottom-0 left-[17px] tablet:left-7 laptop:left-10"/>
+                    <Image width={400} height={400} src={`${SOURCE.static_url}with-us-card-1?field=slug`} alt="" className="absolute w-[73px] tablet:w-[118px] laptop:w-[122px] desktop:w-[165px] bottom-0 left-[17px] tablet:left-7 laptop:left-10"/>
                     <div>
                       <h3 className="text-[16px] tablet:text-[24px] laptop:text-[29px] desktop:text-[40px] font-semibold leading-[120%] mb-[7px] desktop:mb-[10px]">В инстаграм боты могут:</h3>
                       <p className="text-[10px] tablet:text-[16px] laptop:text-[18px] desktop:text-[25px] font-normal leading-[120%] color-[#0B0A0A]">Отправлять голосовое, видео, карусель</p>
@@ -220,16 +220,16 @@ export default function Page() {
                     <Image width={100} height={100} src={`${SOURCE.static_url}with-us-card-2?field=slug`} alt="" className="absolute w-[59px] tablet:w-[95px] laptop:w-[99px] desktop:w-[133px] bottom-1/2 left-7 tablet:left-[47px] desktop:left-[64px] translate-y-1/2"/>
                     <div>
                       <h3 className="text-[16px] tablet:text-[24px] laptop:text-[29px] desktop:text-[40px] font-semibold leading-[120%] mb-[7px] desktop:mb-[10px]">во вконтакте бот может:</h3>
-                      <p className="text-[10px] tablet:text-[16px] laptop:text-[18px] desktop:text-[25px] font-normal leading-[120%] color-[#0B0A0A]">Создать пост на стене подписчиков с вашим текстом и картинкой (гиф-анимация, как это происходит)</p>
+                      <p className="text-[10px] tablet:text-[16px] laptop:text-[18px] desktop:text-[25px] font-normal leading-[120%] color-[#0B0A0A]">Создать пост на стене подписчиков с вашим текстом и картинкой</p>
                     </div>
                   </div>
                 </div>
               </div>
               <div className="flex flex-col laptop:flex-row items-stretch gap-3 phone:gap-4 tablet:gap-[27px] laptop:gap-[21px] desktop:gap-[30px]">
                 <div className={`w-full laptop:w-[calc(100%_-_506px)] desktop:w-[calc(100%_-_681px)] flex flex-row-reverse laptop:flex-row items-center gap-[10px] phone:gap-[14px] tablet:gap-[22px] laptop:gap-[43px] desktop:gap-[58px] ${styles.bgBgColor} rounded-[7px] phone:rounded-[9px] tablet:rounded-[14px] desktop:rounded-[20px] p-[12px_12px_15px_15px] phone:p-[16px_16px_20px_20px] tablet:p-[26px_27px_32px_33px] laptop:py-[44px] desktop:py-[29px] laptop:pl-[41px] desktop:pl-[68px] laptop:pr-[58px] desktop:pr-[79px]`}>
-                  <Image width={100} height={100} src={`${SOURCE.static_url}with-us-card-3?field=slug`} alt="" className="w-[93px] phone:w-[125px] tablet:w-[200px] laptop:w-[241px] desktop:w-[324px] shrink-0"/>
+                  <Image width={400} height={400} src={`${SOURCE.static_url}with-us-card-3-1?field=slug`} alt="" className="w-[93px] phone:w-[125px] tablet:w-[200px] laptop:w-[241px] desktop:w-[324px] shrink-0"/>
                   <div className="w-full">
-                    <h3 className="text-[12px] phone:text-[16px] tablet:text-[27px] laptop:text-[29px] desktop:text-[40px] uppercase font-semibold leading-[120%] mb-[3px] phone:mb-[4px] tablet:mb-[7px] desktop:mb-[10px]">Вы можете подключить нейрость для общения <br/> и продаж клиентам:</h3>
+                    <h3 className="text-[12px] phone:text-[16px] tablet:text-[27px] laptop:text-[29px] desktop:text-[40px] uppercase font-semibold leading-[120%] mb-[3px] phone:mb-[4px] tablet:mb-[7px] desktop:mb-[10px]">Вы можете подключить нейросеть для общения <br/> и продаж клиентам:</h3>
                     <p className="text-[7px] phone:text-[10px] tablet:text-[16px] laptop:text-[18px] desktop:text-[25px] font-normal leading-[120%] color-[#0B0A0A]">Как только появилась эта возможность <br/> в 2023 году мы реализовали для бренда одежды CHUKCHA </p>
                   </div>
                 </div>
@@ -238,8 +238,10 @@ export default function Page() {
                   <span className=""><span className="inline font-semibold">Мы даже можем сделать аналог ХОМЯКА в Телеграм</span> на WebApp для вас.</span>
                   <span className="block laptop:inline text-[7.5px] phone:text-[10px] tablet:text-[16px] leading-[120%] laptop:text-inherit pt-[4px] tablet:pt-[7px] laptop:pt-0">С вас - сценарий, дизайн, <br className="laptop:hidden"/> а реализация за нами</span></p>
 
-                  <CallToActionButton className={`mt-16 laptop:mt-3 laptop:w-auto max-w-full ${styles.CTAButton}`} color='white' actionClassName={styles.CTAAction} arrowClassName={styles.CTAArrow} textClassName="p-0 !left-0 !text-[10px] !tablet:text-[16px] !desktop:text-[24px] !leading-tight whitespace-nowrap">
-                    хочу аналог хомяка
+                  <CallToActionButton className={`mt-16 laptop:mt-3 laptop:w-auto max-w-sm ${styles.CTAButton}`} color='white' actionClassName={styles.CTAAction} arrowClassName={styles.CTAArrow} textClassName="p-0 !left-0 text-[10px] tablet:text-[14px] desktop:text-[18px] !leading-tight whitespace-nowrap">
+                    <span className={`p-0 !left-0 text-[15px] tablet:text-[16px] desktop:text-[18px] !leading-tight whitespace-nowrap`}>
+                      хочу аналог хомяка
+                    </span>
                   </CallToActionButton>
                 </div>
               </div>
@@ -251,42 +253,42 @@ export default function Page() {
               <h2 className="text-[25px] phone:text-[29px] tablet:text-[47px] laptop:text-[42px] desktop:text-[56px] leading-[120%] font-normal text-center font-IgraSans uppercase mb-[21px] phone:mb-[23px] tablet:mb-[38px] laptop:mb-[43px] desktop:mb-[59px]">этапы <br className="laptop:hidden"/> работы с нaми:</h2>
               <ul className="max-w-[297px] phone:max-w-[396px] tablet:max-w-[635px] laptop:max-w-[1107px] desktop:max-w-[1489px] mx-auto flex flex-wrap items-stretch gap-[10px] phone:gap-[13px] tablet:gap-[22px] desktop:gap-[30px] mb-[20px] phone:mb-[22px] tablet:mb-10 desktop:mb-[56px]">
                 <li className="w-full laptop:w-[calc(100%_-_581px)] desktop:w-[calc(100%_-_782px)] rounded-[10px] phone:rounded-[14px] tablet:rounded-[22px] desktop:rounded-[30px] bg-[rgba(242,242,242,0.14)] min-h-[67.5px] phone:min-h-[90px] tablet:min-h-[144px] desktop:min-h-[194px] relative z-[1] flex items-center p-[15px_4px_15px_70px] phone:p-[24px_5px_24px_94px] tablet:p-[20px_8px_20px_151px] desktop:p-[51px] desktop:pl-[203px]">
-                  <Image width={100} height={100} unoptimized src={`${SOURCE.static_url}working-icon-1-1?field=slug`} alt="" className="absolute w-[64px] phone:w-[86px] tablet:w-[138px] desktop:w-auto top-[3.8px] phone:top-[5px] tablet:top-[8px] desktop:top-[11px] left-[2px] phone:left-[3px] tablet:left-[4.5px] desktop:left-[6px] z-[-1]"/>
+                  <Image width={100} height={100} unoptimized src={`${SOURCE.static_url}working-icon-1-1?field=slug`} alt="" className="absolute w-[64px] phone:w-[86px] tablet:w-[138px] top-[3.8px] phone:top-[5px] tablet:top-[8px] desktop:top-[11px] left-[2px] phone:left-[3px] tablet:left-[4.5px] desktop:left-[6px] z-[-1]"/>
                   <div className="text-[11px] phone:text-[14px] tablet:text-[23px] desktop:text-[31px] leading-[120%]">
                     <h3 className="font-bold">Созвон для знакомства</h3>
                     <p className="font-normal">и обсуждения целей проекта</p>
                   </div>
                 </li>
                 <li className="w-full laptop:w-[559px] desktop:w-[752px] rounded-[10px] phone:rounded-[14px] tablet:rounded-[22px] desktop:rounded-[30px] bg-[rgba(242,242,242,0.14)] min-h-[67.5px] phone:min-h-[90px] tablet:min-h-[144px] desktop:min-h-[194px] relative z-[1] flex items-center p-[15px_4px_15px_70px] phone:p-[24px_5px_24px_94px] tablet:p-[20px_8px_20px_151px] desktop:p-[51px] desktop:pl-[203px]">
-                  <Image width={100} height={100} unoptimized src={`${SOURCE.static_url}working-icon-4?field=slug`} alt="" className="absolute w-[58px] phone:w-[79px] tablet:w-[125px] desktop:w-auto top-1/2 left-[10px] phone:left-[13px] tablet:left-[21px] desktop:left-[29px] -translate-y-1/2 z-[-1]"/>
+                  <Image width={100} height={100} unoptimized src={`${SOURCE.static_url}working-icon-4?field=slug`} alt="" className="absolute w-[58px] phone:w-[79px] tablet:w-[125px] top-1/2 left-[10px] phone:left-[13px] tablet:left-[21px] desktop:left-[29px] -translate-y-1/2 z-[-1]"/>
                   <div className="text-[11px] phone:text-[14px] tablet:text-[23px] desktop:text-[31px] leading-[120%]">
                     <h3 className="font-bold">Создание сценария бота</h3>
                     <p className="font-normal">и его утверждение</p>
                   </div>
                 </li>
                 <li className="w-full laptop:w-[calc(100%_-_543px)] desktop:w-[calc(100%_-_731px)] rounded-[10px] phone:rounded-[14px] tablet:rounded-[22px] desktop:rounded-[30px] bg-[rgba(242,242,242,0.14)] min-h-[67.5px] phone:min-h-[90px] tablet:min-h-[144px] desktop:min-h-[194px] relative z-[1] flex items-center p-[15px_4px_15px_70px] phone:p-[24px_5px_24px_94px] tablet:p-[20px_8px_20px_151px] desktop:p-[51px] desktop:pl-[203px]">
-                  <Image width={100} height={100} unoptimized src={`${SOURCE.static_url}working-icon-2?field=slug`} alt="" className="absolute w-[58px] phone:w-[79px] tablet:w-[125px] desktop:w-auto top-1/2 left-[10px] phone:left-[13px] tablet:left-[21px] desktop:left-[29px] -translate-y-1/2 z-[-1]"/>
+                  <Image width={100} height={100} unoptimized src={`${SOURCE.static_url}working-icon-2?field=slug`} alt="" className="absolute w-[58px] phone:w-[79px] tablet:w-[125px] top-1/2 left-[10px] phone:left-[13px] tablet:left-[21px] desktop:left-[29px] -translate-y-1/2 z-[-1]"/>
                   <div className="text-[11px] phone:text-[14px] tablet:text-[23px] desktop:text-[31px] leading-[120%]">
                     <h3 className="font-bold">Заключение договора:</h3>
                     <p className="font-normal">прописываем наши обязанности</p>
                   </div>
                 </li>
                 <li className="w-full laptop:w-[521px] desktop:w-[701px] rounded-[10px] phone:rounded-[14px] tablet:rounded-[22px] desktop:rounded-[30px] bg-[rgba(242,242,242,0.14)] min-h-[67.5px] phone:min-h-[90px] tablet:min-h-[144px] desktop:min-h-[194px] relative z-[1] flex items-center p-[15px_4px_15px_70px] phone:p-[24px_5px_24px_94px] tablet:p-[20px_8px_20px_151px] desktop:p-[51px] desktop:pl-[203px]">
-                  <Image width={100} height={100} unoptimized src={`${SOURCE.static_url}working-icon-5?field=slug`} alt="" className="absolute w-[58px] phone:w-[79px] tablet:w-[125px] desktop:w-auto top-1/2 left-[10px] phone:left-[13px] tablet:left-[21px] desktop:left-[29px] -translate-y-1/2 z-[-1]"/>
+                  <Image width={100} height={100} unoptimized src={`${SOURCE.static_url}working-icon-5?field=slug`} alt="" className="absolute w-[58px] phone:w-[79px] tablet:w-[125px] top-1/2 left-[10px] phone:left-[13px] tablet:left-[21px] desktop:left-[29px] -translate-y-1/2 z-[-1]"/>
                   <div className="text-[11px] phone:text-[14px] tablet:text-[23px] desktop:text-[31px] leading-[120%]">
                     <h3 className="font-bold">Техническая сборка</h3>
                     <p className="font-normal">и тестирование воронки</p>
                   </div>
                 </li>
                 <li className="w-full laptop:w-[calc(100%_-_472px)] desktop:w-[calc(100%_-_636px)] rounded-[10px] phone:rounded-[14px] tablet:rounded-[22px] desktop:rounded-[30px] bg-[rgba(242,242,242,0.14)] min-h-[67.5px] phone:min-h-[90px] tablet:min-h-[144px] desktop:min-h-[194px] relative z-[1] flex items-center p-[15px_4px_15px_70px] phone:p-[24px_5px_24px_94px] tablet:p-[20px_8px_20px_151px] desktop:p-[51px] desktop:pl-[203px]">
-                  <Image width={100} height={100} unoptimized src={`${SOURCE.static_url}working-icon-3?field=slug`} alt="" className="absolute w-[68px] phone:w-[91px] tablet:w-[147px] desktop:w-auto top-[2px] phone:top-[3px] tablet:top-[4px] desktop:top-[6px] left-[10px] phone:left-[13px] tablet:left-[21px] desktop:left-[29px] z-[-1]"/>
+                  <Image width={100} height={100} unoptimized src={`${SOURCE.static_url}working-icon-3?field=slug`} alt="" className="absolute w-[68px] phone:w-[91px] tablet:w-[147px] top-[2px] phone:top-[3px] tablet:top-[4px] desktop:top-[6px] left-[10px] phone:left-[13px] tablet:left-[21px] desktop:left-[29px] z-[-1]"/>
                   <div className="text-[11px] phone:text-[14px] tablet:text-[23px] desktop:text-[31px] leading-[120%]">
                     <h3 className="font-bold">Аналитика воронок конкурентов:</h3>
                     <p className="font-normal">упаковка, тексты, техничка, анализ ЦА</p>
                   </div>
                 </li>
                 <li className="w-full laptop:w-[450px] desktop:w-[606px] rounded-[10px] phone:rounded-[14px] tablet:rounded-[22px] desktop:rounded-[30px] bg-[rgba(242,242,242,0.14)] min-h-[67.5px] phone:min-h-[90px] tablet:min-h-[144px] desktop:min-h-[194px] relative z-[1] flex items-center p-[15px_4px_15px_70px] phone:p-[24px_5px_24px_94px] tablet:p-[20px_8px_20px_151px] desktop:p-[51px] desktop:pl-[203px]">
-                  <Image width={100} height={100} unoptimized src={`${SOURCE.static_url}working-icon-6?field=slug`} alt="" className="absolute w-[68px] phone:w-[91px] tablet:w-[147px] desktop:w-auto top-[2px] phone:top-[3px] tablet:top-[4px] desktop:top-[6px] left-[10px] phone:left-[13px] tablet:left-[21px] desktop:left-[29px] z-[-1]"/>
+                  <Image width={100} height={100} unoptimized src={`${SOURCE.static_url}working-icon-6?field=slug`} alt="" className="absolute w-[68px] phone:w-[91px] tablet:w-[147px] top-[2px] phone:top-[3px] tablet:top-[4px] desktop:top-[6px] left-[10px] phone:left-[13px] tablet:left-[21px] desktop:left-[29px] z-[-1]"/>
                   <div className="text-[11px] phone:text-[14px] tablet:text-[23px] desktop:text-[31px] leading-[120%]">
                     <h3 className="font-bold">Передача доступов</h3>
                     <p className="font-normal">и сопровождение*</p>
