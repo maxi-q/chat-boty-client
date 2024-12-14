@@ -39,36 +39,36 @@ export default function Page() {
               <div className='w-[71px] nokia:w-[95px] tablet:w-[152px] laptop:w-[103px] desktop:w-[169px] absolute right-[-14px] nokia:right-[-19px] tablet:right-[-31px] laptop:right-[-51px] desktop:right-[-65px] top-[371px] nokia:top-[495px] tablet:top-[792px] laptop:top-[109px] desktop:top-[47px] z-[-1]'>
                 <SettingsIcon />
               </div>
-              {/* <Image width={100} height={100} unoptimized src={`${SOURCE.static_url}settings-icon?field=slug`} alt="" className="w-[71px] nokia:w-[95px] tablet:w-[152px] laptop:w-[103px] desktop:w-[169px] absolute right-[-14px] nokia:right-[-19px] tablet:right-[-31px] laptop:right-[-51px] desktop:right-[-65px] top-[371px] nokia:top-[495px] tablet:top-[792px] laptop:top-[109px] desktop:top-[47px] z-[-1]"/> */}
+              {/* <Image width={100} height={100}  src={`${SOURCE.static_url}settings-icon?field=slug`} alt="" className="w-[71px] nokia:w-[95px] tablet:w-[152px] laptop:w-[103px] desktop:w-[169px] absolute right-[-14px] nokia:right-[-19px] tablet:right-[-31px] laptop:right-[-51px] desktop:right-[-65px] top-[371px] nokia:top-[495px] tablet:top-[792px] laptop:top-[109px] desktop:top-[47px] z-[-1]"/> */}
               <div className="hidden desktop:block w-[73px] absolute right-[636px] top-[60px] z-[-1]">
                 <SettingsIconGray />
               </div>
-              {/* <Image width={100} height={100} unoptimized src={`${SOURCE.static_url}settings-icon-gray?field=slug`}  alt="" className="hidden desktop:block w-[73px] absolute right-[636px] top-[60px] z-[-1]"/> */}
+              {/* <Image width={100} height={100}  src={`${SOURCE.static_url}settings-icon-gray?field=slug`}  alt="" className="hidden desktop:block w-[73px] absolute right-[636px] top-[60px] z-[-1]"/> */}
               <div className="w-[22px] nokia:w-[29px] tablet:w-[48px] absolute right-[45px] nokia:right-[60px] tablet:right-[97px] laptop:right-[406px] desktop:right-[560px] bottom-[110px] nokia:bottom-[146px] tablet:bottom-[234px] laptop:bottom-[102px] desktop:bottom-[219px] z-[-1]">
                 <SettingsIconGray />
               </div>
-              {/* <Image width={100} height={100} unoptimized src={`${SOURCE.static_url}settings-icon-gray?field=slug`}  alt="" className="w-[22px] nokia:w-[29px] tablet:w-[48px] absolute right-[45px] nokia:right-[60px] tablet:right-[97px] laptop:right-[406px] desktop:right-[560px] bottom-[110px] nokia:bottom-[146px] tablet:bottom-[234px] laptop:bottom-[102px] desktop:bottom-[219px] z-[-1]"/> */}
+              {/* <Image width={100} height={100}  src={`${SOURCE.static_url}settings-icon-gray?field=slug`}  alt="" className="w-[22px] nokia:w-[29px] tablet:w-[48px] absolute right-[45px] nokia:right-[60px] tablet:right-[97px] laptop:right-[406px] desktop:right-[560px] bottom-[110px] nokia:bottom-[146px] tablet:bottom-[234px] laptop:bottom-[102px] desktop:bottom-[219px] z-[-1]"/> */}
               <div className='w-[44px] nokia:w-[59px] tablet:w-[95px] desktop:w-[90px] absolute left-[-11px] nokia:left-[-15px] tablet:left-[-24px] laptop:left-auto laptop:right-[595px] desktop:right-[679px] top-[154px] nokia:top-[205px] tablet:top-[329px] laptop:top-auto laptop:bottom-[-25px] desktop:bottom-[78px] z-[-1]'>
                 <SettingsIconDouble />
               </div>
-              {/* <Image width={100} height={100} unoptimized src={`${SOURCE.static_url}settings-icon?field=slug`} alt="" className="w-[44px] nokia:w-[59px] tablet:w-[95px] desktop:w-[90px] absolute left-[-11px] nokia:left-[-15px] tablet:left-[-24px] laptop:left-auto laptop:right-[595px] desktop:right-[679px] top-[154px] nokia:top-[205px] tablet:top-[329px] laptop:top-auto laptop:bottom-[-25px] desktop:bottom-[78px] z-[-1]"/> */}
+              {/* <Image width={100} height={100}  src={`${SOURCE.static_url}settings-icon?field=slug`} alt="" className="w-[44px] nokia:w-[59px] tablet:w-[95px] desktop:w-[90px] absolute left-[-11px] nokia:left-[-15px] tablet:left-[-24px] laptop:left-auto laptop:right-[595px] desktop:right-[679px] top-[154px] nokia:top-[205px] tablet:top-[329px] laptop:top-auto laptop:bottom-[-25px] desktop:bottom-[78px] z-[-1]"/> */}
               <Image width={300} height={300} src={`${SOURCE.static_url}msg-icon-1?field=slug`} alt="" className="w-[64px] nokia:w-[86px] tablet:w-[138px] desktop:w-auto absolute left-[19px] nokia:left-9 tablet:left-[58px] laptop:left-auto laptop:right-[257px] desktop:right-[356px] bottom-[181px] nokia:bottom-[252px] tablet:bottom-[404px] laptop:bottom-auto laptop:top-[55px] desktop:top-[113px] z-[-1]"/>
               <Image width={800} height={800} src={`${SOURCE.static_url}home-robot?field=slug`} alt="" className="min-w-[321px] nokia:min-w-[428px] tablet:min-w-[685px] w-[321px] nokia:w-[428px] tablet:w-[685px] laptop:w-[549px] desktop:w-[840px] absolute translate-x-1/2 laptop:translate-x-0 right-1/2 laptop:right-[-119px] desktop:right-[-167px] bottom-[-61px] nokia:bottom-[-82.5px] tablet:bottom-[-132px] desktop:bottom-[-212px] z-[-1]"/>
               <h2 className="order-1 text-[25px] nokia:text-[30px] tablet:text-[50px] laptop:text-[55px] desktop:text-[64px] leading-[120%] font-IgraSans uppercase mb-[22px] nokia:mb-[19px] tablet:mb-[29px] laptop:mb-[34px] desktop:mb-16 text-center laptop:text-start"><span className="inline text-purple">Техническая сборка <br/> автоворонки</span> в соцсетях <br/> и мессенджерах за 72 часа </h2>
               <ul className="order-3 flex flex-col laptop:flex-row  items-stretch gap-[17px] nokia:gap-[22px] tablet:gap-[28px] desktop:gap-[34px] mb-[247px] nokia:mb-[356px] tablet:mb-[571px] laptop:mb-[46px] desktop:mb-[52px]">
                 <li className="w-[194px] nokia:w-[260px] tablet:w-[415px] laptop:w-[318px] desktop:w-[386px] flex flex-col items-start gap-2 nokia:gap-[10px] tablet:gap-[13px] desktop:gap-4 bg-[rgba(243,243,243,0.5)] rounded-[16px] nokia:rounded-[21px] laptop:rounded-[26px] desktop:rounded-[32px] pt-2 nokia:pt-[10px] tablet:pt-[13px] desktop:pt-[16px] pr-[22px] desktop:pr-[60px] pb-[23px] nokia:pb-8 tablet:pb-[37px] desktop:pb-[45px] pl-[23px] nokia:pl-[30px] tablet:pl-[37px] desktop:pl-[46px]">
                   <HomeIcon1 className="w-[23px] nokia:w-[31px] tablet:w-[38px] desktop:w-auto" />
-                  {/* <Image width={100} height={100} unoptimized src={`${SOURCE.static_url}home-icon-1?field=slug`} alt="" className="w-[23px] nokia:w-[31px] tablet:w-[38px] desktop:w-auto"/> */}
+                  {/* <Image width={100} height={100}  src={`${SOURCE.static_url}home-icon-1?field=slug`} alt="" className="w-[23px] nokia:w-[31px] tablet:w-[38px] desktop:w-auto"/> */}
                   <p className="font-Manrope text-[12px] nokia:text-[16px] tablet:text-[25px] laptop:text-[19px] desktop:text-[24px] font-bold leading-[120%] uppercase">интеграции любой сложности</p>
                 </li>
                 <li className="w-[194px] nokia:w-[260px] tablet:w-[415px] laptop:w-[290px] desktop:w-[386px] flex flex-col items-start gap-2 nokia:gap-[10px] tablet:gap-[13px] desktop:gap-4 bg-[rgba(243,243,243,0.5)] rounded-[16px] nokia:rounded-[21px] laptop:rounded-[26px] desktop:rounded-[32px] pt-2 nokia:pt-[10px] tablet:pt-[13px] desktop:pt-[16px] pr-[22px] desktop:pr-[60px] pb-[23px] nokia:pb-8 tablet:pb-[37px] desktop:pb-[45px] pl-[23px] nokia:pl-[30px] tablet:pl-[37px] desktop:pl-[46px]">
                   <HomeIcon1 className="w-[23px] nokia:w-[31px] tablet:w-[38px] desktop:w-auto" />
-                  {/* <Image width={100} height={100} unoptimized src={`${SOURCE.static_url}home-icon-1?field=slug`} alt="" className="w-[23px] nokia:w-[31px] tablet:w-[38px] desktop:w-auto"/> */}
+                  {/* <Image width={100} height={100}  src={`${SOURCE.static_url}home-icon-1?field=slug`} alt="" className="w-[23px] nokia:w-[31px] tablet:w-[38px] desktop:w-auto"/> */}
                   <p className="font-Manrope text-[12px] nokia:text-[16px] tablet:text-[25px] laptop:text-[19px] desktop:text-[24px] font-bold leading-[120%] uppercase">Соблюдение <br/> сроков</p>
                 </li>
                 <li className="w-[194px] nokia:w-[260px] tablet:w-[415px] laptop:w-[318px] desktop:w-[386px] flex flex-col items-start gap-2 nokia:gap-[10px] tablet:gap-[13px] desktop:gap-4 bg-[rgba(243,243,243,0.5)] rounded-[16px] nokia:rounded-[21px] laptop:rounded-[26px] desktop:rounded-[32px] pt-2 nokia:pt-[10px] tablet:pt-[13px] desktop:pt-[16px] pr-[22px] desktop:pr-[60px] pb-[23px] nokia:pb-8 tablet:pb-[37px] desktop:pb-[45px] pl-[23px] nokia:pl-[30px] tablet:pl-[37px] desktop:pl-[46px]">
                   <HomeIcon1 className="w-[23px] nokia:w-[31px] tablet:w-[38px] desktop:w-auto" />
-                  {/* <Image width={100} height={100} unoptimized src={`${SOURCE.static_url}home-icon-1?field=slug`} alt="" className="w-[23px] nokia:w-[31px] tablet:w-[38px] desktop:w-auto"/> */}
+                  {/* <Image width={100} height={100}  src={`${SOURCE.static_url}home-icon-1?field=slug`} alt="" className="w-[23px] nokia:w-[31px] tablet:w-[38px] desktop:w-auto"/> */}
                   <p className="font-Manrope text-[12px] nokia:text-[16px] tablet:text-[25px] laptop:text-[19px] desktop:text-[24px] font-bold leading-[120%] uppercase">во всех соцсетях <br/> и мессенджерах</p>
                 </li>
               </ul>
@@ -84,7 +84,7 @@ export default function Page() {
                 <li>
                   <a href="#" className={`flex flex-col items-start justify-between min-h-[482px] desktop:min-h-[647px] ${styles.bgBgColor} rounded-[38px] desktop:rounded-[50px] p-[45px] desktop:p-[61.5px] font-Manrope`}>
                     <CanIcon1 className="w-[49px] desktop:w-auto" />
-                    {/* <Image width={100} height={100} unoptimized src={`${SOURCE.static_url}can-icon-1?field=slug`} alt="" className="w-[49px] desktop:w-auto"/> */}
+                    {/* <Image width={100} height={100}  src={`${SOURCE.static_url}can-icon-1?field=slug`} alt="" className="w-[49px] desktop:w-auto"/> */}
                     <span className="flex flex-col items-start">
                       <span className="text-[18px] desktop:text-[25px] leading-[120%] font-medium text-secondary mb-[5px] desktop:mb-[7px] block">01</span>
                       <span className="block text-[24px] desktop:text-[34px] leading-[120%] font-bold uppercase mb-[24px] desktop:mb-[33px]">Прогреть вашу аудиторию:</span>
@@ -96,7 +96,7 @@ export default function Page() {
                 <li>
                   <a href="#" className={`flex flex-col items-start justify-between min-h-[482px] desktop:min-h-[647px] ${styles.bgBgColor} rounded-[38px] desktop:rounded-[50px] p-[45px] desktop:p-[61.5px] font-Manrope`}>
                     <CanIcon2 className="w-[49px] desktop:w-auto" />
-                    {/* <Image width={100} height={100} unoptimized src={`${SOURCE.static_url}can-icon-2?field=slug`} alt="" className="w-[49px] desktop:w-auto"/> */}
+                    {/* <Image width={100} height={100}  src={`${SOURCE.static_url}can-icon-2?field=slug`} alt="" className="w-[49px] desktop:w-auto"/> */}
                     <span className="flex flex-col items-start">
                       <span className="text-[18px] desktop:text-[25px] leading-[120%] font-medium text-secondary mb-[5px] desktop:mb-[7px] block">02</span>
                       <span className="block text-[24px] desktop:text-[34px] leading-[120%] font-bold uppercase mb-[24px] desktop:mb-[33px]">консультирование:</span>
@@ -108,7 +108,7 @@ export default function Page() {
                 <li>
                   <a href="#" className={`flex flex-col items-start justify-between min-h-[482px] desktop:min-h-[647px] ${styles.bgBgColor} rounded-[38px] desktop:rounded-[50px] p-[45px] desktop:p-[61.5px] font-Manrope`}>
                     <CanIcon3 className="w-[49px] desktop:w-auto" />
-                    {/* <Image width={100} height={100} unoptimized src={`${SOURCE.static_url}can-icon-3?field=slug`} alt="" className="w-[49px] desktop:w-auto"/> */}
+                    {/* <Image width={100} height={100}  src={`${SOURCE.static_url}can-icon-3?field=slug`} alt="" className="w-[49px] desktop:w-auto"/> */}
                     <span className="flex flex-col items-start">
                       <span className="text-[18px] desktop:text-[25px] leading-[120%] font-medium text-secondary mb-[5px] desktop:mb-[7px] block">03</span>
                       <span className="block text-[24px] desktop:text-[34px] leading-[120%] font-bold uppercase mb-[24px] desktop:mb-[33px]">Рассылки:</span>
@@ -120,7 +120,7 @@ export default function Page() {
                 <li>
                   <a href="#" className={`flex flex-col items-start justify-between min-h-[482px] desktop:min-h-[647px] ${styles.bgBgColor} rounded-[38px] desktop:rounded-[50px] p-[45px] desktop:p-[61.5px] font-Manrope`}>
                     <CanIcon4 className="w-[49px] desktop:w-auto" />
-                    {/* <Image width={100} height={100} unoptimized src={`${SOURCE.static_url}can-icon-4?field=slug`} alt="" className="w-[49px] desktop:w-auto"/> */}
+                    {/* <Image width={100} height={100}  src={`${SOURCE.static_url}can-icon-4?field=slug`} alt="" className="w-[49px] desktop:w-auto"/> */}
                     <span className="flex flex-col items-start">
                       <span className="text-[18px] desktop:text-[25px] leading-[120%] font-medium text-secondary mb-[5px] desktop:mb-[7px] block">04</span>
                       <span className="block text-[24px] desktop:text-[34px] leading-[120%] font-bold uppercase mb-[24px] desktop:mb-[33px]">продажи:</span>
@@ -132,7 +132,7 @@ export default function Page() {
                 <li>
                   <a href="#" className={`flex flex-col items-start justify-between min-h-[482px] desktop:min-h-[647px] ${styles.bgBgColor} rounded-[38px] desktop:rounded-[50px] p-[45px] desktop:p-[61.5px] font-Manrope`}>
                     <CanIcon5 className="w-[49px] desktop:w-auto" />
-                    {/* <Image width={100} height={100} unoptimized src={`${SOURCE.static_url}can-icon-5?field=slug`} alt="" className="w-[49px] desktop:w-auto"/> */}
+                    {/* <Image width={100} height={100}  src={`${SOURCE.static_url}can-icon-5?field=slug`} alt="" className="w-[49px] desktop:w-auto"/> */}
                     <span className="flex flex-col items-start">
                       <span className="text-[18px] desktop:text-[25px] leading-[120%] font-medium text-secondary mb-[5px] desktop:mb-[7px] block">05</span>
                       <span className="block text-[24px] desktop:text-[34px] leading-[120%] font-bold uppercase mb-[24px] desktop:mb-[33px]">опросы:</span>
@@ -144,7 +144,7 @@ export default function Page() {
                 <li>
                   <a href="#" className={`flex flex-col items-start justify-between min-h-[482px] desktop:min-h-[647px] ${styles.bgBgColor} rounded-[38px] desktop:rounded-[50px] p-[45px] desktop:p-[61.5px] font-Manrope`}>
                     <CanIcon6 className="w-[49px] desktop:w-auto" />
-                    {/* <Image width={100} height={100} unoptimized src={`${SOURCE.static_url}can-icon-6?field=slug`} alt="" className="w-[49px] desktop:w-auto"/> */}
+                    {/* <Image width={100} height={100}  src={`${SOURCE.static_url}can-icon-6?field=slug`} alt="" className="w-[49px] desktop:w-auto"/> */}
                     <span className="flex flex-col items-start">
                       <span className="text-[18px] desktop:text-[25px] leading-[120%] font-medium text-secondary mb-[5px] desktop:mb-[7px] block">06</span>
                       <span className="block text-[24px] desktop:text-[34px] leading-[120%] font-bold uppercase mb-[24px] desktop:mb-[33px]">интеграции:</span>
@@ -164,37 +164,37 @@ export default function Page() {
               <ul className="flex flex-wrap gap-[13px] phone:gap-[18px] tablet:gap-[29px] laptop:gap-[26px] desktop:gap-9 uppercase font-Manrope border border-border-line border-solid rounded-[12px] phone:rounded-[16px] tablet:rounded-[25px] laptop:rounded-[23.83px] desktop:rounded-[32px] p-[12px] phone:p-[16px] tablet:p-[25px] laptop:p-6 desktop:p-8 bg-[rgba(35,34,37,0.5)]">
                 <li className={`flex items-center gap-[12px] phone:gap-[18px] tablet:gap-[26px] desktop:gap-9 w-full laptop:w-[calc(100%_-_790px)] desktop:w-[calc(100%_-_1062px)] p-[18px] phone:p-[23px] tablet:px-[35px] tablet:p-9 desktop:p-12 ${styles['bg-grey-dark']} rounded-[11.91px] desktop:rounded-2xl`}>
                   <LevelIcon1 className="flex-shrink-0 w-[21px] phone:w-[28px] tablet:w-[45px] laptop:w-[41px] desktop:w-[56px]" />
-                  {/* <Image width={100} height={100} unoptimized src={`${SOURCE.static_url}level-icon-1?field=slug`} alt="" className="flex-shrink-0 w-[21px] phone:w-[28px] tablet:w-[45px] laptop:w-[41px] desktop:w-[56px]"/> */}
+                  {/* <Image width={100} height={100}  src={`${SOURCE.static_url}level-icon-1?field=slug`} alt="" className="flex-shrink-0 w-[21px] phone:w-[28px] tablet:w-[45px] laptop:w-[41px] desktop:w-[56px]"/> */}
                   <p className="text-[9px] phone:text-[12px] tablet:text-[19px] laptop:text-[17px] desktop:text-[24px] leading-[120%] font-bold">Клуб с ежемесячной подпиской и автосписанием средств</p>
                 </li>
                 <li className={`flex items-center gap-[12px] phone:gap-[18px] tablet:gap-[26px] desktop:gap-9 w-full laptop:w-[356px] desktop:w-[479px] p-[18px] phone:p-[23px] tablet:px-[35px] tablet:p-9 desktop:p-12 ${styles['bg-grey-dark']} rounded-[11.91px] desktop:rounded-2xl`}>
                   <LevelIcon2 className="flex-shrink-0 w-[21px] phone:w-[28px] tablet:w-[45px] laptop:w-[41px] desktop:w-[56px]" />
-                  {/* <Image width={100} height={100} unoptimized src={`${SOURCE.static_url}level-icon-2?field=slug`} alt="" className="flex-shrink-0 w-[21px] phone:w-[28px] tablet:w-[45px] laptop:w-[41px] desktop:w-[56px]"/> */}
+                  {/* <Image width={100} height={100}  src={`${SOURCE.static_url}level-icon-2?field=slug`} alt="" className="flex-shrink-0 w-[21px] phone:w-[28px] tablet:w-[45px] laptop:w-[41px] desktop:w-[56px]"/> */}
                   <p className="text-[9px] phone:text-[12px] tablet:text-[19px] laptop:text-[17px] desktop:text-[24px] leading-[120%] font-bold">Реферальная программа (в ТГ, ВК)</p>
                 </li>
                 <li className={`flex items-center gap-[12px] phone:gap-[18px] tablet:gap-[26px] desktop:gap-9 w-full laptop:w-[380px] desktop:w-[511px] p-[18px] phone:p-[23px] tablet:px-[35px] tablet:p-9 desktop:p-12 ${styles['bg-grey-dark']} rounded-[11.91px] desktop:rounded-2xl`}>
                   <LevelIcon3 className="flex-shrink-0 w-[21px] phone:w-[28px] tablet:w-[45px] laptop:w-[41px] desktop:w-[56px]" />
-                  {/* <Image width={100} height={100} unoptimized src={`${SOURCE.static_url}level-icon-3?field=slug`} alt="" className="flex-shrink-0 w-[21px] phone:w-[28px] tablet:w-[45px] laptop:w-[41px] desktop:w-[56px]"/> */}
+                  {/* <Image width={100} height={100}  src={`${SOURCE.static_url}level-icon-3?field=slug`} alt="" className="flex-shrink-0 w-[21px] phone:w-[28px] tablet:w-[45px] laptop:w-[41px] desktop:w-[56px]"/> */}
                   <p className="text-[9px] phone:text-[12px] tablet:text-[19px] laptop:text-[17px] desktop:text-[24px] leading-[120%] font-bold">Автовебинарная воронка</p>
                 </li>
                 <li className={`flex items-center gap-[12px] phone:gap-[18px] tablet:gap-[26px] desktop:gap-9 w-full laptop:w-[402px] desktop:w-[541px] p-[18px] phone:p-[23px] tablet:px-[35px] tablet:p-9 desktop:p-12 ${styles['bg-grey-dark']} rounded-[11.91px] desktop:rounded-2xl`}>
                   <LevelIcon4 className="flex-shrink-0 w-[21px] phone:w-[28px] tablet:w-[45px] laptop:w-[41px] desktop:w-[56px]" />
-                  {/* <Image width={100} height={100} unoptimized src={`${SOURCE.static_url}level-icon-4?field=slug`} alt="" className="flex-shrink-0 w-[21px] phone:w-[28px] tablet:w-[45px] laptop:w-[41px] desktop:w-[56px]"/> */}
+                  {/* <Image width={100} height={100}  src={`${SOURCE.static_url}level-icon-4?field=slug`} alt="" className="flex-shrink-0 w-[21px] phone:w-[28px] tablet:w-[45px] laptop:w-[41px] desktop:w-[56px]"/> */}
                   <p className="text-[9px] phone:text-[12px] tablet:text-[19px] laptop:text-[17px] desktop:text-[24px] leading-[120%] font-bold">Воронки для живого вебинара</p>
                 </li>
                 <li className={`flex items-center gap-[12px] phone:gap-[18px] tablet:gap-[26px] desktop:gap-9 w-full laptop:w-[calc(100%_-_428px)] desktop:w-[calc(100%_-_577px)] p-[18px] phone:p-[23px] tablet:px-[35px] tablet:p-9 desktop:p-12 ${styles['bg-grey-dark']} rounded-[11.91px] desktop:rounded-2xl`}>
                   <LevelIcon5 className="flex-shrink-0 w-[21px] phone:w-[28px] tablet:w-[45px] laptop:w-[41px] desktop:w-[56px]" />
-                  {/* <Image width={100} height={100} unoptimized src={`${SOURCE.static_url}level-icon-5?field=slug`} alt="" className="flex-shrink-0 w-[21px] phone:w-[28px] tablet:w-[45px] laptop:w-[41px] desktop:w-[56px]"/> */}
+                  {/* <Image width={100} height={100}  src={`${SOURCE.static_url}level-icon-5?field=slug`} alt="" className="flex-shrink-0 w-[21px] phone:w-[28px] tablet:w-[45px] laptop:w-[41px] desktop:w-[56px]"/> */}
                   <p className="text-[9px] phone:text-[12px] tablet:text-[19px] laptop:text-[17px] desktop:text-[24px] leading-[120%] font-bold">Интеграции с гугл-таблицами, CRM системами, платёжными системами в том числе зарубежными</p>
                 </li>
                 <li className={`flex items-center gap-[12px] phone:gap-[18px] tablet:gap-[26px] desktop:gap-9 w-full laptop:w-[577px] desktop:w-[776px] p-[18px] phone:p-[23px] tablet:px-[35px] tablet:p-9 desktop:p-12 ${styles['bg-grey-dark']} rounded-[11.91px] desktop:rounded-2xl`}>
                   <LevelIcon6 className="flex-shrink-0 w-[21px] phone:w-[28px] tablet:w-[45px] laptop:w-[41px] desktop:w-[56px]" />
-                  {/* <Image width={100} height={100} unoptimized src={`${SOURCE.static_url}level-icon-6?field=slug`} alt="" className="flex-shrink-0 w-[21px] phone:w-[28px] tablet:w-[45px] laptop:w-[41px] desktop:w-[56px]"/> */}
+                  {/* <Image width={100} height={100}  src={`${SOURCE.static_url}level-icon-6?field=slug`} alt="" className="flex-shrink-0 w-[21px] phone:w-[28px] tablet:w-[45px] laptop:w-[41px] desktop:w-[56px]"/> */}
                   <p className="text-[9px] phone:text-[12px] tablet:text-[19px] laptop:text-[17px] desktop:text-[24px] leading-[120%] font-bold">Чат-бот для Seller’ов на маркетплейсах для сбора отзывов</p>
                 </li>
                 <li className={`flex items-center gap-[12px] phone:gap-[18px] tablet:gap-[26px] desktop:gap-9 w-full laptop:w-[calc(100%_-_603px)] desktop:w-[calc(100%_-_812px)] p-[18px] phone:p-[23px] tablet:px-[35px] tablet:p-9 desktop:p-12 ${styles['bg-grey-dark']} rounded-[11.91px] desktop:rounded-2xl`}>
                   <LevelIcon7 className="flex-shrink-0 w-[21px] phone:w-[28px] tablet:w-[45px] laptop:w-[41px] desktop:w-[56px]" />
-                  {/* <Image width={100} height={100} unoptimized src={`${SOURCE.static_url}level-icon-7?field=slug`} alt="" className="flex-shrink-0 w-[21px] phone:w-[28px] tablet:w-[45px] laptop:w-[41px] desktop:w-[56px]"/> */}
+                  {/* <Image width={100} height={100}  src={`${SOURCE.static_url}level-icon-7?field=slug`} alt="" className="flex-shrink-0 w-[21px] phone:w-[28px] tablet:w-[45px] laptop:w-[41px] desktop:w-[56px]"/> */}
                   <p className="text-[9px] phone:text-[12px] tablet:text-[19px] laptop:text-[17px] desktop:text-[24px] leading-[120%] font-bold">Воронки со множеством дожимов и элементами геймификации и много пр.</p>
                 </li>
               </ul>
@@ -253,42 +253,42 @@ export default function Page() {
               <h2 className="text-[25px] phone:text-[29px] tablet:text-[47px] laptop:text-[42px] desktop:text-[56px] leading-[120%] font-normal text-center font-IgraSans uppercase mb-[21px] phone:mb-[23px] tablet:mb-[38px] laptop:mb-[43px] desktop:mb-[59px]">этапы <br className="laptop:hidden"/> работы с нaми:</h2>
               <ul className="max-w-[297px] phone:max-w-[396px] tablet:max-w-[635px] laptop:max-w-[1107px] desktop:max-w-[1489px] mx-auto flex flex-wrap items-stretch gap-[10px] phone:gap-[13px] tablet:gap-[22px] desktop:gap-[30px] mb-[20px] phone:mb-[22px] tablet:mb-10 desktop:mb-[56px]">
                 <li className="w-full laptop:w-[calc(100%_-_581px)] desktop:w-[calc(100%_-_782px)] rounded-[10px] phone:rounded-[14px] tablet:rounded-[22px] desktop:rounded-[30px] bg-[rgba(242,242,242,0.14)] min-h-[67.5px] phone:min-h-[90px] tablet:min-h-[144px] desktop:min-h-[194px] relative z-[1] flex items-center p-[15px_4px_15px_70px] phone:p-[24px_5px_24px_94px] tablet:p-[20px_8px_20px_151px] desktop:p-[51px] desktop:pl-[203px]">
-                  <Image width={100} height={100} unoptimized src={`${SOURCE.static_url}working-icon-1-1?field=slug`} alt="" className="absolute w-[64px] phone:w-[86px] tablet:w-[138px] top-[3.8px] phone:top-[5px] tablet:top-[8px] desktop:top-[11px] left-[2px] phone:left-[3px] tablet:left-[4.5px] desktop:left-[6px] z-[-1]"/>
+                  <Image width={100} height={100}  src={`${SOURCE.static_url}working-icon-1-2?field=slug`} alt="" className="absolute w-[64px] phone:w-[86px] tablet:w-[138px] top-[3.8px] phone:top-[5px] tablet:top-[8px] desktop:top-[11px] left-[2px] phone:left-[3px] tablet:left-[4.5px] desktop:left-[6px] z-[-1]"/>
                   <div className="text-[11px] phone:text-[14px] tablet:text-[23px] desktop:text-[31px] leading-[120%]">
                     <h3 className="font-bold">Созвон для знакомства</h3>
                     <p className="font-normal">и обсуждения целей проекта</p>
                   </div>
                 </li>
                 <li className="w-full laptop:w-[559px] desktop:w-[752px] rounded-[10px] phone:rounded-[14px] tablet:rounded-[22px] desktop:rounded-[30px] bg-[rgba(242,242,242,0.14)] min-h-[67.5px] phone:min-h-[90px] tablet:min-h-[144px] desktop:min-h-[194px] relative z-[1] flex items-center p-[15px_4px_15px_70px] phone:p-[24px_5px_24px_94px] tablet:p-[20px_8px_20px_151px] desktop:p-[51px] desktop:pl-[203px]">
-                  <Image width={100} height={100} unoptimized src={`${SOURCE.static_url}working-icon-4?field=slug`} alt="" className="absolute w-[58px] phone:w-[79px] tablet:w-[125px] top-1/2 left-[10px] phone:left-[13px] tablet:left-[21px] desktop:left-[29px] -translate-y-1/2 z-[-1]"/>
+                  <Image width={100} height={100}  src={`${SOURCE.static_url}working-icon-4-1?field=slug`} alt="" className="absolute w-[58px] phone:w-[79px] tablet:w-[125px] top-1/2 left-[10px] phone:left-[13px] tablet:left-[21px] desktop:left-[29px] -translate-y-1/2 z-[-1]"/>
                   <div className="text-[11px] phone:text-[14px] tablet:text-[23px] desktop:text-[31px] leading-[120%]">
                     <h3 className="font-bold">Создание сценария бота</h3>
                     <p className="font-normal">и его утверждение</p>
                   </div>
                 </li>
                 <li className="w-full laptop:w-[calc(100%_-_543px)] desktop:w-[calc(100%_-_731px)] rounded-[10px] phone:rounded-[14px] tablet:rounded-[22px] desktop:rounded-[30px] bg-[rgba(242,242,242,0.14)] min-h-[67.5px] phone:min-h-[90px] tablet:min-h-[144px] desktop:min-h-[194px] relative z-[1] flex items-center p-[15px_4px_15px_70px] phone:p-[24px_5px_24px_94px] tablet:p-[20px_8px_20px_151px] desktop:p-[51px] desktop:pl-[203px]">
-                  <Image width={100} height={100} unoptimized src={`${SOURCE.static_url}working-icon-2?field=slug`} alt="" className="absolute w-[58px] phone:w-[79px] tablet:w-[125px] top-1/2 left-[10px] phone:left-[13px] tablet:left-[21px] desktop:left-[29px] -translate-y-1/2 z-[-1]"/>
+                  <Image width={100} height={100}  src={`${SOURCE.static_url}working-icon-2-1?field=slug`} alt="" className="absolute w-[58px] phone:w-[79px] tablet:w-[125px] top-1/2 left-[10px] phone:left-[13px] tablet:left-[21px] desktop:left-[29px] -translate-y-1/2 z-[-1]"/>
                   <div className="text-[11px] phone:text-[14px] tablet:text-[23px] desktop:text-[31px] leading-[120%]">
                     <h3 className="font-bold">Заключение договора:</h3>
                     <p className="font-normal">прописываем наши обязанности</p>
                   </div>
                 </li>
                 <li className="w-full laptop:w-[521px] desktop:w-[701px] rounded-[10px] phone:rounded-[14px] tablet:rounded-[22px] desktop:rounded-[30px] bg-[rgba(242,242,242,0.14)] min-h-[67.5px] phone:min-h-[90px] tablet:min-h-[144px] desktop:min-h-[194px] relative z-[1] flex items-center p-[15px_4px_15px_70px] phone:p-[24px_5px_24px_94px] tablet:p-[20px_8px_20px_151px] desktop:p-[51px] desktop:pl-[203px]">
-                  <Image width={100} height={100} unoptimized src={`${SOURCE.static_url}working-icon-5?field=slug`} alt="" className="absolute w-[58px] phone:w-[79px] tablet:w-[125px] top-1/2 left-[10px] phone:left-[13px] tablet:left-[21px] desktop:left-[29px] -translate-y-1/2 z-[-1]"/>
+                  <Image width={100} height={100}  src={`${SOURCE.static_url}working-icon-5-1?field=slug`} alt="" className="absolute w-[58px] phone:w-[79px] tablet:w-[125px] top-1/2 left-[10px] phone:left-[13px] tablet:left-[21px] desktop:left-[29px] -translate-y-1/2 z-[-1]"/>
                   <div className="text-[11px] phone:text-[14px] tablet:text-[23px] desktop:text-[31px] leading-[120%]">
                     <h3 className="font-bold">Техническая сборка</h3>
                     <p className="font-normal">и тестирование воронки</p>
                   </div>
                 </li>
                 <li className="w-full laptop:w-[calc(100%_-_472px)] desktop:w-[calc(100%_-_636px)] rounded-[10px] phone:rounded-[14px] tablet:rounded-[22px] desktop:rounded-[30px] bg-[rgba(242,242,242,0.14)] min-h-[67.5px] phone:min-h-[90px] tablet:min-h-[144px] desktop:min-h-[194px] relative z-[1] flex items-center p-[15px_4px_15px_70px] phone:p-[24px_5px_24px_94px] tablet:p-[20px_8px_20px_151px] desktop:p-[51px] desktop:pl-[203px]">
-                  <Image width={100} height={100} unoptimized src={`${SOURCE.static_url}working-icon-3?field=slug`} alt="" className="absolute w-[68px] phone:w-[91px] tablet:w-[147px] top-[2px] phone:top-[3px] tablet:top-[4px] desktop:top-[6px] left-[10px] phone:left-[13px] tablet:left-[21px] desktop:left-[29px] z-[-1]"/>
+                  <Image width={100} height={100}  src={`${SOURCE.static_url}working-icon-3-1?field=slug`} alt="" className="absolute w-[68px] phone:w-[91px] tablet:w-[147px] top-[2px] phone:top-[3px] tablet:top-[4px] desktop:top-[6px] left-[10px] phone:left-[13px] tablet:left-[21px] desktop:left-[29px] z-[-1]"/>
                   <div className="text-[11px] phone:text-[14px] tablet:text-[23px] desktop:text-[31px] leading-[120%]">
                     <h3 className="font-bold">Аналитика воронок конкурентов:</h3>
                     <p className="font-normal">упаковка, тексты, техничка, анализ ЦА</p>
                   </div>
                 </li>
                 <li className="w-full laptop:w-[450px] desktop:w-[606px] rounded-[10px] phone:rounded-[14px] tablet:rounded-[22px] desktop:rounded-[30px] bg-[rgba(242,242,242,0.14)] min-h-[67.5px] phone:min-h-[90px] tablet:min-h-[144px] desktop:min-h-[194px] relative z-[1] flex items-center p-[15px_4px_15px_70px] phone:p-[24px_5px_24px_94px] tablet:p-[20px_8px_20px_151px] desktop:p-[51px] desktop:pl-[203px]">
-                  <Image width={100} height={100} unoptimized src={`${SOURCE.static_url}working-icon-6?field=slug`} alt="" className="absolute w-[68px] phone:w-[91px] tablet:w-[147px] top-[2px] phone:top-[3px] tablet:top-[4px] desktop:top-[6px] left-[10px] phone:left-[13px] tablet:left-[21px] desktop:left-[29px] z-[-1]"/>
+                  <Image width={100} height={100}  src={`${SOURCE.static_url}working-icon-6-1?field=slug`} alt="" className="absolute w-[68px] phone:w-[91px] tablet:w-[147px] top-[2px] phone:top-[3px] tablet:top-[4px] desktop:top-[6px] left-[10px] phone:left-[13px] tablet:left-[21px] desktop:left-[29px] z-[-1]"/>
                   <div className="text-[11px] phone:text-[14px] tablet:text-[23px] desktop:text-[31px] leading-[120%]">
                     <h3 className="font-bold">Передача доступов</h3>
                     <p className="font-normal">и сопровождение*</p>
