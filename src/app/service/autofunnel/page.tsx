@@ -253,42 +253,42 @@ export default function Page() {
               <h2 className="text-[25px] phone:text-[29px] tablet:text-[47px] laptop:text-[42px] desktop:text-[56px] leading-[120%] font-normal text-center font-IgraSans uppercase mb-[21px] phone:mb-[23px] tablet:mb-[38px] laptop:mb-[43px] desktop:mb-[59px]">этапы <br className="laptop:hidden"/> работы с нaми:</h2>
               <ul className="max-w-[297px] phone:max-w-[396px] tablet:max-w-[635px] laptop:max-w-[1107px] desktop:max-w-[1489px] mx-auto flex flex-wrap items-stretch gap-[10px] phone:gap-[13px] tablet:gap-[22px] desktop:gap-[30px] mb-[20px] phone:mb-[22px] tablet:mb-10 desktop:mb-[56px]">
                 <li className="w-full laptop:w-[calc(100%_-_581px)] desktop:w-[calc(100%_-_782px)] rounded-[10px] phone:rounded-[14px] tablet:rounded-[22px] desktop:rounded-[30px] bg-[rgba(242,242,242,0.14)] min-h-[67.5px] phone:min-h-[90px] tablet:min-h-[144px] desktop:min-h-[194px] relative z-[1] flex items-center p-[15px_4px_15px_70px] phone:p-[24px_5px_24px_94px] tablet:p-[20px_8px_20px_151px] desktop:p-[51px] desktop:pl-[203px]">
-                  <Image width={100} height={100} unoptimized src={`${SOURCE.static_url}working-icon-1-1?field=slug`} alt="" className="absolute w-[64px] phone:w-[86px] tablet:w-[138px] top-[3.8px] phone:top-[5px] tablet:top-[8px] desktop:top-[11px] left-[2px] phone:left-[3px] tablet:left-[4.5px] desktop:left-[6px] z-[-1]"/>
+                  <Image width={100} height={100} unoptimized src={`${SOURCE.static_url}working-icon-1-2?field=slug`} alt="" className="absolute w-[64px] phone:w-[86px] tablet:w-[138px] top-[3.8px] phone:top-[5px] tablet:top-[8px] desktop:top-[11px] left-[2px] phone:left-[3px] tablet:left-[4.5px] desktop:left-[6px] z-[-1]"/>
                   <div className="text-[11px] phone:text-[14px] tablet:text-[23px] desktop:text-[31px] leading-[120%]">
                     <h3 className="font-bold">Созвон для знакомства</h3>
                     <p className="font-normal">и обсуждения целей проекта</p>
                   </div>
                 </li>
                 <li className="w-full laptop:w-[559px] desktop:w-[752px] rounded-[10px] phone:rounded-[14px] tablet:rounded-[22px] desktop:rounded-[30px] bg-[rgba(242,242,242,0.14)] min-h-[67.5px] phone:min-h-[90px] tablet:min-h-[144px] desktop:min-h-[194px] relative z-[1] flex items-center p-[15px_4px_15px_70px] phone:p-[24px_5px_24px_94px] tablet:p-[20px_8px_20px_151px] desktop:p-[51px] desktop:pl-[203px]">
-                  <Image width={100} height={100} unoptimized src={`${SOURCE.static_url}working-icon-4?field=slug`} alt="" className="absolute w-[58px] phone:w-[79px] tablet:w-[125px] top-1/2 left-[10px] phone:left-[13px] tablet:left-[21px] desktop:left-[29px] -translate-y-1/2 z-[-1]"/>
+                  <Image width={100} height={100} unoptimized src={`${SOURCE.static_url}working-icon-4-1?field=slug`} alt="" className="absolute w-[58px] phone:w-[79px] tablet:w-[125px] top-1/2 left-[10px] phone:left-[13px] tablet:left-[21px] desktop:left-[29px] -translate-y-1/2 z-[-1]"/>
                   <div className="text-[11px] phone:text-[14px] tablet:text-[23px] desktop:text-[31px] leading-[120%]">
                     <h3 className="font-bold">Создание сценария бота</h3>
                     <p className="font-normal">и его утверждение</p>
                   </div>
                 </li>
                 <li className="w-full laptop:w-[calc(100%_-_543px)] desktop:w-[calc(100%_-_731px)] rounded-[10px] phone:rounded-[14px] tablet:rounded-[22px] desktop:rounded-[30px] bg-[rgba(242,242,242,0.14)] min-h-[67.5px] phone:min-h-[90px] tablet:min-h-[144px] desktop:min-h-[194px] relative z-[1] flex items-center p-[15px_4px_15px_70px] phone:p-[24px_5px_24px_94px] tablet:p-[20px_8px_20px_151px] desktop:p-[51px] desktop:pl-[203px]">
-                  <Image width={100} height={100} unoptimized src={`${SOURCE.static_url}working-icon-2?field=slug`} alt="" className="absolute w-[58px] phone:w-[79px] tablet:w-[125px] top-1/2 left-[10px] phone:left-[13px] tablet:left-[21px] desktop:left-[29px] -translate-y-1/2 z-[-1]"/>
+                  <Image width={100} height={100} unoptimized src={`${SOURCE.static_url}working-icon-2-1?field=slug`} alt="" className="absolute w-[58px] phone:w-[79px] tablet:w-[125px] top-1/2 left-[10px] phone:left-[13px] tablet:left-[21px] desktop:left-[29px] -translate-y-1/2 z-[-1]"/>
                   <div className="text-[11px] phone:text-[14px] tablet:text-[23px] desktop:text-[31px] leading-[120%]">
                     <h3 className="font-bold">Заключение договора:</h3>
                     <p className="font-normal">прописываем наши обязанности</p>
                   </div>
                 </li>
                 <li className="w-full laptop:w-[521px] desktop:w-[701px] rounded-[10px] phone:rounded-[14px] tablet:rounded-[22px] desktop:rounded-[30px] bg-[rgba(242,242,242,0.14)] min-h-[67.5px] phone:min-h-[90px] tablet:min-h-[144px] desktop:min-h-[194px] relative z-[1] flex items-center p-[15px_4px_15px_70px] phone:p-[24px_5px_24px_94px] tablet:p-[20px_8px_20px_151px] desktop:p-[51px] desktop:pl-[203px]">
-                  <Image width={100} height={100} unoptimized src={`${SOURCE.static_url}working-icon-5?field=slug`} alt="" className="absolute w-[58px] phone:w-[79px] tablet:w-[125px] top-1/2 left-[10px] phone:left-[13px] tablet:left-[21px] desktop:left-[29px] -translate-y-1/2 z-[-1]"/>
+                  <Image width={100} height={100} unoptimized src={`${SOURCE.static_url}working-icon-5-1?field=slug`} alt="" className="absolute w-[58px] phone:w-[79px] tablet:w-[125px] top-1/2 left-[10px] phone:left-[13px] tablet:left-[21px] desktop:left-[29px] -translate-y-1/2 z-[-1]"/>
                   <div className="text-[11px] phone:text-[14px] tablet:text-[23px] desktop:text-[31px] leading-[120%]">
                     <h3 className="font-bold">Техническая сборка</h3>
                     <p className="font-normal">и тестирование воронки</p>
                   </div>
                 </li>
                 <li className="w-full laptop:w-[calc(100%_-_472px)] desktop:w-[calc(100%_-_636px)] rounded-[10px] phone:rounded-[14px] tablet:rounded-[22px] desktop:rounded-[30px] bg-[rgba(242,242,242,0.14)] min-h-[67.5px] phone:min-h-[90px] tablet:min-h-[144px] desktop:min-h-[194px] relative z-[1] flex items-center p-[15px_4px_15px_70px] phone:p-[24px_5px_24px_94px] tablet:p-[20px_8px_20px_151px] desktop:p-[51px] desktop:pl-[203px]">
-                  <Image width={100} height={100} unoptimized src={`${SOURCE.static_url}working-icon-3?field=slug`} alt="" className="absolute w-[68px] phone:w-[91px] tablet:w-[147px] top-[2px] phone:top-[3px] tablet:top-[4px] desktop:top-[6px] left-[10px] phone:left-[13px] tablet:left-[21px] desktop:left-[29px] z-[-1]"/>
+                  <Image width={100} height={100} unoptimized src={`${SOURCE.static_url}working-icon-3-1?field=slug`} alt="" className="absolute w-[68px] phone:w-[91px] tablet:w-[147px] top-[2px] phone:top-[3px] tablet:top-[4px] desktop:top-[6px] left-[10px] phone:left-[13px] tablet:left-[21px] desktop:left-[29px] z-[-1]"/>
                   <div className="text-[11px] phone:text-[14px] tablet:text-[23px] desktop:text-[31px] leading-[120%]">
                     <h3 className="font-bold">Аналитика воронок конкурентов:</h3>
                     <p className="font-normal">упаковка, тексты, техничка, анализ ЦА</p>
                   </div>
                 </li>
                 <li className="w-full laptop:w-[450px] desktop:w-[606px] rounded-[10px] phone:rounded-[14px] tablet:rounded-[22px] desktop:rounded-[30px] bg-[rgba(242,242,242,0.14)] min-h-[67.5px] phone:min-h-[90px] tablet:min-h-[144px] desktop:min-h-[194px] relative z-[1] flex items-center p-[15px_4px_15px_70px] phone:p-[24px_5px_24px_94px] tablet:p-[20px_8px_20px_151px] desktop:p-[51px] desktop:pl-[203px]">
-                  <Image width={100} height={100} unoptimized src={`${SOURCE.static_url}working-icon-6?field=slug`} alt="" className="absolute w-[68px] phone:w-[91px] tablet:w-[147px] top-[2px] phone:top-[3px] tablet:top-[4px] desktop:top-[6px] left-[10px] phone:left-[13px] tablet:left-[21px] desktop:left-[29px] z-[-1]"/>
+                  <Image width={100} height={100} unoptimized src={`${SOURCE.static_url}working-icon-6-1?field=slug`} alt="" className="absolute w-[68px] phone:w-[91px] tablet:w-[147px] top-[2px] phone:top-[3px] tablet:top-[4px] desktop:top-[6px] left-[10px] phone:left-[13px] tablet:left-[21px] desktop:left-[29px] z-[-1]"/>
                   <div className="text-[11px] phone:text-[14px] tablet:text-[23px] desktop:text-[31px] leading-[120%]">
                     <h3 className="font-bold">Передача доступов</h3>
                     <p className="font-normal">и сопровождение*</p>
