@@ -213,14 +213,14 @@ export default function Page() {
                     <Image width={400} height={400} src={`${SOURCE.static_url}with-us-card-1?field=slug`} alt="" className="absolute w-[73px] tablet:w-[118px] laptop:w-[122px] desktop:w-[165px] bottom-0 left-[17px] tablet:left-7 laptop:left-10"/>
                     <div>
                       <h3 className="text-[16px] tablet:text-[24px] laptop:text-[29px] desktop:text-[40px] font-semibold leading-[120%] mb-[7px] desktop:mb-[10px]">В инстаграм боты могут:</h3>
-                      <p className="text-[10px] tablet:text-[16px] laptop:text-[18px] desktop:text-[25px] font-normal leading-[120%] color-[#0B0A0A]">Отправлять голосовое, видео, карусель</p>
+                      <p className="text-[14px] tablet:text-[16px] laptop:text-[18px] desktop:text-[25px] font-normal leading-[120%] color-[#0B0A0A]">Отправлять голосовое, видео, карусель</p>
                     </div>
                   </div>
                   <div className={`relative z-[1] p-[25px_26px_29px_111px] tablet:p-[40px_42px_48px_178px] laptop:pt-[42px] desktop:pt-[57px] laptop:pr-[43px] desktop:pr-[59px] laptop:pb-[40px] desktop:pb-[49px] laptop:pl-[186px] desktop:pl-[250px] ${styles.bgBgColor} rounded-[9px] tablet:rounded-[14px] desktop:rounded-[20px]`}>
                     <Image width={100} height={100} src={`${SOURCE.static_url}with-us-card-2?field=slug`} alt="" className="absolute w-[59px] tablet:w-[95px] laptop:w-[99px] desktop:w-[133px] bottom-1/2 left-7 tablet:left-[47px] desktop:left-[64px] translate-y-1/2"/>
                     <div>
                       <h3 className="text-[16px] tablet:text-[24px] laptop:text-[29px] desktop:text-[40px] font-semibold leading-[120%] mb-[7px] desktop:mb-[10px]">во вконтакте бот может:</h3>
-                      <p className="text-[10px] tablet:text-[16px] laptop:text-[18px] desktop:text-[25px] font-normal leading-[120%] color-[#0B0A0A]">Создать пост на стене подписчиков с вашим текстом и картинкой</p>
+                      <p className="text-[14px] tablet:text-[16px] laptop:text-[18px] desktop:text-[25px] font-normal leading-[120%] color-[#0B0A0A]">Создать пост на стене подписчиков с вашим текстом и картинкой</p>
                     </div>
                   </div>
                 </div>
@@ -229,14 +229,14 @@ export default function Page() {
                 <div className={`w-full laptop:w-[calc(100%_-_506px)] desktop:w-[calc(100%_-_681px)] flex flex-row-reverse laptop:flex-row items-center gap-[10px] phone:gap-[14px] tablet:gap-[22px] laptop:gap-[43px] desktop:gap-[58px] ${styles.bgBgColor} rounded-[7px] phone:rounded-[9px] tablet:rounded-[14px] desktop:rounded-[20px] p-[12px_12px_15px_15px] phone:p-[16px_16px_20px_20px] tablet:p-[26px_27px_32px_33px] laptop:py-[44px] desktop:py-[29px] laptop:pl-[41px] desktop:pl-[68px] laptop:pr-[58px] desktop:pr-[79px]`}>
                   <Image width={400} height={400} src={`${SOURCE.static_url}with-us-card-3-1?field=slug`} alt="" className="w-[93px] phone:w-[125px] tablet:w-[200px] laptop:w-[241px] desktop:w-[324px] shrink-0"/>
                   <div className="w-full">
-                    <h3 className="text-[12px] phone:text-[16px] tablet:text-[27px] laptop:text-[29px] desktop:text-[40px] uppercase font-semibold leading-[120%] mb-[3px] phone:mb-[4px] tablet:mb-[7px] desktop:mb-[10px]">Вы можете подключить нейросеть для общения <br/> и продаж клиентам:</h3>
-                    <p className="text-[7px] phone:text-[10px] tablet:text-[16px] laptop:text-[18px] desktop:text-[25px] font-normal leading-[120%] color-[#0B0A0A]">Как только появилась эта возможность <br/> в 2023 году мы реализовали для бренда одежды CHUKCHA </p>
+                    <h3 className="text-[16px] tablet:text-[27px] laptop:text-[29px] desktop:text-[40px] uppercase font-semibold leading-[120%] mb-[3px] phone:mb-[4px] tablet:mb-[7px] desktop:mb-[10px]">Вы можете подключить нейросеть для общения <br/> и продаж клиентам:</h3>
+                    <p className="text-[14px] tablet:text-[16px] laptop:text-[18px] desktop:text-[25px] font-normal leading-[120%] color-[#0B0A0A]">Как только появилась эта возможность <br/> в 2023 году мы реализовали для бренда одежды CHUKCHA </p>
                   </div>
                 </div>
                 <div className={`w-full laptop:w-[485px] desktop:w-[652px] ${styles['bg-green']} rounded-[7px] phone:rounded-[9px] tablet:rounded-[14px] desktop:rounded-[20px] p-[19px_16px] phone:p-[25px_22px] tablet:p-[41px_36px] laptop:p-[49px_79px_54px] desktop:p-[67px] flex justify-center flex-col items-start laptop:items-stretch`}>
                   <p className="w-full max-w-full desktop:max-w-[438px] text-[12px] phone:text-[16px] tablet:text-[27px] laptop:text-[18px] desktop:text-[25px] leading-[120%] mb-[16px] tablet:mb-[20px] laptop:mb-[14px]">
                   <span className=""><span className="inline font-semibold">Мы даже можем сделать аналог ХОМЯКА в Телеграм</span> на WebApp для вас.</span>
-                  <span className="block laptop:inline text-[7.5px] phone:text-[10px] tablet:text-[16px] leading-[120%] laptop:text-inherit pt-[4px] tablet:pt-[7px] laptop:pt-0">С вас - сценарий, дизайн, <br className="laptop:hidden"/> а реализация за нами</span></p>
+                  <span className="block laptop:inline text-[15px] tablet:text-[16px] leading-[120%] laptop:text-inherit pt-[4px] tablet:pt-[7px] laptop:pt-0">С вас - сценарий, дизайн, <br className="laptop:hidden"/> а реализация за нами</span></p>
 
                   <CallToActionButton className={`mt-16 laptop:mt-3 laptop:w-auto max-w-sm ${styles.CTAButton}`} color='white' actionClassName={styles.CTAAction} arrowClassName={styles.CTAArrow} textClassName="p-0 !left-0 text-[10px] tablet:text-[14px] desktop:text-[18px] !leading-tight whitespace-nowrap">
                     <span className={`p-0 !left-0 text-[15px] tablet:text-[16px] desktop:text-[18px] !leading-tight whitespace-nowrap`}>
@@ -312,7 +312,7 @@ export default function Page() {
                       <span className="text-[8px] phone:text-[10px] tablet:text-[18px] desktop:text-[25px] leading-[120%] font-medium text-secondary mb-[2px] phone:mb-[3px] tablet:mb-[5px] desktop:mb-[7px] block">01</span>
                       <span className="block text-[10px] phone:text-[14px] tablet:text-[24px] desktop:text-[34px] leading-[120%] font-bold uppercase mb-[10px] phone:mb-[14px] tablet:mb-[24px] desktop:mb-[33px]">опыт и насмотренность</span>
                       <span className="block h-[0.46px] phone:h-[0.61px] tablet:h-[1.4px] w-full bg-secondary mb-[2px] phone:mb-[3px] tablet:mb-[24px] desktop:mb-[33px]"></span>
-                      <span className="text-[7px] phone:text-[10px] tablet:text-[16px] desktop:text-[22px] font-normal text-secondary leading-[120%]">Мы работаем с разными нишами и видим, кто как выстраивает воронки</span>
+                      <span className="text-[12px] tablet:text-[16px] desktop:text-[22px] font-normal text-secondary leading-[120%]">Мы работаем с разными нишами и видим, кто как выстраивает воронки</span>
                     </span>
                   </a>
                 </li>
@@ -322,7 +322,7 @@ export default function Page() {
                       <span className="text-[8px] phone:text-[10px] tablet:text-[18px] desktop:text-[25px] leading-[120%] font-medium text-secondary mb-[2px] phone:mb-[3px] tablet:mb-[5px] desktop:mb-[7px] block">02</span>
                       <span className="block text-[10px] phone:text-[14px] tablet:text-[24px] desktop:text-[34px] leading-[120%] font-bold uppercase mb-[10px] phone:mb-[14px] tablet:mb-[24px] desktop:mb-[33px]">Команду профессионалов</span>
                       <span className="block h-[0.46px] phone:h-[0.61px] tablet:h-[1.4px] w-full bg-secondary mb-[2px] phone:mb-[3px] tablet:mb-[24px] desktop:mb-[33px]"></span>
-                      <span className="text-[7px] phone:text-[10px] tablet:text-[16px] desktop:text-[22px] font-normal text-secondary leading-[120%]">Мы увлечены своей работой и постоянно в ней развиваемся. </span>
+                      <span className="text-[12px] tablet:text-[16px] desktop:text-[22px] font-normal text-secondary leading-[120%]">Мы увлечены своей работой и постоянно в ней развиваемся. </span>
                     </span>
                   </a>
                 </li>
@@ -332,7 +332,7 @@ export default function Page() {
                       <span className="text-[8px] phone:text-[10px] tablet:text-[18px] desktop:text-[25px] leading-[120%] font-medium text-secondary mb-[2px] phone:mb-[3px] tablet:mb-[5px] desktop:mb-[7px] block">03</span>
                       <span className="block text-[10px] phone:text-[14px] tablet:text-[24px] desktop:text-[34px] leading-[120%] font-bold uppercase mb-[10px] phone:mb-[14px] tablet:mb-[24px] desktop:mb-[33px]">Снижение затрат</span>
                       <span className="block h-[0.46px] phone:h-[0.61px] tablet:h-[1.4px] w-full bg-secondary mb-[2px] phone:mb-[3px] tablet:mb-[24px] desktop:mb-[33px]"></span>
-                      <span className="text-[7px] phone:text-[10px] tablet:text-[16px] desktop:text-[22px] font-normal text-secondary leading-[120%]">Освободим менеджеров от рутины, настроим приём платежей и т.д</span>
+                      <span className="text-[12px] tablet:text-[16px] desktop:text-[22px] font-normal text-secondary leading-[120%]">Освободим менеджеров от рутины, настроим приём платежей и т.д</span>
                     </span>
                   </a>
                 </li>
