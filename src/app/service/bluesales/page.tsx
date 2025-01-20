@@ -48,7 +48,7 @@ export default function Page() {
                   className={`${onest.className} font-medium desktop:text-[32px] laptop:text-[28px] tablet:text-[24px] nokia:text-[20px] text-[16px] desktop:leading-[38px] laptop:leading-[29.4px] tablet:leading-[25.2px] nokia:leading-[21px] leading-[16px] mt-[24px] phone:mb-[48px] mb-[20px] text-center nokia:text-start`}
                 >
                   Сосредоточьтесь на продажах,
-                  <br className={`tablet:hidden block`} /> всё остальное сделаем мы.
+                  <br /> всё остальное сделаем мы.
                 </p>
                 <CallToActionButton color="blue" textClassName="p-0 !left-0 " className={`tablet:w-auto w-full max-w-full`}>
                   ОСТАВИТЬ ЗАЯВКУ
