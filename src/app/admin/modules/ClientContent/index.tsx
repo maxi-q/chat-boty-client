@@ -65,6 +65,7 @@ const MarkdownEditor = ({
       return
     }
     if (response.slug) {
+      revalidateCash()
       if (currentPath.split('/')[3] == 'new') {
         alert(`Успех! сейчас перенесем вас на изменение ${response.slug} ${currentPath}`)
         const redirectPath = redirectToSlug(currentPath, response.slug)
