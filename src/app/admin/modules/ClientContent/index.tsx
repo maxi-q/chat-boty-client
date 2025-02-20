@@ -13,6 +13,7 @@ import { redirectToSlug, settings } from '../../helpers/helpers'
 import ArticleForm from '../../modules/ArticleForm/InfoMenu'
 import { AdminMDXPage } from '../AdminMDXPage'
 
+import { revalidateCash } from '@/api/admin/external/revalidate'
 
 const MarkdownEditor = ({
   loadContent,
