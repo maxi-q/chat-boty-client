@@ -1,13 +1,17 @@
+'use client'
+
 import Link from 'next/link'
 import { RefreshButton } from './ui'
+import { revalidateCash } from '@/api/admin/external/revalidate'
 
 const Admin = () => {
-
   return (
     <main className="flex flex-col items-center justify-start h-screen bg-gray-100 relative pt-10">
-      <h1 className="text-4xl font-bold mb-8">Админка</h1>
+      <div className='flex flex-col items-center  mb-8'>
+        <h1 className="text-4xl font-bold mb-1">Админка</h1>
 
-      <RefreshButton onClick={revalidateCash}/>
+        <RefreshButton onClick={revalidateCash}/>
+      </div>
 
       <div className="gap-5 flex flex-row">
         <Link href="/admin/cases">
