@@ -36,8 +36,6 @@ const ImageLoaderForm = ({ loadFile }: { loadFile: () => void }) => {
   const loadImage = async () => {
     const response = await createFileData({title, description, slug})
 
-    console.log(response)
-
     if (response instanceof Response) {
       if (response.status == 422) {
         alert('файл с таким slug уже существует')
