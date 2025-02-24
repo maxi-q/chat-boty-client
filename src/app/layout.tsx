@@ -53,7 +53,8 @@ export default function RootLayout({
                     defer: true,
                     clickmap:true,
                     trackLinks:true,
-                    accurateTrackBounce:true
+                    accurateTrackBounce:true,
+                    webvisor:true
               });`}
             </Script>
             <Suspense fallback={<></>}>
@@ -71,3 +72,4 @@ export default function RootLayout({
     </html>
   )
 }
+

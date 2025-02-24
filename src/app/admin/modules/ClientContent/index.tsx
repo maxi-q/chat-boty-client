@@ -5,6 +5,7 @@ import { usePathname, useRouter } from 'next/navigation'
 import { useEffect, useRef, useState } from 'react'
 
 import 'easymde/dist/easymde.min.css'
+import styles from './style.module.css'
 
 import { PostInfo } from '@/api/admin/blog/ArticlesTypes'
 import { PostCaseInfo } from '@/api/admin/cases/CasesTypes'
@@ -13,6 +14,7 @@ import { redirectToSlug, settings } from '../../helpers/helpers'
 import ArticleForm from '../../modules/ArticleForm/InfoMenu'
 import { AdminMDXPage } from '../AdminMDXPage'
 
+import { revalidateCash } from '@/api/admin/external/revalidate'
 
 const MarkdownEditor = ({
   loadContent,
@@ -66,12 +68,13 @@ const MarkdownEditor = ({
     }
     if (response.slug) {
       if (currentPath.split('/')[3] == 'new') {
-        alert(`Успех! сейчас перенесем вас на изменение ${response.slug} ${currentPath}`)
+        alert(`Успех! сейчас перенесем вас на изменение ${response.slug} ${currentPath}, на клиенте обновления не произошло`)
         const redirectPath = redirectToSlug(currentPath, response.slug)
         router.push(redirectPath)
       }
       else if (!autosave) {
-        alert(`Успех! Для обновления данных на клиенте нужно 5 минут`)
+        alert(`Успех! Статья обновлена в черновике и у клиента`)
+        revalidateCash()
       }
     }
   }
@@ -80,12 +83,12 @@ const MarkdownEditor = ({
   return (
     <div className="prose section p-2">
       <ArticleForm onSubmit={PostData} data={loadContent?.postInfo} content={content} />
-      <div className="flex w-screen">
-        <div className="w-1/2 p-4">
-          <textarea id="markdown-editor" className="w-full h-full border border-gray-300 rounded p-2" />
+      <div className="flex w-screen max-h-screen overflow-hidden border border-gray-300 rounded my-2">
+        <div className={`w-1/2 p-4 scroll-auto overflow-y-auto ${styles['scrollbar-hidden']}`}>
+          <textarea id="markdown-editor" className="w-full h-full p-2" />
         </div>
 
-        <div className="w-1/2 p-4 border-l border-gray-300 pt-16">
+        <div className={`w-1/2 p-4 border-l border-gray-300 pt-16 overflow-y-auto ${styles['scrollbar-hidden']}`}>
           <AdminMDXPage content={content} />
         </div>
       </div>

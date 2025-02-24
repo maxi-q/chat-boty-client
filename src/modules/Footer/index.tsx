@@ -19,7 +19,7 @@ export const Footer = () => {
         </Link>
         <CallToActionButton className={`mt-8 ${styles.cta} w-full`}>Обсудить проект</CallToActionButton>
       </div>
-      <div className="flex flex-1 flex-col tablet:flex-row laptop:justify-around gap-[36px]">
+      <div className="flex flex-1 flex-col tablet:flex-row laptop:justify-around gap-9">
         <div>
           <h3 className={`${styles.navTitle} ${titleClass}`}>Услуги</h3>
           <ul className={liClass}>
