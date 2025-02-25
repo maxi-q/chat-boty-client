@@ -15,7 +15,7 @@ interface ICard {
 }
 
 export const Card = ({ created_at, duration, title, image, link, views_count }: ICard) => {
-  const date = new Date(created_at).toLocaleDateString()
+  const formattedDate = `${new Date(created_at).getDate()} ${new Date(created_at).toLocaleString('ru-RU', { month: 'long', day: 'numeric' }).split(' ')[1]} ${new Date(created_at).getFullYear()}`;
 
   const keyStr = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/='
 
@@ -37,7 +37,7 @@ export const Card = ({ created_at, duration, title, image, link, views_count }: 
           alt={'изображение'}
         />
         <div className="flex text-[16px] font-medium items-center text-center">
-          {date}
+          {formattedDate}
           <span className={`${style.slash} mx-1`} />
           <span className="me-1">
             <PostClock />
