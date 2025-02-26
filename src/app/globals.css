@@ -6,16 +6,19 @@
   font-family: 'Igra Sans';
   src: url('../fonts/IgraSans/IgraSans.otf');
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Gilroy';
   src: url('../fonts/Gilory/Gilroy.otf');
+  font-display: swap;
 }
 @font-face {
   font-family: 'Gilroy';
   src: url('../fonts/Gilory/Gilroy-SemiBold.ttf');
   font-style: normal;
+  font-display: swap;
 }
 /* @font-face {
   font-family: 'Gilroy';
@@ -27,6 +30,7 @@
   font-family: 'Onest';
   src: url('../fonts/IgraSans/IgraSans.otf');
   font-style: normal;
+  font-display: swap;
 }
 
 /*
