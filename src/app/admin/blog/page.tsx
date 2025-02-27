@@ -1,4 +1,4 @@
-import { getAllArticles } from '@/api/admin/blog/Articles'
+import { getAllArticles } from '@/api/admin/(CMS)/blog/Articles'
 import { formatHumanReadableDateTime } from '@/constants/helpers'
 import { SOURCE } from '@/constants/static'
 import Link from 'next/link'

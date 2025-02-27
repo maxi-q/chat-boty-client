@@ -1,4 +1,4 @@
-import { CallBackBlock } from '@/modules/Posts/CallBackBlock'
+import { CallBackBlock } from '@/modules/Articles/CallBackBlock'
 
 import Image from 'next/image'
 

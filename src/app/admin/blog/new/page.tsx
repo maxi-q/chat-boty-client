@@ -1,4 +1,4 @@
-import { postArticle } from '@/api/admin/blog/Articles'
+import { postArticle } from '@/api/admin/(CMS)/blog/Articles'
 import dynamic from 'next/dynamic'
 import React from 'react'
 import MarkdownEditor from '../../modules/ClientContent'

@@ -1,4 +1,4 @@
-import { getAllCases } from '@/api/admin/cases/Cases'
+import { getAllCases } from '@/api/admin/(CMS)/cases/Cases'
 import { formatHumanReadableDateTime } from '@/constants/helpers'
 import { SOURCE } from '@/constants/static'
 import Link from 'next/link'
