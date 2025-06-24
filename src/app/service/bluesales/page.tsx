@@ -521,18 +521,18 @@ export default function Page() {
               <aside
                 className={`hidden laptop:ml-12 laptop:flex desktop:mb-5 desktop:pb-16 flex-1 w-[600px] bg-[url("/Nilita.webp")] bg-no-repeat bg-cover rounded-3xl justify-end gap-5 laptop:h-[980px] laptop:max-w-[777px] ${styles.aside}`}
               >
-                <Tablet text={'Поможем увеличить продажи\nс помощью инструментов\nинтернет-маркетинга'} icon={<Chart />} margin={-90} />
-                <Tablet text={'5+ лет опыта разработки\nчат-ботов и автоворонок'} icon={<Diplomat />} margin={-15} />
-                <Tablet text={'Спикер конференции:\nСуровый Питерский SMM,\nсотрудничал с Senler'} icon={<WorkerMan />} margin={40} last />
+                <Tablet text={'Поможем увеличить продажи\nс помощью инструментов\nинтернет-маркетинга'} icon={<Chart />} color="blue" margin={-90} />
+                <Tablet text={'5+ лет опыта разработки\nчат-ботов и автоворонок'} icon={<Diplomat />} color="blue" margin={-15} />
+                <Tablet text={'Спикер конференции:\nСуровый Питерский SMM,\nсотрудничал с Senler'} icon={<WorkerMan />} color="blue" margin={40} last />
               </aside>
             </div>
 
             <CallBackForm color="blue" className={`laptop:hidden rounded-xl mx-auto p-6 desktop:p-14 my-5 w-full max-w-[728px] ${styles.feedback}`} />
 
             <aside className={`flex laptop:hidden flex-1 h-[625px] w-full bg-[url("/Nilita.webp")] bg-no-repeat bg-cover rounded-3xl justify-end gap-5 ${styles.aside}`}>
-              <Tablet text={'Поможем увеличить продажи\nс помощью инструментов\nинтернет-маркетинга'} icon={<Chart />} margin={40} color="blue" />
+              {/* <Tablet text={'Поможем увеличить продажи\nс помощью инструментов\nинтернет-маркетинга'} icon={<Chart />} margin={40} color="blue" />
               <Tablet text={'5+ лет опыта разработки\nчат-ботов и автоворонок'} icon={<Diplomat />} margin={85} color="blue" />
-              <Tablet text={'Спикер конференции:\nСуровый Питерский SMM,\nсотрудничал с Senler'} icon={<WorkerMan />} margin={120} color="blue" last />
+              <Tablet text={'Спикер конференции:\nСуровый Питерский SMM,\nсотрудничал с Senler'} icon={<WorkerMan />} margin={120} color="blue" last /> */}
             </aside>
           </main>
         </section>

@@ -1,15 +1,16 @@
 import dynamic from 'next/dynamic'
+import { Kanban } from './modules/kanban'
 
 const NoSsr = async ({ params }: { params: { slug: string } }) => {
 
-  const fromPost = async (content: any) => {
-    'use server'
+  // const fromPost = async (content: any) => {
+  //   'use server'
 
-    console.log(content)
-    // return patchArticle(params.slug, content)
-  }
+  //   console.log(content)
+  //   // return patchArticle(params.slug, content)
+  // }
 
-  return <>блог\статьи</>
+  return <Kanban />
 }
 
 export default dynamic(() => Promise.resolve(NoSsr), {
