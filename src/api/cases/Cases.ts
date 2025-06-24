@@ -1,5 +1,5 @@
 import { SOURCE } from '@/constants/static'
-import { CaseType, GetCaseFileType, getCasesType, IGetCaseFile, IGetCaseInfo, IGetCases } from './casesTypes'
+import { CaseType, GetCaseFileType, getCasesType, IGetCaseFile, IGetCaseInfo, IGetCases } from '../admin/(CMS)/cases/CasesTypes'
 
 const API_URL = SOURCE.url
 

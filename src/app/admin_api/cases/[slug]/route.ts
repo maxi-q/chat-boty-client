@@ -1,11 +1,11 @@
 'use server'
 
-import { PostInfo } from '@/api/admin/blog/ArticlesTypes'
-import { patchCase } from '@/api/admin/cases/Cases'
+import { PostCaseInfo } from '@/api/admin/(CMS)/cases/CasesTypes'
+import { patchCase } from '@/api/admin/(CMS)/cases/Cases'
 import { type NextRequest } from 'next/server'
 
 export async function PATCH(request: NextRequest, { params }: { params: { slug: string } }) {
-  const content: PostInfo = await request.json()
+  const content: PostCaseInfo = await request.json()
 
   const response = await patchCase(params.slug, content)
 

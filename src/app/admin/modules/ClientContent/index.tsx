@@ -7,14 +7,15 @@ import { useEffect, useRef, useState } from 'react'
 import 'easymde/dist/easymde.min.css'
 import styles from './style.module.css'
 
-import { PostInfo } from '@/api/admin/blog/ArticlesTypes'
-import { PostCaseInfo } from '@/api/admin/cases/CasesTypes'
+import { PostCaseInfo } from '@/api/admin/(CMS)/cases/CasesTypes'
 
 import { redirectToSlug, settings } from '../../helpers/helpers'
 import ArticleForm from '../../modules/ArticleForm/InfoMenu'
 import { AdminMDXPage } from '../AdminMDXPage'
 
 import { revalidateCash } from '@/api/admin/external/revalidate'
+import { PostInfo } from '@/api/admin/(CMS)/types/ArticleTypes'
+// Article or PostInfo
 
 const MarkdownEditor = ({
   loadContent,
@@ -68,7 +69,8 @@ const MarkdownEditor = ({
     }
     if (response.slug) {
       if (currentPath.split('/')[3] == 'new') {
-        alert(`Успех! сейчас перенесем вас на изменение ${response.slug} ${currentPath}, на клиенте обновления не произошло`)
+        const pathMessage = currentPath.replace('new', response.slug)
+        alert(`Успех! сейчас перенесем вас на ${pathMessage}, на клиенте обновления не произошло`)
         const redirectPath = redirectToSlug(currentPath, response.slug)
         router.push(redirectPath)
       }

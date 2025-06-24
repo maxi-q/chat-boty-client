@@ -1,9 +1,10 @@
 import { SOURCE } from '@/constants/static'
-import { ArticleType, GetArticleFileType, getArticlesType, IGetArticleFile, IGetArticleInfo, IGetArticles } from './blogTypes'
+import { BlogArticleType, GetBlogArticleFileType, getBlogArticlesType, IGetBlogArticleFile, IGetBlogArticleInfo, IGetBlogArticles } from '../admin/(CMS)/blog/ArticlesTypes'
+
 
 const API_URL = SOURCE.url
 
-export async function getArticles(content: IGetArticles): Promise<getArticlesType | undefined> {
+export async function getArticles(content: IGetBlogArticles): Promise<getBlogArticlesType | undefined> {
   try {
     const params = new URLSearchParams()
     params.append('page', '' + content.page)
@@ -35,7 +36,7 @@ export async function getArticles(content: IGetArticles): Promise<getArticlesTyp
   }
 }
 
-export async function getArticleFile(content: IGetArticleFile): Promise<GetArticleFileType | undefined> {
+export async function getBlogArticleFile(content: IGetBlogArticleFile): Promise<GetBlogArticleFileType | undefined> {
   try {
     const response = await fetch(`${API_URL}posts/${content.slug}/content?field=slug`, {
       method: 'GET',
@@ -61,7 +62,7 @@ export async function getArticleFile(content: IGetArticleFile): Promise<GetArtic
   }
 }
 
-export async function getArticleInfo(content: IGetArticleInfo): Promise<ArticleType | undefined> {
+export async function getBlogArticleInfo(content: IGetBlogArticleInfo): Promise<BlogArticleType | undefined> {
   try {
     const response = await fetch(`${API_URL}posts/${content.slug}/?field=slug`, {
       method: 'GET',

@@ -1,8 +1,8 @@
 import { FormEvent, useEffect, useRef, useState } from 'react'
 
 // Предполагаем, что эта функция открывает модальное окно для выбора изображения
-import { PostInfo } from '@/api/admin/blog/ArticlesTypes'
 import openImageSelector from '@/modules/HeavyComponents/ImageSelector/ImageSelector'
+import { PostInfo } from '@/api/admin/(CMS)/types/ArticleTypes'
 
 interface ImageData {
   id: string

@@ -1,6 +1,6 @@
 import dynamic from 'next/dynamic'
 
-import { getArticleFileAdmin, getArticleInfoAdmin, patchArticle } from '@/api/admin/blog/Articles'
+import { getArticleFileAdmin, getArticleInfoAdmin, patchArticle } from '@/api/admin/(CMS)/blog/Articles'
 import MarkdownEditor from '../../modules/ClientContent'
 
 const NoSsr = async ({ params }: { params: { slug: string } }) => {

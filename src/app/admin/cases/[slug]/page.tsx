@@ -1,6 +1,6 @@
 import dynamic from 'next/dynamic'
 
-import { getCaseFileAdmin, getCaseInfoAdmin, patchCase } from '@/api/admin/cases/Cases'
+import { getCaseFileAdmin, getCaseInfoAdmin, patchCase } from '@/api/admin/(CMS)/cases/Cases'
 import MarkdownEditor from '../../modules/ClientContent'
 
 const NoSsr = async ({ params }: { params: { slug: string } }) => {

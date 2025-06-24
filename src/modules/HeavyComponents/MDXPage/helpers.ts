@@ -35,5 +35,5 @@ export const settings: Omit<MDXRemoteProps, 'source'> = {
     },
   },
   components: overrideComponents
-  
+
 }

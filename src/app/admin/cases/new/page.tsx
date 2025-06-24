@@ -1,4 +1,4 @@
-import { postCase } from '@/api/admin/cases/Cases'
+import { postCase } from '@/api/admin/(CMS)/cases/Cases'
 import dynamic from 'next/dynamic'
 import React from 'react'
 import MarkdownEditor from '../../modules/ClientContent'
