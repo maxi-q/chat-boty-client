@@ -54,7 +54,7 @@ const FourScreen = () => {
 
 const Case = ({ title, text, link }: { title: string; text: string; link: string }) => {
   return (
-    <div className={`p-5 tablet:p-10 flex group rounded-2xl desktop:h-[350px] ${styles.case}`}>
+    <div className={`p-5 tablet:p-10 flex group rounded-2xl desktop:h-auto ${styles.case}`}>
       <h3 className={'pb-3 text-xl tablet:text-2xl font-bold uppercase'}>{title}</h3>
       <p className={`text-lg tablet:text-xl font-medium laptop:whitespace-pre-wrap ${styles.text}`} style={{ flex: 1 }}>
         {text}
