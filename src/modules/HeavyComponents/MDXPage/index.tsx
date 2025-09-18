@@ -20,7 +20,6 @@ export const FileArticleMDX = async ({ rawContent }: IArticlePage) => {
 
 export const ContentMDX = async ({ content }: { content: string }) => {
   try {
-    console.log(content)
     const { content: compiledContent } = await compileMDX({
       source: content,
       options: settings.options,
