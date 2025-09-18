@@ -14,7 +14,7 @@
     "@mdx-js/react": "^3.0.1",
     "@svgr/webpack": "^8.1.0",
     "axios": "^1.7.7",
-    "cookie": "^0.6.0",
+    "cookie": "^1.0.2",
     "dnd-core": "^16.0.1",
     "dotenv": "^16.4.5",
     "easymde": "^2.18.0",
