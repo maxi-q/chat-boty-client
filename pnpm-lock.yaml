@@ -77,6 +77,9 @@ importers:
       unified:
         specifier: ^11.0.5
         version: 11.0.5
+      unist-util-visit:
+        specifier: ^5.0.0
+        version: 5.0.0
       winston:
         specifier: ^3.14.2
         version: 3.16.0

@@ -6,6 +6,7 @@ import remarkSlug from 'remark-slug'
 import ArticleImage from './components/ArticleImage'
 import Carousel from './components/Carousel'
 import style from './style.module.css'
+import { rehypeShortWords } from './plugins/remark-widows'
 
 const overrideComponents = {
   Carousel: Carousel,
@@ -21,7 +22,7 @@ export const settings: Omit<MDXRemoteProps, 'source'> = {
         [
           remarkAutolinkHeadings as Plugin,
           {
-            behavior: 'prepend', // 'append' или 'wrap' можно использовать в зависимости от того, куда вы хотите вставить иконку
+            behavior: 'prepend',
             linkProperties: {
               className: style.anchorLink,
             },
@@ -31,9 +32,9 @@ export const settings: Omit<MDXRemoteProps, 'source'> = {
             },
           },
         ],
+        rehypeShortWords,
       ],
     },
   },
   components: overrideComponents
-
 }
