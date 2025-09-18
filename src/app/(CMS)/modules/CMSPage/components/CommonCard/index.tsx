@@ -32,7 +32,7 @@ export const CMSCard = ({
   const rgbDataURL = (r: number, g: number, b: number) => `data:image/gif;base64,R0lGODlhAQABAPAA${triplet(0, r, g) + triplet(b, 255, 255)}/yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==`
 
   return (
-    <Link href={link} className="laptop:w-1/2 p-2 no-underline overflow-hidden">
+    <Link href={link} className="w-auto p-2 no-underline overflow-hidden">
       <div className="max-w-[410px] w-full rounded-[12px]">
         <Image
           className="rounded-xl m-0 mb-3 select-none"

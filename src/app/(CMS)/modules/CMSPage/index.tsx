@@ -16,7 +16,7 @@ export const CMSPage = ({
   return (
     <div className="max-w-full">
       <h1 className="mb-7 text-2xl phone:text-3xl tablet:text-4xl laptop:text-4xl desktop:text-5xl">{children}</h1>
-      <div className="flex flex-wrap w-full">
+      <div className="flex flex-wrap w-full justify-center">
         {pageData.data.map((el) => (
           <CMSCard key={el.id} created_at={el.created_at} duration={el.reading_time} title={el.title} link={`/${type}/${el.slug}`} image={el.preview_file_id} views_count={el.views_count} />
         ))}

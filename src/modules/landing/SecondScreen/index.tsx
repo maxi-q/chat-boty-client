@@ -19,7 +19,7 @@ const SecondScreen = () => {
           <br /> мы предлагаем:
         </h1>
       </Link>
-      <main className="inline-flex flex-wrap pt-16 gap-5 laptop:gap-5 content-between justify-center tablet:w-[800px] laptop:w-full mx-auto">
+      <main className="inline-flex flex-wrap pt-16 gap-5 laptop:gap-5 content-between justify-center tablet:w-[800px] laptop:w-full mx-auto max-w-[2010px]">
         <CardShadow className="hidden laptop:block" />
         <Card
           title={'АВТОМАТИЗАЦИЯ\n CRM'}
