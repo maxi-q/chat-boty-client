@@ -56,7 +56,11 @@ export async function patchArticle(slug: string, content: PostBlogArticleInfo): 
       body: JSON.stringify(content),
     })
 
+    console.log('response.ok', response.ok)
+
     const data = await response.json()
+
+    console.log('data', data)
 
     if (!response.ok) {
       const error = new Error(`HTTP Error: ${response.status}`)
@@ -66,6 +70,8 @@ export async function patchArticle(slug: string, content: PostBlogArticleInfo): 
 
     return data
   } catch (error) {
+    console.log('content', content)
+    console.log('slug', slug)
     console.log(error, 'Error: patchArticle')
     return
   }
