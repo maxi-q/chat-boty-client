@@ -17,7 +17,7 @@ const FirstScreen = () => {
         <Image
           fill
           src="/main_abstract_figure.webp"
-          alt="Абстрактная фигура"
+          alt="Стильный интерфейс автоворонки продаж для онлайн-школ от Chat Boty"
         />
       </div>
 

@@ -50,7 +50,15 @@ export const TextCarousel = () => {
       <div ref={carousel} onScroll={recalculate} className={styles.carousel + ' mx-auto'}>
         <div className={`gap-5 flex items-stretch ${styles.gallery}`}>
           {textReviews.map((el, i) => (
-            <TextCard key={i} text={el.text} title={el.title} company={el.company} authorLink={el.authorLink} name={el.name} avatar={el.avatar} />
+            <TextCard
+              key={i}
+              text={el.text}
+              title={el.title}
+              company={el.company}
+              authorLink={el.authorLink}
+              name={el.name}
+              avatar={el.avatar}
+            />
           ))}
         </div>
       </div>

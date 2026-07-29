@@ -66,7 +66,7 @@ export default function Page() {
                   height={383}
                   loading={`lazy`}
                   src={`${SOURCE.static_url}homeimg?field=slug`}
-                  alt={`Фото image`}
+                  alt={`Автоматизация продаж и настройка CRM-системы BlueSales под ключ`}
                   className={`select-none tablet:absolute tablet:mt-0 nokia:translate-x-0 translate-x-5 mt-3 static desktop:top-0 laptop:top-[70px] desktop:-bottom-4 bottom-[20px] right-0 desktop:w-[990px] tablet:h-[277px] laptop:w-[650px] desktop:h-[552px] laptop:h-[383px] w-full tablet:w-auto`}
                 />
                 {/* <img className={`nokia:absolute nokia:mt-0 nokia:translate-x-0 translate-x-5 mt-3 static desktop:top-0 laptop:top-[70px] desktop:-bottom-4 bottom-[20px] right-0 desktop:w-[990px] nokia:h-[277px] laptop:w-[650px] desktop:h-[552px] laptop:h-[383px] h-full` src={`./assets/images/home_img.png` alt={``}/> */}
@@ -79,7 +79,7 @@ export default function Page() {
           <div className={`flex laptop:flex-row flex-col tablet:gap-5 gap-3 w-full max-w-[1880px] mx-auto`}>
             <div className={`${styles.container} w-full`}>
               <div>
-                <Image width={834} height={344} loading={`lazy`} src={`${SOURCE.static_url}services1?field=slug`} alt={`Фото image`} className={`select-none w-full mb-9`} />
+                <Image width={834} height={344} loading={`lazy`} src={`${SOURCE.static_url}services1?field=slug`} alt={`Проектирование и программирование чат-ботов на JSON для BlueSales`} className={`select-none w-full mb-9`} />
                 {/* <img className={`w-full mb-9`} src={`${SOURCE.static_url}services1?field=slug`} alt={``}/> */}
                 <h3
                   className={`${styles['font-Gilroy']} font-semibold desktop:text-[63px] desktop:leading-[67.2px] laptop:text-[56px] text-[28px] tablet:text-[48px] nokia:text-[36px] laptop:leading-[58px] tablet:leading-[50px] nokia:leading-[37px] leading-[29.9px] ${styles.textBluesales} mb-3`}
@@ -95,7 +95,7 @@ export default function Page() {
             </div>
             <div className={`${styles.container} w-full`}>
               <div>
-                <Image width={607} height={250} loading={`lazy`} src={`${SOURCE.static_url}services2?field=slug`} alt={`Фото image`} className={`select-none w-full mb-9`} />
+                <Image width={607} height={250} loading={`lazy`} src={`${SOURCE.static_url}services2?field=slug`} alt={`Схема интеграции и передачи данных из BlueSales в сторонние сервисы`} className={`select-none w-full mb-9`} />
                 {/* <img className={`w-full mb-9` src={`./assets/images/services2.png` alt={``}/> */}
                 <h3
                   className={`${styles['font-Gilroy']} font-semibold desktop:text-[63px] desktop:leading-[67.2px] laptop:text-[56px] text-[28px] tablet:text-[48px] nokia:text-[36px] laptop:leading-[58px] tablet:leading-[50px] nokia:leading-[37px] leading-[29.9px] ${styles.textBluesales} mb-3`}
@@ -112,7 +112,7 @@ export default function Page() {
           </div>
           <div className={`${styles.container} mt-5`}>
             <div className={`flex laptop:flex-row flex-col items-center gap-9`}>
-              <Image width={665} height={262} loading={`lazy`} src={`${SOURCE.static_url}services3?field=slug`} alt={`Фото image`} className={`select-none laptop:w-1/2 w-full`} />
+              <Image width={665} height={262} loading={`lazy`} src={`${SOURCE.static_url}services3?field=slug`} alt={`Подключение мессенджеров Telegram, WhatsApp и соцсетей к CRM-системе`} className={`select-none laptop:w-1/2 w-full`} />
               {/* <img className={`laptop:w-1/2 w-full` src={`./assets/images/services3.png` alt={``}/> */}
               <div className={`laptop:w-1/2 w-full`}>
                 <h3
@@ -206,7 +206,7 @@ export default function Page() {
                 height={304}
                 loading={`lazy`}
                 src={`${SOURCE.static_url}eskalator?field=slug`}
-                alt={`Фото image`}
+                alt={`Пошаговая автоматизация бизнес-процессов и воронки продаж в CRM`}
                 className={`select-none w-auto tablet:absolute static ml-auto tablet:translate-x-0 tablet:mt-0 mt-3 translate-x-5 desktop:top-[17px] laptop:bottom-0 bottom-[58px] right-0 desktop:h-[426px] laptop:h-[304px] h-[158px]`}
               />
               {/* <img className={`nokia:absolute static ml-auto nokia:translate-x-0 nokia:mt-0 mt-3 translate-x-5 desktop:top-[17px] laptop:bottom-0 bottom-[58px] right-0 desktop:h-[426px] laptop:h-[304px] h-[158px]`} src={`${SOURCE.static_url}eskalator?field=slug`} alt={``}/> */}
@@ -255,7 +255,7 @@ export default function Page() {
                   height={272}
                   loading={`lazy`}
                   src={`${SOURCE.static_url}card2?field=slug`}
-                  alt={`Фото image`}
+                  alt={`Детальные графики аналитики и статистики продаж в CRM`}
                   className={`select-none laptop:mb-9 nokia:mb-0 mb-5 w-full laptop:max-w-full nokia:max-w-[250px]`}
                 />
                 {/* <img className={`laptop:mb-9 nokia:mb-0 mb-5 w-full laptop:max-w-full nokia:max-w-[250px]`} src={`./assets/images/card2.png`} alt={``} /> */}
@@ -280,7 +280,7 @@ export default function Page() {
                   height={272}
                   loading={`lazy`}
                   src={`${SOURCE.static_url}card3?field=slug`}
-                  alt={`Фото image`}
+                  alt={`Напоминания и уведомления в CRM для контроля работы менеджеров`}
                   className={`select-none laptop:mb-9 nokia:mb-0 mb-5 w-full laptop:max-w-full nokia:max-w-[250px]`}
                 />
                 {/* <img className={`laptop:mb-9 nokia:mb-0 mb-5 w-full laptop:max-w-full nokia:max-w-[250px]` src={`./assets/images/card3.png` alt={``}/> */}
