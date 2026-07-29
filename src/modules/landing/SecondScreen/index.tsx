@@ -146,7 +146,7 @@ const Card = ({
         {icons}
       </div>
       <h3 className={`${styles.number} font-thin opacity-50 pt-[50px] phone:pt-0 tablet:pt-[50px] laptop:pt-0`}>{index}</h3>
-      <h1 className={`${styles.title} uppercase font-bold text-xl`}>{title}</h1>
+      <h2 className={`${styles.title} uppercase font-bold text-xl`}>{title}</h2>
       <div className={`${styles.line} my-5`} />
       <p className={`${styles.p} text-lg`}>{children}</p>
     </Link>
