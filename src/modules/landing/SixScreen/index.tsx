@@ -5,9 +5,9 @@ import Link from 'next/link'
  const SixScreen = () => {
   return (
     <main className={'section bp-5 px-4 py-5 laptop:px-[40px] tablet:pt-10 laptop:pt-8 pb-8  ' + styles.screen}>
-      <h1 className={'text-3xl phone:text-4xl tablet:text-6xl laptop:text-5xl desktop:text-6xl pb-8 select-none uppercase tracking-wide ' + styles.title}>
+      <h2 className={'text-3xl phone:text-4xl tablet:text-6xl laptop:text-5xl desktop:text-6xl pb-8 select-none uppercase tracking-wide ' + styles.title}>
         блог&ensp;|&ensp;статьи
-      </h1>
+      </h2>
       <div className={'flex flex-wrap gap-4 justify-center'}>
         <Card
           date={'10.01.2025'}
