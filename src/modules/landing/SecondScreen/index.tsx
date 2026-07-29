@@ -14,10 +14,10 @@ const SecondScreen = () => {
   return (
     <main className={`grid section p-5 laptop:pl-[40px] laptop:pt-[70px] ${styles.screen}`} id="service">
       <Link href={'#service'}>
-        <h1 className={`${styles.mainTitle} text-3xl tablet:text-5xl laptop:text-5xl uppercase`}>
+        <h2 className={`${styles.mainTitle} text-3xl tablet:text-5xl laptop:text-5xl uppercase`}>
           <span className={styles.titleSpan}>решения,</span> которые
           <br /> мы предлагаем:
-        </h1>
+        </h2>
       </Link>
       <main className="inline-flex flex-wrap pt-16 gap-5 laptop:gap-5 content-between justify-center tablet:w-[800px] laptop:w-full mx-auto max-w-[2010px]">
         <CardShadow className="hidden laptop:block" />
